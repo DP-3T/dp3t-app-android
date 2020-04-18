@@ -186,12 +186,12 @@ Hou je aan de hygiene- en gedragsregels."</string>
 
     <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
     <string name="push_exposed_text">"Open de app voor verdere informatie."</string>
-    <string name="onboarding_top_label_how">"Hoe werkt dat:"</string>
+    <string name="onboarding_top_label_how">"Hoe werkt het:"</string>
     <string name="onboarding_title_1">"Een stap verder"</string>
     <string name="onboarding_desc_1">"Met de Next Step App kunnen wij allemaal bijdragen om de verbreiding van COVID-19 in te dammen. De App helpt mensen die een besmetting hebben opgedaan om zich al vanaf de eerste symptomen te isoleren."</string>
     <string name="onboarding_title_2">"Automatisch
 en anoniem"</string>
-    <string name="onboarding_desc_2">"De App herkent ontmoetingen en slaat dezen anoniem en versleuteld op je apparaat op."</string>
+    <string name="onboarding_desc_2">"De App herkent ontmoetingen en slaat deze anoniem en versleuteld op je apparaat op."</string>
     <string name="onboarding_title_3">"Informeren"</string>
     <string name="onboarding_desc_3">"Bij een positieve test kun je de mensen die je ontmoet hebt anoniem informeren zodat zij de juiste maatregelen kunnen treffen."</string>
     <string name="onboarding_title_4">"Toestemmingen"</string>
@@ -200,7 +200,7 @@ en anoniem"</string>
     <string name="onboarding_desc_5">"Samen maken we de volgende stap uit de isolatie mogelijk."</string>
     <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de App toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de App locatie-authorisatie heeft.
 
-De App gebruikt echt geen toegang tot je locatie!"</string>
+De App gebruikt echter geen toegang tot je locatie!"</string>
     <string name="onboarding_android_battery_saving_info">"Om Tracing voortdurend op de achtergrond uit te voeren, moet accu-optimalisatie voor de App uitgeschakeld worden."</string>
     <string name="button_permission_location_android">"Locatie toestaan"</string>
     <string name="button_permission_location_granted_android">"Locatie toegestaan"</string>
@@ -243,7 +243,7 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
     <string name="foreground_service_notification_text">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
 
     <!-- Text, der angezeigt wird als Info für Leute die jemand positiv getesteten begegnet sind -->
-    <string name="exposed_info_support_text">"Als je vragen of tips nodig hebt, bel dan de Hotline."</string>
+    <string name="exposed_info_support_text">"Als je vragen hebt of aanwijzingen nodig hebt, bel dan de Hotline."</string>
 
     <!-- Button mit Support Telefonnummer -->
     <string name="exposed_info_tel_button_title">"+31 00 000 00 00"</string>
@@ -252,7 +252,7 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
     <string name="inform_code_title">"Code invoeren"</string>
 
     <!-- Inform: Code eingeben Subtext -->
-    <string name="inform_code_text">"Voer een code in, die je bij je testresultaat heb gekregen."</string>
+    <string name="inform_code_text">"Voer de code in, die je bij je testresultaat heb gekregen."</string>
 
     <!-- Inform: Code eingeben kein Code Button Text -->
     <string name="inform_code_no_code">"Geen code gekregen?"</string>
@@ -286,7 +286,7 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"De App herkent door middel van Bluetooth, preciezer gezegd Bluetooth Low Energy, onmoetingen met andere gebruikers. Een ontmoeting wordt door de App geregistreerd wanneer twee gebruikers voor een bepaalde tijd in elkaars buurt zijn, en na 21 dagen weer verwijderd."</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">"De App herkent door middel van Bluetooth, preciezer gezegd Bluetooth Low Energy, ontmoetingen met andere gebruikers. Een ontmoeting wordt door de App geregistreerd wanneer twee gebruikers voor een bepaalde tijd in elkaars buurt zijn, en na 21 dagen weer verwijderd."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
@@ -294,7 +294,7 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_data_explanation_text1">"Elke App heeft een dynamische ID die elke 15 minuten door middel van «HMAC(SHA256)» random aangemaakt. Zo blijft elke gebruiker anoniem."</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Elke App heeft een dynamische ID die elke 15 minuten door middel van «HMAC(SHA256)» random wordt aangemaakt. Zo blijft elke gebruiker anoniem."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
@@ -333,14 +333,14 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
     <string name="tracing_active_title">"Tracing actief"</string>
     <string name="tracing_active_text">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
     <string name="tracing_error_title">"Tracing niet actief"</string>
-    <string name="tracing_error_text">"Activeer Tracing en Bluetooth zodat ontmoetingen anoniem opgenomen kunnen worden."</string>
+    <string name="tracing_error_text">"Activeer Tracing en Bluetooth zodat ontmoetingen anoniem geregistreerd kunnen worden."</string>
 
     <!-- Meldungen: zusätzliche Info Titel -->
     <string name="meldungen_additional_info_title">"Wat betekent dat?"</string>
 
     <!-- Meldungen: Info Text 1 -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingketen doorbreken. Dat lukt als besmettelijke personen zicht isoleren. Maar: bij het nieuwe Coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ookal isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
+    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingsketen doorbreken. Dat lukt als besmettelijke personen zich isoleren. Maar: bij het nieuwe Coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ookal isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
     <!-- Fuzzy -->
