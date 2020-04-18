@@ -301,13 +301,13 @@ L'application n'accède jamais à votre position!"</string>
 - Offene Architektur / Protokoll und Spezifikation inkl. SDK für iOS und Android
 - Interoperabilität (Eigene App, eigenes Backend)
 - Open Source"</string>
-    <string name="reports_title_homescreen">"Messages"</string>
+    <string name="reports_title_homescreen">"Alertes"</string>
 
     <!-- Keine Meldungen Titel -->
-    <string name="meldungen_no_meldungen_title">"Aucun message"</string>
+    <string name="meldungen_no_meldungen_title">"Aucune alerte"</string>
 
     <!-- Keine Meldungen Text -->
-    <string name="meldungen_no_meldungen_text">"Vous serez informé si vous soupçonnez une éventuelle infection."</string>
+    <string name="meldungen_no_meldungen_text">"Vous serez alerté en cas de possibilité d'infection."</string>
 
     <!-- Push deaktiviert Titel -->
     <string name="push_deactivated_title">"Push désactivé"</string>
