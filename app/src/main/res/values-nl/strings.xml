@@ -304,97 +304,97 @@ De App gebruikt echt geen toegang tot je locatie!"</string>
 - Open architectuur / protocol an specificaties inclusief SDK voor iOS en Android
 - Interoperabiliteit (eigen App, eigen backend)
 - Open Source"</string>
-    <string name="reports_title_homescreen">"Meldungen"</string>
+    <string name="reports_title_homescreen">"Meldingen"</string>
 
     <!-- Keine Meldungen Titel -->
-    <string name="meldungen_no_meldungen_title">"Keine Meldungen"</string>
+    <string name="meldungen_no_meldungen_title">"Geen Meldingen"</string>
 
     <!-- Keine Meldungen Text -->
-    <string name="meldungen_no_meldungen_text">"Du wirst beim Verdacht auf eine mögliche Ansteckung informiert."</string>
+    <string name="meldungen_no_meldungen_text">"Je wordt bij verdenking van een mogelijke besmetting geïnformeerd."</string>
 
     <!-- Push deaktiviert Titel -->
-    <string name="push_deactivated_title">"Push deaktiviert"</string>
+    <string name="push_deactivated_title">"Push gedeactiveert"</string>
 
     <!-- Push deaktiviert Text -->
-    <string name="push_deactivated_text">"Erlaube Push Nachrichten, um bei einer Meldung direkt informiert zu werden."</string>
+    <string name="push_deactivated_text">"Sta pushberichten toe om bij een melding direct geïnformeerd te worden."</string>
 
     <!-- Hinweis Titel -->
-    <string name="hinweis_title">"Wichtiger Hinweis"</string>
+    <string name="hinweis_title">"Belangrijke opmerking"</string>
 
     <!-- Hinweis Text -->
     <!-- Fuzzy -->
-    <string name="hinweis_text">"Eine Person, der du begegnet bist, wurde positiv auf COVID-19 getestet."</string>
-    <string name="button_report_illness">"Erkrankung melden"</string>
-    <string name="meldungen_meldung_title">"Wichtiger Hinweis"</string>
+    <string name="hinweis_text">"Een persoon die je ontmoet hebt, is positief getest op COVID-19."</string>
+    <string name="button_report_illness">"Ziekte melden"</string>
+    <string name="meldungen_meldung_title">"Belangrijke opmerking"</string>
 
     <!-- Fuzzy -->
-    <string name="meldungen_meldung_text">"Eine Person, der du begegnet bist, wurde positiv auf COVID-19 getestet. Bitte informiere dich hier über die Verhaltensempfehlungen."</string>
-    <string name="meldungen_meldung_more_button">"Mehr erfahren"</string>
-    <string name="tracing_active_title">"Tracing aktiv"</string>
-    <string name="tracing_active_text">"Begegnungen werden anonym auf deinem Gerät gespeichert."</string>
-    <string name="tracing_error_title">"Tracing nicht aktiv"</string>
-    <string name="tracing_error_text">"Aktiviere Tracing und Bluetooth, damit Begegnungen anonym aufgezeichnet werden können."</string>
+    <string name="meldungen_meldung_text">"Een persoon die je ontmoet hebt, is positief getest op COVID-19. Informeer je alsjeblieft hier over de gedragsaanbevelingen."</string>
+    <string name="meldungen_meldung_more_button">"Kom meer te weten"</string>
+    <string name="tracing_active_title">"Tracing actief"</string>
+    <string name="tracing_active_text">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
+    <string name="tracing_error_title">"Tracing niet actief"</string>
+    <string name="tracing_error_text">"Activeer Tracing en Bluetooth zodat ontmoetingen anoniem opgenomen kunnen worden."</string>
 
     <!-- Meldungen: zusätzliche Info Titel -->
-    <string name="meldungen_additional_info_title">"Was bedeutet das?"</string>
+    <string name="meldungen_additional_info_title">"Wat betekent dat?"</string>
 
     <!-- Meldungen: Info Text 1 -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text1">"Um die Verbreitung eines Virus zu stoppen, muss man die Ansteckungsketten unterbrechen. Das gelingt, wenn man ansteckende Personen isoliert. Nur: Beim neuen Coronavirus gibt es ein Problem. Es kann sein, dass du bereits ansteckend bist, bevor du dich krank fühlst. So kann sich das Virus ausbreiten, obwohl sich Personen mit Symptomen selbst isolieren. Denn wir sind einen Schritt zu spät."</string>
+    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingketen doorbreken. Dat lukt als besmettelijke personen zicht isoleren. Maar: bij het nieuwe Coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ookal isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text2">"Deshalb sollen Kontakpersonen informiert werden. So können sie sich frühzeitig isolieren – noch bevor sie sich krank fühlen. Natürlich haben dann nicht alle Kontaktpersonen das Virus. Aber diejenigen, die es haben, geben es nicht weiter. So sind wir dem Virus einen Schritt voraus."</string>
+    <string name="meldungen_additional_info_text2">"Daarom moeten contactpersonen geïnformeerd worden. Dan kunnen zij zich vroegtijdig isoleren – nog voor dat zij zich ziek voelen. Natuurlijk hebben dan niet alle contactpersonen het virus. Maar degenen die het hebben geven het niet door. Zo zijn we het virus een stap voor."</string>
 
     <!-- Hinweis beim Eingabefeld für den Authentifizierungs-Code -->
     <string name="auth_code_input_hint">"000-000"</string>
 
     <!-- Meldungen: Info Titel -->
-    <string name="meldungen_additional_info_title2">"Wie soll ich mich verhalten?"</string>
+    <string name="meldungen_additional_info_title2">"Hoe moet ik mij gedragen?"</string>
 
     <!-- Meldungen: Text -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text3">"Experten vom BAG beraten Sie telefonisch.
+    <string name="meldungen_additional_info_text3">"Experts van de GGD kun je telefonisch raadplegen.
 
 Corona-Infoline
-+41 58 463 00 00"</string>
++31 xx xxx xx xx"</string>
 
     <!-- Meldungen: Jetzt anrufen -->
-    <string name="meldungen_call_button_title">"Jetzt anrufen"</string>
+    <string name="meldungen_call_button_title">"Nu bellen"</string>
 
     <!-- Bezeichnung für Beratungs-Hotline -->
     <string name="meldungen_hotline_label">"Corona-Infoline"</string>
 
     <!-- Label für Anrufen-Button -->
-    <string name="button_call_now">"Jetzt anrufen"</string>
+    <string name="button_call_now">"Nu bellen"</string>
 
     <!-- Telefon-Nummer für die Hotline -->
-    <string name="tel_hotline">"+41 58 463 00 00"</string>
+    <string name="tel_hotline">"+31 xx xxx xx xx"</string>
 
     <!-- Meldungen: Text ohne Hotline Info -->
-    <string name="meldungen_additional_info_text3_reduced">"Experten vom BAG beraten dich telefonisch."</string>
+    <string name="meldungen_additional_info_text3_reduced">"Experts van de GGD adviseren je telefonisch."</string>
 
     <!-- Fuzzy -->
-    <string name="meldungen_infected_title">"Infektion gemeldet"</string>
+    <string name="meldungen_infected_title">"Infectie gemeld"</string>
 
     <!-- Fuzzy -->
-    <string name="meldungen_infected_text">"Vielen Dank! Nutzer denen du begegnet bist, werden anonym informiert und können sich isolieren."</string>
-    <string name="foreground_service_notification_errors">"App kann zur Zeit nicht richtig funktionieren:"</string>
-    <string name="foreground_service_notification_error_network_sync">"beim Laden der Daten ist ein Fehler aufgetreten"</string>
-    <string name="foreground_service_notification_error_location_permission">"Standort Berechtigung fehlt (benötigt um auf Bluetooth zuzugreifen)"</string>
-    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth ist deaktiviert"</string>
-    <string name="foreground_service_notification_error_battery_optimization">"Akku Optimierung ist aktiviert (verhindert zuverlässiges Scanning im Hintergrund)"</string>
+    <string name="meldungen_infected_text">"Hartelijk bedankt! Gebruikers die je ontmoet hebt worden anoniem geïnformeerd en kunnen zich isoleren."</string>
+    <string name="foreground_service_notification_errors">"App kan momentel niet correct functioneren:"</string>
+    <string name="foreground_service_notification_error_network_sync">"bij het laden van data is een fout opgetreden"</string>
+    <string name="foreground_service_notification_error_location_permission">"Locatie-authorizatie mislukt (nodig om toegang tot Bluetooth te krijgen)"</string>
+    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is gedeactiveert"</string>
+    <string name="foreground_service_notification_error_battery_optimization">"Accu-optimalisatie is geactiveerd (voorkomt betrouwbare scanning op de achtergrond)"</string>
 
     <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
-    <string name="meldungen_hinweis_info_text1">"Dies bedeutet nicht, dass du angesteckt wurdest. Aber es ist wichtig, dass du dich über mögliche Massnahmen informierst."</string>
+    <string name="meldungen_hinweis_info_text1">"Dit betekent niet dat je besmet bent. Maar het is belangrijk dat je je over mogelijke maatregelen informeert."</string>
 
     <!-- Info-Text "Was bedeuteted das" für Person, die selbst bemeldet hat -->
     <!-- Fuzzy -->
-    <string name="meldungen_hinweis_info_text1_infected">"Dies bedeutet nicht, dass jemand angesteckt wurde. Aber es ist wichtig, dass jede Person, der du begegnet bist, sich über angemessene Massnahmen informieren kann."</string>
+    <string name="meldungen_hinweis_info_text1_infected">"Dit betekent niet dat iemand besmet is. Maar het is belangrijk dat alle personen die je ontmoet hebt, zich over redelijke maatregelen kan informeren."</string>
 
     <!-- Titel der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_title">"Vorschau Version"</string>
+    <string name="preview_warning_title">"Voorbeeld Versie"</string>
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">"Diese App dient als Vorschau, um die DP-3T Implementation zu zeigen. Es ist kein produktiv verwendbarer COVID-19 Tracer."</string>
+    <string name="preview_warning_text">"Deze App dient als voorbeeld, om de DP-3T implementatie te tonen. Het is geen productie-waardige COVID-19 Tracer."</string>
 </resources>
