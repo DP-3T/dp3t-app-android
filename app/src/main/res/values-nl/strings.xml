@@ -78,90 +78,90 @@ Ik wil daarom een mogelijke infectieketen voorkomen door de App personen die ik 
     <string name="inform_send_button_title">"Verzenden"</string>
 
     <!-- Informieren: Senden Text Symptome -->
-    <string name="inform_symptoms_send_text">"Ich leide an den zuvor erwähnten Symptomen, welche auf COVID-19 hindeuten können.
+    <string name="inform_symptoms_send_text">"Ik heb de genoemde symptomen, die op COVID-19 kunnen duiden.
 
-Ich möchte daher eine mögliche Infektionskette verhindern, indem die App Personen, denen ich begegnet bin, anonym benachrichtigt."</string>
+Ik wil daarom een mogelijke infectieketen voorkomen door de App personen die ik ontmoet heb te informeren."</string>
 
     <!-- Informieren: Danke -->
-    <string name="inform_send_thankyou">"DANKE!"</string>
-    <string name="inform_send_thankyou_text">"Deine Infos wurden übermittelt.
-Damit leistest du einen wichtigen Beitrag, die Verbreitung des Corona-Virus zu stoppen."</string>
+    <string name="inform_send_thankyou">"BEDANKT!"</string>
+    <string name="inform_send_thankyou_text">"Je informatie is verzonden.
+Daarmee lever je een belangrijke bijdrage om de verspreiding van het Corona-Virus te stoppen."</string>
 
     <!-- Symptome -->
-    <string name="inform_symptom_coughdry">"Husten (meist trocken)"</string>
+    <string name="inform_symptom_coughdry">"Hoesten (meestal droog)"</string>
 
     <!-- Symptom -->
-    <string name="inform_symptom_hals">"Halsschmerzen"</string>
+    <string name="inform_symptom_hals">"Keelpijn"</string>
 
     <!-- Symptom -->
-    <string name="inform_symptom_kurzatmigkeit">"Kurzatmigkeit"</string>
+    <string name="inform_symptom_kurzatmigkeit">"Kortademigheid"</string>
 
     <!-- Symptom -->
-    <string name="inform_symptom_fieber">"Fieber, Fiebergefühl"</string>
+    <string name="inform_symptom_fieber">"Koorst, koortsgevoel"</string>
 
     <!-- Symptom -->
-    <string name="inform_symptom_muskel">"Muskelschmerzen"</string>
+    <string name="inform_symptom_muskel">"Spierpijn"</string>
 
     <!-- Symptome -->
-    <string name="inform_no_symptom">"Keine der aufgeführten Symptome"</string>
+    <string name="inform_no_symptom">"Geen van de vermelde symptomen"</string>
 
     <!-- Text in toast when downloading pdf -->
-    <string name="downloading_pdf">"PDF wird heruntergeladen"</string>
+    <string name="downloading_pdf">"PDF wordt gedownload"</string>
 
     <!-- Inform: Empfehlung -->
-    <string name="inform_empfehlung">"Empfehlung"</string>
+    <string name="inform_empfehlung">"Aanbeveling"</string>
 
     <!-- Inform: Empfehlung Text -->
-    <string name="inform_empfehlung_subtext">"Eine medizinische Abklärung oder ein Labortest ist nicht angezeigt.
+    <string name="inform_empfehlung_subtext">"Een medische verklaring of labtest wordt niet weergeven.
 
-Halten Sie sich an die Hygiene- und Verhaltensregeln."</string>
+Hou je aan de hygiene- en gedragsregels."</string>
 
     <!-- Inform: Button Titel -->
-    <string name="inform_fertig_button_title">"Fertig"</string>
+    <string name="inform_fertig_button_title">"Klaar"</string>
 
     <!-- CSV wird heruntergeladen -->
-    <string name="downloading_csv">"CSV wird heruntergeladen"</string>
+    <string name="downloading_csv">"CSV wordt gedownload"</string>
     <string name="handshakes_heading_homescreen">" "</string>
-    <string name="handshakes_title_homescreen">"Begegnungen"</string>
+    <string name="handshakes_title_homescreen">"Ontmoetingen"</string>
     <string name="inform_heading_homescreen">" "</string>
-    <string name="inform_title_homescreen">"Verdacht auf eine Corona Erkrankung"</string>
-    <string name="inform_text_homescreen">"Informiere Personen, denen du begegnet bist, wenn du Symptome verspürst oder positiv getestet wurdest."</string>
-    <string name="inform_button_title">"Erkrankung melden"</string>
-    <string name="inform_button_title_again">"Erneut informieren"</string>
-    <string name="inform_last_meldung_text">"Letzte erfolgreiche Meldung am {date}"</string>
+    <string name="inform_title_homescreen">"Vermoedelijke Corona ziekte"</string>
+    <string name="inform_text_homescreen">"Informeer personen die je ontmoet hebt, als je symptomen voelt of positief getest wordt."</string>
+    <string name="inform_button_title">"Ziekte melden"</string>
+    <string name="inform_button_title_again">"Opnieuw informeren"</string>
+    <string name="inform_last_meldung_text">"Laatste succesvolle meldung op {date}"</string>
 
     <!-- Erstes Tab -->
-    <string name="tab_theapp_title">"Die App"</string>
+    <string name="tab_theapp_title">"De App"</string>
 
     <!-- Tab Titel -->
-    <string name="tab_aktuell_title">"Aktuell"</string>
+    <string name="tab_aktuell_title">"Actueel"</string>
 
     <!-- Tab Titel -->
-    <string name="tab_verhalten_title">"Verhalten"</string>
+    <string name="tab_verhalten_title">"Gedrag"</string>
 
     <!-- Tab Titel -->
-    <string name="tab_prinzip_title">"Prinzip"</string>
+    <string name="tab_prinzip_title">"Principes"</string>
 
     <!-- Abbrechen -->
-    <string name="cancel">"Abbrechen"</string>
+    <string name="cancel">"Annuleren"</string>
 
     <!-- Schliessen -->
-    <string name="close">"Schliessen"</string>
+    <string name="close">"Sluiten"</string>
 
     <!-- App Name ohne COVID-19 -->
     <string name="app_name_star">"Next Step"</string>
 
     <!-- Info Text ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_info_label_star">"Zur Zeit hat kein Nutzer, der kürzlich in deiner Nähe war, ein Signal aktiviert."</string>
+    <string name="homescreen_handshakes_module_info_label_star">"Op dit moment heeft geen gebruiker, die onlangs in jouw buurt was, een signaal geactiveerd."</string>
 
     <!-- Text bei aktivierung ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_gemeldet_label_star">"Ein Nutzer, der kürzlich in deiner Nähe war, hat ein Signal aktiviert."</string>
+    <string name="homescreen_handshakes_module_gemeldet_label_star">"Een gebruiker die onlangs in jouw buurt was heeft een signaal geactiveerd."</string>
 
     <!-- Informieren Titel ohne COVID-19 -->
     <string name="inform_title_homescreen_star">"Broadcast"</string>
 
     <!-- Informieren Info Text ohne COVID-19 -->
-    <string name="inform_text_homescreen_star">"Sende ein Signal an Nutzer, denen du kürzlich begegnet bist."</string>
+    <string name="inform_text_homescreen_star">"Stuur een signaal naar gebruikers die je onlangs ontmoet hebt."</string>
 
     <!-- Übertitel für Broadcast ohne COVID-19 -->
     <string name="inform_heading_homescreen_star">" "</string>
@@ -170,34 +170,34 @@ Halten Sie sich an die Hygiene- und Verhaltensregeln."</string>
     <string name="inform_broadcast_title_star">"Broadcast"</string>
 
     <!-- Text für Broadcast ohne COVID-19 -->
-    <string name="inform_broadcast_long_text_star">"Sende ein Signal an alle Nutzer, die kürzlich in deiner Nähe waren. Dadurch werden weder deine Position noch private Daten veröffentlicht."</string>
+    <string name="inform_broadcast_long_text_star">"Stuur een signaal naar alle gebruikers die onlangs in de buurt waren. Daardoor worden noch je locatie noch je persoonlijke data openbaar gemaakt."</string>
 
     <!-- Danke Text ohne COVID-19 -->
-    <string name="inform_send_thankyou_text_star">"Dein Signal wurde übermittelt und ist für andere Nutzer nun sichtbar, falls sie kürzlich in deiner Nähe waren. Deine Position oder private Daten hast du dadurch nicht geteilt."</string>
+    <string name="inform_send_thankyou_text_star">"Jouw signaal is verzonden en is voor andere gebruikers zichtbaar, als je onlangs in de buurt was. Je locatie en persoonlijke data zijn daarbij niet openbaar gemaakt."</string>
 
     <!-- Begegnungen -->
-    <string name="begegnungen_counter_title">"Synchronisationen"</string>
-    <string name="inform_meldung_time">"Meldung vom {date}"</string>
-    <string name="homescreen_inform_module_gemeldet_label_star">"Du hast ein Signal an alle Nutzer gesendet, denen du in letzter Zeit begegnet bist."</string>
-    <string name="homescreen_inform_module_gemeldet_label">"Du hast alle Nutzer informiert, denen du in letzter Zeit begegnet bist."</string>
+    <string name="begegnungen_counter_title">"Synchronizaties"</string>
+    <string name="inform_meldung_time">"Melduing van {date}"</string>
+    <string name="homescreen_inform_module_gemeldet_label_star">"Je hebt een signaal verstuurd naar alle gebruikers die je in de laatste tijd bent tegengekomen."</string>
+    <string name="homescreen_inform_module_gemeldet_label">"Je hebt alle gebruikers geinformeerd die je in de laatste tijd bent tegengekomen."</string>
 
     <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
-    <string name="push_exposed_title">"Neue Informationen verfügbar"</string>
+    <string name="push_exposed_title">"Nieuwe informatie beschikbaar"</string>
 
     <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
-    <string name="push_exposed_text">"Bitte öffne die App für weitere Informationen."</string>
-    <string name="onboarding_top_label_how">"Wie funktioniert das:"</string>
-    <string name="onboarding_title_1">"Einen Schritt voraus"</string>
-    <string name="onboarding_desc_1">"Mit der Next Step App können wir alle dazu beitragen, die Verbreitung von COVID-19 einzudämmen. Die App hilft infizierten, sich bereits vor den ersten Symptomen zu isolieren."</string>
+    <string name="push_exposed_text">"Open de app voor verdere informatie."</string>
+    <string name="onboarding_top_label_how">"Hoe werkt dat:"</string>
+    <string name="onboarding_title_1">"Een stap verder"</string>
+    <string name="onboarding_desc_1">"Met de Next Step App kunnen wij allemaal bijdragen om de verbreiding van COVID-19 in te dammen. De App helpt mensen die een besmetting hebben opgedaan om zich al vanaf de eerste symptomen te isoleren."</string>
     <string name="onboarding_title_2">"Automatisch
-und anonym"</string>
-    <string name="onboarding_desc_2">"Die App erkennt Begegnungen und speichert diese anonym und verschlüsselt auf deinem Gerät."</string>
-    <string name="onboarding_title_3">"Informieren"</string>
-    <string name="onboarding_desc_3">"Bei einem positiven Test kannst du deine Begegnungen anonym informieren, damit diese die richtigen Massnahmen treffen können."</string>
-    <string name="onboarding_title_4">"Berechtigungen"</string>
-    <string name="onboarding_desc_4">"Bitte stimme noch diesen Berechtigungen zu, damit die App richtig funktioniert."</string>
+en anoniem"</string>
+    <string name="onboarding_desc_2">"De App herkent ontmoetingen en slaat dezen anoniem en versleuteld op je apparaat op."</string>
+    <string name="onboarding_title_3">"Informeren"</string>
+    <string name="onboarding_desc_3">"Bij een positieve test kun je de mensen die je ontmoet hebt anoniem informeren zodat zij de juiste maatregelen kunnen treffen."</string>
+    <string name="onboarding_title_4">"Toestemmingen"</string>
+    <string name="onboarding_desc_4">"Geef alsjeblieft de volgende toestemmingen zodat de App correct werkt."</string>
     <string name="onboarding_title_5">"Next Step"</string>
-    <string name="onboarding_desc_5">"Gemeinsam können wir den nächsten Schritt aus der Isolation schaffen."</string>
+    <string name="onboarding_desc_5">"Samen maken we de volgende stap uit de isolatie mogelijk."</string>
     <string name="onboarding_android_location_permission_info">"Das Tracing funktioniert über Bluetooth Low Energy Technologie, deshalb braucht die App Zugriff auf Bluetooth. Auf Android ist es aber nur möglich, auf Bluetooth zuzugreifen, wenn die App Standort Berechtigung hat.
 
 Die App greift aber nie auf deinen Standort zu!"</string>
