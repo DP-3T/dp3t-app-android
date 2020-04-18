@@ -198,111 +198,111 @@ en anoniem"</string>
     <string name="onboarding_desc_4">"Geef alsjeblieft de volgende toestemmingen zodat de App correct werkt."</string>
     <string name="onboarding_title_5">"Next Step"</string>
     <string name="onboarding_desc_5">"Samen maken we de volgende stap uit de isolatie mogelijk."</string>
-    <string name="onboarding_android_location_permission_info">"Das Tracing funktioniert über Bluetooth Low Energy Technologie, deshalb braucht die App Zugriff auf Bluetooth. Auf Android ist es aber nur möglich, auf Bluetooth zuzugreifen, wenn die App Standort Berechtigung hat.
+    <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de App toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de App locatie-authorisatie heeft.
 
-Die App greift aber nie auf deinen Standort zu!"</string>
-    <string name="onboarding_android_battery_saving_info">"Damit wir das Tracing durchgehend im Hintergrund machen können, muss die Akku Optimierung für unsere App ausgeschaltet werden."</string>
-    <string name="button_permission_location_android">"Ortung erlauben"</string>
-    <string name="button_permission_location_granted_android">"Ortung erlaubt"</string>
+De App gebruikt echt geen toegang tot je locatie!"</string>
+    <string name="onboarding_android_battery_saving_info">"Om Tracing voortdurend op de achtergrond uit te voeren, moet accu-optimalisatie voor de App uitgeschakeld worden."</string>
+    <string name="button_permission_location_android">"Locatie toestaan"</string>
+    <string name="button_permission_location_granted_android">"Locatie toegestaan"</string>
     <string name="button_ok">"ok"</string>
-    <string name="activate_bluetooth_button">"Bluetooth aktivieren"</string>
-    <string name="activate_push_button">"Push aktivieren"</string>
-    <string name="bluetooth_activated_label">"Bluetooth aktiviert"</string>
-    <string name="push_activated_label">"Push aktiviert"</string>
-    <string name="onboarding_continue_button">"Weiter"</string>
-    <string name="onboarding_continue_without_button">"Weiter ohne Berechtigungen"</string>
-    <string name="onboarding_continue_without_popup_text">"Willst du wirklich fortfahren? Die App funktioniert nicht komplett, wenn sie die nötigen Berechtigungen nicht hat."</string>
-    <string name="onboarding_continue_without_popup_abort">"Abbrechen"</string>
-    <string name="onboarding_continue_without_popup_continue">"Fortfahren"</string>
-    <string name="onboarding_finish_button">"Fertig"</string>
-    <string name="button_battery_optimization">"Akku-Optimierung deaktivieren"</string>
-    <string name="button_battery_optimization_deactivated">"Akku-Optimierung deaktiviert"</string>
+    <string name="activate_bluetooth_button">"Bluetooth activeren"</string>
+    <string name="activate_push_button">"Push activeren"</string>
+    <string name="bluetooth_activated_label">"Bluetooth geactiveert"</string>
+    <string name="push_activated_label">"Push geactiveert"</string>
+    <string name="onboarding_continue_button">"Verder"</string>
+    <string name="onboarding_continue_without_button">"Verder zonder toestemmingen"</string>
+    <string name="onboarding_continue_without_popup_text">"Wil je echt verder? De App functioneert niet volledig als je de nodige toestemmingen niet geeft."</string>
+    <string name="onboarding_continue_without_popup_abort">"Afbreken"</string>
+    <string name="onboarding_continue_without_popup_continue">"Verder"</string>
+    <string name="onboarding_finish_button">"Klaar"</string>
+    <string name="button_battery_optimization">"Accu-optimalisatie deactiveren"</string>
+    <string name="button_battery_optimization_deactivated">"Accu-optimalisatie gedeactiveerd"</string>
 
     <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
-    <string name="homescreen_handshakes_module_info_label_nosymptoms">"Hier wird angezeigt, wenn Personen, denen du begegnet bist, über COVID-19 informieren."</string>
+    <string name="homescreen_handshakes_module_info_label_nosymptoms">"Hier zie je of personen die je bent tegengekomen over COVID-19 informeren."</string>
 
     <!-- Siehe inform_text_homescreen -->
-    <string name="inform_text_homescreen_nosymptoms">"Informiere Personen, denen du begegnet bist anonym, wenn du positiv auf COVID-19 getestet wurdest."</string>
+    <string name="inform_text_homescreen_nosymptoms">"Informeer personen die je tegengekomen bent anoniem als je positief op COVID-19 getest wordt."</string>
 
     <!-- Unerwarteter Fehler -->
-    <string name="unexpected_error_title">"Ein unerwarteter Fehler ist aufgetreten ({ERROR})."</string>
+    <string name="unexpected_error_title">"Er is een onverwachte fout opgetreden ({ERROR})."</string>
 
     <!-- Bluetooth Fehlermeldung -->
-    <string name="bluetooth_turned_off">"Die App funktioniert nicht, weil Bluetooth ausgeschaltet ist."</string>
+    <string name="bluetooth_turned_off">"De App werkt niet als Bluetooth uitgeschakeld is."</string>
 
     <!-- Bluetooth Permission Fehler -->
-    <string name="bluetooth_permission_turned_off">"Die App funktioniert nicht, weil die Bluetooth Berechtigung nicht gegeben ist."</string>
+    <string name="bluetooth_permission_turned_off">"De App werkt niet als er geen toestemming voor Bluetooth gegeven is."</string>
 
     <!-- Permission Text für Bluetooth -->
-    <string name="NSBluetoothPeripheralUsageDescription">"Begegnungen werden über Bluetooth energiesparend im Hintergrund erkannt."</string>
+    <string name="NSBluetoothPeripheralUsageDescription">"Ontmoetingen worden door Bluetooth energie-efficiënt op de achtergrond herkent."</string>
 
     <!-- Bluetooth Permission Text für iOS -->
-    <string name="NSBluetoothAlwaysUsageDescription">"Begegnungen werden über Bluetooth energiesparend im Hintergrund erkannt."</string>
+    <string name="NSBluetoothAlwaysUsageDescription">"Ontmoetingen worden door Bluetooth energie-efficiënt op de achtergrond herkent."</string>
 
     <!-- Text der bei Android in der permanenten Notification immer angezeigt wird -->
-    <string name="foreground_service_notification_text">"Begegnungen werden anonym auf deinem Gerät gespeichert."</string>
+    <string name="foreground_service_notification_text">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
 
     <!-- Text, der angezeigt wird als Info für Leute die jemand positiv getesteten begegnet sind -->
-    <string name="exposed_info_support_text">"Wenn du Fragen hast oder Empfehlungen brauchst, ruf die Hotline an."</string>
+    <string name="exposed_info_support_text">"Als je vragen of tips nodig hebt, bel dan de Hotline."</string>
 
     <!-- Button mit Support Telefonnummer -->
-    <string name="exposed_info_tel_button_title">"+41 00 000 00 00"</string>
+    <string name="exposed_info_tel_button_title">"+31 00 000 00 00"</string>
 
     <!-- Inform: Titel der Code abschicken Seite -->
-    <string name="inform_code_title">"Code eingeben"</string>
+    <string name="inform_code_title">"Code invoeren"</string>
 
     <!-- Inform: Code eingeben Subtext -->
-    <string name="inform_code_text">"Gib den Code ein, den du mit deinem Testergebnis erhalten hast."</string>
+    <string name="inform_code_text">"Voer een code in, die je bij je testresultaat heb gekregen."</string>
 
     <!-- Inform: Code eingeben kein Code Button Text -->
-    <string name="inform_code_no_code">"Keinen Code erhalten?"</string>
+    <string name="inform_code_no_code">"Geen code gekregen?"</string>
 
     <!-- hint for filter tags in log-search -->
-    <string name="logs_filter_tags">"Tag-Filter (kommagetrennt)"</string>
+    <string name="logs_filter_tags">"Tag-Filter (komma-gescheiden)"</string>
 
     <!-- Titel des Bluetooth Control -->
     <string name="bluetooth_setting_title">"Tracing"</string>
 
     <!-- Text beim Bluetooth Control -->
-    <string name="bluetooth_setting_text">"Begegnungen erkennen"</string>
+    <string name="bluetooth_setting_text">"Ontmoetingen herkennen"</string>
 
     <!-- Bluetooth Control: Tracking aktiv -->
-    <string name="bluetooth_setting_tracking_active">"Tracing aktiv"</string>
+    <string name="bluetooth_setting_tracking_active">"Tracing actief"</string>
 
     <!-- Bluetooth Control: Tracking Aktiv Subtext -->
-    <string name="bluetooth_setting_tracking_active_subtext">"Begegnungen werden anonym auf deinem Gerät gespeichert."</string>
+    <string name="bluetooth_setting_tracking_active_subtext">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
 
     <!-- Bluetooth Control: Tracking deaktiviert -->
-    <string name="bluetooth_setting_tracking_inactive">"Tracing deaktiviert"</string>
+    <string name="bluetooth_setting_tracking_inactive">"Tracing gedeactiveerd"</string>
 
     <!-- Bluetooth Control: Tracking deaktiviert Subtext -->
-    <string name="bluetooth_setting_tracking_inactive_subtext">"Erlaube Bluetooth, damit Begegnungen anonym gespeichert werden können."</string>
+    <string name="bluetooth_setting_tracking_inactive_subtext">"Bluetooth toestaan zodat ontmoetingen op je apparaat kunnen worden opgeslagen."</string>
 
     <!-- Bluetooth Setting: Titel unten -->
-    <string name="bluetooth_setting_tracking_explanation_title">"Wie funktioniert das Tracing?"</string>
+    <string name="bluetooth_setting_tracking_explanation_title">"Hoe werkt Tracing?"</string>
 
     <!-- Bluetooth Setting Text unten -->
-    <string name="bluetooth_setting_data_explanation_title">"Sind meine Daten sicher?"</string>
+    <string name="bluetooth_setting_data_explanation_title">"Is mijn data veilig?"</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"Die App erkennt mittels Bluetooth, genauer gesagt Bluetooth Low Energy, Begegnungen mit anderen Nutzern. Eine Begegnung wird durch die App registriert, wenn zwei Nutzer sich für eine bestimmte Zeit in der Nähe aufhalten, und nach 21 Tagen wieder gelöscht."</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">"De App herkent door middel van Bluetooth, preciezer gezegd Bluetooth Low Energy, onmoetingen met andere gebruikers. Een ontmoeting wordt door de App geregistreerd wanneer twee gebruikers voor een bepaalde tijd in elkaars buurt zijn, en na 21 dagen weer verwijderd."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_tracking_explanation_text2">"Eine Begegnung mit einem anderen Nutzer wird nur lokal auf deinem Smartphone gespeichert."</string>
+    <string name="bluetooth_setting_tracking_explanation_text2">"Een ontmoeting met een andere gebruiker wordt alleen lokaal op je Smartphone opgeslagen."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_data_explanation_text1">"Jede App hat eine dynamische ID, die alle 15 Minuten mittels «HMAC(SHA256)» zufällig generiert wird. So bleibt jeder Nutzer anonym."</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Elke App heeft een dynamische ID die elke 15 minuten door middel van «HMAC(SHA256)» random aangemaakt. Zo blijft elke gebruiker anoniem."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_data_explanation_text2">"Wichtige Eigenschaften:
-- Kein Location-Tracking
-- Keine Analytics oder Advertising Dienste
-- Offene Architektur / Protokoll und Spezifikation inkl. SDK für iOS und Android
-- Interoperabilität (Eigene App, eigenes Backend)
+    <string name="bluetooth_setting_data_explanation_text2">"Belangrijke eigenschappen:
+- geen Locatie-Tracking
+- Geen analytica of advertentiediensten
+- Open architectuur / protocol an specificaties inclusief SDK voor iOS en Android
+- Interoperabiliteit (eigen App, eigen backend)
 - Open Source"</string>
     <string name="reports_title_homescreen">"Meldungen"</string>
 
