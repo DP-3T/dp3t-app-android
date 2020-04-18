@@ -207,8 +207,8 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
     <string name="button_ok">"ok"</string>
     <string name="activate_bluetooth_button">"Bluetooth activeren"</string>
     <string name="activate_push_button">"Push activeren"</string>
-    <string name="bluetooth_activated_label">"Bluetooth geactiveert"</string>
-    <string name="push_activated_label">"Push geactiveert"</string>
+    <string name="bluetooth_activated_label">"Bluetooth geactiveerd"</string>
+    <string name="push_activated_label">"Push geactiveerd"</string>
     <string name="onboarding_continue_button">"Verder"</string>
     <string name="onboarding_continue_without_button">"Verder zonder toestemmingen"</string>
     <string name="onboarding_continue_without_popup_text">"Wil je echt verder? De App functioneert niet volledig als je de nodige toestemmingen niet geeft."</string>
@@ -313,7 +313,7 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
     <string name="meldungen_no_meldungen_text">"Je wordt bij verdenking van een mogelijke besmetting geïnformeerd."</string>
 
     <!-- Push deaktiviert Titel -->
-    <string name="push_deactivated_title">"Push gedeactiveert"</string>
+    <string name="push_deactivated_title">"Push gedeactiveerd"</string>
 
     <!-- Push deaktiviert Text -->
     <string name="push_deactivated_text">"Sta pushberichten toe om bij een melding direct geïnformeerd te worden."</string>
@@ -382,7 +382,7 @@ Corona-Infoline
     <string name="foreground_service_notification_errors">"App kan momentel niet correct functioneren:"</string>
     <string name="foreground_service_notification_error_network_sync">"bij het laden van data is een fout opgetreden"</string>
     <string name="foreground_service_notification_error_location_permission">"Locatie-authorizatie mislukt (nodig om toegang tot Bluetooth te krijgen)"</string>
-    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is gedeactiveert"</string>
+    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is gedeactiveerd"</string>
     <string name="foreground_service_notification_error_battery_optimization">"Accu-optimalisatie is geactiveerd (voorkomt betrouwbare scanning op de achtergrond)"</string>
 
     <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
