@@ -340,7 +340,7 @@ De app gebruikt echter geen toegang tot je locatie!"</string>
 
     <!-- Meldungen: Info Text 1 -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingsketen doorbreken. Dat lukt als besmettelijke personen zich isoleren. Maar: bij het nieuwe coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ook al isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
+    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus te stoppen moeten we de besmettingsketen doorbreken. Dat lukt als besmettelijke personen zich isoleren. Maar: bij het nieuwe coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ook al isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
     <!-- Fuzzy -->
@@ -379,7 +379,7 @@ Corona infolijn
 
     <!-- Fuzzy -->
     <string name="meldungen_infected_text">"Hartelijk bedankt! Gebruikers die je ontmoet hebt worden anoniem geïnformeerd en kunnen zich isoleren."</string>
-    <string name="foreground_service_notification_errors">"App kan momentel niet correct functioneren:"</string>
+    <string name="foreground_service_notification_errors">"App kan momenteel niet correct functioneren:"</string>
     <string name="foreground_service_notification_error_network_sync">"bij het laden van data is een fout opgetreden"</string>
     <string name="foreground_service_notification_error_location_permission">"Locatie-autorisatie mislukt (nodig om toegang tot Bluetooth te krijgen)"</string>
     <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is gedeactiveerd"</string>
