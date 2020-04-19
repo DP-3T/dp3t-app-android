@@ -21,7 +21,7 @@
     <string name="menu_item_info">"Info"</string>
 
     <!-- Title of the menu item tracking -->
-    <string name="menu_item_tracking">"Traciamento"</string>
+    <string name="menu_item_tracking">Tracciamento</string>
 
     <!-- Loading View: Erneut laden -->
     <string name="loading_view_reload">"Ricarica"</string>
@@ -30,10 +30,10 @@
     <string name="loading_view_error_title">"Errore"</string>
 
     <!-- Text on grant permission button -->
-    <string name="grant_permission_button">"Concedi autorizzazione"</string>
+    <string name="grant_permission_button">Concedi i permessi</string>
 
     <!-- Text on grant permission button if permission is granted -->
-    <string name="granted_permission_button">"Autorizzazione concessa"</string>
+    <string name="granted_permission_button">Permessi concessi</string>
 
     <!-- Sprachen-Key -->
     <string name="language_key">"it"</string>
@@ -60,17 +60,15 @@
     <string name="inform_button_positive_title">"I test sono risultati positivi"</string>
 
     <!-- Inform Button Positiv -->
-    <string name="inform_button_positive_text">"Sono stato recentemente testato positivo"</string>
+    <string name="inform_button_positive_text">Recentemente sono risultato positivo al test</string>
     <string name="what_to_do_button">"Cosa devo fare ?"</string>
-    <string name="homescreen_handshakes_module_gemeldet_label">"Una persona che hai recentemente incontrato è stata trovata positiva al COVID-19"</string>
+    <string name="homescreen_handshakes_module_gemeldet_label">Una persona che hai incontrato è risultata positiva al COVID-19.</string>
 
     <!-- Inform-Flow -->
     <string name="inform_continue_button">"Avanti"</string>
 
     <!-- Informieren: Positive Testergebnis -->
-    <string name="inform_positive_long_text">"Sono stato recentemente testato positivo al COVID-19.
-
-Volgio evitare una potenziale infezione permettando alla app di contattare in forma anonuma le persone che ho recentemente incontrato."</string>
+    <string name="inform_positive_long_text">Sono risultato positivo al COVID-19.\n\nVoglio evitare potenziali infezioni permettendo all\'app di contattare in forma anonima le persone che ho incontrato.</string>
 
     <!-- Ich leide an einem oder mehreren der folgenden Symptome: -->
     <string name="inform_symptom_starttext">"Soffro di uno dei seguenti sintomi :"</string>
@@ -79,14 +77,11 @@ Volgio evitare una potenziale infezione permettando alla app di contattare in fo
     <string name="inform_send_button_title">"Invia"</string>
 
     <!-- Informieren: Senden Text Symptome -->
-    <string name="inform_symptoms_send_text">"Soffro dei sintomi elencati, che possono essere attribuiti al COVID-19.
-
-Volgio evitare una potenziale infezione permettando alla app di contattare in forma anonuma le persone che ho recentemente incontrato."</string>
+    <string name="inform_symptoms_send_text">Soffro dei sintomi elencati, che possono essere attribuiti al COVID-19.\n\nVoglio evitare potenziali infezioni permettendo all\'app di contattare in forma anonima le persone che ho incontrato.</string>
 
     <!-- Informieren: Danke -->
     <string name="inform_send_thankyou">"GRAZIE !"</string>
-    <string name="inform_send_thankyou_text">"Le informazioni sono state trasmesse.
-Stai dando un importante contributo a impedire la diffusione del COVID-19. "</string>
+    <string name="inform_send_thankyou_text">Le informazioni sono state trasmesse.\nStai dando un importante contributo per impedire la diffusione del COVID-19.\n\n</string>
 
     <!-- Symptome -->
     <string name="inform_symptom_coughdry">"Tosse (prevalentemente secca)"</string>
@@ -113,9 +108,7 @@ Stai dando un importante contributo a impedire la diffusione del COVID-19. "</st
     <string name="inform_empfehlung">"Raccomandazioni"</string>
 
     <!-- Inform: Empfehlung Text -->
-    <string name="inform_empfehlung_subtext">"Un controllo medico o un test di laboratiorio al momento non è consigliato.
-
-Continua a praticare le misure di distanziamento sociale e igeniche come richiesto."</string>
+    <string name="inform_empfehlung_subtext">Un controllo medico o un test di laboratorio al momento non è consigliato.\n\nContinua a praticare le misure di distanziamento sociale e igieniche come richiesto.\n\n.</string>
 
     <!-- Inform: Button Titel -->
     <string name="inform_fertig_button_title">"Fatto"</string>
@@ -126,7 +119,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="handshakes_title_homescreen">"Incontri"</string>
     <string name="inform_heading_homescreen">" "</string>
     <string name="inform_title_homescreen">"Sospetto COVID-19"</string>
-    <string name="inform_text_homescreen">"Informa le persone che hai recentemente incontrato che hai i sintomi o il test al COVID-19 è risultato positivo."</string>
+    <string name="inform_text_homescreen">Informa le persone che hai incontrato che hai i sintomi o che il test da COVID-19 è risultato positivo.</string>
     <string name="inform_button_title">"Segnala adesso"</string>
     <string name="inform_button_title_again">"Aggiorna la segnalazione"</string>
     <string name="inform_last_meldung_text">"Ultima segnalazione effettuata {date}"</string>
@@ -156,7 +149,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="homescreen_handshakes_module_info_label_star">"Non ci sono segnalazioni di contatti con persone infette."</string>
 
     <!-- Text bei aktivierung ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_gemeldet_label_star">"Una persona con cui sei stato recentemente in conttato ha inviato una segnalazione."</string>
+    <string name="homescreen_handshakes_module_gemeldet_label_star">Una persona con cui sei stato in contatto ha inviato una segnalazione.</string>
 
     <!-- Informieren Titel ohne COVID-19 -->
     <string name="inform_title_homescreen_star">"Broadcast"</string>
@@ -195,9 +188,9 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="onboarding_title_4">Autorizzazioni</string>
     <string name="onboarding_desc_4">Questa app necessita delle seguenti autorizzazioni per funzionare correttamente.</string>
     <string name="onboarding_title_5">"Next Step"</string>
-    <string name="onboarding_desc_5">Insieme possiamo adare anvanti e termitanre l\'isolamento.</string>
-    <string name="onboarding_android_location_permission_info">Il tracciamento èeffettuato tramite Bluetooth Low Energy. L\'applicazione richiede che il Bluetooth venga tenuto attivo sul tuo telefono. Su Android l\'app necessita anche del permesso \"Posizione\" per poter mantenere attivo il Bluetooth. Nessuna posizione verrà comunque registrata.</string>
-    <string name="onboarding_android_battery_saving_info">"Damit wir das Tracing durchgehend im Hintergrund machen können, muss die Akku Optimierung für unsere App ausgeschaltet werden."</string>
+    <string name="onboarding_desc_5">Insieme possiamo andare avanti e terminare l\'isolamento.</string>
+    <string name="onboarding_android_location_permission_info">Il tracciamento è effettuato tramite Bluetooth Low Energy. L\'applicazione richiede che il Bluetooth venga tenuto attivo sul tuo telefono. Su Android l\'app necessita anche del permesso \"Posizione\" per poter mantenere attivo il Bluetooth. Nessuna posizione verrà comunque registrata.</string>
+    <string name="onboarding_android_battery_saving_info">Disattiva l\'ottimizzazione della durata batteria per permettere il tracciamento in background.</string>
     <string name="button_permission_location_android">Permetti il tracciamento</string>
     <string name="button_permission_location_granted_android">Tracciamento permesso</string>
     <string name="button_ok">"ok"</string>
@@ -211,8 +204,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="onboarding_continue_without_popup_abort">Annulla</string>
     <string name="onboarding_continue_without_popup_continue">Continua</string>
     <string name="onboarding_finish_button">Fatto</string>
-    <string name="button_battery_optimization">Disattiva l\'ottimizzazione batteria</string>
-    <string name="button_battery_optimization_deactivated">Ottimizzazione batteria disattivata</string>
+    <string name="button_battery_optimization_deactivated">"Ottimizzazione della batteria disattivata  "</string>
 
     <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
     <string name="homescreen_handshakes_module_info_label_nosymptoms">Quì verrai informato se hai avuto contatti con persone che sono state testate positive al COVID-19.</string>
@@ -221,7 +213,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="inform_text_homescreen_nosymptoms">Se sei stato testato positivo al COVID-19, Informa le persone con cui sei venuto in contatto.</string>
 
     <!-- Unerwarteter Fehler -->
-    <string name="unexpected_error_title">Errore sconoscutio ({ERROR}).</string>
+    <string name="unexpected_error_title">Errore sconosciuto ({ERROR}).</string>
 
     <!-- Bluetooth Fehlermeldung -->
     <string name="bluetooth_turned_off">L\'app non sta funzionando, per cortesia attivare il Bluetooth.</string>
@@ -284,7 +276,6 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="bluetooth_setting_tracking_explanation_text2">I contatti sono salvati esclusivamente sul tuo telefono.</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_data_explanation_text1">Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ongi 15 minuti per garantire l\'anonimato.</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <string name="bluetooth_setting_data_explanation_text2">Caratteristiche importanti :\n- Nessun tracciamento di posizione\n- Nessun tracciamento di marketing ne pubblicità\n- Architettura aperta, protocollo, specifiche e SDK pubblicati\n- Completa interoperabilità\n- Open Source</string>
@@ -309,7 +300,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="hinweis_text">Una persona con cui hai avuto contatto è stata testata positiva al COVID-19</string>
     <string name="button_report_illness">Condividi i sintomi</string>
     <string name="meldungen_meldung_title">Note</string>
-    <string name="meldungen_meldung_text">Una persona con cui hai avuto contatto è stata testata positiva al COVID-19. Leggi le informazioni e le raccomandazioni qui.</string>
+    <string name="meldungen_meldung_text">Una persona con cui hai avuto contatto è risultata positiva al COVID-19. Leggi le informazioni e le raccomandazioni qui.</string>
     <string name="meldungen_meldung_more_button">Più informazioni</string>
     <string name="tracing_active_title">Tracciamento attivo</string>
     <string name="tracing_active_text">Gli incontri sono registrati in forma anonima sul tuo device.</string>
@@ -320,7 +311,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="meldungen_additional_info_title">Cosa vuol dire ?</string>
 
     <!-- Meldungen: Info Text 1 -->
-    <string name="meldungen_additional_info_text1">Per bloccare il virus bisogna interrompere la catena di trasmissione. Questo si può fare isolando le persone contagiose. Con il COVID-19 le persone possono infette possono essere contagiose prima di mostrare i sintomi, il che sigifica che possono trasmettere il virus senza saperlo. Se solo le persone con sintomi vengono isolate il virus continuerà a trasmettersi. Dobbiame stare un passo avanti !</string>
+    <string name="meldungen_additional_info_text1">Per bloccare il virus bisogna interrompere la catena di trasmissione. Questo si può fare isolando le persone contaggiate. Con il COVID-19 le persone infette possono trasmettere il virus prima di mostrare i sintomi, il che significa che possono infettare senza saperlo. Questo permette al virus di propagarsi anche se le persone con i sintomi si isolano. Dobbiamo stare un passo avanti !</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
 
@@ -349,7 +340,7 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="meldungen_infected_title">Infezione segnalata</string>
     <string name="meldungen_infected_text">Grazie ! Le persone informate in via anonima si potranno isolare interrompendo la catena di contagio.</string>
     <string name="foreground_service_notification_error_network_sync">"Errore caricando i dati "</string>
-    <string name="foreground_service_notification_error_bluetooth_disabled">Bluetooth è disattivato</string>
+    <string name="foreground_service_notification_error_bluetooth_disabled">Bluetooth è stato disattivato</string>
     <string name="foreground_service_notification_error_battery_optimization">L\'ottimizzazione della battaeria è attivata e impedisce la scansione in background</string>
 
     <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
@@ -367,9 +358,11 @@ Continua a praticare le misure di distanziamento sociale e igeniche come richies
     <string name="onboarding_desc_3">In caso di test positivo pupi informare in forma anonuma tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
     <string name="exposed_info_support_text">Per qualunque informazione o raccomandazione, potete chiamare</string>
     <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
-    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatto con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE (Bluetooth Low Energy) dp3t-app riesce a fare una scansione con altri dispositivi che stanno eseguendo l\'app in background. Questi incontri vengono salvati se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
     <string name="meldungen_additional_info_text2">Quindi le persone che sono venute in contatto con un infetto devono essere informate, così da potersi isolare prima di mostrare i sintomi. Non tutti quelli venuti in contatto con un infetto hanno il virus, ma quelli che ce l\'hanno lo passeranno. Il trucco è stare un passo avanti.</string>
     <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono "</string>
     <string name="foreground_service_notification_errors">L\'app non funziona correttamente al momento :</string>
     <string name="foreground_service_notification_error_location_permission">I permessi di \"posizione\" sono necessari per attivare la funzionalità Bluetooth</string>
+    <string name="button_battery_optimization">"Disattiva l'ottimizzazione della durata batteria  "</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ogni 15 minuti per garantire l'anonimato.  "</string>
 </resources>
