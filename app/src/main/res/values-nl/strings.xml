@@ -198,7 +198,7 @@ en anoniem"</string>
     <string name="onboarding_desc_4">"Geef alsjeblieft de volgende toestemmingen zodat de app correct werkt."</string>
     <string name="onboarding_title_5">"Next Step"</string>
     <string name="onboarding_desc_5">"Samen maken we de volgende stap uit de isolatie mogelijk."</string>
-    <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de app toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de App locatie-autorisatie heeft.
+    <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de app toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de app locatie-autorisatie heeft.
 
 De app gebruikt echter geen toegang tot je locatie!"</string>
     <string name="onboarding_android_battery_saving_info">"Om Tracing voortdurend op de achtergrond uit te voeren, moet accu-optimalisatie voor de app uitgeschakeld worden."</string>
