@@ -298,12 +298,12 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_data_explanation_text2">"Belangrijke eigenschappen:
-- geen Locatie-Tracking
-- Geen analytica of advertentiediensten
-- Open architectuur / protocol an specificaties inclusief SDK voor iOS en Android
-- Interoperabiliteit (eigen App, eigen backend)
-- Open Source"</string>
+    <string name="bluetooth_setting_data_explanation_text2">"Belangrijkste eigenschappen:
+- geen locatie tracking
+- geen analytica en advertentiediensten
+- open architectuur, open protocol en specificaties inclusief SDK voor iOS en Android
+- interoperabiliteit (eigen App, eigen backend)
+- open source"</string>
     <string name="reports_title_homescreen">"Meldingen"</string>
 
     <!-- Keine Meldungen Titel -->
