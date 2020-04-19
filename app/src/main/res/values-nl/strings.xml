@@ -40,7 +40,7 @@
     <!-- Force Update Alert Titel -->
     <string name="force_update_title">"Update"</string>
     <string name="homescreen_handshakes_module_count_info_label">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
-    <string name="homescreen_handshakes_module_count_label_format">"{count} in de laatste 48h"</string>
+    <string name="homescreen_handshakes_module_count_label_format">"{count} in de laatste 48 uur"</string>
     <string name="homescreen_handshakes_module_info_label">"Hier wordt informatie over jouw ontmoetingen gerelateerd aan COVID-19 getoond."</string>
 
     <!-- Informieren Titel -->
