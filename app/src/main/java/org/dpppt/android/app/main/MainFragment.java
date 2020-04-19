@@ -7,9 +7,11 @@
 package org.dpppt.android.app.main;
 
 import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,7 +19,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
 
-import org.dpppt.android.app.main.model.AppState;
 import org.dpppt.android.app.main.views.HeaderView;
 import org.dpppt.android.sdk.TracingStatus;
 
@@ -50,6 +51,7 @@ public class MainFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		setupHeader(view);
 		setupCards(view);
+		setupBuildInfo(view);
 	}
 
 	@Override
@@ -124,4 +126,8 @@ public class MainFragment extends Fragment {
 				});
 	}
 
+	private void setupBuildInfo(View view) {
+		TextView buildInfoView = view.findViewById(R.id.build_info);
+		buildInfoView.setText(Build.VERSION.INCREMENTAL);
+	}
 }

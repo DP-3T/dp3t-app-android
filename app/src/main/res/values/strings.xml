@@ -380,4 +380,7 @@ Coronavirus Infoline
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
     <string name="preview_warning_text">"This app was built as a preview to demonstrate the DP-3T implementation. It is not a final COVID-19 tracer."</string>
+
+    <!-- Build info -->
+    <string name="build_info">"THIS IS BUILD INFO PLACEHOLDER"</string>
 </resources>
