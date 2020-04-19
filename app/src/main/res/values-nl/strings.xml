@@ -69,7 +69,7 @@
     <!-- Informieren: Positive Testergebnis -->
     <string name="inform_positive_long_text">"Ik ben onlangs positief getest op COVID-19.
 
-Ik wil daarom een mogelijke infectieketen voorkomen door de App personen die ik ontmoet heb te informeren."</string>
+Ik wil daarom een mogelijke infectieketen voorkomen door de app personen die ik ontmoet heb te informeren."</string>
 
     <!-- Ich leide an einem oder mehreren der folgenden Symptome: -->
     <string name="inform_symptom_starttext">"Ik heb één of meerdere van de volgende symptomen:"</string>
@@ -80,12 +80,12 @@ Ik wil daarom een mogelijke infectieketen voorkomen door de App personen die ik 
     <!-- Informieren: Senden Text Symptome -->
     <string name="inform_symptoms_send_text">"Ik heb de genoemde symptomen, die op COVID-19 kunnen duiden.
 
-Ik wil daarom een mogelijke infectieketen voorkomen door de App personen die ik ontmoet heb te informeren."</string>
+Ik wil daarom een mogelijke infectieketen voorkomen door de app personen die ik ontmoet heb te informeren."</string>
 
     <!-- Informieren: Danke -->
     <string name="inform_send_thankyou">"BEDANKT!"</string>
     <string name="inform_send_thankyou_text">"Je informatie is verzonden.
-Daarmee lever je een belangrijke bijdrage om de verspreiding van het Corona-Virus te stoppen."</string>
+Daarmee lever je een belangrijke bijdrage om de verspreiding van het coronavirus te stoppen."</string>
 
     <!-- Symptome -->
     <string name="inform_symptom_coughdry">"Hoesten (meestal droog)"</string>
@@ -114,7 +114,7 @@ Daarmee lever je een belangrijke bijdrage om de verspreiding van het Corona-Viru
     <!-- Inform: Empfehlung Text -->
     <string name="inform_empfehlung_subtext">"Een medische verklaring of labtest wordt niet weergeven.
 
-Hou je aan de hygiene- en gedragsregels."</string>
+Hou je aan de hygiëne- en gedragsregels."</string>
 
     <!-- Inform: Button Titel -->
     <string name="inform_fertig_button_title">"Klaar"</string>
@@ -124,7 +124,7 @@ Hou je aan de hygiene- en gedragsregels."</string>
     <string name="handshakes_heading_homescreen">" "</string>
     <string name="handshakes_title_homescreen">"Ontmoetingen"</string>
     <string name="inform_heading_homescreen">" "</string>
-    <string name="inform_title_homescreen">"Vermoedelijke Corona ziekte"</string>
+    <string name="inform_title_homescreen">"Vermoedelijke coronaziekte"</string>
     <string name="inform_text_homescreen">"Informeer personen die je ontmoet hebt, als je symptomen voelt of positief getest wordt."</string>
     <string name="inform_button_title">"Ziekte melden"</string>
     <string name="inform_button_title_again">"Opnieuw informeren"</string>
@@ -177,7 +177,7 @@ Hou je aan de hygiene- en gedragsregels."</string>
 
     <!-- Begegnungen -->
     <string name="begegnungen_counter_title">"Synchronizaties"</string>
-    <string name="inform_meldung_time">"Melduing van {date}"</string>
+    <string name="inform_meldung_time">"Melding van {date}"</string>
     <string name="homescreen_inform_module_gemeldet_label_star">"Je hebt een signaal verstuurd naar alle gebruikers die je in de laatste tijd bent tegengekomen."</string>
     <string name="homescreen_inform_module_gemeldet_label">"Je hebt alle gebruikers geinformeerd die je in de laatste tijd bent tegengekomen."</string>
 
@@ -188,30 +188,30 @@ Hou je aan de hygiene- en gedragsregels."</string>
     <string name="push_exposed_text">"Open de app voor verdere informatie."</string>
     <string name="onboarding_top_label_how">"Hoe werkt het:"</string>
     <string name="onboarding_title_1">"Een stap verder"</string>
-    <string name="onboarding_desc_1">"Met de Next Step App kunnen wij allemaal bijdragen om de verbreiding van COVID-19 in te dammen. De App helpt mensen die een besmetting hebben opgedaan om zich al vanaf de eerste symptomen te isoleren."</string>
+    <string name="onboarding_desc_1">"Met de Next Step app kunnen wij allemaal bijdragen om de verbreiding van COVID-19 in te dammen. De app helpt mensen die een besmetting hebben opgedaan om zich al vanaf de eerste symptomen te isoleren."</string>
     <string name="onboarding_title_2">"Automatisch
 en anoniem"</string>
-    <string name="onboarding_desc_2">"De App herkent ontmoetingen en slaat deze anoniem en versleuteld op je apparaat op."</string>
+    <string name="onboarding_desc_2">"De app herkent ontmoetingen en slaat deze anoniem en versleuteld op je apparaat op."</string>
     <string name="onboarding_title_3">"Informeren"</string>
     <string name="onboarding_desc_3">"Bij een positieve test kun je de mensen die je ontmoet hebt anoniem informeren zodat zij de juiste maatregelen kunnen treffen."</string>
     <string name="onboarding_title_4">"Toestemmingen"</string>
-    <string name="onboarding_desc_4">"Geef alsjeblieft de volgende toestemmingen zodat de App correct werkt."</string>
+    <string name="onboarding_desc_4">"Geef alsjeblieft de volgende toestemmingen zodat de app correct werkt."</string>
     <string name="onboarding_title_5">"Next Step"</string>
     <string name="onboarding_desc_5">"Samen maken we de volgende stap uit de isolatie mogelijk."</string>
-    <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de App toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de App locatie-authorisatie heeft.
+    <string name="onboarding_android_location_permission_info">"Tracing werkt door middel van Bluetooth Low Energy Technology, daarom heeft de app toegang tot Bluetooth nodig. Op Android is dat alleen mogelijk als de App locatie-autorisatie heeft.
 
-De App gebruikt echter geen toegang tot je locatie!"</string>
-    <string name="onboarding_android_battery_saving_info">"Om Tracing voortdurend op de achtergrond uit te voeren, moet accu-optimalisatie voor de App uitgeschakeld worden."</string>
+De app gebruikt echter geen toegang tot je locatie!"</string>
+    <string name="onboarding_android_battery_saving_info">"Om Tracing voortdurend op de achtergrond uit te voeren, moet accu-optimalisatie voor de app uitgeschakeld worden."</string>
     <string name="button_permission_location_android">"Locatie toestaan"</string>
     <string name="button_permission_location_granted_android">"Locatie toegestaan"</string>
-    <string name="button_ok">"ok"</string>
+    <string name="button_ok">"OK"</string>
     <string name="activate_bluetooth_button">"Bluetooth activeren"</string>
-    <string name="activate_push_button">"Push activeren"</string>
+    <string name="activate_push_button">"Pushberichten activeren"</string>
     <string name="bluetooth_activated_label">"Bluetooth geactiveerd"</string>
     <string name="push_activated_label">"Push geactiveerd"</string>
     <string name="onboarding_continue_button">"Verder"</string>
     <string name="onboarding_continue_without_button">"Verder zonder toestemmingen"</string>
-    <string name="onboarding_continue_without_popup_text">"Wil je echt verder? De App functioneert niet volledig als je de nodige toestemmingen niet geeft."</string>
+    <string name="onboarding_continue_without_popup_text">"Wil je echt verder? De app functioneert niet volledig als je de nodige toestemmingen niet geeft."</string>
     <string name="onboarding_continue_without_popup_abort">"Afbreken"</string>
     <string name="onboarding_continue_without_popup_continue">"Verder"</string>
     <string name="onboarding_finish_button">"Klaar"</string>
@@ -228,22 +228,22 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
     <string name="unexpected_error_title">"Er is een onverwachte fout opgetreden ({ERROR})."</string>
 
     <!-- Bluetooth Fehlermeldung -->
-    <string name="bluetooth_turned_off">"De App werkt niet als Bluetooth uitgeschakeld is."</string>
+    <string name="bluetooth_turned_off">"De app werkt niet als Bluetooth uitgeschakeld is."</string>
 
     <!-- Bluetooth Permission Fehler -->
-    <string name="bluetooth_permission_turned_off">"De App werkt niet als er geen toestemming voor Bluetooth gegeven is."</string>
+    <string name="bluetooth_permission_turned_off">"De app werkt niet als er geen toestemming voor Bluetooth gegeven is."</string>
 
     <!-- Permission Text für Bluetooth -->
-    <string name="NSBluetoothPeripheralUsageDescription">"Ontmoetingen worden door Bluetooth energie-efficiënt op de achtergrond herkent."</string>
+    <string name="NSBluetoothPeripheralUsageDescription">"Ontmoetingen worden door Bluetooth energiezuinig op de achtergrond herkend."</string>
 
     <!-- Bluetooth Permission Text für iOS -->
-    <string name="NSBluetoothAlwaysUsageDescription">"Ontmoetingen worden door Bluetooth energie-efficiënt op de achtergrond herkent."</string>
+    <string name="NSBluetoothAlwaysUsageDescription">"Ontmoetingen worden door Bluetooth energiezuinig op de achtergrond herkend."</string>
 
     <!-- Text der bei Android in der permanenten Notification immer angezeigt wird -->
     <string name="foreground_service_notification_text">"Ontmoetingen worden anoniem op je apparaat opgeslagen."</string>
 
     <!-- Text, der angezeigt wird als Info für Leute die jemand positiv getesteten begegnet sind -->
-    <string name="exposed_info_support_text">"Als je vragen hebt of aanwijzingen nodig hebt, bel dan de Hotline."</string>
+    <string name="exposed_info_support_text">"Als je vragen hebt of aanwijzingen nodig hebt, bel dan de infolijn."</string>
 
     <!-- Button mit Support Telefonnummer -->
     <string name="exposed_info_tel_button_title">"+31 00 000 00 00"</string>
@@ -258,7 +258,7 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
     <string name="inform_code_no_code">"Geen code gekregen?"</string>
 
     <!-- hint for filter tags in log-search -->
-    <string name="logs_filter_tags">"Tag-Filter (komma-gescheiden)"</string>
+    <string name="logs_filter_tags">"Tagfilter (kommagescheiden)"</string>
 
     <!-- Titel des Bluetooth Control -->
     <string name="bluetooth_setting_title">"Tracing"</string>
@@ -286,15 +286,15 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"De App herkent door middel van Bluetooth, preciezer gezegd Bluetooth Low Energy, ontmoetingen met andere gebruikers. Een ontmoeting wordt door de App geregistreerd wanneer twee gebruikers voor een bepaalde tijd in elkaars buurt zijn, en na 21 dagen weer verwijderd."</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">"De app herkent door middel van Bluetooth, preciezer gezegd Bluetooth Low Energy, ontmoetingen met andere gebruikers. Een ontmoeting wordt door de app geregistreerd wanneer twee gebruikers voor een bepaalde tijd in elkaars buurt zijn, en na 21 dagen weer verwijderd."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_tracking_explanation_text2">"Een ontmoeting met een andere gebruiker wordt alleen lokaal op je Smartphone opgeslagen."</string>
+    <string name="bluetooth_setting_tracking_explanation_text2">"Een ontmoeting met een andere gebruiker wordt alleen lokaal op je smartphone opgeslagen."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
-    <string name="bluetooth_setting_data_explanation_text1">"Elke App heeft een dynamische ID die elke 15 minuten door middel van «HMAC(SHA256)» random wordt aangemaakt. Zo blijft elke gebruiker anoniem."</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Elke app heeft een dynamisch ID die elke 15 minuten door middel van «HMAC(SHA256)» random wordt aangemaakt. Zo blijft elke gebruiker anoniem."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <!-- Fuzzy -->
@@ -302,7 +302,7 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
 - geen locatie tracking
 - geen analytica en advertentiediensten
 - open architectuur, open protocol en specificaties inclusief SDK voor iOS en Android
-- interoperabiliteit (eigen App, eigen backend)
+- interoperabiliteit (eigen app, eigen backend)
 - open source"</string>
     <string name="reports_title_homescreen">"Meldingen"</string>
 
@@ -340,7 +340,7 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
 
     <!-- Meldungen: Info Text 1 -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingsketen doorbreken. Dat lukt als besmettelijke personen zich isoleren. Maar: bij het nieuwe Coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ookal isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
+    <string name="meldungen_additional_info_text1">"Om de verspreiding van een virus de stoppen moeten we de besmettingsketen doorbreken. Dat lukt als besmettelijke personen zich isoleren. Maar: bij het nieuwe coronavirus is er een probleem. Het kan voorkomen dat je al besmettelijk bent vóórdat je je ziek voelt. Zo kan het virus zich uitbreiden, ook al isoleren personen mét symptomen zich. Daardoor zijn we een stap te laat."</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
     <!-- Fuzzy -->
@@ -356,14 +356,14 @@ De App gebruikt echter geen toegang tot je locatie!"</string>
     <!-- Fuzzy -->
     <string name="meldungen_additional_info_text3">"Experts van de GGD kun je telefonisch raadplegen.
 
-Corona-Infoline
+Corona infolijn
 +31 xx xxx xx xx"</string>
 
     <!-- Meldungen: Jetzt anrufen -->
     <string name="meldungen_call_button_title">"Nu bellen"</string>
 
     <!-- Bezeichnung für Beratungs-Hotline -->
-    <string name="meldungen_hotline_label">"Corona-Infoline"</string>
+    <string name="meldungen_hotline_label">"Corona infolijn"</string>
 
     <!-- Label für Anrufen-Button -->
     <string name="button_call_now">"Nu bellen"</string>
@@ -381,12 +381,12 @@ Corona-Infoline
     <string name="meldungen_infected_text">"Hartelijk bedankt! Gebruikers die je ontmoet hebt worden anoniem geïnformeerd en kunnen zich isoleren."</string>
     <string name="foreground_service_notification_errors">"App kan momentel niet correct functioneren:"</string>
     <string name="foreground_service_notification_error_network_sync">"bij het laden van data is een fout opgetreden"</string>
-    <string name="foreground_service_notification_error_location_permission">"Locatie-authorizatie mislukt (nodig om toegang tot Bluetooth te krijgen)"</string>
+    <string name="foreground_service_notification_error_location_permission">"Locatie-autorisatie mislukt (nodig om toegang tot Bluetooth te krijgen)"</string>
     <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is gedeactiveerd"</string>
     <string name="foreground_service_notification_error_battery_optimization">"Accu-optimalisatie is geactiveerd (voorkomt betrouwbare scanning op de achtergrond)"</string>
 
     <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
-    <string name="meldungen_hinweis_info_text1">"Dit betekent niet dat je besmet bent. Maar het is belangrijk dat je je over mogelijke maatregelen informeert."</string>
+    <string name="meldungen_hinweis_info_text1">"Dit betekent niet dat je besmet bent. Maar het is belangrijk dat jij je over mogelijke maatregelen informeert."</string>
 
     <!-- Info-Text "Was bedeuteted das" für Person, die selbst bemeldet hat -->
     <!-- Fuzzy -->
@@ -396,5 +396,5 @@ Corona-Infoline
     <string name="preview_warning_title">"Voorbeeld Versie"</string>
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">"Deze App dient als voorbeeld, om de DP-3T implementatie te tonen. Het is geen productie-waardige COVID-19 Tracer."</string>
+    <string name="preview_warning_text">"Deze app dient als voorbeeld, om de DP-3T implementatie te tonen. Het is geen productie-waardige COVID-19 Tracer."</string>
 </resources>
