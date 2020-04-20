@@ -379,8 +379,8 @@ Corona-Infoline
     <string name="meldungen_hinweis_info_text1_infected">"Cela ne signifie pas que d'autres personnes n'ont pas été infectées. Mais il est important que tout personnes que vous recontriez puisse prendre les bonnes mesures."</string>
 
     <!-- Titel der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_title">"Preview version"</string>
+    <string name="preview_warning_title">"Version de démonstration"</string>
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">"Cette application a été développée comme démonstrateur pour DP-3T. Celle-ci n'est pas un traqueur final pour COVID-19."</string>
+    <string name="preview_warning_text">"Cette application est une version de démonstration de la mise en œuvre du DP-3T. Il ne s'agit pas d'un traceur COVID-19 fonctionnel."</string>
 </resources>
