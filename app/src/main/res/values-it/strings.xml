@@ -68,7 +68,7 @@
     <string name="inform_continue_button">"Avanti"</string>
 
     <!-- Informieren: Positive Testergebnis -->
-    <string name="inform_positive_long_text">Sono risultato positivo al COVID-19.\n\nVoglio evitare potenziali infezioni permettendo all\'app di contattare in forma anonima le persone che ho incontrato.</string>
+    <string name="inform_positive_long_text">Il test per il COVID-19 è risutlato positivo.  Voglio evitare potenziali infezioni permettendo all\'app di contattare in forma anonima le persone che ho incontrato.</string>
 
     <!-- Ich leide an einem oder mehreren der folgenden Symptome: -->
     <string name="inform_symptom_starttext">"Soffro di uno dei seguenti sintomi :"</string>
@@ -149,7 +149,7 @@
     <string name="homescreen_handshakes_module_info_label_star">"Non ci sono segnalazioni di contatti con persone infette."</string>
 
     <!-- Text bei aktivierung ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_gemeldet_label_star">Una persona con cui sei stato in contatto ha inviato una segnalazione.</string>
+    <string name="homescreen_handshakes_module_gemeldet_label_star">Una persona con cui hai avuto un contatto ha inviato una segnalazione.</string>
 
     <!-- Informieren Titel ohne COVID-19 -->
     <string name="inform_title_homescreen_star">"Broadcast"</string>
@@ -210,7 +210,7 @@
     <string name="homescreen_handshakes_module_info_label_nosymptoms">Qui verrai informato se hai avuto contatti con persone che sono state testate positive al COVID-19.</string>
 
     <!-- Siehe inform_text_homescreen -->
-    <string name="inform_text_homescreen_nosymptoms">Se sei stato testato positivo al COVID-19, Informa le persone con cui sei venuto in contatto.</string>
+    <string name="inform_text_homescreen_nosymptoms">Se il tuo test al COVID-19 è positivo, informa le persone con cui sei venuto in contatto.</string>
 
     <!-- Unerwarteter Fehler -->
     <string name="unexpected_error_title">Errore sconosciuto ({ERROR}).</string>
@@ -355,7 +355,7 @@
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
     <string name="preview_warning_text">Questa app è stata creata per dimostrare un implementazione di DP-3T.</string>
     <string name="onboarding_title_2">Automatica e anonima</string>
-    <string name="onboarding_desc_3">In caso di test positivo puoi informare in forma anonuma tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
+    <string name="onboarding_desc_3">In caso di test positivo puoi informare in forma anonima tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
     <string name="exposed_info_support_text">Per qualunque informazione o raccomandazione, potete chiamare</string>
     <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
     <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatti con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
