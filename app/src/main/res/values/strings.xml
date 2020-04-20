@@ -283,7 +283,7 @@ anonymous"</string>
     <string name="bluetooth_setting_data_explanation_title">"Is my data safe?"</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"Via BLE (Bluetooth Low Energy) the app recognizes ecounters with other users. Such encouters will be registered by the app, if two users stand close to each other for a certain time period, and are deleted after 21 days."</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">"Via BLE (Bluetooth Low Energy) the app recognizes encounters with other users. Such encounters will be registered by the app, if two users stand close to each other for a certain time period, and are deleted after 21 days."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <string name="bluetooth_setting_tracking_explanation_text2">"Encounters with other users are only saved locally on your smartphone."</string>

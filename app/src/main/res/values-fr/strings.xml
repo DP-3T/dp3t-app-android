@@ -286,20 +286,20 @@ L'application n'accède jamais à votre position!"</string>
     <string name="bluetooth_setting_data_explanation_title">"Mes données sont-elles en sécurité?"</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"Die App erkennt mittels Bluetooth, genauer gesagt Bluetooth Low Energy, Begegnungen mit anderen Nutzern. Eine Begegnung wird durch die App registriert, wenn zwei Nutzer sich für eine bestimmte Zeit in der Nähe aufhalten, und nach 21 Tagen wieder gelöscht."</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">"Via BLE (Bluetooth Low Energy), l'application reconnaît les rencontres avec d'autres utilisateurs. Ces rencontres seront enregistrées par l'application, si deux utilisateurs se tiennent proches l'un de l'autre pendant une certaine période de temps, et sont supprimées après 21 jours."</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_tracking_explanation_text2">"Eine Begegnung mit einem anderen Nutzer wird nur lokal auf deinem Smartphone gespeichert."</string>
+    <string name="bluetooth_setting_tracking_explanation_text2">"Une rencontre avec un autre utilisateur n'est enregistrée que localement sur votre smartphone."</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_data_explanation_text1">"Jede App hat eine dynamische ID, die alle 15 Minuten mittels «HMAC(SHA256)» zufällig generiert wird. So bleibt jeder Nutzer anonym."</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Chaque application a son propre ID dynamique qui est généré aléatoirement via «HMAC (SHA256)» et change toutes les 15 minutes. De cette façon, chaque utilisateur reste anonyme."</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_data_explanation_text2">"Wichtige Eigenschaften:
-- Kein Location-Tracking
-- Keine Analytics oder Advertising Dienste
-- Offene Architektur / Protokoll und Spezifikation inkl. SDK für iOS und Android
-- Interoperabilität (Eigene App, eigenes Backend)
+    <string name="bluetooth_setting_data_explanation_text2">"Caractéristiques importantes:
+- Aucun suivi de localisation
+- Aucune analyse ou publicité
+- Architecture / protocole ouvert et spécifications incl. SDK pour iOS et Android
+- Interopérabilité (propre application, propre backend)
 - Open Source"</string>
     <string name="reports_title_homescreen">"Messages"</string>
 
@@ -333,10 +333,10 @@ L'application n'accède jamais à votre position!"</string>
     <string name="meldungen_additional_info_title">"Qu'est-ce que cela signifie?"</string>
 
     <!-- Meldungen: Info Text 1 -->
-    <string name="meldungen_additional_info_text1">"Um die Verbreitung eines Virus zu stoppen, muss man die Ansteckungsketten unterbrechen. Das gelingt, wenn man ansteckende Personen isoliert. Nur: Beim neuen Coronavirus gibt es ein Problem. Es kann sein, dass du bereits ansteckend bist, bevor du dich krank fühlst. So kann sich das Virus ausbreiten, obwohl sich Personen mit Symptomen selbst isolieren. Denn wir sind einen Schritt zu spät."</string>
+    <string name="meldungen_additional_info_text1">"Pour arrêter une épidémie virale, vous devez rompre la chaîne de transmission. Vous pouvez le faire en isolant les personnes contagieuses. Seulement, il y a un problème avec COVID-19. Les personnes infectées peuvent être contagieuses avant d'avoir des symptômes, ce qui signifie: vous pouvez propager le virus sans le savoir. Si seules les personnes présentant des symptômes s'isolent, le virus peut encore se propager. Nous avons un pas de retard."</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
-    <string name="meldungen_additional_info_text2">"Deshalb sollen Kontakpersonen informiert werden. So können sie sich frühzeitig isolieren – noch bevor sie sich krank fühlen. Natürlich haben dann nicht alle Kontaktpersonen das Virus. Aber diejenigen, die es haben, geben es nicht weiter. So sind wir dem Virus einen Schritt voraus."</string>
+    <string name="meldungen_additional_info_text2">"Par conséquent, les contacts exposés doivent être informés. Ensuite, ils peuvent également s'isoler précocement tôt - avant de se sentir malades. Tous les contacts exposés n'auront pas le virus. Mais ceux qui l'auront ne le transmettront pas. L'astuce consiste à avoir une longueur d'avance."</string>
 
     <!-- Hinweis beim Eingabefeld für den Authentifizierungs-Code -->
     <string name="auth_code_input_hint">"000-000"</string>
@@ -345,42 +345,42 @@ L'application n'accède jamais à votre position!"</string>
     <string name="meldungen_additional_info_title2">"Wie soll ich mich verhalten?"</string>
 
     <!-- Meldungen: Text -->
-    <string name="meldungen_additional_info_text3">"Experten vom BAG beraten Sie telefonisch.
+    <string name="meldungen_additional_info_text3">"Des experts de l'OFSP vous donnent des conseils par téléphone.
 
 Corona-Infoline
 +41 58 463 00 00"</string>
 
     <!-- Meldungen: Jetzt anrufen -->
-    <string name="meldungen_call_button_title">"Jetzt anrufen"</string>
+    <string name="meldungen_call_button_title">"Appeler maintenant"</string>
 
     <!-- Bezeichnung für Beratungs-Hotline -->
     <string name="meldungen_hotline_label">"Corona-Infoline"</string>
 
     <!-- Label für Anrufen-Button -->
-    <string name="button_call_now">"Jetzt anrufen"</string>
+    <string name="button_call_now">"Appeler maintenant"</string>
 
     <!-- Telefon-Nummer für die Hotline -->
     <string name="tel_hotline">"+41 58 463 00 00"</string>
 
     <!-- Meldungen: Text ohne Hotline Info -->
-    <string name="meldungen_additional_info_text3_reduced">"Experten vom BAG beraten dich telefonisch."</string>
-    <string name="meldungen_infected_title">"Infektion gemeldet"</string>
-    <string name="meldungen_infected_text">"Vielen Dank! Nutzer denen du begegnet bist, werden anonym informiert und können sich isolieren."</string>
-    <string name="foreground_service_notification_errors">"App kann zur Zeit nicht richtig funktionieren:"</string>
-    <string name="foreground_service_notification_error_network_sync">"beim Laden der Daten ist ein Fehler aufgetreten"</string>
-    <string name="foreground_service_notification_error_location_permission">"Standort Berechtigung fehlt (benötigt um auf Bluetooth zuzugreifen)"</string>
-    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth ist deaktiviert"</string>
-    <string name="foreground_service_notification_error_battery_optimization">"Akku Optimierung ist aktiviert (verhindert zuverlässiges Scanning im Hintergrund)"</string>
+    <string name="meldungen_additional_info_text3_reduced">"Des experts de l'OFSP vous donnent des conseils par téléphone."</string>
+    <string name="meldungen_infected_title">"Infection reportée"</string>
+    <string name="meldungen_infected_text">"Merci beaucoup! Les personnes que vous avez rencontré sont informé de manière anonyme et peuvent s'isoler."</string>
+    <string name="foreground_service_notification_errors">"L'application ne peut fonctionner normalement pour le moment:"</string>
+    <string name="foreground_service_notification_error_network_sync">"Une erreur est survenue durant le chargement des données"</string>
+    <string name="foreground_service_notification_error_location_permission">"Persmission de localisation manquante (nécessaire pour l'utilisation du bluetooth)"</string>
+    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth désactivé"</string>
+    <string name="foreground_service_notification_error_battery_optimization">"L'optimisation de la batterie est activée (empêche le scannage en arrière-plan)"</string>
 
     <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
-    <string name="meldungen_hinweis_info_text1">"Dies bedeutet nicht, dass du angesteckt wurdest. Aber es ist wichtig, dass du dich über mögliche Massnahmen informierst."</string>
+    <string name="meldungen_hinweis_info_text1">"Cela ne signifie pas que vous avez été infecté. Mais il est important que vous preniez conscience des mesures adéquates."</string>
 
     <!-- Info-Text "Was bedeuteted das" für Person, die selbst bemeldet hat -->
-    <string name="meldungen_hinweis_info_text1_infected">"Dies bedeutet nicht, dass jemand angesteckt wurde. Aber es ist wichtig, dass jede Person, der du begegnet bist, sich über angemessene Massnahmen informieren kann."</string>
+    <string name="meldungen_hinweis_info_text1_infected">"Cela ne signifie pas que d'autres personnes n'ont pas été infectées. Mais il est important que tout personnes que vous recontriez puisse prendre les bonnes mesures."</string>
 
     <!-- Titel der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_title">"Vorschau Version"</string>
+    <string name="preview_warning_title">"Preview version"</string>
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">"Diese App dient als Vorschau, um die DP-3T Implementation zu zeigen. Es ist kein produktiv verwendbarer COVID-19 Tracer."</string>
+    <string name="preview_warning_text">"Cette application a été développée comme démonstrateur pour DP-3T. Celle-ci n'est pas un traqueur final pour COVID-19."</string>
 </resources>
