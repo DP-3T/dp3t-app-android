@@ -42,7 +42,7 @@
     <string name="force_update_title">"Aggiorna"</string>
     <string name="homescreen_handshakes_module_count_info_label">"Gli incontri sono memorizzati in forma anonima sul tuo telefono"</string>
     <string name="homescreen_handshakes_module_count_label_format">"{count} nelle ultime 48 ore"</string>
-    <string name="homescreen_handshakes_module_info_label">"Quì vedrai le informazioni sul COVID-19 delle persone che hai incontrato"</string>
+    <string name="homescreen_handshakes_module_info_label">"Qui vedrai le informazioni sul COVID-19 delle persone che hai incontrato"</string>
 
     <!-- Informieren Titel -->
     <string name="inform_title">"Ferma la catena di infezione"</string>
@@ -185,8 +185,8 @@
     <string name="onboarding_desc_1">Con l\'app Next Step tutti possiamo collaborare a limitare la diffusione del COVID-19. L\'app Next Step permette alle persone che sono state infettate di isolarsi prima di diventare sintomatiche.</string>
     <string name="onboarding_desc_2">Questa app registra i contatti con le altre persone e le registra in forma anonima e cifrata sul tuo telefono.</string>
     <string name="onboarding_title_3">Informazioni</string>
-    <string name="onboarding_title_4">Autorizzazioni</string>
-    <string name="onboarding_desc_4">Questa app necessita delle seguenti autorizzazioni per funzionare correttamente.</string>
+    <string name="onboarding_title_4">Permessi</string>
+    <string name="onboarding_desc_4">Questa app necessita delle seguenti permessi per funzionare correttamente.</string>
     <string name="onboarding_title_5">"Next Step"</string>
     <string name="onboarding_desc_5">Insieme possiamo andare avanti e terminare l\'isolamento.</string>
     <string name="onboarding_android_location_permission_info">Il tracciamento è effettuato tramite Bluetooth Low Energy. L\'applicazione richiede che il Bluetooth venga tenuto attivo sul tuo telefono. Su Android l\'app necessita anche del permesso \"Posizione\" per poter mantenere attivo il Bluetooth. Nessuna posizione verrà comunque registrata.</string>
@@ -199,15 +199,15 @@
     <string name="bluetooth_activated_label">Bluetooth attivato</string>
     <string name="push_activated_label">Notifiche push attivate</string>
     <string name="onboarding_continue_button">Avanti</string>
-    <string name="onboarding_continue_without_button">Continua senza autorizzazioni</string>
-    <string name="onboarding_continue_without_popup_text">Vuoi veramente continuare ? L\'app non potrà funzionare senza le necessarie autorizazzioni.</string>
+    <string name="onboarding_continue_without_button">Continua senza permessi</string>
+    <string name="onboarding_continue_without_popup_text">Vuoi veramente continuare ? L\'app non potrà funzionare senza le necessarie permessi.</string>
     <string name="onboarding_continue_without_popup_abort">Annulla</string>
     <string name="onboarding_continue_without_popup_continue">Continua</string>
     <string name="onboarding_finish_button">Fatto</string>
     <string name="button_battery_optimization_deactivated">"Ottimizzazione della batteria disattivata  "</string>
 
     <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
-    <string name="homescreen_handshakes_module_info_label_nosymptoms">Quì verrai informato se hai avuto contatti con persone che sono state testate positive al COVID-19.</string>
+    <string name="homescreen_handshakes_module_info_label_nosymptoms">Qui verrai informato se hai avuto contatti con persone che sono state testate positive al COVID-19.</string>
 
     <!-- Siehe inform_text_homescreen -->
     <string name="inform_text_homescreen_nosymptoms">Se sei stato testato positivo al COVID-19, Informa le persone con cui sei venuto in contatto.</string>
@@ -219,7 +219,7 @@
     <string name="bluetooth_turned_off">L\'app non sta funzionando, per cortesia attivare il Bluetooth.</string>
 
     <!-- Bluetooth Permission Fehler -->
-    <string name="bluetooth_permission_turned_off">L\'app non sta funzionando, l\'autorizzazione a utilizzare il Bluetooth è stata revocata.</string>
+    <string name="bluetooth_permission_turned_off">L\'app non sta funzionando, il permesso a utilizzare il Bluetooth è stata revocato.</string>
 
     <!-- Permission Text für Bluetooth -->
     <string name="NSBluetoothPeripheralUsageDescription">I contatti vengono riconosciuti via Bluetooth, in background e in modo da risparmiare batteria.</string>
@@ -355,10 +355,10 @@
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
     <string name="preview_warning_text">Questa app è stata creata per dimostrare un implementazione di DP-3T.</string>
     <string name="onboarding_title_2">Automatica e anonima</string>
-    <string name="onboarding_desc_3">In caso di test positivo pupi informare in forma anonuma tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
+    <string name="onboarding_desc_3">In caso di test positivo puoi informare in forma anonuma tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
     <string name="exposed_info_support_text">Per qualunque informazione o raccomandazione, potete chiamare</string>
     <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
-    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE (Bluetooth Low Energy) dp3t-app riesce a fare una scansione con altri dispositivi che stanno eseguendo l\'app in background. Questi incontri vengono salvati se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
+    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatti con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
     <string name="meldungen_additional_info_text2">Quindi le persone che sono venute in contatto con un infetto devono essere informate, così da potersi isolare prima di mostrare i sintomi. Non tutti quelli venuti in contatto con un infetto hanno il virus, ma quelli che ce l\'hanno lo passeranno. Il trucco è stare un passo avanti.</string>
     <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono "</string>
     <string name="foreground_service_notification_errors">L\'app non funziona correttamente al momento :</string>
