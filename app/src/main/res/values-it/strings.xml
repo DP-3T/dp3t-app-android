@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
-  -->
-
 <resources>
 
     <!-- Name der App -->
@@ -183,8 +177,10 @@
     <string name="onboarding_top_label_how">"Come funziona :"</string>
     <string name="onboarding_title_1">"Un passo avanti"</string>
     <string name="onboarding_desc_1">Con l\'app Next Step tutti possiamo collaborare a limitare la diffusione del COVID-19. L\'app Next Step permette alle persone che sono state infettate di isolarsi prima di diventare sintomatiche.</string>
+    <string name="onboarding_title_2">Automatica e anonima</string>
     <string name="onboarding_desc_2">Questa app registra i contatti con le altre persone e le registra in forma anonima e cifrata sul tuo telefono.</string>
     <string name="onboarding_title_3">Informazioni</string>
+    <string name="onboarding_desc_3">In caso di test positivo puoi informare in forma anonima tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
     <string name="onboarding_title_4">Permessi</string>
     <string name="onboarding_desc_4">Questa app necessita delle seguenti permessi per funzionare correttamente.</string>
     <string name="onboarding_title_5">"Next Step"</string>
@@ -204,6 +200,7 @@
     <string name="onboarding_continue_without_popup_abort">Annulla</string>
     <string name="onboarding_continue_without_popup_continue">Continua</string>
     <string name="onboarding_finish_button">Fatto</string>
+    <string name="button_battery_optimization">"Disattiva l'ottimizzazione della durata batteria  "</string>
     <string name="button_battery_optimization_deactivated">"Ottimizzazione della batteria disattivata"</string>
 
     <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
@@ -231,7 +228,8 @@
     <string name="foreground_service_notification_text">L\'app sta operando in background</string>
 
     <!-- Text, der angezeigt wird als Info für Leute die jemand positiv getesteten begegnet sind -->
-
+    <string name="exposed_info_support_text">Per qualunque informazione o raccomandazione, potete chiamare</string>
+ 
     <!-- Button mit Support Telefonnummer -->
     <string name="exposed_info_tel_button_title">+39 00 000 00 00</string>
 
@@ -251,6 +249,7 @@
     <string name="bluetooth_setting_title">Tracciamento</string>
 
     <!-- Text beim Bluetooth Control -->
+    <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
 
     <!-- Bluetooth Control: Tracking aktiv -->
     <string name="bluetooth_setting_tracking_active">Tracciamento attivo</string>
@@ -271,11 +270,13 @@
     <string name="bluetooth_setting_data_explanation_title">I miei dati personali sono al sicuro ?</string>
 
     <!-- Bluetooth Setting: Text unten -->
-
+    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatti con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
+ 
     <!-- Bluetooth Setting: Text unten -->
     <string name="bluetooth_setting_tracking_explanation_text2">I contatti sono salvati esclusivamente sul tuo telefono.</string>
 
     <!-- Bluetooth Setting: Text unten -->
+    <string name="bluetooth_setting_data_explanation_text1">"Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ogni 15 minuti per garantire l'anonimato."</string>
 
     <!-- Bluetooth Setting: Text unten -->
     <string name="bluetooth_setting_data_explanation_text2">Caratteristiche importanti :\n- Nessun tracciamento di posizione\n- Nessun tracciamento di marketing ne pubblicità\n- Architettura aperta, protocollo, specifiche e SDK pubblicati\n- Completa interoperabilità\n- Open Source</string>
@@ -314,6 +315,7 @@
     <string name="meldungen_additional_info_text1">Per bloccare il virus bisogna interrompere la catena di trasmissione. Questo si può fare isolando le persone contaggiate. Con il COVID-19 le persone infette possono trasmettere il virus prima di mostrare i sintomi, il che significa che possono infettare senza saperlo. Questo permette al virus di propagarsi anche se le persone con i sintomi si isolano. Dobbiamo stare un passo avanti !</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
+    <string name="meldungen_additional_info_text2">Quindi le persone che sono venute in contatto con un infetto devono essere informate, così da potersi isolare prima di mostrare i sintomi. Non tutti quelli venuti in contatto con un infetto hanno il virus, ma quelli che ce l\'hanno lo passeranno. Il trucco è stare un passo avanti.</string>
 
     <!-- Hinweis beim Eingabefeld für den Authentifizierungs-Code -->
     <string name="auth_code_input_hint">"000-000"</string>
@@ -337,9 +339,12 @@
     <string name="tel_hotline">+39 00 000 0000</string>
 
     <!-- Meldungen: Text ohne Hotline Info -->
+    <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono"</string>
     <string name="meldungen_infected_title">Infezione segnalata</string>
     <string name="meldungen_infected_text">Grazie ! Le persone informate in via anonima si potranno isolare interrompendo la catena di contagio.</string>
+    <string name="foreground_service_notification_errors">L\'app non funziona correttamente al momento :</string>
     <string name="foreground_service_notification_error_network_sync">"Errore durante la sincronizzazione dei dati"</string>
+    <string name="foreground_service_notification_error_location_permission">I permessi di \"posizione\" sono necessari per attivare la funzionalità Bluetooth</string>
     <string name="foreground_service_notification_error_bluetooth_disabled">Bluetooth è stato disattivato</string>
     <string name="foreground_service_notification_error_battery_optimization">L\'ottimizzazione della battaeria è attivata e impedisce la scansione in background</string>
 
@@ -353,16 +358,62 @@
     <string name="preview_warning_title">Versione preliminare</string>
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">Questa app è stata creata per dimostrare un implementazione di DP-3T.</string>
-    <string name="onboarding_title_2">Automatica e anonima</string>
-    <string name="onboarding_desc_3">In caso di test positivo puoi informare in forma anonima tutte le persone che hai incontrato, così che possano prendere le necessarie precauzioni.</string>
-    <string name="exposed_info_support_text">Per qualunque informazione o raccomandazione, potete chiamare</string>
-    <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
-    <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatti con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
-    <string name="meldungen_additional_info_text2">Quindi le persone che sono venute in contatto con un infetto devono essere informate, così da potersi isolare prima di mostrare i sintomi. Non tutti quelli venuti in contatto con un infetto hanno il virus, ma quelli che ce l\'hanno lo passeranno. Il trucco è stare un passo avanti.</string>
-    <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono"</string>
-    <string name="foreground_service_notification_errors">L\'app non funziona correttamente al momento :</string>
-    <string name="foreground_service_notification_error_location_permission">I permessi di \"posizione\" sono necessari per attivare la funzionalità Bluetooth</string>
-    <string name="button_battery_optimization">"Disattiva l'ottimizzazione della durata batteria  "</string>
-    <string name="bluetooth_setting_data_explanation_text1">"Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ogni 15 minuti per garantire l'anonimato."</string>
+    <string name="preview_warning_text">"Questa app è stata creata per dimostrare un implementazione di DP-3T. Non utilizzare come tracciatore COVID-19."</string>
+
+    <!-- Label auf dem Button, der zum Debug-Screen führt -->
+    <string name="debug_settings_title">"Impostazioni di debug"</string>
+
+    <!-- Titel für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_title">"Sovrascrivi lo stato dell'app"</string>
+
+    <!-- Erklärungstext für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_text">"Questa impostazione sovrascrive lo stato dell UI dell'app. La funzionalità di tracciamento non è interessata."</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Keine -->
+    <string name="debug_state_setting_option_none">"Nessuna sovrascrittura"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Gesund -->
+    <string name="debug_state_setting_option_ok">"Sano"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Einem positiven Kontakt ausgesetzt -->
+    <string name="debug_state_setting_option_exposed">"Positivo al test"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Selbst positiv getestet -->
+    <string name="debug_state_setting_option_infected">"Segnalato positivo"</string>
+
+    <!-- Titel für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_title">"Impostazioni SDK"</string>
+
+    <!-- Erklärungstext für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_text">"Stato corrente dell'SDK DP-3T."</string>
+
+    <!-- Bezeichnung für den aktiven SDK Status -->
+    <string name="debug_sdk_state_active">"In esecuzione"</string>
+
+    <!-- Bezeichnung für den inaktiven SDK Status -->
+    <string name="debug_sdk_state_inactive">"Non attivo"</string>
+
+    <!-- Bezeichnung für den letzen sync-Zeitpunkt -->
+    <string name="debug_sdk_state_last_synced">"Ultima sincronizzazione : "</string>
+
+    <!-- Bezeichnung für den Fall, bei dem der User selber als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_self_exposed">"Auto segnalato : "</string>
+
+    <!-- Bezeichnung für den Fall, bei dem ein Kontakt als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_contact_exposed">"Contatto segnalato : "</string>
+
+    <!-- Bezeichnung für die Anzahl bluetooth-handshakes, die ausgeführt wurden -->
+    <string name="debug_sdk_state_number_handshakes">"Numero di  handshakes : "</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'true' -->
+    <string name="debug_sdk_state_boolean_true">"Si"</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'false' -->
+    <string name="debug_sdk_state_boolean_false">"No"</string>
+
+    <!-- Button-Text für das Zurücksetzen des lokalen SDK Zustandes -->
+    <string name="debug_sdk_button_reset">"Ripristina SDK"</string>
+
+    <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
+    <string name="debug_sdk_reset_text">"Lo stato locale dell'SDK DP-3T è stato ripristinato."</string>
 </resources>

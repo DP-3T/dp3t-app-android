@@ -3,7 +3,6 @@
  * https://www.ubique.ch
  * Copyright (c) 2020. All rights reserved.
  */
-
 package org.dpppt.android.app.main;
 
 import android.app.Application;
@@ -21,11 +20,12 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.Collections;
 import java.util.List;
 
+import org.dpppt.android.app.debug.model.DebugAppState;
+import org.dpppt.android.app.main.model.AppState;
 import org.dpppt.android.app.util.DeviceFeatureHelper;
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.TracingStatus;
-
-import org.dpppt.android.app.main.model.AppState;
+import org.dpppt.android.app.debug.TracingStatusWrapper;
 
 public class TracingViewModel extends AndroidViewModel {
 
@@ -54,23 +54,21 @@ public class TracingViewModel extends AndroidViewModel {
 		}
 	};
 
+	private TracingStatusWrapper tracingStatusWrapper = new TracingStatusWrapper(DebugAppState.NONE);
+
 	public TracingViewModel(@NonNull Application application) {
 		super(application);
 
 		tracingStatusLiveData.observeForever(status -> {
 			tracingEnabledLiveData.setValue(status.isAdvertising() && status.isReceiving());
 			numberOfHandshakesLiveData.setValue(status.getNumberOfHandshakes());
-			exposedLiveData.setValue(new Pair<>(status.isReportedAsExposed(), status.wasContactExposed()));
+			tracingStatusWrapper.setStatus(status);
+
+			exposedLiveData.setValue(new Pair<>(tracingStatusWrapper.isReportedAsExposed(), tracingStatusWrapper.wasContactExposed()));
+
 			errorsLiveData.setValue(status.getErrors());
 
-			boolean hasError = status.getErrors().size() > 0 || !(status.isAdvertising() || status.isReceiving());
-			if (status.isReportedAsExposed() || status.wasContactExposed()) {
-				appStateLiveData.setValue(hasError ? AppState.EXPOSED_ERROR : AppState.EXPOSED);
-			} else if (hasError) {
-				appStateLiveData.setValue(AppState.ERROR);
-			} else {
-				appStateLiveData.setValue(AppState.TRACING);
-			}
+			appStateLiveData.setValue(tracingStatusWrapper.getAppState());
 		});
 
 		invalidateBluetoothState();
@@ -80,12 +78,18 @@ public class TracingViewModel extends AndroidViewModel {
 		application.registerReceiver(bluetoothReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
 	}
 
-	public void invalidateTracingStatus() {
+	public void resetSdk(Runnable onDeleteListener) {
+		if (tracingEnabledLiveData.getValue()) DP3T.stop(getApplication());
+		tracingStatusWrapper.setDebugAppState(DebugAppState.NONE);
+		DP3T.clearData(getApplication(), onDeleteListener);
+	}
+
+	void invalidateTracingStatus() {
 		TracingStatus status = DP3T.getStatus(getApplication());
 		tracingStatusLiveData.setValue(status);
 	}
 
-	public LiveData<Boolean> getTracingEnabledLiveData() {
+	LiveData<Boolean> getTracingEnabledLiveData() {
 		return tracingEnabledLiveData;
 	}
 
@@ -97,7 +101,7 @@ public class TracingViewModel extends AndroidViewModel {
 		return errorsLiveData;
 	}
 
-	public LiveData<AppState> getAppStateLiveData() {
+	LiveData<AppState> getAppStateLiveData() {
 		return appStateLiveData;
 	}
 
@@ -132,6 +136,14 @@ public class TracingViewModel extends AndroidViewModel {
 	protected void onCleared() {
 		getApplication().unregisterReceiver(tracingStatusBroadcastReceiver);
 		getApplication().unregisterReceiver(bluetoothReceiver);
+	}
+
+	public DebugAppState getDebugAppState() {
+		return tracingStatusWrapper.getDebugAppState();
+	}
+
+	public void setDebugAppState(DebugAppState debugAppState) {
+		tracingStatusWrapper.setDebugAppState(debugAppState);
 	}
 
 }
