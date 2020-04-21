@@ -163,6 +163,33 @@
 
 			</androidx.cardview.widget.CardView>
 
+			<androidx.cardview.widget.CardView
+				style="@style/NextStep.Card"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/spacing_medium_large">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/spacing_large"
+					android:layout_marginTop="@dimen/spacing_medium_large"
+					android:layout_marginRight="@dimen/spacing_large"
+					android:layout_marginBottom="@dimen/spacing_medium"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/build_info"
+						style="@style/NextStep.Text"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/build_info"
+						android:textColor="@color/grey_dark" />
+
+				</LinearLayout>
+
+			</androidx.cardview.widget.CardView>
+
 		</LinearLayout>
 
 	</ScrollView>

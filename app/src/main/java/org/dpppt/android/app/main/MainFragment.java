@@ -8,6 +8,7 @@ package org.dpppt.android.app.main;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -133,5 +134,4 @@ public class MainFragment extends Fragment {
 			debugButton.setVisibility(View.GONE);
 		}
 	}
-
 }

@@ -432,4 +432,7 @@ Coronavirus Infoline
 
     <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
     <string name="debug_sdk_reset_text">"The local data of the dp-3t sdk has been reset."</string>
+
+    <!-- Build info -->
+    <string name="build_info">"THIS IS BUILD INFO PLACEHOLDER"</string>
 </resources>

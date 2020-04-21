@@ -3,6 +3,7 @@ package org.dpppt.android.app.debug;
 import android.app.AlertDialog;
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -63,6 +64,7 @@ public class DebugFragment extends Fragment {
 
 		setupSdkViews(view);
 		setupStateOptions(view);
+		setupBuildInfo(view);
 	}
 
 	private void setupSdkViews(View view) {
@@ -108,6 +110,11 @@ public class DebugFragment extends Fragment {
 		});
 
 		updateRadioGroup(optionsGroup);
+	}
+
+	private void setupBuildInfo(View view) {
+		TextView buildInfoView = view.findViewById(R.id.build_info);
+		buildInfoView.setText(Build.VERSION.INCREMENTAL);
 	}
 
 	private void updateRadioGroup(RadioGroup optionsGroup) {
