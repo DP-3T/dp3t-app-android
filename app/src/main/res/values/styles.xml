@@ -115,6 +115,11 @@
 		<item name="android:background">@drawable/bg_button_outlined</item>
 	</style>
 
+	<style name="NextStep.Button.Outlined.Red">
+		<item name="android:textColor">@color/red_main</item>
+		<item name="android:background">@drawable/bg_button_outlined_red</item>
+	</style>
+
 	<style name="NextStep.Button.Red">
 		<item name="backgroundTint">@color/red_main</item>
 		<item name="android:backgroundTint">@color/red_main</item>
@@ -139,6 +144,12 @@
 	<style name="NextStep.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
 		<item name="android:thumbTint">@color/switch_tint_selector</item>
 		<item name="android:trackTint">@color/switch_tint_selector</item>
+	</style>
+
+	<style name="NextStep.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+		<item name="android:textAppearance">@style/NextStep.Text</item>
+		<item name="android:textColor">@color/dark_main</item>
+		<item name="android:paddingStart">@dimen/spacing_medium</item>
 	</style>
 
 </resources>

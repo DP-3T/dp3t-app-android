@@ -29,6 +29,7 @@
 	<color name="status_green">#2BD9C2</color>
 	<color name="status_green_bg">#D3F2EE</color>
 	<color name="status_red">@color/red_main</color>
+	<color name="status_red_bg">#FFE0E7</color>
 	<color name="status_blue">@color/blue_main</color>
 	<color name="status_arc">#1F000000</color>
 

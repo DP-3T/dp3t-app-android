@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
-  -->
-
 <resources>
 
     <!-- Name der App -->
@@ -380,6 +374,64 @@ Coronavirus Infoline
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
     <string name="preview_warning_text">"This app was built as a preview to demonstrate the DP-3T implementation. It is not a final COVID-19 tracer."</string>
+
+    <!-- Label auf dem Button, der zum Debug-Screen führt -->
+    <!-- Fuzzy -->
+    <string name="debug_settings_title">"Debug Settings"</string>
+
+    <!-- Titel für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_title">"Override app state"</string>
+
+    <!-- Erklärungstext für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_text">"This setting overrides the visual state of the app. The actual tracing functionality is not affected by it."</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Keine -->
+    <string name="debug_state_setting_option_none">"no override"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Gesund -->
+    <string name="debug_state_setting_option_ok">"healthy"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Einem positiven Kontakt ausgesetzt -->
+    <string name="debug_state_setting_option_exposed">"exposed to a positively tested contact"</string>
+
+    <!-- Einstellungs-Option zum überschreiben des App-Zustands: Selbst positiv getestet -->
+    <string name="debug_state_setting_option_infected">"reported self as positively tested"</string>
+
+    <!-- Titel für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_title">"Sdk state"</string>
+
+    <!-- Erklärungstext für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_text">"The current state of the dp-3t sdk."</string>
+
+    <!-- Bezeichnung für den aktiven SDK Status -->
+    <string name="debug_sdk_state_active">"is active"</string>
+
+    <!-- Bezeichnung für den inaktiven SDK Status -->
+    <string name="debug_sdk_state_inactive">"inactive"</string>
+
+    <!-- Bezeichnung für den letzen sync-Zeitpunkt -->
+    <string name="debug_sdk_state_last_synced">"last sync date: "</string>
+
+    <!-- Bezeichnung für den Fall, bei dem der User selber als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_self_exposed">"reported self: "</string>
+
+    <!-- Bezeichnung für den Fall, bei dem ein Kontakt als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_contact_exposed">"contact reported: "</string>
+
+    <!-- Bezeichnung für die Anzahl bluetooth-handshakes, die ausgeführt wurden -->
+    <string name="debug_sdk_state_number_handshakes">"number of handshakes: "</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'true' -->
+    <string name="debug_sdk_state_boolean_true">"true"</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'false' -->
+    <string name="debug_sdk_state_boolean_false">"false"</string>
+
+    <!-- Button-Text für das Zurücksetzen des lokalen SDK Zustandes -->
+    <string name="debug_sdk_button_reset">"reset sdk"</string>
+
+    <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
+    <string name="debug_sdk_reset_text">"The local data of the dp-3t sdk has been reset."</string>
 
     <!-- Build info -->
     <string name="build_info">"THIS IS BUILD INFO PLACEHOLDER"</string>
