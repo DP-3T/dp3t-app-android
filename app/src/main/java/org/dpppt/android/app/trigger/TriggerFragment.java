@@ -76,7 +76,7 @@ public class TriggerFragment extends Fragment {
 					new ExposeeAuthData(inputBase64), new CallbackListener<Void>() {
 						@Override
 						public void onSuccess(Void response) {
-							progressDialog.hide();
+							progressDialog.dismiss();
 							getParentFragmentManager().beginTransaction()
 									.replace(R.id.main_fragment_container, ThankYouFragment.newInstance())
 									.addToBackStack(ThankYouFragment.class.getCanonicalName())
@@ -85,7 +85,7 @@ public class TriggerFragment extends Fragment {
 
 						@Override
 						public void onError(Throwable throwable) {
-							progressDialog.hide();
+							progressDialog.dismiss();
 							String error;
 							error = getString(R.string.unexpected_error_title).replace("{ERROR}",
 									throwable instanceof ResponseException ? throwable.getMessage() :
