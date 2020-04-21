@@ -63,13 +63,15 @@ public class TracingViewModel extends AndroidViewModel {
 			exposedLiveData.setValue(new Pair<>(status.isReportedAsExposed(), status.wasContactExposed()));
 			errorsLiveData.setValue(status.getErrors());
 
-			boolean hasError = status.getErrors().size() > 0 || !(status.isAdvertising() || status.isReceiving());
+			boolean hasError = status.getErrors().size() > 0;
 			if (status.isReportedAsExposed() || status.wasContactExposed()) {
 				appStateLiveData.setValue(hasError ? AppState.EXPOSED_ERROR : AppState.EXPOSED);
 			} else if (hasError) {
 				appStateLiveData.setValue(AppState.ERROR);
+			} else  if (status.isAdvertising() && status.isReceiving()) {
+				appStateLiveData.setValue(AppState.TRACING_ACTIVATED);
 			} else {
-				appStateLiveData.setValue(AppState.TRACING);
+				appStateLiveData.setValue(AppState.TRACING_DEACTIVATED);
 			}
 		});
 

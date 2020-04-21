@@ -120,22 +120,33 @@ public class HeaderView extends FrameLayout {
 
 		int backgroundColor = Color.TRANSPARENT;
 		int iconRes = 0;
+		String contentDescription = null;
 		switch (state) {
-			case TRACING:
+			case TRACING_ACTIVATED:
 				iconRes = (R.drawable.ic_header_check);
 				backgroundColor = getResources().getColor(R.color.status_green, null);
+				contentDescription = getResources().getString(R.string.state_tracing);
+				break;
+			case TRACING_DEACTIVATED:
+				iconRes = (R.drawable.ic_header_error);
+				backgroundColor = getResources().getColor(R.color.status_red, null);
+				contentDescription = getResources().getString(R.string.state_tracing_deactivated);
 				break;
 			case ERROR:
 				iconRes = (R.drawable.ic_header_error);
 				backgroundColor = getResources().getColor(R.color.status_red, null);
+				contentDescription = getResources().getString(R.string.state_error);
 				break;
 			case EXPOSED_ERROR:
 			case EXPOSED:
 				iconRes = (R.drawable.ic_header_info);
 				backgroundColor = getResources().getColor(R.color.status_blue, null);
+				contentDescription = getResources().getString(R.string.state_exposed);
 				break;
 		}
 		iconBackground.setImageResource(R.drawable.ic_header_background);
+
+		setContentDescription(contentDescription);
 
 		if (colorAnimator != null && colorAnimator.isRunning()) colorAnimator.cancel();
 		int startColor = ((ColorDrawable) getBackground()).getColor();
@@ -161,7 +172,7 @@ public class HeaderView extends FrameLayout {
 		}
 
 		stopArcAnimation();
-		if (state != AppState.ERROR && state != AppState.EXPOSED_ERROR) {
+		if (state != AppState.ERROR && state != AppState.EXPOSED_ERROR && state != AppState.TRACING_DEACTIVATED) {
 			arcRunnable = new ArcRunnable(3);
 			arcHandler.postDelayed(arcRunnable, initialUpdate ? INITIAL_DELAY_ARC : 0);
 		}

@@ -380,4 +380,9 @@ Coronavirus Infoline
 
     <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
     <string name="preview_warning_text">"This app was built as a preview to demonstrate the DP-3T implementation. It is not a final COVID-19 tracer."</string>
+
+    <string name="state_tracing">"State: Tracing activated"</string>
+    <string name="state_tracing_deactivated">"State: Tracing deactivated"</string>
+    <string name="state_error">"State: Error"</string>
+    <string name="state_exposed">"State: Exposed"</string>
 </resources>
