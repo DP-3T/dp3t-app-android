@@ -60,7 +60,7 @@
     <string name="inform_button_positive_title">"I test sono risultati positivi"</string>
 
     <!-- Inform Button Positiv -->
-    <string name="inform_button_positive_text">Recentemente sono risultato positivo al test</string>
+    <string name="inform_button_positive_text">I test effettuati recentemente sono risultati positivi</string>
     <string name="what_to_do_button">"Cosa devo fare ?"</string>
     <string name="homescreen_handshakes_module_gemeldet_label">Una persona che hai incontrato è risultata positiva al COVID-19.</string>
 
@@ -81,7 +81,7 @@
 
     <!-- Informieren: Danke -->
     <string name="inform_send_thankyou">"GRAZIE !"</string>
-    <string name="inform_send_thankyou_text">Le informazioni sono state trasmesse.\nStai dando un importante contributo per impedire la diffusione del COVID-19.\n\n</string>
+    <string name="inform_send_thankyou_text">Le informazioni sono state trasmesse.\nStai dando un importante contributo per impedire la diffusione del COVID-19.</string>
 
     <!-- Symptome -->
     <string name="inform_symptom_coughdry">"Tosse (prevalentemente secca)"</string>
@@ -108,7 +108,7 @@
     <string name="inform_empfehlung">"Raccomandazioni"</string>
 
     <!-- Inform: Empfehlung Text -->
-    <string name="inform_empfehlung_subtext">Un controllo medico o un test di laboratorio al momento non è consigliato.\n\nContinua a praticare le misure di distanziamento sociale e igieniche come richiesto.\n\n.</string>
+    <string name="inform_empfehlung_subtext">Un controllo medico o un test di laboratorio al momento non è consigliato.\n\nContinua a praticare le misure di distanziamento sociale e igieniche come richiesto.</string>
 
     <!-- Inform: Button Titel -->
     <string name="inform_fertig_button_title">"Fatto"</string>
@@ -204,7 +204,7 @@
     <string name="onboarding_continue_without_popup_abort">Annulla</string>
     <string name="onboarding_continue_without_popup_continue">Continua</string>
     <string name="onboarding_finish_button">Fatto</string>
-    <string name="button_battery_optimization_deactivated">"Ottimizzazione della batteria disattivata  "</string>
+    <string name="button_battery_optimization_deactivated">"Ottimizzazione della batteria disattivata"</string>
 
     <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
     <string name="homescreen_handshakes_module_info_label_nosymptoms">Qui verrai informato se hai avuto contatti con persone che sono state testate positive al COVID-19.</string>
@@ -339,7 +339,7 @@
     <!-- Meldungen: Text ohne Hotline Info -->
     <string name="meldungen_infected_title">Infezione segnalata</string>
     <string name="meldungen_infected_text">Grazie ! Le persone informate in via anonima si potranno isolare interrompendo la catena di contagio.</string>
-    <string name="foreground_service_notification_error_network_sync">"Errore caricando i dati "</string>
+    <string name="foreground_service_notification_error_network_sync">"Errore durante la sincronizzazione dei dati"</string>
     <string name="foreground_service_notification_error_bluetooth_disabled">Bluetooth è stato disattivato</string>
     <string name="foreground_service_notification_error_battery_optimization">L\'ottimizzazione della battaeria è attivata e impedisce la scansione in background</string>
 
@@ -360,9 +360,9 @@
     <string name="bluetooth_setting_text">Abilitare Bluetooth</string>
     <string name="bluetooth_setting_tracking_explanation_text1">Utilizzando il BLE  (Bluetooth Low Energy)  l\'app riconosce i contatti con altre persone. Questi incontri vengono registrati dall\'app se due persone si trovano vicine per un certo periodo di tempo e vengono cancellati dopo 21 giorni.</string>
     <string name="meldungen_additional_info_text2">Quindi le persone che sono venute in contatto con un infetto devono essere informate, così da potersi isolare prima di mostrare i sintomi. Non tutti quelli venuti in contatto con un infetto hanno il virus, ma quelli che ce l\'hanno lo passeranno. Il trucco è stare un passo avanti.</string>
-    <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono "</string>
+    <string name="meldungen_additional_info_text3_reduced">"Gli esperti di XXX ti daranno informazioni e consigli per telefono"</string>
     <string name="foreground_service_notification_errors">L\'app non funziona correttamente al momento :</string>
     <string name="foreground_service_notification_error_location_permission">I permessi di \"posizione\" sono necessari per attivare la funzionalità Bluetooth</string>
     <string name="button_battery_optimization">"Disattiva l'ottimizzazione della durata batteria  "</string>
-    <string name="bluetooth_setting_data_explanation_text1">"Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ogni 15 minuti per garantire l'anonimato.  "</string>
+    <string name="bluetooth_setting_data_explanation_text1">"Ogni app ha il suo ID dinamico, generato casualmente, cifrato via HMAC(SHA256) e cambia ogni 15 minuti per garantire l'anonimato."</string>
 </resources>
