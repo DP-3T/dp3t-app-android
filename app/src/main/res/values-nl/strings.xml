@@ -400,7 +400,7 @@ Corona infolijn
     <string name="debug_state_setting_title">"App-status overschrijven"</string>
 
     <!-- Erklärungstext für die Debug-Einstellungen zur Status-Überschreibung -->
-    <string name="debug_state_setting_text">"Deze instelling overschrijft de visuele toestand van de app. De tracing functionaliteit wordt daardoor niet beïnvloed."</string>
+    <string name="debug_state_setting_text">"Deze instelling overschrijft de visuele state van de app. De tracing functionaliteit wordt daardoor niet beïnvloed."</string>
 
     <!-- Einstellungs-Option zum überschreiben des App-Zustands: Keine -->
     <string name="debug_state_setting_option_none">"Geen overschrijving"</string>
@@ -418,7 +418,7 @@ Corona infolijn
     <string name="debug_sdk_state_title">"SDK status"</string>
 
     <!-- Erklärungstext für die Debug-Info zum Tracing-Status -->
-    <string name="debug_sdk_state_text">"De actuele toestand van de DP-3T SDKs."</string>
+    <string name="debug_sdk_state_text">"De actuele state van de DP-3T SDKs."</string>
 
     <!-- Bezeichnung für den aktiven SDK Status -->
     <string name="debug_sdk_state_active">"wordt uitgevoerd"</string>
@@ -448,5 +448,5 @@ Corona infolijn
     <string name="debug_sdk_button_reset">"SDK opnieuw instellen"</string>
 
     <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
-    <string name="debug_sdk_reset_text">"De lokale stand van de DP-3T SDK wordt opnieuw ingesteld."</string>
+    <string name="debug_sdk_reset_text">"De lokale state van de DP-3T SDK wordt opnieuw ingesteld."</string>
 </resources>
