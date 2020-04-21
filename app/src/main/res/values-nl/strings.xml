@@ -394,59 +394,59 @@ Corona infolijn
 
     <!-- Label auf dem Button, der zum Debug-Screen führt -->
     <!-- Fuzzy -->
-    <string name="debug_settings_title">"Debug Einstellungen"</string>
+    <string name="debug_settings_title">"Debug instellingen"</string>
 
     <!-- Titel für die Debug-Einstellungen zur Status-Überschreibung -->
-    <string name="debug_state_setting_title">"App-Zustand überschreiben"</string>
+    <string name="debug_state_setting_title">"App-status overschrijven"</string>
 
     <!-- Erklärungstext für die Debug-Einstellungen zur Status-Überschreibung -->
-    <string name="debug_state_setting_text">"Diese Einstellung überschreibt den visuellen Zustand der App. Die Tracing-Funktionalität wird davon nicht beeinflusst."</string>
+    <string name="debug_state_setting_text">"Deze instelling overschrijft de visuele toestand van de app. De tracing functionaliteit wordt daardoor niet beïnvloed."</string>
 
     <!-- Einstellungs-Option zum überschreiben des App-Zustands: Keine -->
-    <string name="debug_state_setting_option_none">"Keine Überschreibung"</string>
+    <string name="debug_state_setting_option_none">"Geen overschrijving"</string>
 
     <!-- Einstellungs-Option zum überschreiben des App-Zustands: Gesund -->
-    <string name="debug_state_setting_option_ok">"Gesund"</string>
+    <string name="debug_state_setting_option_ok">"Gezond"</string>
 
     <!-- Einstellungs-Option zum überschreiben des App-Zustands: Einem positiven Kontakt ausgesetzt -->
-    <string name="debug_state_setting_option_exposed">"Positiv getesteter Kontakt"</string>
+    <string name="debug_state_setting_option_exposed">"Positief getest contact"</string>
 
     <!-- Einstellungs-Option zum überschreiben des App-Zustands: Selbst positiv getestet -->
-    <string name="debug_state_setting_option_infected">"Selbst positiv gemeldet"</string>
+    <string name="debug_state_setting_option_infected">"Zelf positief gemeld"</string>
 
     <!-- Titel für die Debug-Info zum Tracing-Status -->
-    <string name="debug_sdk_state_title">"SDK Status"</string>
+    <string name="debug_sdk_state_title">"SDK status"</string>
 
     <!-- Erklärungstext für die Debug-Info zum Tracing-Status -->
-    <string name="debug_sdk_state_text">"Der aktuelle Zustand des DP-3T SDKs."</string>
+    <string name="debug_sdk_state_text">"De actuele toestand van de DP-3T SDKs."</string>
 
     <!-- Bezeichnung für den aktiven SDK Status -->
-    <string name="debug_sdk_state_active">"wird ausgeführt"</string>
+    <string name="debug_sdk_state_active">"wordt uitgevoerd"</string>
 
     <!-- Bezeichnung für den inaktiven SDK Status -->
-    <string name="debug_sdk_state_inactive">"wird nicht ausgeführt"</string>
+    <string name="debug_sdk_state_inactive">"wordt niet uitgevoerd"</string>
 
     <!-- Bezeichnung für den letzen sync-Zeitpunkt -->
-    <string name="debug_sdk_state_last_synced">"Letzte Synchronisation: "</string>
+    <string name="debug_sdk_state_last_synced">"Laatste synchronisatie: "</string>
 
     <!-- Bezeichnung für den Fall, bei dem der User selber als positiv getestet gemeldet wurde -->
-    <string name="debug_sdk_state_self_exposed">"Selbst gemeldet: "</string>
+    <string name="debug_sdk_state_self_exposed">"Zelf gemeld: "</string>
 
     <!-- Bezeichnung für den Fall, bei dem ein Kontakt als positiv getestet gemeldet wurde -->
-    <string name="debug_sdk_state_contact_exposed">"Kontakt gemeldet: "</string>
+    <string name="debug_sdk_state_contact_exposed">"Contact gemeld: "</string>
 
     <!-- Bezeichnung für die Anzahl bluetooth-handshakes, die ausgeführt wurden -->
-    <string name="debug_sdk_state_number_handshakes">"Anzahl handshakes: "</string>
+    <string name="debug_sdk_state_number_handshakes">"Aantal handshakes: "</string>
 
     <!-- Debug-Status-Bezeichnung für boleschen Wert 'true' -->
     <string name="debug_sdk_state_boolean_true">"ja"</string>
 
     <!-- Debug-Status-Bezeichnung für boleschen Wert 'false' -->
-    <string name="debug_sdk_state_boolean_false">"nein"</string>
+    <string name="debug_sdk_state_boolean_false">"nee"</string>
 
     <!-- Button-Text für das Zurücksetzen des lokalen SDK Zustandes -->
-    <string name="debug_sdk_button_reset">"SDK zurücksetzen"</string>
+    <string name="debug_sdk_button_reset">"SDK opnieuw instellen"</string>
 
     <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
-    <string name="debug_sdk_reset_text">"Der lokale Stand des DP-3T SDK wurde zurückgesetzt."</string>
+    <string name="debug_sdk_reset_text">"De lokale stand van de DP-3T SDK wordt opnieuw ingesteld."</string>
 </resources>
