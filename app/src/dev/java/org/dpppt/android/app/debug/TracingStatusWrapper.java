@@ -40,23 +40,30 @@ public class TracingStatusWrapper implements TracingStatusInterface {
 
 	@Override
 	public AppState getAppState() {
-		boolean hasError = status.getErrors().size() > 0 || !(status.isAdvertising() || status.isReceiving());
+		boolean hasError = status.getErrors().size() > 0;
 		switch (debugAppState) {
 			case NONE:
 				if (status.isReportedAsExposed() || status.wasContactExposed()) {
 					return hasError ? AppState.EXPOSED_ERROR : AppState.EXPOSED;
 				} else if (hasError) {
 					return AppState.ERROR;
+				} else if (status.isAdvertising() && status.isReceiving()) {
+					return AppState.TRACING_ACTIVATED;
 				} else {
-					return AppState.TRACING;
+					return AppState.TRACING_DEACTIVATED;
 				}
 			case HEALTHY:
-				return hasError ? AppState.ERROR : AppState.TRACING;
+				if (hasError) {
+					return AppState.ERROR;
+				} else if (status.isAdvertising() && status.isReceiving()) {
+					return AppState.TRACING_ACTIVATED;
+				} else {
+					return AppState.TRACING_DEACTIVATED;
+				}
 			case REPORTED_EXPOSED:
 			case CONTACT_EXPOSED:
 				return hasError ? AppState.EXPOSED_ERROR : AppState.EXPOSED;
 		}
 		throw new IllegalStateException("Unkown debug AppState: " + debugAppState.toString());
 	}
-
 }
