@@ -50,15 +50,13 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_horizontal"
-				android:layout_marginStart="@dimen/spacing_medium_large"
-				android:layout_marginEnd="@dimen/spacing_medium_large"
 				android:text="@string/button_report_illness" />
 
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/spacing_larger"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
+				android:layout_marginBottom="@dimen/spacing_larger"
 				android:orientation="horizontal">
 
 				<ImageView
@@ -96,6 +94,14 @@
 				</LinearLayout>
 
 			</LinearLayout>
+
+			<Button
+				android:id="@+id/main_button_debug"
+				style="@style/NextStep.Button.Outlined.Red"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text="@string/debug_settings_title" />
 
 		</LinearLayout>
 

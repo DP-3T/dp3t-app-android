@@ -23,8 +23,10 @@ android {
 	flavorDimensions "version"
 	productFlavors {
 		dev {
+			buildConfigField 'boolean', 'IS_DEV', 'true'
 		}
 		prod {
+			buildConfigField 'boolean', 'IS_DEV', 'false'
 		}
 	}
 

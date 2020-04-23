@@ -3,13 +3,11 @@
  * https://www.ubique.ch
  * Copyright (c) 2020. All rights reserved.
  */
-
 package org.dpppt.android.app.main;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,15 +15,15 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
 
-import org.dpppt.android.app.main.model.AppState;
-import org.dpppt.android.app.main.views.HeaderView;
-import org.dpppt.android.sdk.TracingStatus;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.contacts.ContactsFragment;
+import org.dpppt.android.app.debug.DebugFragment;
+import org.dpppt.android.app.util.DebugUtils;
+import org.dpppt.android.app.main.views.HeaderView;
 import org.dpppt.android.app.notifications.NotificationsFragment;
 import org.dpppt.android.app.trigger.TriggerFragment;
 import org.dpppt.android.app.util.TracingStatusHelper;
+import org.dpppt.android.sdk.TracingStatus;
 
 public class MainFragment extends Fragment {
 
@@ -50,6 +48,7 @@ public class MainFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		setupHeader(view);
 		setupCards(view);
+		setupDebugButton(view);
 	}
 
 	@Override
@@ -122,6 +121,17 @@ public class MainFragment extends Fragment {
 							.valueOf(getContext().getColor(isExposed ? R.color.status_blue : R.color.status_green_bg)));
 					TracingStatusHelper.updateStatusView(notificationStatusView, state, title, text);
 				});
+	}
+
+	private void setupDebugButton(View view) {
+		View debugButton = view.findViewById(R.id.main_button_debug);
+		if (DebugUtils.isDev()) {
+			debugButton.setVisibility(View.VISIBLE);
+			debugButton.setOnClickListener(
+					v -> DebugFragment.startDebugFragment(getParentFragmentManager()));
+		} else {
+			debugButton.setVisibility(View.GONE);
+		}
 	}
 
 }
