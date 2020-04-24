@@ -264,6 +264,9 @@ anonymous"</string>
     <!-- Bluetooth Control: Tracking Aktiv Subtext -->
     <string name="bluetooth_setting_tracking_active_subtext">"Encounters are saved anonymously on your device."</string>
 
+    <!-- Bluetooth Control: Tracking Aktiv Counter -->
+    <string name="bluetooth_setting_tracing_active_counter">"Number of contacts: %d"</string>
+
     <!-- Bluetooth Control: Tracking deaktiviert -->
     <string name="bluetooth_setting_tracking_inactive">"Tracing disabled"</string>
 
@@ -317,6 +320,7 @@ anonymous"</string>
     <string name="meldungen_meldung_more_button">"Learn more"</string>
     <string name="tracing_active_title">"Tracing enabled"</string>
     <string name="tracing_active_text">"Encounters are saved anonymously on your device."</string>
+    <string name="tracing_active_counter">"Number of contacts: %d"</string>
     <string name="tracing_error_title">"Tracing deactivated"</string>
     <string name="tracing_error_text">"Activate tracing and Bluetooth so that encounters can be recorded anonymously."</string>
 

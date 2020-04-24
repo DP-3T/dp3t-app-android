@@ -15,6 +15,7 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -78,6 +79,11 @@ public class ContactsFragment extends Fragment {
 			TracingStatusHelper.updateStatusView(contactStatusView, state, titleRes, textRes);
 
 			invalidateErrorResolverButtons();
+		});
+
+		tracingViewModel.getNumberOfHandshakesLiveData().observe(getViewLifecycleOwner(), counter -> {
+			TextView counterView = contactStatusView.findViewById(R.id.status_contact_counter);
+			counterView.setText(getString(R.string.tracing_active_counter, counter));
 		});
 
 		locationPermissionButton = view.findViewById(R.id.contact_location_permission_button);
