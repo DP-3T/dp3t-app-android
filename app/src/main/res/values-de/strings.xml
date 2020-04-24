@@ -338,7 +338,7 @@ Die App greift aber nie auf deinen Standort zu!"</string>
 
     <!-- Meldungen: zusätzlicher Info Text -->
     <!-- Fuzzy -->
-    <string name="meldungen_additional_info_text2">"Deshalb sollen Kontakpersonen informiert werden. So können sie sich frühzeitig isolieren – noch bevor sie sich krank fühlen. Natürlich haben dann nicht alle Kontaktpersonen das Virus. Aber diejenigen, die es haben, geben es nicht weiter. So sind wir dem Virus einen Schritt voraus."</string>
+    <string name="meldungen_additional_info_text2">"Deshalb sollen Kontaktpersonen informiert werden. So können sie sich frühzeitig isolieren – noch bevor sie sich krank fühlen. Natürlich haben dann nicht alle Kontaktpersonen das Virus. Aber diejenigen, die es haben, geben es nicht weiter. So sind wir dem Virus einen Schritt voraus."</string>
 
     <!-- Hinweis beim Eingabefeld für den Authentifizierungs-Code -->
     <string name="auth_code_input_hint">"000-000"</string>
