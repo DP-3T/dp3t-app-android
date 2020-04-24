@@ -8,6 +8,8 @@ package org.dpppt.android.app.main;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -87,6 +89,11 @@ public class MainFragment extends Fragment {
 																		: R.string.tracing_error_text;
 					TracingStatusHelper.updateStatusView(contactStatusView, state, titleRes, textRes);
 				});
+
+		tracingViewModel.getNumberOfHandshakesLiveData().observe(getViewLifecycleOwner(), counter -> {
+			TextView counterView = contactStatusView.findViewById(R.id.status_contact_counter);
+			counterView.setText(getString(R.string.tracing_active_counter, counter));
+		});
 
 		view.findViewById(R.id.card_notifications).setOnClickListener(
 				v -> getParentFragmentManager().beginTransaction()

@@ -266,6 +266,9 @@ Die App greift aber nie auf deinen Standort zu!"</string>
     <!-- Bluetooth Control: Tracking Aktiv Subtext -->
     <string name="bluetooth_setting_tracking_active_subtext">"Begegnungen werden anonym auf deinem Gerät gespeichert."</string>
 
+    <!-- Bluetooth Control: Tracking Aktiv Counter -->
+    <string name="bluetooth_setting_tracing_active_counter">"Anzahl Kontakte: %d"</string>
+
     <!-- Bluetooth Control: Tracking deaktiviert -->
     <string name="bluetooth_setting_tracking_inactive">"Tracing deaktiviert"</string>
 
@@ -326,6 +329,7 @@ Die App greift aber nie auf deinen Standort zu!"</string>
     <string name="meldungen_meldung_more_button">"Mehr erfahren"</string>
     <string name="tracing_active_title">"Tracing aktiv"</string>
     <string name="tracing_active_text">"Begegnungen werden anonym auf deinem Gerät gespeichert."</string>
+    <string name="tracing_active_counter">"Anzahl Kontakte: %d"</string>
     <string name="tracing_error_title">"Tracing nicht aktiv"</string>
     <string name="tracing_error_text">"Aktiviere Tracing und Bluetooth, damit Begegnungen anonym aufgezeichnet werden können."</string>
 

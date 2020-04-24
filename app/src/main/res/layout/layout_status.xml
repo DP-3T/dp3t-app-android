@@ -40,6 +40,12 @@
 			android:layout_height="wrap_content"
 			tools:text="@string/bluetooth_setting_tracking_active_subtext" />
 
+		<TextView
+			android:id="@+id/status_contact_counter"
+			style="@style/NextStep.Text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			tools:text="@string/bluetooth_setting_tracing_active_counter" />
 	</LinearLayout>
 
 </LinearLayout>

@@ -93,6 +93,10 @@ public class TracingViewModel extends AndroidViewModel {
 		return tracingEnabledLiveData;
 	}
 
+	public LiveData<Integer> getNumberOfHandshakesLiveData() {
+		return numberOfHandshakesLiveData;
+	}
+
 	public LiveData<Pair<Boolean, Boolean>> getSelfOrContactExposedLiveData() {
 		return exposedLiveData;
 	}

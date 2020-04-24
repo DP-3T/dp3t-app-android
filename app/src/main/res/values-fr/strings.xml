@@ -273,6 +273,9 @@ L'application n'accède jamais à votre position!"</string>
     <!-- Bluetooth Control: Tracking deaktiviert Subtext -->
     <string name="bluetooth_setting_tracking_inactive_subtext">"Autorisez Bluetooth pour que les rencontres puissent être enregistrées de manière anonyme."</string>
 
+    <!-- Bluetooth Control: Tracking Aktiv Counter -->
+    <string name="bluetooth_setting_tracing_active_counter">"Nombre de contacts: %d"</string>
+
     <!-- Bluetooth Setting: Titel unten -->
     <string name="bluetooth_setting_tracking_explanation_title">"Comment fonctionne le suivi?"</string>
 
@@ -320,6 +323,7 @@ L'application n'accède jamais à votre position!"</string>
     <string name="meldungen_meldung_more_button">"En savoir plus"</string>
     <string name="tracing_active_title">"Suivi actif"</string>
     <string name="tracing_active_text">"Les rencontres sont enregistrées de manière anonyme sur votre appareil."</string>
+    <string name="tracing_active_counter">"Nombre de contacts: %d"</string>
     <string name="tracing_error_title">"Suivi non actif"</string>
     <string name="tracing_error_text">"Activez le traçage et le Bluetooth pour que les rencontres puissent être enregistrées de manière anonyme."</string>
 
