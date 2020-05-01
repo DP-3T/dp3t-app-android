@@ -24,9 +24,23 @@ android {
 	productFlavors {
 		dev {
 			buildConfigField 'boolean', 'IS_DEV', 'true'
+			buildConfigField 'String', "CUSTOM_BACKEND_URL", '\"\"'
+			buildConfigField 'String', "APPNAME", '\"org.dpppt.demo\"'
 		}
-		prod {
+		prod{
 			buildConfigField 'boolean', 'IS_DEV', 'false'
+			buildConfigField 'String', "CUSTOM_BACKEND_URL", '\"\"'
+			buildConfigField 'String', "APPNAME", '\"org.dpppt.demo\"'
+		}
+		devNoiApp {
+			buildConfigField 'boolean', 'IS_DEV', 'true'
+			buildConfigField 'String', "CUSTOM_BACKEND_URL", '\"https://protetti.app/\"'
+			buildConfigField 'String', "APPNAME", '\"it.noiapp.demo\"'
+		}
+		prodNoiApp {
+			buildConfigField 'boolean', 'IS_DEV', 'false'
+			buildConfigField 'String', "CUSTOM_BACKEND_URL", '\"https://protetti.app/\"'
+			buildConfigField 'String', "APPNAME", '\"it.noiapp.demo\"'
 		}
 	}
 

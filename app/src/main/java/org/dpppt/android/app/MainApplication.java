@@ -21,6 +21,7 @@ import androidx.core.app.NotificationCompat;
 
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.TracingStatus;
+import org.dpppt.android.sdk.internal.backend.models.ApplicationInfo;
 import org.dpppt.android.sdk.internal.util.ProcessUtil;
 
 
@@ -33,8 +34,13 @@ public class MainApplication extends Application {
 		super.onCreate();
 		if (ProcessUtil.isMainProcess(this)) {
 			registerReceiver(broadcastReceiver, DP3T.getUpdateIntentFilter());
-			DP3T.init(this, "org.dpppt.demo", BuildConfig.FLAVOR.equals("dev"));
-		}
+
+			if(BuildConfig.CUSTOM_BACKEND_URL.length() > 0) {
+				DP3T.init(this, new ApplicationInfo(BuildConfig.APPNAME, BuildConfig.CUSTOM_BACKEND_URL));
+			}else{
+				DP3T.init(this, BuildConfig.APPNAME, BuildConfig.FLAVOR.equals("dev"));
+			}
+	}
 	}
 
 	@Override
