@@ -3,6 +3,7 @@ package org.dpppt.android.app.debug;
 import org.dpppt.android.app.debug.model.DebugAppState;
 import org.dpppt.android.app.main.model.AppState;
 import org.dpppt.android.app.main.model.TracingStatusInterface;
+import org.dpppt.android.sdk.InfectionStatus;
 import org.dpppt.android.sdk.TracingStatus;
 
 public class TracingStatusWrapper implements TracingStatusInterface {
@@ -19,13 +20,13 @@ public class TracingStatusWrapper implements TracingStatusInterface {
 	}
 
 	@Override
-	public boolean isReportedAsExposed() {
-		return status.isReportedAsExposed();
+	public boolean isInfected() {
+		return InfectionStatus.INFECTED.equals(status.getInfectionStatus());
 	}
 
 	@Override
-	public boolean wasContactExposed() {
-		return status.wasContactExposed();
+	public boolean isExposed() {
+		return InfectionStatus.EXPOSED.equals(status.getInfectionStatus());
 	}
 
 	@Override
@@ -41,7 +42,10 @@ public class TracingStatusWrapper implements TracingStatusInterface {
 	@Override
 	public AppState getAppState() {
 		boolean hasError = status.getErrors().size() > 0 || !(status.isAdvertising() || status.isReceiving());
-		if (status.isReportedAsExposed() || status.wasContactExposed()) {
+		if (
+				InfectionStatus.INFECTED.equals(status.getInfectionStatus()) ||
+						InfectionStatus.EXPOSED.equals(status.getInfectionStatus())
+		) {
 			return hasError ? AppState.EXPOSED_ERROR : AppState.EXPOSED;
 		} else if (hasError) {
 			return AppState.ERROR;

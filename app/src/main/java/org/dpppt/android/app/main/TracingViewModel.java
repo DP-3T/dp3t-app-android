@@ -12,20 +12,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Pair;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import java.util.Collections;
-import java.util.List;
-
+import org.dpppt.android.app.debug.TracingStatusWrapper;
 import org.dpppt.android.app.debug.model.DebugAppState;
 import org.dpppt.android.app.main.model.AppState;
 import org.dpppt.android.app.util.DeviceFeatureHelper;
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.TracingStatus;
-import org.dpppt.android.app.debug.TracingStatusWrapper;
+
+import java.util.Collection;
+import java.util.Collections;
 
 public class TracingViewModel extends AndroidViewModel {
 
@@ -40,7 +41,7 @@ public class TracingViewModel extends AndroidViewModel {
 	private final MutableLiveData<Boolean> tracingEnabledLiveData = new MutableLiveData<>();
 	private final MutableLiveData<Pair<Boolean, Boolean>> exposedLiveData = new MutableLiveData<>();
 	private final MutableLiveData<Integer> numberOfHandshakesLiveData = new MutableLiveData<>(0);
-	private final MutableLiveData<List<TracingStatus.ErrorState>> errorsLiveData = new MutableLiveData<>(Collections.emptyList());
+	private final MutableLiveData<Collection<TracingStatus.ErrorState>> errorsLiveData = new MutableLiveData<>(Collections.emptyList());
 	private final MutableLiveData<AppState> appStateLiveData = new MutableLiveData<>();
 
 	private final MutableLiveData<Boolean> bluetoothEnabledLiveData = new MutableLiveData<>();
@@ -61,10 +62,10 @@ public class TracingViewModel extends AndroidViewModel {
 
 		tracingStatusLiveData.observeForever(status -> {
 			tracingEnabledLiveData.setValue(status.isAdvertising() && status.isReceiving());
-			numberOfHandshakesLiveData.setValue(status.getNumberOfHandshakes());
+			numberOfHandshakesLiveData.setValue(status.getNumberOfContacts());
 			tracingStatusWrapper.setStatus(status);
 
-			exposedLiveData.setValue(new Pair<>(tracingStatusWrapper.isReportedAsExposed(), tracingStatusWrapper.wasContactExposed()));
+			exposedLiveData.setValue(new Pair<>(tracingStatusWrapper.isInfected(), tracingStatusWrapper.isExposed()));
 
 			errorsLiveData.setValue(status.getErrors());
 
@@ -93,11 +94,11 @@ public class TracingViewModel extends AndroidViewModel {
 		return tracingEnabledLiveData;
 	}
 
-	public LiveData<Pair<Boolean, Boolean>> getSelfOrContactExposedLiveData() {
+	public LiveData<Pair<Boolean, Boolean>> getInfectedOrExposedLiveData() {
 		return exposedLiveData;
 	}
 
-	public LiveData<List<TracingStatus.ErrorState>> getErrorsLiveData() {
+	public LiveData<Collection<TracingStatus.ErrorState>> getErrorsLiveData() {
 		return errorsLiveData;
 	}
 

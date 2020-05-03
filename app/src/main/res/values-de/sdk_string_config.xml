@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Ubique Innovation AG
+  ~ https://www.ubique.ch
+  ~ Copyright (c) 2020. All rights reserved.
+  -->
+
+<resources>
+	<string name="dp3t_sdk_service_notification_channel">@string/app_name</string>
+	<string name="dp3t_sdk_service_notification_title">@string/app_name</string>
+	<string name="dp3t_sdk_service_notification_text">@string/foreground_service_notification_text</string>
+	<string name="dp3t_sdk_service_notification_errors">@string/foreground_service_notification_errors</string>
+	<string name="dp3t_sdk_service_notification_error_network_sync">@string/foreground_service_notification_error_network_sync</string>
+	<string name="dp3t_sdk_service_notification_error_location_permission">@string/foreground_service_notification_error_location_permission</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">@string/foreground_service_notification_error_bluetooth_disabled</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">@string/foreground_service_notification_error_battery_optimization</string>
+</resources>

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -53,15 +54,15 @@ public class NotificationsFragment extends Fragment {
 
 		hotlineButton.setOnClickListener(v -> PhoneUtil.callHelpline(getContext()));
 
-		tracingViewModel.getSelfOrContactExposedLiveData().observe(getViewLifecycleOwner(), selfOrContactExposed -> {
-			boolean isExposed = selfOrContactExposed.first || selfOrContactExposed.second;
+		tracingViewModel.getInfectedOrExposedLiveData().observe(getViewLifecycleOwner(), infectedOrExposed -> {
+			boolean isExposed = infectedOrExposed.first || infectedOrExposed.second;
 			TracingStatusHelper.State state =
 					!(isExposed) ? TracingStatusHelper.State.OK
 								 : TracingStatusHelper.State.INFO;
 			int title =
-					isExposed ? (selfOrContactExposed.first ? R.string.meldungen_infected_title : R.string.meldungen_meldung_title)
+					isExposed ? (infectedOrExposed.first ? R.string.meldungen_infected_title : R.string.meldungen_meldung_title)
 							  : R.string.meldungen_no_meldungen_title;
-			int text = isExposed ? (selfOrContactExposed.first ? R.string.meldungen_infected_text :
+			int text = isExposed ? (infectedOrExposed.first ? R.string.meldungen_infected_text :
 									R.string.meldungen_meldung_text)
 								 : R.string.meldungen_no_meldungen_text;
 			ColorStateList bubbleColor =
@@ -76,7 +77,7 @@ public class NotificationsFragment extends Fragment {
 			exposedInfoGroup.setVisibility(isExposed ? View.VISIBLE : View.GONE);
 			if (isExposed) {
 				((TextView) exposedInfoGroup.findViewById(R.id.notifications_info_text_specific)).setText(
-						selfOrContactExposed.first ? R.string.meldungen_hinweis_info_text1_infected
+						infectedOrExposed.first ? R.string.meldungen_hinweis_info_text1_infected
 												   : R.string.meldungen_hinweis_info_text1);
 			}
 		});

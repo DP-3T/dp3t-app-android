@@ -8,22 +8,23 @@ package org.dpppt.android.app.main;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import java.util.List;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.contacts.ContactsFragment;
 import org.dpppt.android.app.debug.DebugFragment;
-import org.dpppt.android.app.util.DebugUtils;
 import org.dpppt.android.app.main.views.HeaderView;
 import org.dpppt.android.app.notifications.NotificationsFragment;
 import org.dpppt.android.app.trigger.TriggerFragment;
+import org.dpppt.android.app.util.DebugUtils;
 import org.dpppt.android.app.util.TracingStatusHelper;
 import org.dpppt.android.sdk.TracingStatus;
+
+import java.util.Collection;
 
 public class MainFragment extends Fragment {
 
@@ -78,7 +79,7 @@ public class MainFragment extends Fragment {
 		View contactStatusView = view.findViewById(R.id.contacts_status);
 		tracingViewModel.getTracingEnabledLiveData().observe(getViewLifecycleOwner(),
 				isTracing -> {
-					List<TracingStatus.ErrorState> errors = tracingViewModel.getErrorsLiveData().getValue();
+					Collection<TracingStatus.ErrorState> errors = tracingViewModel.getErrorsLiveData().getValue();
 					TracingStatusHelper.State state = errors.size() > 0 || !isTracing ? TracingStatusHelper.State.WARNING :
 													  TracingStatusHelper.State.OK;
 					int titleRes = state == TracingStatusHelper.State.OK ? R.string.tracing_active_title
@@ -103,17 +104,17 @@ public class MainFragment extends Fragment {
 						.addToBackStack(TriggerFragment.class.getCanonicalName())
 						.commit());
 
-		tracingViewModel.getSelfOrContactExposedLiveData().observe(getViewLifecycleOwner(),
-				selfOrContactExposed -> {
-					boolean isExposed = selfOrContactExposed.first || selfOrContactExposed.second;
-					buttonInform.setVisibility(!selfOrContactExposed.first ? View.VISIBLE : View.GONE);
+		tracingViewModel.getInfectedOrExposedLiveData().observe(getViewLifecycleOwner(),
+				infectedOrExposed -> {
+					boolean isExposed = infectedOrExposed.first || infectedOrExposed.second;
+					buttonInform.setVisibility(!infectedOrExposed.first ? View.VISIBLE : View.GONE);
 					TracingStatusHelper.State state =
 							!(isExposed) ? TracingStatusHelper.State.OK
 										 : TracingStatusHelper.State.INFO;
-					int title = isExposed ? (selfOrContactExposed.first ? R.string.meldungen_infected_title
+					int title = isExposed ? (infectedOrExposed.first ? R.string.meldungen_infected_title
 																		: R.string.meldungen_meldung_title)
 										  : R.string.meldungen_no_meldungen_title;
-					int text = isExposed ? (selfOrContactExposed.first ? R.string.meldungen_infected_text :
+					int text = isExposed ? (infectedOrExposed.first ? R.string.meldungen_infected_text :
 											R.string.meldungen_meldung_text)
 										 : R.string.meldungen_no_meldungen_text;
 

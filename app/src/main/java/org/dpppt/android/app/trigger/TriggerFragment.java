@@ -23,12 +23,13 @@ import java.util.GregorianCalendar;
 
 import org.dpppt.android.app.trigger.views.ChainedEditText;
 import org.dpppt.android.sdk.DP3T;
-import org.dpppt.android.sdk.internal.backend.CallbackListener;
-import org.dpppt.android.sdk.internal.backend.ResponseException;
-import org.dpppt.android.sdk.internal.backend.models.ExposeeAuthData;
 
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.util.InfoDialog;
+import org.dpppt.android.sdk.backend.ResponseCallback;
+import org.dpppt.android.sdk.backend.models.ExposeeAuthMethod;
+import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodAuthorization;
+import org.dpppt.android.sdk.internal.backend.StatusCodeException;
 
 public class TriggerFragment extends Fragment {
 
@@ -72,8 +73,8 @@ public class TriggerFragment extends Fragment {
 					.show();
 			String inputBase64 = new String(Base64.encode(authCodeInput.getText().getBytes(StandardCharsets.UTF_8), Base64.NO_WRAP),
 					StandardCharsets.UTF_8);
-			DP3T.sendIWasExposed(v.getContext(), new Date(calendarNow.getTimeInMillis()),
-					new ExposeeAuthData(inputBase64), new CallbackListener<Void>() {
+			DP3T.sendIAmInfected(v.getContext(), new Date(calendarNow.getTimeInMillis()),
+					new ExposeeAuthMethodAuthorization(inputBase64), new ResponseCallback<Void>() {
 						@Override
 						public void onSuccess(Void response) {
 							progressDialog.dismiss();
@@ -88,7 +89,7 @@ public class TriggerFragment extends Fragment {
 							progressDialog.dismiss();
 							String error;
 							error = getString(R.string.unexpected_error_title).replace("{ERROR}",
-									throwable instanceof ResponseException ? throwable.getMessage() :
+									throwable instanceof StatusCodeException ? throwable.getMessage() :
 									throwable instanceof IOException ? throwable.getLocalizedMessage() : "");
 							InfoDialog.newInstance(error)
 									.show(getChildFragmentManager(), InfoDialog.class.getCanonicalName());
