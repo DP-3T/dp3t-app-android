@@ -46,6 +46,65 @@
 			<androidx.cardview.widget.CardView
 				style="@style/NextStep.Card"
 				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_margin="@dimen/spacing_medium_large">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/spacing_large"
+						android:layout_marginTop="@dimen/spacing_medium_large"
+						android:layout_marginRight="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_medium">
+
+						<Switch
+							android:id="@+id/debug_force_sync_switch"
+							style="@style/NextStep.Switch"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentEnd="true"
+							android:layout_marginTop="3dp" />
+
+						<TextView
+							android:id="@+id/debug_force_sync_title"
+							style="@style/NextStep.Text.Title"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_toStartOf="@+id/debug_force_sync_switch"
+							android:text="@string/debug_force_sync_title" />
+
+						<TextView
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/debug_force_sync_title"
+							android:layout_alignParentStart="true"
+							android:text="@string/debug_force_sync_subtitle" />
+
+					</RelativeLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="1dp"
+						android:layout_marginStart="@dimen/spacing_medium_large"
+						android:layout_marginEnd="@dimen/spacing_medium_large"
+						android:background="@color/divider" />
+
+				</LinearLayout>
+
+			</androidx.cardview.widget.CardView>
+
+			<androidx.cardview.widget.CardView
+				style="@style/NextStep.Card"
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/spacing_medium_large"
 				android:layout_marginStart="@dimen/spacing_medium_large"

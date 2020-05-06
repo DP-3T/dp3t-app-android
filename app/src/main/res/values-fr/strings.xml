@@ -381,6 +381,9 @@ Corona-Infoline
     <!-- Label auf dem Button, der zum Debug-Screen führt -->
     <string name="debug_settings_title">"Debug Einstellungen"</string>
 
+    <string name="debug_force_sync_title">"Forcer la synchronisation"</string>
+    <string name="debug_force_sync_subtitle">"Définir la période de synchronisation à 10 s"</string>
+
     <!-- Titel für die Debug-Einstellungen zur Status-Überschreibung -->
     <string name="debug_state_setting_title">"App-Zustand überschreiben"</string>
 

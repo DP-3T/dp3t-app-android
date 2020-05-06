@@ -379,6 +379,9 @@ Coronavirus Infoline
     <!-- Fuzzy -->
     <string name="debug_settings_title">"Debug Settings"</string>
 
+    <string name="debug_force_sync_title">"Force sync"</string>
+    <string name="debug_force_sync_subtitle">"set sync period at 10s"</string>
+
     <!-- Titel für die Debug-Einstellungen zur Status-Überschreibung -->
     <string name="debug_state_setting_title">"Override app state"</string>
 
