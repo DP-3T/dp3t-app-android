@@ -9,11 +9,14 @@
   -->
 
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
-    <path
-        android:fillColor="@color/white"
-        android:pathData="M10,6L8.59,7.41 13.17,12l-4.58,4.59L10,18l6,-6z"/>
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M6.2929,2.7071l1.4142,-1.4142l10.7071,10.7071l-10.7071,10.7071l-1.4142,-1.4142l9.2921,-9.2929z"
+      android:strokeWidth="1"
+      android:fillColor="#4A4969"
+      android:fillType="evenOdd"
+      android:strokeColor="#00000000"/>
 </vector>
