@@ -1,52 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-	<ScrollView
-		android:id="@+id/onboarding_scroll_view"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		app:layout_constraintBottom_toTopOf="@id/onboarding_tab_dots"
-		android:paddingBottom="@dimen/spacing_medium"
-		app:layout_constraintTop_toTopOf="parent">
-
 		<androidx.viewpager2.widget.ViewPager2
 			android:id="@+id/pager"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content" />
-	</ScrollView>
+			android:layout_height="match_parent" />
 
-	<com.google.android.material.tabs.TabLayout
-		android:id="@+id/onboarding_tab_dots"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/view_pager_page_indicator_margin"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:tabBackground="@drawable/selector_view_pager_dot"
-		app:tabGravity="center"
-		app:tabIndicatorHeight="0dp" />
-
-	<com.google.android.material.floatingactionbutton.FloatingActionButton
-		android:id="@+id/onboarding_fab"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="@dimen/floating_action_button_margin"
-		android:backgroundTint="@color/selector_floating_action_button_onboarding"
-		app:borderWidth="0dp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:maxImageSize="40dp"
-		app:srcCompat="@drawable/ic_chevron_right"
-		app:tint="@color/white" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

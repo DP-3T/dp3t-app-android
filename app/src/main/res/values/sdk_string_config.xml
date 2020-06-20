@@ -1,17 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <resources>
 	<string name="dp3t_sdk_service_notification_channel">@string/app_name</string>
 	<string name="dp3t_sdk_service_notification_title">@string/app_name</string>
-	<string name="dp3t_sdk_service_notification_text">@string/foreground_service_notification_text</string>
-	<string name="dp3t_sdk_service_notification_errors">@string/foreground_service_notification_errors</string>
-	<string name="dp3t_sdk_service_notification_error_network_sync">@string/foreground_service_notification_error_network_sync</string>
-	<string name="dp3t_sdk_service_notification_error_location_permission">@string/foreground_service_notification_error_location_permission</string>
-	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">@string/foreground_service_notification_error_bluetooth_disabled</string>
-	<string name="dp3t_sdk_service_notification_error_battery_optimization">@string/foreground_service_notification_error_battery_optimization</string>
+	<string name="dp3t_sdk_service_notification_text">@string/android_foreground_service_notification_text</string>
+	<string name="dp3t_sdk_service_notification_errors">@string/android_foreground_service_notification_errors</string>
+	<string name="dp3t_sdk_service_notification_error_location_permission">@string/android_foreground_service_notification_error_location_permission</string>
+	<string name="dp3t_sdk_service_notification_error_location_service">@string/foreground_service_notification_error_location_service</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">@string/android_foreground_service_notification_error_battery_optimization</string>
+
+	<string name="dp3t_sdk_service_notification_error_bluetooth_advertising_error">@string/begegnungen_restart_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">@string/bluetooth_turned_off_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_internal_error">@string/begegnungen_restart_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">@string/begegnungen_restart_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_scanner_error">@string/begegnungen_restart_error_text</string>
+
+	<string name="dp3t_sdk_service_notification_error_sync_database">@string/sync_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_sync_network">@string/sync_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_sync_server">@string/sync_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_sync_signature">@string/sync_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_sync_timing">@string/time_inconsistency_text</string>
 </resources>
+
+

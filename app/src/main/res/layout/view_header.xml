@@ -1,30 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:layout_height="@dimen/header_height"
 	tools:layout_width="match_parent"
-	tools:parentTag="android.widget.FrameLayout">
+	tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+	<ImageView
+		android:id="@+id/main_header_bg_image"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="centerCrop" />
 
 	<ImageView
 		android:id="@+id/main_header_icon_bg"
 		android:layout_width="wrap_content"
-		android:layout_height="@dimen/header_size_bg"
-		android:layout_gravity="center"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/spacing_small"
+		android:layout_marginBottom="@dimen/spacing_larger"
 		android:scaleType="fitCenter"
-		tools:src="@drawable/ic_header_background" />
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@drawable/bg_header_icon_on" />
+
+	<org.dpppt.android.app.main.views.CircleAnimationView
+		android:id="@+id/main_header_anim_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
 	<ImageView
 		android:id="@+id/main_header_icon"
 		android:layout_width="@dimen/header_size_icon"
 		android:layout_height="@dimen/header_size_icon"
-		android:layout_gravity="center"
+		android:layout_marginTop="@dimen/spacing_small"
+		android:layout_marginBottom="@dimen/spacing_larger"
 		android:scaleType="fitCenter"
-		tools:src="@drawable/ic_header_check" />
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@drawable/ic_begegnungen" />
 
 </merge>

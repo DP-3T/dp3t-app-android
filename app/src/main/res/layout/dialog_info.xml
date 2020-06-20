@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,14 +22,22 @@
 		style="@style/NextStep.Text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/spacing_large"
+		tools:text="This is an example text for information purposes on at least two lines" />
+
+	<TextView
+		android:id="@+id/dialog_info_subtext"
+		style="@style/NextStep.Text.Small"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
 		tools:text="This is an example text for information purposes on at least two lines" />
 
 	<Button
 		android:id="@+id/dialog_info_button"
-		style="@style/NextStep.Button.Green"
+		style="@style/NextStep.Button"
+		android:layout_marginTop="@dimen/spacing_large"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/button_ok" />
+		android:text="@string/android_button_ok" />
 
 </LinearLayout>

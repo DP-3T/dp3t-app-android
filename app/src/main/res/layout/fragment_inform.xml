@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:background="@color/white"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:padding="@dimen/spacing_medium_large">
+
+		<Button
+			android:id="@+id/cancel_button"
+			style="@style/NextStep.Button.Transparent"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:text="@string/cancel" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/spacing_huge"
+			android:orientation="vertical">
+
+			<TextView
+				style="@style/NextStep.Text.Title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="bottom|center_horizontal"
+				android:text="@string/inform_code_title" />
+
+			<LinearLayout
+				android:id="@+id/inform_invalid_code_error"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/spacing_medium_large"
+				android:layout_marginBottom="@dimen/spacing_medium"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:visibility="gone"
+				tools:visibility="visible">
+
+				<TextView
+					style="@style/NextStep.Text.Bold.Red"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/inform_code_invalid_title" />
+
+				<TextView
+					style="@style/NextStep.Text.Red"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					android:text="@string/inform_code_invalid_subtitle" />
+
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/inform_input_text"
+				style="@style/NextStep.Text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/spacing_medium_large"
+				android:layout_marginBottom="@dimen/spacing_medium"
+				android:gravity="center_horizontal"
+				android:paddingStart="@dimen/spacing_huge"
+				android:paddingEnd="@dimen/spacing_huge"
+				android:text="@string/inform_code_text" />
+
+			<org.dpppt.android.app.inform.views.ChainedEditText
+				android:id="@+id/trigger_fragment_input"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/spacing_huge" />
+
+			<Button
+				android:id="@+id/trigger_fragment_button_trigger"
+				style="@style/NextStep.Button.Purple"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginBottom="@dimen/spacing_large"
+				android:enabled="false"
+				android:text="@string/inform_send_button_title" />
+
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

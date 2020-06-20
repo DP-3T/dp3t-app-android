@@ -1,0 +1,37 @@
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="113.93627dp"
+	android:height="88.5dp"
+	android:viewportWidth="40.216663"
+	android:viewportHeight="31.238293">
+	<path
+		android:fillColor="@color/white_10"
+		android:pathData="M19.9319,15.5222m-9.8778,0a9.8778,9.8778 0,1 1,19.7556 0a9.8778,9.8778 0,1 1,-19.7556 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M8.1513,1.5875m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M31.5468,1.5875m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M8.1513,29.6508m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M31.5468,29.6508m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M38.6292,15.5222m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+	<path
+		android:fillColor="@color/white"
+		android:pathData="M1.5875,15.5222m-1.5875,0a1.5875,1.5875 0,1 1,3.175 0a1.5875,1.5875 0,1 1,-3.175 0" />
+</vector>

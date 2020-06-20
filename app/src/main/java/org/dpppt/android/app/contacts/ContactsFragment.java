@@ -1,21 +1,18 @@
 /*
- * Created by Ubique Innovation AG
- * https://www.ubique.ch
- * Copyright (c) 2020. All rights reserved.
+ * Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ *
+ * SPDX-License-Identifier: MPL-2.0
  */
-
 package org.dpppt.android.app.contacts;
 
-import android.Manifest;
-import android.bluetooth.BluetoothAdapter;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.Switch;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -23,19 +20,22 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import org.dpppt.android.app.R;
-import org.dpppt.android.app.main.TracingViewModel;
-import org.dpppt.android.app.util.DeviceFeatureHelper;
-import org.dpppt.android.app.util.TracingStatusHelper;
+import org.dpppt.android.app.main.TracingBoxFragment;
+import org.dpppt.android.app.main.views.HeaderView;
+import org.dpppt.android.app.viewmodel.TracingViewModel;
+
 
 public class ContactsFragment extends Fragment {
 
+	private static final int REQUEST_CODE_BLE_INTENT = 330;
+
 	private TracingViewModel tracingViewModel;
+	private HeaderView headerView;
+	private ScrollView scrollView;
 
-	private Button locationPermissionButton;
-	private Button bluetoothButton;
-	private Button batteryOptimizationButton;
-
-	private boolean requestedSomething = false;
+	private View tracingStatusView;
+	private View tracingErrorView;
+	private Switch tracingSwitch;
 
 	public static ContactsFragment newInstance() {
 		return new ContactsFragment();
@@ -48,6 +48,10 @@ public class ContactsFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 
 		tracingViewModel = new ViewModelProvider(requireActivity()).get(TracingViewModel.class);
+		getChildFragmentManager()
+				.beginTransaction()
+				.add(R.id.status_container, TracingBoxFragment.newInstance(false))
+				.commit();
 	}
 
 	@Override
@@ -55,74 +59,59 @@ public class ContactsFragment extends Fragment {
 		Toolbar toolbar = view.findViewById(R.id.contacts_toolbar);
 		toolbar.setNavigationOnClickListener(v -> getParentFragmentManager().popBackStack());
 
-		View contactStatusView = view.findViewById(R.id.contacts_status);
+		tracingStatusView = view.findViewById(R.id.tracing_status);
+		tracingErrorView = view.findViewById(R.id.tracing_error);
+		tracingSwitch = view.findViewById(R.id.contacts_tracing_switch);
 
-		Switch tracingSwitch = view.findViewById(R.id.contacts_tracking_switch);
+		headerView = view.findViewById(R.id.contacts_header_view);
+		scrollView = view.findViewById(R.id.contacts_scroll_view);
+		tracingViewModel.getAppStatusLiveData().observe(getViewLifecycleOwner(), tracingStatus -> {
+			headerView.setState(tracingStatus);
+		});
+		setupScrollBehavior();
+		setupTracingView();
+	}
+
+	private void setupTracingView() {
+
 		tracingSwitch.setOnClickListener(v -> tracingViewModel.setTracingEnabled(tracingSwitch.isChecked()));
 
-		tracingViewModel.getErrorsLiveData().observe(getViewLifecycleOwner(), errorStates -> {
-			tracingSwitch.setEnabled(errorStates.isEmpty());
-		});
-
 		tracingViewModel.getTracingStatusLiveData().observe(getViewLifecycleOwner(), status -> {
-			boolean running = status.isAdvertising() && status.isReceiving();
-			tracingSwitch.setChecked(running);
-
-			TracingStatusHelper.State state = (status.getErrors().size() > 0 || !running)
-											  ? TracingStatusHelper.State.WARNING
-											  : TracingStatusHelper.State.OK;
-			int titleRes = state == TracingStatusHelper.State.OK ? R.string.tracing_active_title
-																 : R.string.tracing_error_title;
-			int textRes = state == TracingStatusHelper.State.OK ? R.string.tracing_active_text
-																: R.string.tracing_error_text;
-			TracingStatusHelper.updateStatusView(contactStatusView, state, titleRes, textRes);
-
-			invalidateErrorResolverButtons();
+			boolean isTracing = status.isAdvertising() && status.isReceiving();
+			tracingSwitch.setChecked(isTracing);
 		});
-
-		locationPermissionButton = view.findViewById(R.id.contact_location_permission_button);
-		locationPermissionButton.setOnClickListener(v -> {
-			requestedSomething = true;
-			String[] permissions = new String[] { Manifest.permission.ACCESS_FINE_LOCATION };
-			requestPermissions(permissions, 1);
-		});
-
-		batteryOptimizationButton = view.findViewById(R.id.contact_battery_button);
-		batteryOptimizationButton.setOnClickListener(v -> {
-			requestedSomething = true;
-			startActivity(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
-					Uri.parse("package:" + requireContext().getPackageName())));
-		});
-
-		bluetoothButton = view.findViewById(R.id.contact_bluetooth_button);
-		bluetoothButton.setOnClickListener(v -> {
-			Toast.makeText(v.getContext(), getString(R.string.activate_bluetooth_button) + " ...", Toast.LENGTH_SHORT).show();
-			BluetoothAdapter.getDefaultAdapter().enable();
-		});
-		tracingViewModel.getBluetoothEnabledLiveData().observe(getViewLifecycleOwner(), bluetoothEnabled -> {
-			bluetoothButton.setVisibility(bluetoothEnabled ? View.GONE : View.VISIBLE);
-		});
-
-		invalidateErrorResolverButtons();
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-
-		if (requestedSomething) {
-			tracingViewModel.invalidateService();
-			invalidateErrorResolverButtons();
-			requestedSomething = false;
-		}
+		tracingViewModel.invalidateService();
 	}
 
-	private void invalidateErrorResolverButtons() {
-		boolean locationPermissionGranted = DeviceFeatureHelper.isLocationPermissionGranted(requireContext());
-		locationPermissionButton.setVisibility(locationPermissionGranted ? View.GONE : View.VISIBLE);
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		headerView.stopAnimation();
+	}
 
-		boolean batteryOptDeactivated = DeviceFeatureHelper.isBatteryOptimizationDeactivated(requireContext());
-		batteryOptimizationButton.setVisibility(batteryOptDeactivated ? View.GONE : View.VISIBLE);
+	private void setupScrollBehavior() {
+
+		int scrollRangePx = getResources().getDimensionPixelSize(R.dimen.top_item_padding);
+		int translationRangePx = -getResources().getDimensionPixelSize(R.dimen.spacing_huge);
+		scrollView.setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
+			float progress = computeScrollAnimProgress(scrollY, scrollRangePx);
+			headerView.setAlpha(1 - progress);
+			headerView.setTranslationY(progress * translationRangePx);
+		});
+		scrollView.post(() -> {
+			float progress = computeScrollAnimProgress(scrollView.getScrollY(), scrollRangePx);
+			headerView.setAlpha(1 - progress);
+			headerView.setTranslationY(progress * translationRangePx);
+		});
+	}
+
+	private float computeScrollAnimProgress(int scrollY, int scrollRange) {
+		return Math.min(scrollY, scrollRange) / (float) scrollRange;
 	}
 
 }

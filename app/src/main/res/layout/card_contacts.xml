@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,27 +14,19 @@
 	android:layout_height="wrap_content">
 
 	<LinearLayout
-		android:id="@+id/card_contacts"
+		android:id="@+id/card_tracing"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:foreground="?selectableItemBackground"
-		android:orientation="vertical"
-		android:paddingTop="@dimen/spacing_medium"
-		android:paddingBottom="@dimen/spacing_medium">
+		android:orientation="vertical">
 
 		<LinearLayout
 			android:id="@+id/contacts_header"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:gravity="center_vertical"
+			android:layout_marginTop="5dp"
 			android:orientation="horizontal">
-
-			<ImageView
-				android:layout_width="@dimen/icon_size_title"
-				android:layout_height="@dimen/icon_size_title"
-				android:layout_marginStart="@dimen/spacing_large"
-				android:src="@drawable/ic_begegnungen"
-				android:tint="@color/blue_main" />
 
 			<TextView
 				style="@style/NextStep.Text.Title"
@@ -42,22 +37,19 @@
 				android:text="@string/handshakes_title_homescreen" />
 
 			<ImageView
+				android:id="@+id/contacs_chevron"
 				android:layout_width="@dimen/chevron_size_title"
 				android:layout_height="@dimen/chevron_size_title"
+				android:layout_marginEnd="@dimen/spacing_small"
 				android:src="@drawable/ic_chevron_right"
-				android:tint="@color/blue_main" />
+				android:tint="@color/dark_main" />
 
 		</LinearLayout>
 
-		<include
-			android:id="@+id/contacts_status"
-			layout="@layout/layout_status"
+		<FrameLayout
+			android:id="@+id/status_container"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginStart="@dimen/spacing_large"
-			android:layout_marginTop="@dimen/spacing_medium"
-			android:layout_marginEnd="@dimen/spacing_large"
-			android:layout_marginBottom="@dimen/spacing_medium" />
+			android:layout_height="wrap_content" />
 
 	</LinearLayout>
 

@@ -1,11 +1,27 @@
 /*
- * Created by Ubique Innovation AG
- * https://www.ubique.ch
- * Copyright (c) 2020. All rights reserved.
+ * Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ *
+ * SPDX-License-Identifier: MPL-2.0
  */
 
 plugins {
 	id 'com.android.application'
+}
+
+ext.readProperty = { paramName ->
+	if (project.hasProperty(paramName)) {
+		return project.getProperties().get(paramName)
+	} else {
+		Properties properties = new Properties()
+		if (project.rootProject.file('local.properties').exists()) {
+			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+		}
+		return properties.getProperty(paramName)
+	}
 }
 
 android {
@@ -18,27 +34,31 @@ android {
 		targetSdkVersion 29
 		versionCode 1
 		versionName "1.0"
+		resConfigs "en", "fr", "de", "it"
+
+		buildConfigField "long", "BUILD_TIME", System.currentTimeMillis() + "L"
 	}
 
 	flavorDimensions "version"
 	productFlavors {
 		dev {
-		}
-		prod {
+			buildConfigField 'boolean', 'IS_DEV', 'true'
+			buildConfigField 'String', 'BUCKET_PUBLIC_KEY', '"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFdkxXZHVFWThqcnA4aWNSNEpVSlJaU0JkOFh2UgphR2FLeUg2VlFnTXV2Zk1JcmxrNk92QmtKeHdhbUdNRnFWYW9zOW11di9rWGhZdjF1a1p1R2RjREJBPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg=="'
 		}
 	}
 
 	signingConfigs {
 		release {
 			storeFile file('testKeystore')
-			storePassword '123456'
+			storePassword readProperty('keystorePassword')
 			keyAlias 'keyAlias'
-			keyPassword '123456'
+			keyPassword readProperty('keyAliasPassword')
 		}
 	}
 	buildTypes {
 		release {
-			minifyEnabled false
+			shrinkResources true
+			setMinifyEnabled true
 			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 			signingConfig signingConfigs.release
 		}
@@ -53,7 +73,8 @@ android {
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-	implementation 'org.dpppt:dp3t-sdk-android:0.1.2'
+	implementation 'org.dpppt:dp3t-sdk-android:0.2.6'
+
 
 	implementation 'androidx.appcompat:appcompat:1.1.0'
 	implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -61,6 +82,8 @@ dependencies {
 	implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
 	implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0'
 	implementation 'androidx.viewpager2:viewpager2:1.0.0'
+	implementation 'androidx.security:security-crypto:1.0.0-rc01'
+	implementation 'androidx.work:work-runtime:2.3.4'
 
 	implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 	implementation 'io.reactivex.rxjava3:rxjava:3.0.0'

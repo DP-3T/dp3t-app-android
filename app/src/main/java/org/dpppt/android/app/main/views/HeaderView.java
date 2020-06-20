@@ -1,9 +1,12 @@
 /*
- * Created by Ubique Innovation AG
- * https://www.ubique.ch
- * Copyright (c) 2020. All rights reserved.
+ * Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ *
+ * SPDX-License-Identifier: MPL-2.0
  */
-
 package org.dpppt.android.app.main.views;
 
 import android.animation.Animator;
@@ -11,83 +14,79 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.animation.*;
-import android.widget.FrameLayout;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
-import java.util.Iterator;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.Random;
 
 import org.dpppt.android.app.R;
-import org.dpppt.android.app.main.model.AppState;
+import org.dpppt.android.app.main.model.NotificationState;
+import org.dpppt.android.app.main.model.TracingState;
+import org.dpppt.android.app.main.model.TracingStatusInterface;
+import org.dpppt.android.app.util.TracingErrorStateHelper;
+import org.dpppt.android.sdk.TracingStatus;
 
-public class HeaderView extends FrameLayout {
 
-	private static final int MAX_NUM_ARCS = 20;
+public class HeaderView extends ConstraintLayout {
 
-	private static final long COLOR_ANIM_DURATION = 500;
-	private static final long ICON_ANIM_DURATION = 500;
-	private static final long ICON_ANIM_DELAY = 200;
-	private static final float ICON_BG_BUMP_FACTOR = 0.95f;
 	private static final float ANIM_OVERSHOOT_TENSION = 2;
-	private static final float ARC_RADIUS_START_FRAC = 0.25f;
-	private static final float ARC_RADIUS_DELTA = 0.4f;
-	private static final float ARC_SIZE_DELTA = 1.25f;
-	private static final float ARC_HALF_ANGLE_DEG = 30;
-	private static final long ARC_MAX_AGE = 2000;
-	private static final long ARC_PAUSE_DELAY = 5000;
-	private static final long ARC_CONSEC_DELAY = ARC_MAX_AGE - 500;
-	private static final float ARC_FADE_IN_FRAC = 0.1f;
-	private static final long INITIAL_DELAY = 500;
-	private static final long INITIAL_DELAY_ARC = 2 * INITIAL_DELAY + ICON_ANIM_DURATION + ICON_ANIM_DELAY;
+	private static final long COLOR_ANIM_DURATION = 500;
+	static final long ICON_ANIM_DURATION = 500;
+	static final long ICON_ANIM_DELAY = 200;
+	static final long INITIAL_DELAY = 500;
 
+	private static final int[] BACKGROUND_IMAGES =
+			new int[] { R.drawable.header_basel,
+					R.drawable.header_bern,
+					R.drawable.header_chur,
+					R.drawable.header_geneva,
+					R.drawable.header_lausanne,
+					R.drawable.header_locarno,
+					R.drawable.header_lugano,
+					R.drawable.header_luzern,
+					R.drawable.header_stgallen,
+					R.drawable.header_zurich };
+	private static Integer backgroundImageIndex = null;
+
+	private ImageView backgroundImage;
 	private ImageView icon;
 	private ImageView iconBackground;
+	private CircleAnimationView circleView;
 
-	private AppState currentState;
+	private TracingState currentTracingState;
+	private NotificationState currentNotificationState;
+	private TracingStatus.ErrorState currentErrorState;
 	private AnimatorSet iconAnimatorSet;
 	private ValueAnimator colorAnimator;
-	private Handler arcHandler;
-	private ArcRunnable arcRunnable;
-	private ConcurrentLinkedQueue<ArcObject> arcs = new ConcurrentLinkedQueue<>();
-	private Paint paintArc;
-	private int arcStrokeWidth;
-	private int arcAlpha;
 
 	public HeaderView(Context context) {
 		super(context);
-		init(context, null, 0, 0);
+		init(context, null, 0);
 	}
 
 	public HeaderView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
-		init(context, attrs, 0, 0);
+		init(context, attrs, 0);
 	}
 
 	public HeaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
-		init(context, attrs, defStyleAttr, 0);
+		init(context, attrs, defStyleAttr);
 	}
 
-	public HeaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-		super(context, attrs, defStyleAttr, defStyleRes);
-		init(context, attrs, defStyleAttr, defStyleRes);
-	}
-
-	private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+	private void init(Context context, AttributeSet attrs, int defStyleAttr) {
 		setForegroundGravity(Gravity.CENTER);
-		setBackgroundColor(Color.TRANSPARENT);
 		View headerContent = LayoutInflater.from(context).inflate(R.layout.view_header, this, true);
 		icon = headerContent.findViewById(R.id.main_header_icon);
 		icon.setScaleX(0);
@@ -96,114 +95,124 @@ public class HeaderView extends FrameLayout {
 		iconBackground.setScaleX(0);
 		iconBackground.setScaleY(0);
 
-		paintArc = new Paint();
-		paintArc.setStyle(Paint.Style.STROKE);
-		paintArc.setAntiAlias(true);
-		int arcColor = getResources().getColor(R.color.status_arc, null);
-		paintArc.setColor(arcColor);
-		arcStrokeWidth = getResources().getDimensionPixelSize(R.dimen.header_stroke_width_arc);
-		arcAlpha = Color.alpha(arcColor);
-
-		arcHandler = new Handler();
-	}
-
-	public void stopArcAnimation() {
-		if (arcRunnable != null) {
-			arcRunnable.stop();
-			arcHandler.removeCallbacksAndMessages(null);
+		if (backgroundImageIndex == null) {
+			backgroundImageIndex = new Random(System.currentTimeMillis()).nextInt(BACKGROUND_IMAGES.length);
 		}
+		backgroundImage = headerContent.findViewById(R.id.main_header_bg_image);
+		backgroundImage.setForeground(new ColorDrawable(getResources().getColor(R.color.header_bg_off, null)));
+		backgroundImage.setImageResource(BACKGROUND_IMAGES[backgroundImageIndex]);
+
+		circleView = headerContent.findViewById(R.id.main_header_anim_view);
 	}
 
-	public void setState(AppState state) {
-		if (currentState == state) return;
-		boolean initialUpdate = currentState == null;
+	public void stopAnimation() {
+		circleView.stopAnimation();
+	}
 
-		int backgroundColor = Color.TRANSPARENT;
+	public void setState(TracingStatusInterface state) {
+		boolean initialUpdate = currentTracingState == null;
+
+		if (state.getTracingState() == currentTracingState && state.getNotificationState() == currentNotificationState &&
+				state.getTracingErrorState() == currentErrorState) {
+			return;
+		}
+
+		currentErrorState = state.getTracingErrorState();
+		currentTracingState = state.getTracingState();
+		currentNotificationState = state.getNotificationState();
+
+		int backgroundColor;
 		int iconRes = 0;
-		switch (state) {
-			case TRACING:
-				iconRes = (R.drawable.ic_header_check);
-				backgroundColor = getResources().getColor(R.color.status_green, null);
-				break;
-			case ERROR:
-				iconRes = (R.drawable.ic_header_error);
-				backgroundColor = getResources().getColor(R.color.status_red, null);
-				break;
-			case EXPOSED_ERROR:
-			case EXPOSED:
-				iconRes = (R.drawable.ic_header_info);
-				backgroundColor = getResources().getColor(R.color.status_blue, null);
-				break;
+		Integer iconTintColor = null;
+		int iconBgRes = 0;
+		TracingStatus.ErrorState error = state.getTracingErrorState();
+		boolean hasTracingError = error != null && TracingErrorStateHelper.isTracingErrorState(error);
+		if (state.getNotificationState() == NotificationState.NO_REPORTS ||
+				state.getNotificationState() == NotificationState.EXPOSED) {
+			if (currentTracingState == TracingState.ACTIVE && hasTracingError) {
+				iconBgRes = R.drawable.bg_header_icon_off;
+				iconTintColor = R.color.white;
+				backgroundColor = getResources().getColor(R.color.header_bg_error, null);
+				switch (error) {
+					case SYNC_ERROR_TIMING:
+					case MISSING_LOCATION_PERMISSION:
+					case BLE_NOT_SUPPORTED:
+					case BLE_INTERNAL_ERROR:
+					case BATTERY_OPTIMIZER_ENABLED:
+					case BLE_ADVERTISING_ERROR:
+					case BLE_SCANNER_ERROR:
+						iconRes = R.drawable.ic_warning;
+						break;
+					case BLE_DISABLED:
+						iconRes = R.drawable.ic_bluetooth_off;
+						break;
+					case LOCATION_SERVICE_DISABLED:
+						iconRes = R.drawable.ic_header_gps_off;
+				}
+			} else {
+				if (state.getTracingState() == TracingState.ACTIVE) {
+					iconRes = R.drawable.ic_begegnungen;
+					iconTintColor = R.color.white;
+					iconBgRes = R.drawable.bg_header_icon_on;
+					backgroundColor = getResources().getColor(R.color.header_bg_on, null);
+				} else {
+					iconRes = R.drawable.ic_warning_red;
+					iconBgRes = R.drawable.bg_header_icon_off;
+					backgroundColor = getResources().getColor(R.color.header_bg_off, null);
+				}
+			}
+		} else if (state.getNotificationState() == NotificationState.POSITIVE_TESTED) {
+			backgroundColor = getResources().getColor(R.color.header_bg_exposed, null);
+		} else {
+			throw new IllegalStateException(
+					"Unhandled tracing status in header: \n" + state.getNotificationState() + "\n" + state.getTracingState() +
+							"\n" + state.getTracingErrorState());
 		}
 		iconBackground.setImageResource(R.drawable.ic_header_background);
 
 		if (colorAnimator != null && colorAnimator.isRunning()) colorAnimator.cancel();
-		int startColor = ((ColorDrawable) getBackground()).getColor();
+		ColorDrawable colorDrawable = (ColorDrawable) backgroundImage.getForeground();
+		int startColor = colorDrawable.getColor();
 		int endColor = backgroundColor;
 		colorAnimator = ValueAnimator.ofArgb(startColor, endColor);
 		colorAnimator.setDuration(COLOR_ANIM_DURATION);
-		colorAnimator.addUpdateListener(animation -> setBackgroundColor((int) animation.getAnimatedValue()));
+		colorAnimator.addUpdateListener(animation -> colorDrawable.setColor((int) animation.getAnimatedValue()));
 		colorAnimator.start();
 
-		if (iconAnimatorSet != null && iconAnimatorSet.isRunning()) iconAnimatorSet.cancel();
 		if (initialUpdate) {
+			if (iconAnimatorSet != null && iconAnimatorSet.isRunning()) iconAnimatorSet.cancel();
 			Animator iconAnimator =
 					createSizeAnimation(icon, icon.getScaleX(), 1, ICON_ANIM_DURATION, ICON_ANIM_DELAY + INITIAL_DELAY);
 			Animator iconBgAnimator =
 					createSizeAnimation(iconBackground, iconBackground.getScaleX(), 1, ICON_ANIM_DURATION, INITIAL_DELAY);
 			icon.setImageResource(iconRes);
+			if (iconTintColor != null) {
+				icon.setImageTintList(ContextCompat.getColorStateList(getContext(), iconTintColor));
+			} else {
+				icon.setImageTintList(null);
+			}
+			iconBackground.setImageResource(iconBgRes);
 			iconAnimatorSet = new AnimatorSet();
 			iconAnimatorSet.playTogether(iconAnimator, iconBgAnimator);
 			iconAnimatorSet.start();
 		} else {
-			iconAnimatorSet = createIconSwitchAnimation(icon, iconBackground, iconRes, ICON_ANIM_DURATION);
-			iconAnimatorSet.start();
-		}
-
-		stopArcAnimation();
-		if (state != AppState.ERROR && state != AppState.EXPOSED_ERROR) {
-			arcRunnable = new ArcRunnable(3);
-			arcHandler.postDelayed(arcRunnable, initialUpdate ? INITIAL_DELAY_ARC : 0);
-		}
-
-		currentState = state;
-	}
-
-	@Override
-	protected void onDraw(Canvas canvas) {
-		super.onDraw(canvas);
-		if (arcs.size() == 0) return;
-
-		long now = System.currentTimeMillis();
-		int halfW = Math.round(getWidth() * 0.5f);
-		int halfH = Math.round(getHeight() * 0.5f);
-
-		Iterator<ArcObject> iter = arcs.iterator();
-		while (iter.hasNext()) {
-			ArcObject arc = iter.next();
-			float progress = (now - arc.getBirthMs()) / (float) ARC_MAX_AGE;
-
-			if (progress >= 1) {
-				iter.remove();
-				continue;
+			icon.setImageResource(iconRes);
+			if (iconTintColor != null) {
+				icon.setImageTintList(ContextCompat.getColorStateList(getContext(), iconTintColor));
+			} else {
+				icon.setImageTintList(null);
 			}
-
-			int radius = Math.round((ARC_RADIUS_START_FRAC + progress * ARC_RADIUS_DELTA) * halfW);
-			float scaleFactor = 1 + progress * ARC_SIZE_DELTA;
-			paintArc.setStrokeWidth(scaleFactor * arcStrokeWidth);
-			int alpha = Math.round(
-					(progress > ARC_FADE_IN_FRAC ? Math.max(1 - progress, 0) : progress * 1 / ARC_FADE_IN_FRAC) * arcAlpha);
-			paintArc.setAlpha(alpha);
-
-			int left = halfW - radius;
-			int top = halfH - radius;
-			int right = halfW + radius;
-			int bottom = halfH + radius;
-			canvas.drawArc(left, top, right, bottom, -ARC_HALF_ANGLE_DEG, 2 * ARC_HALF_ANGLE_DEG, false, paintArc);
-			canvas.drawArc(left, top, right, bottom, 180 - ARC_HALF_ANGLE_DEG, 2 * ARC_HALF_ANGLE_DEG, false, paintArc);
+			iconBackground.setImageResource(iconBgRes);
 		}
 
-		if (arcs.size() > 0) invalidate();
+		circleView.setState(
+				state.getNotificationState() != NotificationState.POSITIVE_TESTED
+						&& state.getTracingState() == TracingState.ACTIVE
+						&& !hasTracingError,
+				initialUpdate);
+		icon.post(() -> {
+			circleView.setCenter(Math.round(icon.getX() + icon.getWidth() / 2), Math.round(icon.getY() + icon.getHeight() / 2));
+		});
 	}
 
 	private ValueAnimator createSizeAnimation(View view, float from, float to, long duration, long delay) {
@@ -219,93 +228,48 @@ public class HeaderView extends FrameLayout {
 		return animator;
 	}
 
-	private AnimatorSet createSizeBumpAnimation(View view, float to, long duration, Runnable onBumpPeak) {
-		long halfDur = duration / 2;
-		AnimatorSet animatorSet = new AnimatorSet();
-
-		ValueAnimator bumpStart = createSizeAnimation(view, 1f, to, halfDur, 0);
-		bumpStart.setInterpolator(new LinearInterpolator());
-		bumpStart.addListener(new AnimatorListenerAdapter() {
-			@Override
-			public void onAnimationEnd(Animator animation) {
-				super.onAnimationEnd(animation);
-				if (onBumpPeak != null) onBumpPeak.run();
-			}
+	private ValueAnimator createAlphaAnimation(View view, float from, float to, long duration, long delay) {
+		ValueAnimator animator = ValueAnimator.ofFloat(from, to);
+		animator.setInterpolator(new DecelerateInterpolator());
+		animator.setDuration(duration);
+		animator.setStartDelay(delay);
+		animator.addUpdateListener(animation -> {
+			float alpha = (float) animation.getAnimatedValue();
+			view.setAlpha(alpha);
+			view.setAlpha(alpha);
 		});
-		ValueAnimator bumpEnd = createSizeAnimation(view, to, 1f, halfDur, 0);
-
-		animatorSet.playSequentially(bumpStart, bumpEnd);
-		return animatorSet;
+		return animator;
 	}
 
-	private AnimatorSet createIconSwitchAnimation(ImageView iconView, ImageView iconBg, @DrawableRes int iconRes, long duration) {
+	private AnimatorSet createIconSwitchAnimation(ImageView iconView, ImageView iconBg, @DrawableRes int iconRes,
+			@DrawableRes int iconBgRes, long duration) {
 		long halfDur = duration / 2;
 		AnimatorSet animatorSet = new AnimatorSet();
-		AnimatorSet bump = createSizeBumpAnimation(iconBg, ICON_BG_BUMP_FACTOR, duration, null);
-		ValueAnimator disappear = createSizeAnimation(iconView, 1f, 0f, halfDur, 0);
-		disappear.setInterpolator(new AnticipateInterpolator(ANIM_OVERSHOOT_TENSION));
-		disappear.addListener(new AnimatorListenerAdapter() {
+
+		ValueAnimator disappearIcon = createSizeAnimation(iconView, 1f, 0f, halfDur, ICON_ANIM_DELAY);
+		disappearIcon.setInterpolator(new AccelerateInterpolator());
+		ValueAnimator appearIcon = createAlphaAnimation(iconView, 0f, 1f, halfDur, 0);
+		disappearIcon.addListener(new AnimatorListenerAdapter() {
 			@Override
 			public void onAnimationEnd(Animator animation) {
 				icon.setImageResource(iconRes);
 			}
 		});
-		ValueAnimator appear = createSizeAnimation(iconView, 0f, 1f, halfDur, 0);
-		animatorSet.playTogether(disappear, bump);
-		animatorSet.play(appear).after(disappear);
-		return animatorSet;
-	}
 
-	public void spawnArc() {
-		if (arcs.size() < MAX_NUM_ARCS) {
-			arcs.add(new ArcObject(System.currentTimeMillis()));
-			invalidate();
-		}
-	}
-
-	private class ArcObject {
-		private final long birthMs;
-
-		private ArcObject(long birthMs) {this.birthMs = birthMs;}
-
-		public long getBirthMs() {
-			return birthMs;
-		}
-
-	}
-
-
-	private class ArcRunnable implements Runnable {
-		private boolean run = true;
-		private final int newConsecutives;
-
-		private ArcRunnable(int numConsecutives) {
-			newConsecutives = Math.max(numConsecutives - 1, 0);
-		}
-
-		public void stop() {
-			run = false;
-		}
-
-		@Override
-		public void run() {
-			if (!run) return;
-
-			arcRunnable = new ArcRunnable(newConsecutives);
-			long arcDelay = newConsecutives > 0 ? ARC_CONSEC_DELAY : ARC_PAUSE_DELAY;
-
-			if (iconAnimatorSet != null && iconAnimatorSet.isRunning()) {
-				spawnArc();
-				arcHandler.postDelayed(arcRunnable, arcDelay);
-			} else {
-				iconAnimatorSet = createSizeBumpAnimation(iconBackground, ICON_BG_BUMP_FACTOR, ICON_ANIM_DURATION, () -> {
-					spawnArc();
-					arcHandler.postDelayed(arcRunnable, arcDelay);
-				});
-				iconAnimatorSet.start();
+		ValueAnimator disappearBg = createSizeAnimation(iconView, 1f, 0f, halfDur, 0);
+		disappearBg.setInterpolator(new AccelerateInterpolator());
+		ValueAnimator appearBg = createSizeAnimation(iconView, 0f, 1f, halfDur, 0);
+		disappearBg.addListener(new AnimatorListenerAdapter() {
+			@Override
+			public void onAnimationEnd(Animator animation) {
+				iconBg.setImageResource(iconBgRes);
 			}
-		}
+		});
 
+		animatorSet.playTogether(disappearBg, disappearIcon);
+		animatorSet.play(appearBg).after(disappearBg);
+		animatorSet.play(appearIcon).after(disappearIcon);
+		return animatorSet;
 	}
 
 }

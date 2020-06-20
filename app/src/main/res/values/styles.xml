@@ -1,7 +1,11 @@
 <!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <resources>
@@ -13,11 +17,12 @@
 		<item name="fontFamily">@font/inter</item>
 		<item name="android:windowLightStatusBar">true</item>
 		<item name="android:statusBarColor">@color/white</item>
+		<item name="toolbarStyle">@style/NextStep.Toolbar</item>
 		<item name="toolbarNavigationButtonStyle">@style/NextStep.Toolbar.Button.Navigation</item>
 	</style>
 
 	<style name="NextStep.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
-		<item name="background">@color/background_light</item>
+		<item name="background">@color/navigation_background</item>
 		<item name="itemIconTint">@color/selector_bottom_navigation_item</item>
 		<item name="itemTextColor">@color/selector_bottom_navigation_item</item>
 	</style>
@@ -29,35 +34,60 @@
 		<item name="fontFamily">@font/inter</item>
 	</style>
 
+	<style name="NextStep.Text.Small">
+		<item name="android:textSize">@dimen/text_size_small</item>
+		<item name="android:textColor">@color/grey_medium</item>
+	</style>
+
+	<style name="NextStep.Text.Red">
+		<item name="android:textColor">@color/red_main</item>
+	</style>
+
+	<style name="NextStep.Text.Blue">
+		<item name="android:textColor">@color/blue_main</item>
+	</style>
+
 	<style name="NextStep.Text.Bold">
 		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="NextStep.Text.Bold.Red">
+		<item name="android:textColor">@color/red_main</item>
+	</style>
+
+	<style name="NextStep.Text.Bold.Red.CAPS">
+		<item name="android:textAllCaps">true</item>
+		<item name="android:letterSpacing">0.1</item>
+	</style>
+
+	<style name="NextStep.Text.Bold.Purple">
+		<item name="android:textColor">@color/purple_main</item>
 	</style>
 
 	<style name="NextStep.Text.Bold.Blue">
 		<item name="android:textColor">@color/blue_main</item>
 	</style>
 
+	<style name="NextStep.Text.Bold.Green">
+		<item name="android:textColor">@color/green_main</item>
+	</style>
+
 	<style name="NextStep.Text.Title">
 		<item name="android:textSize">@dimen/text_size_title</item>
 		<item name="android:textStyle">bold</item>
-		<item name="android:textColor">@color/blue_main</item>
 	</style>
 
-	<style name="NextStep.Text.Title.Toolbar">
+	<style name="NextStep.Text.SubTitle">
 		<item name="android:textSize">@dimen/text_size_normal</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/green_main</item>
 	</style>
 
 	<style name="NextStep.Text.MainTitle">
 		<item name="android:textSize">@dimen/text_size_title</item>
 		<item name="android:textStyle">bold</item>
-	</style>
-
-	<style name="NextStep.Text.Small">
-		<item name="android:textSize">@dimen/text_size_small</item>
-	</style>
-
-	<style name="NextStep.Text.VeryLarge">
-		<item name="android:textSize">@dimen/text_size_title</item>
+		<item name="android:textColor">@color/purple_main</item>
+		<item name="android:gravity">center_horizontal</item>
 	</style>
 
 	<style name="NextStep.Text.Status">
@@ -67,57 +97,83 @@
 	</style>
 
 	<style name="NextStep.Text.Input">
-		<item name="android:textSize">@dimen/text_size_title</item>
+		<item name="android:textSize">@dimen/text_size_input</item>
 		<item name="android:textStyle">bold</item>
 		<item name="android:textAllCaps">true</item>
-		<item name="android:gravity">center_horizontal</item>
+		<item name="android:gravity">center</item>
 		<item name="android:focusable">false</item>
 		<item name="android:background">@drawable/bg_chained_edit_text</item>
-		<item name="android:paddingStart">@dimen/spacing_medium</item>
-		<item name="android:paddingEnd">@dimen/spacing_medium</item>
-		<item name="android:paddingTop">@dimen/spacing_very_small</item>
-		<item name="android:paddingBottom">@dimen/spacing_very_small</item>
 	</style>
 
 	<style name="NextStep.Button.Transparent" parent="TextAppearance.AppCompat">
 		<item name="android:padding">@dimen/spacing_medium</item>
 		<item name="android:textSize">@dimen/text_size_button</item>
-		<item name="android:textColor">@color/green_main</item>
+		<item name="android:textColor">@color/purple_main</item>
 		<item name="android:textStyle">bold</item>
+		<item name="android:textAllCaps">false</item>
 		<item name="android:background">?selectableItemBackground</item>
 	</style>
 
-	<style name="NextStep.Button.Transparent.Light">
+	<style name="NextStep.Button.Transparent.Blue">
+		<item name="android:textColor">@color/blue_main</item>
+	</style>
+
+	<style name="NextStep.Button.Transparent.Blue.Light">
 		<item name="android:textStyle">normal</item>
+		<item name="android:textAllCaps">false</item>
 	</style>
 
 	<style name="NextStep.Button" parent="Widget.MaterialComponents.Button">
 		<item name="android:textColor">@color/white</item>
-		<item name="android:textAllCaps">true</item>
+		<item name="android:textAllCaps">false</item>
 		<item name="android:textStyle">bold</item>
 		<item name="android:textSize">@dimen/text_size_button</item>
 		<item name="android:background">@drawable/bg_button_default</item>
+		<item name="android:stateListAnimator">@null</item>
 		<item name="android:foreground">@drawable/ripple_button</item>
 		<item name="android:paddingBottom">@dimen/spacing_small</item>
 		<item name="android:paddingTop">@dimen/spacing_small</item>
 		<item name="android:paddingStart">@dimen/spacing_large</item>
 		<item name="android:paddingEnd">@dimen/spacing_large</item>
-		<item name="android:elevation">@dimen/button_elevation</item>
 		<item name="android:drawablePadding">@dimen/spacing_small</item>
 	</style>
 
-	<style name="NextStep.Button.Green">
-		<item name="android:background">@drawable/bg_button_green</item>
+	<style name="NextStep.Button.AllCaps">
+		<item name="textAllCaps">true</item>
 	</style>
 
-	<style name="NextStep.Button.Outlined">
+	<style name="NextStep.Button.Purple">
+		<item name="android:background">@drawable/bg_button_purple</item>
+	</style>
+
+	<style name="NextStep.Button.Blue">
+		<item name="android:background">@drawable/bg_button_blue</item>
+	</style>
+
+	<style name="NextStep.Button.WhiteBlue">
+		<item name="android:background">@drawable/bg_button_white</item>
 		<item name="android:textColor">@color/blue_main</item>
-		<item name="android:background">@drawable/bg_button_outlined</item>
 	</style>
 
 	<style name="NextStep.Button.Red">
 		<item name="backgroundTint">@color/red_main</item>
 		<item name="android:backgroundTint">@color/red_main</item>
+	</style>
+
+	<style name="NextStep.Button.Outlined">
+		<item name="android:textColor">@color/blue_main</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="android:background">@drawable/bg_button_outlined</item>
+	</style>
+
+	<style name="NextStep.Button.Outlined.Red">
+		<item name="android:textColor">@color/red_main</item>
+		<item name="android:background">@drawable/bg_button_outlined_red</item>
+	</style>
+
+	<style name="NextStep.Button.Outlined.Purple">
+		<item name="android:textColor">@color/purple_main</item>
+		<item name="android:background">@drawable/bg_button_outlined_purple</item>
 	</style>
 
 	<style name="NextStep.Card" parent="CardView">
@@ -126,19 +182,26 @@
 	</style>
 
 	<style name="NextStep.Toolbar" parent="Widget.AppCompat.Toolbar">
-		<item name="android:background">@color/white</item>
+		<item name="android:background">@drawable/bg_toolbar</item>
 		<item name="android:elevation">@dimen/toolbar_elevation</item>
-		<item name="titleTextColor">@color/blue_main</item>
-		<item name="titleTextAppearance">@style/NextStep.Text.Title.Toolbar</item>
+		<item name="titleTextColor">@color/dark_main</item>
+		<item name="titleTextAppearance">@style/NextStep.Text.Bold</item>
+		<item name="android:gravity">center_horizontal</item>
 	</style>
 
 	<style name="NextStep.Toolbar.Button.Navigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
-		<item name="android:tint">@color/colorAccent</item>
+		<item name="android:tint">@color/navigation_icon_toolbar</item>
 	</style>
 
 	<style name="NextStep.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
 		<item name="android:thumbTint">@color/switch_tint_selector</item>
 		<item name="android:trackTint">@color/switch_tint_selector</item>
+	</style>
+
+	<style name="NextStep.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+		<item name="android:textAppearance">@style/NextStep.Text</item>
+		<item name="android:textColor">@color/dark_main</item>
+		<item name="android:paddingStart">@dimen/spacing_medium</item>
 	</style>
 
 </resources>

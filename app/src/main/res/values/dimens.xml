@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <resources>
-	<dimen name="view_pager_page_indicator_margin">20dp</dimen>
-	<dimen name="floating_action_button_margin">16dp</dimen>
-	<dimen name="spacing_very_small">4dp</dimen>
+	<dimen name="spacing_tiny_small">2dp</dimen>
 	<dimen name="spacing_small">9dp</dimen>
 	<dimen name="spacing_medium">12dp</dimen>
 	<dimen name="spacing_medium_large">15dp</dimen>
@@ -16,32 +18,37 @@
 	<dimen name="spacing_larger">25dp</dimen>
 	<dimen name="spacing_very_large">30dp</dimen>
 	<dimen name="spacing_huge">40dp</dimen>
+	<dimen name="spacing_huger">50dp</dimen>
 	<dimen name="spacing_enormous">100dp</dimen>
-	<dimen name="text_size_main_title">28sp</dimen>
-	<dimen name="text_size_title">24sp</dimen>
+	<dimen name="text_size_title">22sp</dimen>
 	<dimen name="text_size_normal">16sp</dimen>
 	<dimen name="text_size_small">14sp</dimen>
 	<dimen name="text_size_button">16sp</dimen>
-	<dimen name="chevron_size_title">48dp</dimen>
-	<dimen name="illustration_height">220dp</dimen>
-	<dimen name="info_button_size">48dp</dimen>
-	<dimen name="home_appbar_height">240dp</dimen>
-	<dimen name="button_elevation">4dp</dimen>
+	<dimen name="text_size_input">24sp</dimen>
+	<dimen name="chevron_size_title">24dp</dimen>
+	<dimen name="illustration_height">180dp</dimen>
+	<dimen name="button_elevation">0dp</dimen>
 	<dimen name="card_border_radius">2dp</dimen>
 	<dimen name="card_elevation">3dp</dimen>
+	<dimen name="card_what_to_do_ill_margin">32dp</dimen>
+	<dimen name="card_ill_width">80dp</dimen>
 	<dimen name="toolbar_elevation">3dp</dimen>
-	<dimen name="icon_size_title">24dp</dimen>
+	<dimen name="icon_size">24dp</dimen>
 	<dimen name="stroke_width_default">2dp</dimen>
 	<dimen name="button_corner_radius">4dp</dimen>
-	<dimen name="top_item_padding">180dp</dimen>
-	<dimen name="header_height">220dp</dimen>
-	<dimen name="header_size_bg">75dp</dimen>
-	<dimen name="header_size_arc">65dp</dimen>
-	<dimen name="header_stroke_width_arc">6dp</dimen>
-	<dimen name="header_size_icon">24dp</dimen>
+	<dimen name="top_item_padding">155dp</dimen>
+	<dimen name="top_item_padding_reports">185dp</dimen>
+	<dimen name="top_item_padding_reports_width_indicator">205dp</dimen>
+	<dimen name="header_height">180dp</dimen>
+	<dimen name="header_height_reports">210dp</dimen>
+	<dimen name="header_height_reports_with_indicator">230dp</dimen>
+	<dimen name="header_stroke_width_circle">4dp</dimen>
+	<dimen name="header_size_icon">36dp</dimen>
 	<dimen name="message_bubble_corner_radius">5dp</dimen>
-	<dimen name="message_triangle_size">12dp</dimen>
-	<dimen name="chained_edit_text_height">44sp</dimen>
-	<dimen name="chained_edit_text_width">40sp</dimen>
+	<dimen name="chained_edit_text_height">36sp</dimen>
+	<dimen name="chained_edit_text_width">25sp</dimen>
 	<dimen name="size_progress_bar">48dp</dimen>
+	<dimen name="marging_status_error">10dp</dimen>
+	<dimen name="onboarding_continue_button_height">72dp</dimen>
+	<dimen name="padding_between_code">1dp</dimen>
 </resources>

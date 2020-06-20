@@ -16,11 +16,11 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleDevRelease -PkeystorePassword=${{secrets.KEYSTORE_PASSWORD}} -PkeyAliasPassword=${{secrets.KEY_ALIAS_PASSWORD}}
     - name: upload artefact to App Center
       uses: wzieba/AppCenter-Github-Action@v1.0.0
       with:
         appName: ${{secrets.APPCENTER_ORGANIZATION}}/${{secrets.APPCENTER_APP}}
         token: ${{secrets.APPCENTER_API_TOKEN}}
         group: Internal
-        file: app/build/outputs/apk/prod/release/app-prod-release.apk
+        file: app/build/outputs/apk/dev/release/app-dev-release.apk

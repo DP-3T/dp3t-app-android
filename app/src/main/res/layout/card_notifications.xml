@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	style="@style/NextStep.Card"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
@@ -15,23 +19,16 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:foreground="?selectableItemBackground"
-		android:orientation="vertical"
-		android:paddingTop="@dimen/spacing_medium"
-		android:paddingBottom="@dimen/spacing_medium">
+		android:orientation="vertical">
 
 		<LinearLayout
 			android:id="@+id/notifications_header"
 			android:layout_width="match_parent"
+			android:layout_marginTop="5dp"
+			android:paddingBottom="5dp"
 			android:layout_height="match_parent"
 			android:gravity="center_vertical"
 			android:orientation="horizontal">
-
-			<ImageView
-				android:layout_width="@dimen/icon_size_title"
-				android:layout_height="@dimen/icon_size_title"
-				android:layout_marginStart="@dimen/spacing_large"
-				android:src="@drawable/ic_message"
-				android:tint="@color/blue_main" />
 
 			<TextView
 				style="@style/NextStep.Text.Title"
@@ -44,27 +41,29 @@
 			<ImageView
 				android:layout_width="@dimen/chevron_size_title"
 				android:layout_height="@dimen/chevron_size_title"
+				android:layout_marginEnd="@dimen/spacing_small"
 				android:src="@drawable/ic_chevron_right"
-				android:tint="@color/blue_main" />
+				android:tint="@color/dark_main" />
 
 		</LinearLayout>
 
-		<FrameLayout
-			android:id="@+id/notifications_status_bubble"
+		<LinearLayout
+			android:id="@+id/report_status_bubble"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_margin="@dimen/spacing_medium"
-			android:background="@drawable/bg_status_bubble"
-			android:paddingStart="@dimen/spacing_medium"
-			android:paddingTop="@dimen/spacing_medium_large"
-			android:paddingEnd="@dimen/spacing_medium"
-			android:paddingBottom="@dimen/spacing_medium_large">
+			android:orientation="vertical">
 
 			<include
-				android:id="@+id/notification_status"
+				android:id="@+id/report_status"
 				layout="@layout/layout_status" />
 
-		</FrameLayout>
+			<include
+				android:id="@+id/report_errors"
+				layout="@layout/item_error_status"
+				android:visibility="gone"
+				tools:visibility="visible"/>
+
+		</LinearLayout>
 
 	</LinearLayout>
 

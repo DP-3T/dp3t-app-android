@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clipChildren="false"
+		android:clipToPadding="false"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/spacing_huge">
+
+		<ImageView
+			android:id="@+id/onboarding_illustration"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/illustration_height"
+			android:layout_marginTop="@dimen/spacing_huge"
+			android:layout_marginBottom="@dimen/spacing_medium"
+			android:paddingStart="@dimen/spacing_huge"
+			android:paddingEnd="@dimen/spacing_huge"
+			android:scaleType="fitCenter"
+			android:src="@drawable/ill_bt_permission" />
+
+		<TextView
+			android:id="@+id/onboarding_title"
+			style="@style/NextStep.Text.Title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/spacing_medium"
+			android:layout_marginBottom="@dimen/spacing_large"
+			android:gravity="center_horizontal"
+			android:paddingStart="@dimen/spacing_huge"
+			android:paddingEnd="@dimen/spacing_huge"
+			android:text="@string/android_onboarding_bt_permission_title" />
+
+		<TextView
+			android:id="@+id/onboarding_description"
+			style="@style/NextStep.Text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/spacing_large"
+			android:gravity="center_horizontal"
+			android:paddingStart="@dimen/spacing_huge"
+			android:paddingEnd="@dimen/spacing_huge"
+			android:text="@string/android_onboarding_bt_permission_text" />
+
+		<Button
+			android:id="@+id/onboarding_location_permission_button"
+			style="@style/NextStep.Button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="@dimen/spacing_small"
+			android:text="@string/android_onboarding_bt_permission_button" />
+
+		<Button
+			android:id="@+id/onboarding_location_permission_continue_button"
+			style="@style/NextStep.Button.Transparent.Blue.Light"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="@dimen/spacing_small"
+			android:text="@string/onboarding_continue_button"
+			android:visibility="gone"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/grey_light"
+			android:orientation="vertical"
+			android:layout_marginTop="@dimen/spacing_huge"
+			android:paddingStart="@dimen/spacing_large"
+			android:paddingTop="@dimen/spacing_medium_large"
+			android:paddingEnd="@dimen/spacing_large"
+			android:paddingBottom="@dimen/spacing_huge">
+
+			<TextView
+				style="@style/NextStep.Text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/spacing_large"
+				android:text="@string/android_onboarding_bt_permission_goodtoknow" />
+
+			<TextView
+				style="@style/NextStep.Text.Bold"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/spacing_small"
+				android:text="@string/android_onboarding_bt_permission_info_1_title" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/spacing_very_large"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="@dimen/icon_size"
+					android:layout_height="@dimen/icon_size"
+					android:layout_marginRight="@dimen/spacing_medium_large"
+					android:tint="@color/blue_main"
+					android:src="@drawable/ic_location_off" />
+
+				<TextView
+					style="@style/NextStep.Text"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:breakStrategy="high_quality"
+					android:hyphenationFrequency="full"
+					android:text="@string/android_onboarding_bt_permission_info_1_text" />
+
+			</LinearLayout>
+
+			<TextView
+				style="@style/NextStep.Text.Bold"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/spacing_small"
+				android:text="@string/android_onboarding_bt_permission_info_2_title" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="@dimen/icon_size"
+					android:layout_height="@dimen/icon_size"
+					android:layout_marginRight="@dimen/spacing_medium_large"
+					android:tint="@color/blue_main"
+					android:src="@drawable/ic_lock" />
+
+				<TextView
+					style="@style/NextStep.Text"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:breakStrategy="high_quality"
+					android:hyphenationFrequency="full"
+					android:text="@string/android_onboarding_bt_permission_info_2_text" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

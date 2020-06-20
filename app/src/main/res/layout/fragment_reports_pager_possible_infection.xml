@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/blue_main">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="-16dp"
+		android:orientation="vertical"
+		android:padding="@dimen/spacing_medium">
+
+		<ImageView
+			android:id="@+id/fragment_reports_pager_info"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/ic_info_border" />
+
+		<LinearLayout
+			android:id="@+id/fragment_reports_pager_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_large"
+			android:layout_marginBottom="@dimen/spacing_medium"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:visibility="gone"
+			tools:visibility="visible">
+
+			<TextView
+				style="@style/NextStep.Text.Bold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/spacing_tiny_small"
+				android:gravity="center"
+				android:text="@string/meldung_detail_exposed_new_meldung" />
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+
+				android:layout_marginTop="@dimen/spacing_huger"
+				android:src="@drawable/ill_exposed_banner" />
+
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/fragment_reports_pager_title"
+			style="@style/NextStep.Text.Title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_small"
+			android:text="@string/meldung_detail_exposed_title"
+			android:textColor="@color/white" />
+
+		<TextView
+			android:id="@+id/fragment_reports_pager_date"
+			style="@style/NextStep.Text.Bold"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_tiny_small"
+			android:gravity="center"
+			android:textSize="@dimen/text_size_small"
+			tools:text="am 30.04.2020 / Heute" />
+
+		<TextView
+			android:id="@+id/fragment_reports_pager_subtitle"
+			style="@style/NextStep.Text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_medium_large"
+			android:gravity="center"
+			android:text="@string/meldung_detail_exposed_subtitle"
+			android:textColor="@color/white" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/fragment_reports_pager_button"
+		style="@style/NextStep.Button.WhiteBlue"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal|bottom"
+		android:layout_marginBottom="@dimen/spacing_larger"
+		android:text="@string/meldung_animation_continue_button"
+		android:visibility="gone"
+		tools:visibility="visible" />
+
+</FrameLayout>

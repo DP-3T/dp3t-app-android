@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,221 +17,191 @@
 
 	<androidx.appcompat.widget.Toolbar
 		android:id="@+id/contacts_toolbar"
-		style="@style/NextStep.Toolbar"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		app:navigationContentDescription="@string/android_accessibility_back_button"
 		app:navigationIcon="@drawable/ic_arrow_back"
 		app:title="@string/handshakes_title_homescreen" />
 
-	<ScrollView
+	<FrameLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+		android:background="@color/grey_light">
 
-		<LinearLayout
+		<org.dpppt.android.app.main.views.HeaderView
+			android:id="@+id/contacts_header_view"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="vertical">
+			android:layout_height="@dimen/header_height" />
 
-			<ImageView
+		<ScrollView
+			android:id="@+id/contacts_scroll_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/spacing_huge"
-				android:layout_marginTop="@dimen/spacing_huge"
-				android:layout_marginEnd="@dimen/spacing_huge"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:adjustViewBounds="true"
-				android:maxHeight="@dimen/illustration_height"
-				android:paddingStart="@dimen/spacing_huge"
-				android:paddingEnd="@dimen/spacing_huge"
-				android:src="@drawable/ill_bluetooth" />
+				android:orientation="vertical"
+				android:paddingTop="@dimen/top_item_padding">
 
-			<androidx.cardview.widget.CardView
-				style="@style/NextStep.Card"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_margin="@dimen/spacing_medium_large">
+				<androidx.cardview.widget.CardView
+					style="@style/NextStep.Card"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/spacing_medium_large"
+					android:layout_marginEnd="@dimen/spacing_medium_large"
+					android:layout_marginBottom="@dimen/spacing_medium">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/spacing_large"
+							android:layout_marginTop="@dimen/spacing_medium_large"
+							android:layout_marginRight="@dimen/spacing_large"
+							android:layout_marginBottom="@dimen/spacing_medium">
+
+							<Switch
+								android:id="@+id/contacts_tracing_switch"
+								style="@style/NextStep.Switch"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_alignParentTop="true"
+								android:layout_alignParentEnd="true"
+								android:layout_marginTop="3dp" />
+
+							<TextView
+								android:id="@+id/contacts_tracing_title"
+								style="@style/NextStep.Text.Title"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_alignParentStart="true"
+								android:layout_alignParentTop="true"
+								android:layout_toStartOf="@id/contacts_tracing_switch"
+								android:text="@string/tracing_setting_title" />
+
+							<TextView
+								style="@style/NextStep.Text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_below="@id/contacts_tracing_title"
+								android:layout_alignParentStart="true"
+								android:text="@string/tracing_setting_text" />
+
+						</RelativeLayout>
+
+						<FrameLayout
+							android:id="@+id/status_container"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content" />
+
+					</LinearLayout>
+
+				</androidx.cardview.widget.CardView>
 
 				<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/spacing_large"
+					android:layout_marginTop="@dimen/spacing_huger"
+					android:layout_marginEnd="@dimen/spacing_large"
+					android:layout_marginBottom="@dimen/spacing_very_large"
 					android:orientation="vertical">
 
-					<RelativeLayout
+					<TextView
+						style="@style/NextStep.Text.Bold"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:layout_marginLeft="@dimen/spacing_large"
-						android:layout_marginTop="@dimen/spacing_medium_large"
-						android:layout_marginRight="@dimen/spacing_large"
-						android:layout_marginBottom="@dimen/spacing_medium">
+						android:layout_marginBottom="@dimen/spacing_small"
+						android:text="@string/begegnung_detail_faq1_title" />
 
-						<Switch
-							android:id="@+id/contacts_tracking_switch"
-							style="@style/NextStep.Switch"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:layout_alignParentTop="true"
-							android:layout_alignParentEnd="true"
-							android:layout_marginTop="3dp" />
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
 
-						<TextView
-							android:id="@+id/contacts_tracking_title"
-							style="@style/NextStep.Text.Title"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_alignParentStart="true"
-							android:layout_alignParentTop="true"
-							android:layout_toStartOf="@id/contacts_tracking_switch"
-							android:text="@string/bluetooth_setting_title" />
+						<ImageView
+							android:layout_width="@dimen/icon_size"
+							android:layout_height="@dimen/icon_size"
+							android:layout_marginRight="@dimen/spacing_medium_large"
+							android:src="@drawable/ic_begegnungen"
+							android:tint="@color/blue_main" />
 
 						<TextView
 							style="@style/NextStep.Text"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_below="@id/contacts_tracking_title"
-							android:layout_alignParentStart="true"
-							android:text="@string/bluetooth_setting_text" />
+							android:text="@string/begegnung_detail_faq1_text" />
 
-					</RelativeLayout>
-
-					<View
-						android:layout_width="match_parent"
-						android:layout_height="1dp"
-						android:layout_marginStart="@dimen/spacing_medium_large"
-						android:layout_marginEnd="@dimen/spacing_medium_large"
-						android:background="@color/divider" />
-
-					<include
-						android:id="@+id/contacts_status"
-						layout="@layout/layout_status"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginStart="@dimen/spacing_large"
-						android:layout_marginTop="@dimen/spacing_medium"
-						android:layout_marginEnd="@dimen/spacing_large"
-						android:layout_marginBottom="@dimen/spacing_medium_large" />
-
-					<Button
-						android:id="@+id/contact_location_permission_button"
-						style="@style/NextStep.Button.Red"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginStart="@dimen/spacing_large"
-						android:layout_marginEnd="@dimen/spacing_large"
-						android:text="@string/button_permission_location_android"
-						android:layout_marginBottom="@dimen/spacing_medium_large" />
-
-					<Button
-						android:id="@+id/contact_battery_button"
-						style="@style/NextStep.Button.Red"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginStart="@dimen/spacing_large"
-						android:layout_marginEnd="@dimen/spacing_large"
-						android:text="@string/button_battery_optimization"
-						android:layout_marginBottom="@dimen/spacing_medium_large" />
-
-					<Button
-						android:id="@+id/contact_bluetooth_button"
-						style="@style/NextStep.Button.Red"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginStart="@dimen/spacing_large"
-						android:layout_marginEnd="@dimen/spacing_large"
-						android:text="@string/activate_bluetooth_button"
-						android:layout_marginBottom="@dimen/spacing_medium_large" />
-
-				</LinearLayout>
-
-			</androidx.cardview.widget.CardView>
-
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_margin="@dimen/spacing_large"
-				android:orientation="vertical">
-
-				<TextView
-					style="@style/NextStep.Text.Bold"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:text="@string/bluetooth_setting_tracking_explanation_title" />
-
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:orientation="horizontal">
-
-					<include layout="@layout/view_text_bullet" />
+					</LinearLayout>
 
 					<TextView
-						style="@style/NextStep.Text"
+						style="@style/NextStep.Text.Bold"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/bluetooth_setting_tracking_explanation_text1" />
+						android:layout_marginTop="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_small"
+						android:text="@string/begegnung_detail_faq2_title" />
 
-				</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
 
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:orientation="horizontal">
+						<ImageView
+							android:layout_width="@dimen/icon_size"
+							android:layout_height="@dimen/icon_size"
+							android:layout_marginRight="@dimen/spacing_medium_large"
+							android:src="@drawable/ic_lock"
+							android:tint="@color/blue_main" />
 
-					<include layout="@layout/view_text_bullet" />
+						<TextView
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/begegnung_detail_faq2_text" />
+
+					</LinearLayout>
 
 					<TextView
-						style="@style/NextStep.Text"
+						style="@style/NextStep.Text.Bold"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/bluetooth_setting_tracking_explanation_text2" />
+						android:layout_marginTop="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_small"
+						android:text="@string/begegnungen_detail_faq3_title" />
 
-				</LinearLayout>
-
-				<TextView
-					style="@style/NextStep.Text.Bold"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:text="@string/bluetooth_setting_data_explanation_title" />
-
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:orientation="horizontal">
-
-					<include layout="@layout/view_text_bullet" />
-
-					<TextView
-						style="@style/NextStep.Text"
+					<LinearLayout
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/bluetooth_setting_data_explanation_text1" />
+						android:layout_marginBottom="@dimen/spacing_medium"
+						android:orientation="horizontal">
 
-				</LinearLayout>
+						<ImageView
+							android:layout_width="@dimen/icon_size"
+							android:layout_height="@dimen/icon_size"
+							android:layout_marginRight="@dimen/spacing_medium_large"
+							android:src="@drawable/ic_bluetooth"
+							android:tint="@color/blue_main" />
 
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:orientation="horizontal">
+						<TextView
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/begegnungen_detail_faq3_text" />
 
-					<include layout="@layout/view_text_bullet" />
-
-					<TextView
-						style="@style/NextStep.Text"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:text="@string/bluetooth_setting_data_explanation_text2" />
+					</LinearLayout>
 
 				</LinearLayout>
 
 			</LinearLayout>
 
-		</LinearLayout>
+		</ScrollView>
 
-	</ScrollView>
+	</FrameLayout>
 
 </LinearLayout>

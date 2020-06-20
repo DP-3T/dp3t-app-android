@@ -1,0 +1,25 @@
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="30dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+  <path
+      android:pathData="M15,15m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"
+      android:fillColor="#FFF"
+      android:fillAlpha=".477"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M7,15.51L12.479,21 23,10.49 21.49,9 12.479,18 8.49,14.01z"
+      android:fillColor="#00BFA6"
+      android:fillType="evenOdd"/>
+</vector>

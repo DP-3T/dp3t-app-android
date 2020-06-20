@@ -1,383 +1,798 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by Ubique Innovation AG
-  ~ https://www.ubique.ch
-  ~ Copyright (c) 2020. All rights reserved.
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
   -->
 
 <resources>
 
-    <!-- Name der App -->
-    <string name="app_name">"Next Step"</string>
+    <!-- App Name -->
+    <string name="app_name">"DP3T Demo"</string>
 
-    <!-- App Name unter Icon (iOS) -->
-    <!-- Fuzzy -->
-    <string name="CFBundleDisplayName">"Next Step"</string>
-
-    <!-- Title of the menu item home -->
-    <string name="menu_item_home">"Home"</string>
-
-    <!-- Title of the menu item info -->
-    <string name="menu_item_info">"Info"</string>
-
-    <!-- Title of the menu item tracking -->
-    <string name="menu_item_tracking">"Tracing"</string>
+    <!-- App Name (unter Icon auf iOS) -->
+    <string name="CFBundleDisplayName">"DP3T Demo"</string>
 
     <!-- Loading View: Erneut laden -->
     <string name="loading_view_reload">"Reload"</string>
 
-    <!-- Loading View: Titel -->
+    <!-- Fehler Titel in Loading View -->
     <string name="loading_view_error_title">"Error"</string>
 
-    <!-- Text on grant permission button -->
-    <string name="grant_permission_button">"Grant permission"</string>
+    <!-- Alert: Titel wenn die App muss geupdatet werden -->
+    <string name="force_update_title">"Update required"</string>
 
-    <!-- Text on grant permission button if permission is granted -->
-    <string name="granted_permission_button">"Permission granted"</string>
-
-    <!-- Sprachen-Key -->
-    <string name="language_key">"en"</string>
-
-    <!-- Force Update Alert Titel -->
-    <string name="force_update_title">"Update"</string>
-    <string name="homescreen_handshakes_module_count_info_label">"Encounters are anonymously stored on your device"</string>
-    <string name="homescreen_handshakes_module_count_label_format">"{count} last 48 hours"</string>
-    <string name="homescreen_handshakes_module_info_label">"Here you'll see when users you've encountered inform about COVID-19."</string>
-
-    <!-- Informieren Titel -->
-    <string name="inform_title">"Stop the chain of infection"</string>
-
-    <!-- Inform Subtext -->
-    <string name="inform_subtext">"I want to help break the COVID-19 chain of infection"</string>
-
-    <!-- Inform: Symptome Button -->
-    <string name="inform_button_symptom_title">"Symptoms"</string>
-
-    <!-- Inform: Symptome Button -->
-    <string name="inform_button_symptom_text">"I have Symptoms"</string>
-
-    <!-- Inform: Button Titel -->
-    <string name="inform_button_positive_title">"Positive test result"</string>
-
-    <!-- Inform Button Positiv -->
-    <string name="inform_button_positive_text">"I was recently tested positive"</string>
-    <string name="what_to_do_button">"What to do"</string>
-    <string name="homescreen_handshakes_module_gemeldet_label">"An encounter you have recently met has informed about COVID-19"</string>
-
-    <!-- Inform-Flow -->
-    <string name="inform_continue_button">"Next"</string>
-
-    <!-- Informieren: Positive Testergebnis -->
-    <string name="inform_positive_long_text">"I have recently tested positive for COVID-19. 
-
-I want to stop a potential infection chain by allowing the app to anonymously contact people who were recently close by."</string>
-
-    <!-- Ich leide an einem oder mehreren der folgenden Symptome: -->
-    <string name="inform_symptom_starttext">"I suffer from one or more of the following symptoms:"</string>
+    <!-- Informieren: Weiter Button -->
+    <string name="inform_continue_button">"Continue"</string>
 
     <!-- Informieren: Senden Button -->
-    <string name="inform_send_button_title">"Send"</string>
-
-    <!-- Informieren: Senden Text Symptome -->
-    <string name="inform_symptoms_send_text">"I suffer from the previously listed symptoms which can be attributed to COVID-19.
-
-I want to stop a potential infection chain by allowing the app to anonymously contact people who were recently close by."</string>
+    <string name="inform_send_button_title">"Send anonymous report"</string>
 
     <!-- Informieren: Danke -->
-    <string name="inform_send_thankyou">"THANK YOU!"</string>
-    <string name="inform_send_thankyou_text">"Your information was transmitted. You're making an important contribution to keeping the spread of COVID-19 at bay."</string>
+    <string name="inform_send_thankyou">"Thank you"</string>
 
-    <!-- Symptome -->
-    <string name="inform_symptom_coughdry">"Cough (mostly dry)"</string>
+    <!-- Informieren: Danke Text -->
+    <string name="inform_send_thankyou_text">"You have reported your positive test anonymously via the app.
 
-    <!-- Symptom -->
-    <string name="inform_symptom_hals">"Sore throat"</string>
+Thank you for helping to contain the spread of the coronavirus."</string>
 
-    <!-- Symptom -->
-    <string name="inform_symptom_kurzatmigkeit">"Shortness of breath"</string>
+    <!-- Informieren: Button Titel -->
+    <string name="inform_fertig_button_title">"Close"</string>
 
-    <!-- Symptom -->
-    <string name="inform_symptom_fieber">"Fever"</string>
-
-    <!-- Symptom -->
-    <string name="inform_symptom_muskel">"Muscle pain"</string>
-
-    <!-- Symptome -->
-    <string name="inform_no_symptom">"None of the listed symptoms"</string>
-
-    <!-- Text in toast when downloading pdf -->
-    <string name="downloading_pdf">"Downloading PDF"</string>
-
-    <!-- Inform: Empfehlung -->
-    <string name="inform_empfehlung">"Recommendation"</string>
-
-    <!-- Inform: Empfehlung Text -->
-    <string name="inform_empfehlung_subtext">"A medical check up or lab test is currently not advised. 
-
-Please continue to practice protective hygiene measures and follow the advised behavior rules."</string>
-
-    <!-- Inform: Button Titel -->
-    <string name="inform_fertig_button_title">"Finish"</string>
-
-    <!-- CSV wird heruntergeladen -->
-    <string name="downloading_csv">"Downloading CSV"</string>
-    <string name="handshakes_heading_homescreen">" "</string>
+    <!-- Titel auf Homescreen für Begegnungen -->
     <string name="handshakes_title_homescreen">"Encounters"</string>
-    <string name="inform_heading_homescreen">" "</string>
-    <string name="inform_title_homescreen">"Suspicion of COVID-19"</string>
-    <string name="inform_text_homescreen">"Inform users you've recently encountered if you experience symptoms or if you've tested positive for COVID-19"</string>
-    <string name="inform_button_title">"Inform now"</string>
-    <string name="inform_button_title_again">"Inform again"</string>
-    <string name="inform_last_meldung_text">"last successful signal"</string>
 
-    <!-- Erstes Tab -->
+    <!-- Titel der About Seite -->
     <string name="tab_theapp_title">"The App"</string>
-
-    <!-- Tab Titel -->
-    <string name="tab_aktuell_title">"Current"</string>
-
-    <!-- Tab Titel -->
-    <string name="tab_verhalten_title">"Behavior"</string>
-
-    <!-- Tab Titel -->
-    <string name="tab_prinzip_title">"Principle"</string>
 
     <!-- Abbrechen -->
     <string name="cancel">"Cancel"</string>
 
-    <!-- Schliessen -->
-    <string name="close">"Close"</string>
-
-    <!-- App Name ohne COVID-19 -->
-    <string name="app_name_star">"STAR"</string>
-
-    <!-- Info Text ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_info_label_star">"There are currently no signals of other users thate were recently close by."</string>
-
-    <!-- Text bei aktivierung ohne COVID-19 -->
-    <string name="homescreen_handshakes_module_gemeldet_label_star">"A user who was recently close by has sent out a signal."</string>
-
-    <!-- Informieren Titel ohne COVID-19 -->
-    <string name="inform_title_homescreen_star">"Broadcast"</string>
-
-    <!-- Informieren Info Text ohne COVID-19 -->
-    <string name="inform_text_homescreen_star">"Send a signal to all users who you've recently encountered"</string>
-
-    <!-- Übertitel für Broadcast ohne COVID-19 -->
-    <string name="inform_heading_homescreen_star">" "</string>
-
-    <!-- Titel für Broadcast Screen ohne COVID-19 -->
-    <string name="inform_broadcast_title_star">"Broadcast"</string>
-
-    <!-- Text für Broadcast ohne COVID-19 -->
-    <string name="inform_broadcast_long_text_star">"Send a signal to all users who were recently near you. Positional or private data is not published or shared with anyone in this process."</string>
-
-    <!-- Danke Text ohne COVID-19 -->
-    <string name="inform_send_thankyou_text_star">"You've signaled all users who've recently been near you. Positional or private data was not published or shared with anyone in this process."</string>
-
-    <!-- Begegnungen -->
-    <string name="begegnungen_counter_title">"Synchronisation"</string>
-    <string name="inform_meldung_time">"Report  from {date}"</string>
-    <string name="homescreen_inform_module_gemeldet_label_star">"You have sent a signal to all users you have met recently"</string>
-    <string name="homescreen_inform_module_gemeldet_label">"You have informed all users you have met recently"</string>
+    <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
+    <string name="push_exposed_title">"New message"</string>
 
     <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
-    <string name="push_exposed_title">"New information available"</string>
+    <string name="push_exposed_text">"Open the app to read the message"</string>
 
-    <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
-    <string name="push_exposed_text">"Please open the app for more information."</string>
-    <string name="onboarding_top_label_how">"How does it work:"</string>
-    <string name="onboarding_title_1">"One step ahead"</string>
-    <string name="onboarding_desc_1">"With the Next Step application we can all cooperate to keep the spread of COVID-19 at bay. The Next Step application allows people who have become infected to start isolating before they experience first symptoms."</string>
-    <string name="onboarding_title_2">"Automatic and
-anonymous"</string>
-    <string name="onboarding_desc_2">"This app recognizes encounters with other users and saves these encounters anonymously on your device using encryption."</string>
-    <string name="onboarding_title_3">"Inform"</string>
-    <string name="onboarding_desc_3">"If you test positive you can anonymously inform everyone you've encountered so that they can make the necessary precautionary measures."</string>
-    <string name="onboarding_title_4">"Authorization"</string>
-    <string name="onboarding_desc_4">"This app needs the following permissions in order to work properly."</string>
-    <string name="onboarding_title_5">"Next Step"</string>
-    <string name="onboarding_desc_5">"Together we can move towards lifting isolation."</string>
-    <string name="onboarding_android_location_permission_info">"User tracing is performed using Bluetooth Low Energy technology. The app requires you to keep Bluetooth enabled in order to perform the tracing. On Android, applications need to additionally have Location Services enabled by design in order to access Bluetooth. But we will not at any point access your location."</string>
-    <string name="onboarding_android_battery_saving_info">"Turn off battery optimization for our app so that we can perform continuous tracing in the background."</string>
-    <string name="button_permission_location_android">"Allow tracing"</string>
-    <string name="button_permission_location_granted_android">"Tracing allowed"</string>
-    <string name="button_ok">"ok"</string>
-    <string name="activate_bluetooth_button">"Activate Bluetooth"</string>
-    <string name="activate_push_button">"Activate Push"</string>
-    <string name="bluetooth_activated_label">"Bluetooth activated"</string>
-    <string name="push_activated_label">"Push activated"</string>
-    <string name="onboarding_continue_button">"Next"</string>
-    <string name="onboarding_continue_without_button">"Continue without authorization"</string>
-    <string name="onboarding_continue_without_popup_text">"Do you really want to continue? The App can only work with the required permissions."</string>
-    <string name="onboarding_continue_without_popup_abort">"Cancel"</string>
-    <string name="onboarding_continue_without_popup_continue">"Continue"</string>
+    <!-- Titel für Button um Ortung zu erlauben -->
+    <string name="android_button_permission_location">"Permit localisation"</string>
+
+    <!-- Okay Button Titel -->
+    <string name="android_button_ok">"Ok"</string>
+
+    <!-- Onboarding: Weiter Button Titel -->
+    <string name="onboarding_continue_button">"Continue"</string>
+
+    <!-- Onboarding: Fertig Button -->
     <string name="onboarding_finish_button">"Finish"</string>
-    <string name="button_battery_optimization">"Deactivate battery optimization"</string>
-    <string name="button_battery_optimization_deactivated">"Activate battery optimization"</string>
-
-    <!-- Gleicher Inhalt wie homescreen_handshakes_module_info_label, aber ohne Symptome -->
-    <string name="homescreen_handshakes_module_info_label_nosymptoms">"Here you will be informed, if one of your encounters has been positively tested on COVID-19."</string>
-
-    <!-- Siehe inform_text_homescreen -->
-    <string name="inform_text_homescreen_nosymptoms">"Inform your encounters, if you have been positively tested on COVID-19."</string>
 
     <!-- Unerwarteter Fehler -->
-    <string name="unexpected_error_title">"an unknown Error has occurred."</string>
+    <string name="unexpected_error_title">"An unexpected error has occurred"</string>
 
     <!-- Bluetooth Fehlermeldung -->
-    <string name="bluetooth_turned_off">"The App does not work, please activate Bluetooth."</string>
+    <string name="bluetooth_turned_off">"The app is not working because Bluetooth is switched off"</string>
 
     <!-- Bluetooth Permission Fehler -->
-    <string name="bluetooth_permission_turned_off">"The app does not work hence the Bluetooth authorization is turned off."</string>
+    <string name="bluetooth_permission_turned_off">"The app is not working because Bluetooth is not permitted"</string>
 
     <!-- Permission Text für Bluetooth -->
-    <string name="NSBluetoothPeripheralUsageDescription">"Encounters are recognized via Bluetooth, in the Background and energy-saving"</string>
+    <string name="NSBluetoothPeripheralUsageDescription">"Encounters will be recognised in the background via low energy Bluetooth."</string>
 
-    <!-- Bluetooth Permission Text für iOS -->
-    <string name="NSBluetoothAlwaysUsageDescription">"Encounters are recognized via Bluetooth, in the Background and energy-saving"</string>
+    <!-- Permission Text für Bluetooth -->
+    <string name="NSBluetoothAlwaysUsageDescription">"Encounters will be recognised in the background via low energy Bluetooth."</string>
 
     <!-- Text der bei Android in der permanenten Notification immer angezeigt wird -->
-    <string name="foreground_service_notification_text">"App is scanning in the Background"</string>
-
-    <!-- Text, der angezeigt wird als Info für Leute die jemand positiv getesteten begegnet sind -->
-    <string name="exposed_info_support_text">"If you have any questions or need recommendations, call the hotline."</string>
-
-    <!-- Button mit Support Telefonnummer -->
-    <string name="exposed_info_tel_button_title">"+41 00 000 00 00"</string>
+    <string name="android_foreground_service_notification_text">"Encounters will be registered anonymously on your device."</string>
 
     <!-- Inform: Titel der Code abschicken Seite -->
-    <string name="inform_code_title">"Enter the code"</string>
+    <string name="inform_code_title">"Enter the Covidcode"</string>
 
     <!-- Inform: Code eingeben Subtext -->
-    <string name="inform_code_text">"Enter the code you received with your test result."</string>
+    <string name="inform_code_text">"Enter the Covidcode sent to you."</string>
 
     <!-- Inform: Code eingeben kein Code Button Text -->
-    <string name="inform_code_no_code">"Didn't get a code?"</string>
-
-    <!-- hint for filter tags in log-search -->
-    <string name="logs_filter_tags">"tag filter (comma separated)"</string>
+    <string name="inform_code_no_code">"Do you need help?"</string>
 
     <!-- Titel des Bluetooth Control -->
-    <string name="bluetooth_setting_title">"Tracing"</string>
+    <string name="tracing_setting_title">"Tracing"</string>
 
     <!-- Text beim Bluetooth Control -->
-    <string name="bluetooth_setting_text">"Enable Bluetooth"</string>
-
-    <!-- Bluetooth Control: Tracking aktiv -->
-    <string name="bluetooth_setting_tracking_active">"Tracing enabled"</string>
-
-    <!-- Bluetooth Control: Tracking Aktiv Subtext -->
-    <string name="bluetooth_setting_tracking_active_subtext">"Encounters are saved anonymously on your device."</string>
+    <string name="tracing_setting_text">"Allow anonymous tracing"</string>
 
     <!-- Bluetooth Control: Tracking deaktiviert -->
-    <string name="bluetooth_setting_tracking_inactive">"Tracing disabled"</string>
-
-    <!-- Bluetooth Control: Tracking deaktiviert Subtext -->
-    <string name="bluetooth_setting_tracking_inactive_subtext">"Allow Bluetooth so that encounters can be saved anonymously."</string>
-
-    <!-- Bluetooth Setting: Titel unten -->
-    <string name="bluetooth_setting_tracking_explanation_title">"How does tracing work?"</string>
+    <string name="bluetooth_setting_tracking_inactive">"Tracing deactivated"</string>
 
     <!-- Bluetooth Setting Text unten -->
-    <string name="bluetooth_setting_data_explanation_title">"Is my data safe?"</string>
+    <string name="bluetooth_setting_data_explanation_title">"Are my data secure?"</string>
 
     <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_tracking_explanation_text1">"Via BLE (Bluetooth Low Energy) the app recognizes encounters with other users. Such encounters will be registered by the app, if two users stand close to each other for a certain time period, and are deleted after 21 days."</string>
+    <string name="bluetooth_setting_tracking_explanation_text2">"An encounter with another user is only saved locally on your smartphone."</string>
 
-    <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_tracking_explanation_text2">"Encounters with other users are only saved locally on your smartphone."</string>
-
-    <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_data_explanation_text1">"Each App has its own dynamic ID that is randomly generated via «HMAC(SHA256)» and changes every 15 minutes. This way each user remains anonymous."</string>
-
-    <!-- Bluetooth Setting: Text unten -->
-    <string name="bluetooth_setting_data_explanation_text2">"Important features:
-- No location tracking
-- No analytics or advertising
-- Open architecture / protocol and specification incl. SDK for iOS and Android
-- Interoperability (own app, own Backend)
-- Open source"</string>
+    <!-- Titel auf Homescreen -->
     <string name="reports_title_homescreen">"Reports"</string>
 
     <!-- Keine Meldungen Titel -->
     <string name="meldungen_no_meldungen_title">"No reports"</string>
 
-    <!-- Keine Meldungen Text -->
-    <string name="meldungen_no_meldungen_text">"You will be informed in case of a possible infection."</string>
-
     <!-- Push deaktiviert Titel -->
-    <string name="push_deactivated_title">"Push deactivated"</string>
+    <string name="push_deactivated_title">"Messages deactivated"</string>
 
     <!-- Push deaktiviert Text -->
-    <string name="push_deactivated_text">"Allow push notifications to be informed immediately when a report is received."</string>
+    <string name="push_deactivated_text">"Change the settings to receive information directly in the event of a report."</string>
 
-    <!-- Hinweis Titel -->
-    <string name="hinweis_title">"Note"</string>
+    <!-- Titel im Meldung Detail -->
+    <string name="meldungen_meldung_title">"Possible infection"</string>
 
-    <!-- Hinweis Text -->
-    <string name="hinweis_text">"One person you met was tested positive for COVID-19."</string>
-    <string name="button_report_illness">"Report illness"</string>
-    <string name="meldungen_meldung_title">"Note"</string>
-    <string name="meldungen_meldung_text">"One person you met was tested positive for COVID-19. Please read the information about the recommended behaviour here."</string>
-    <string name="meldungen_meldung_more_button">"Learn more"</string>
-    <string name="tracing_active_title">"Tracing enabled"</string>
-    <string name="tracing_active_text">"Encounters are saved anonymously on your device."</string>
-    <string name="tracing_error_title">"Tracing deactivated"</string>
-    <string name="tracing_error_text">"Activate tracing and Bluetooth so that encounters can be recorded anonymously."</string>
+    <!-- Text im Meldung Detail -->
+    <string name="meldungen_meldung_text">"An infection is suspected."</string>
 
-    <!-- Meldungen: zusätzliche Info Titel -->
-    <string name="meldungen_additional_info_title">"What does that mean?"</string>
+    <!-- Titel ob Tracing aktiv -->
+    <string name="tracing_active_title">"Tracing active"</string>
 
-    <!-- Meldungen: Info Text 1 -->
-    <string name="meldungen_additional_info_text1">"To stop a viral outbreak, you must break the chain of transmission. You can do this by isolating contagious people. Only, there is a problem with COVID-19. Infected people can be contagious, before having symptoms, which means: You can spread the virus without knowing. If only people with symptoms isolate themselves, the virus can still spread. We are one step behind."</string>
+    <!-- Text bei Tracing aktiv -->
+    <string name="tracing_active_text">"Encounters will be registered anonymously."</string>
 
-    <!-- Meldungen: zusätzlicher Info Text -->
-    <string name="meldungen_additional_info_text2">"Therefore, exposed contacts should be informed. Then, they can also precociously isolate early – before they feel sick. Not everyone exposed contact will have the Virus. But those who do won’t pass it on. The trick is to be one step ahead."</string>
+    <!-- Android: Fehler Text bei Tracing -->
+    <string name="android_tracing_error_title">"Tracing not active"</string>
 
-    <!-- Hinweis beim Eingabefeld für den Authentifizierungs-Code -->
-    <string name="auth_code_input_hint">"000-000"</string>
+    <!-- Fehlertitel mit Foreground Service Notification -->
+    <string name="android_foreground_service_notification_errors">"App currently unable to function properly"</string>
 
-    <!-- Meldungen: Info Titel -->
-    <string name="meldungen_additional_info_title2">"What shall I do?"</string>
+    <!-- Fehler Beschreibung -->
+    <string name="android_foreground_service_notification_error_network_sync">"An error occurred when loading the data"</string>
 
-    <!-- Meldungen: Text -->
-    <string name="meldungen_additional_info_text3">"Experts from the FOPH give you advice by phone.
+    <!-- Fehler Beschreibung -->
+    <string name="android_foreground_service_notification_error_location_permission">"For the app to use Bluetooth, you must enable your location to be used. The app itself does not recognise your location at any time."</string>
 
-Coronavirus Infoline
-+41 58 463 00 00"</string>
+    <!-- Fehler Beschreibung Akku -->
+    <string name="android_foreground_service_notification_error_battery_optimization">"For tracing to work precisely, the app must also run in the background. This will cause a minor increase in battery usage."</string>
 
-    <!-- Meldungen: Jetzt anrufen -->
-    <string name="meldungen_call_button_title">"Call now"</string>
+    <!-- Titel der Nachricht, die auf Beta-Status hinweist -->
+    <string name="preview_warning_title">"Version preview"</string>
 
-    <!-- Bezeichnung für Beratungs-Hotline -->
-    <string name="meldungen_hotline_label">"Coronavirus Infoline"</string>
+    <!-- Text der Nachricht, die auf Beta-Status hinweist -->
+    <string name="preview_warning_text">"This app provides a preview of how the DP-*T works. It is not a functioning COVIS-19 tracer."</string>
 
-    <!-- Label für Anrufen-Button -->
-    <string name="button_call_now">"Call now"</string>
+    <!-- Debug: Label auf dem Button, der zum Debug-Screen führt -->
+    <string name="debug_settings_title">"Debug settings"</string>
 
-    <!-- Telefon-Nummer für die Hotline -->
-    <string name="tel_hotline">"+41 58 463 00 00"</string>
+    <!-- Debug: Titel für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_title">"Overwrite app status"</string>
 
-    <!-- Meldungen: Text ohne Hotline Info -->
-    <string name="meldungen_additional_info_text3_reduced">"Experts from the FOPH give you advice by phone."</string>
-    <string name="meldungen_infected_title">"Infection reported"</string>
-    <string name="meldungen_infected_text">"Thank you so much! People you met are informed anonymously and can isolate themselves."</string>
-    <string name="foreground_service_notification_errors">"App cannot work properly at the moment:"</string>
-    <string name="foreground_service_notification_error_network_sync">"Error occurred while loading data"</string>
-    <string name="foreground_service_notification_error_location_permission">"Location permission is missing (needed for accessing bluetooth)"</string>
-    <string name="foreground_service_notification_error_bluetooth_disabled">"Bluetooth is deactivated"</string>
-    <string name="foreground_service_notification_error_battery_optimization">"Battery optimization is activated (prevents reliable background scanning)"</string>
+    <!-- Debug: Erklärungstext für die Debug-Einstellungen zur Status-Überschreibung -->
+    <string name="debug_state_setting_text">"This setting overwrites the app's visual status. Tracing functionality remains unaffected."</string>
 
-    <!-- Beruhigender Text für Detail-Seite, falls Meldung eingegangen ist -->
-    <string name="meldungen_hinweis_info_text1">"This does not mean that you have been infected. But it is important that you make yourself aware of the adequate measures."</string>
+    <!-- Debug: Einstellungs-Option zum überschreiben des App-Zustands: Keine -->
+    <string name="debug_state_setting_option_none">"No overwrite"</string>
 
-    <!-- Info-Text "Was bedeuteted das" für Person, die selbst bemeldet hat -->
-    <string name="meldungen_hinweis_info_text1_infected">"This does not mean that others have been infected. But it is important that everyone you met can take the appropriate measures."</string>
+    <!-- Debug: Einstellungs-Option zum überschreiben des App-Zustands: Gesund -->
+    <string name="debug_state_setting_option_ok">"Healthy"</string>
 
-    <!-- Titel der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_title">"Preview version"</string>
+    <!-- Debug: Einstellungs-Option zum überschreiben des App-Zustands: Einem positiven Kontakt ausgesetzt -->
+    <string name="debug_state_setting_option_exposed">"Contact has tested positive"</string>
 
-    <!-- Text der Nachricht, die auf Beta-Status Hinweist -->
-    <string name="preview_warning_text">"This app was built as a preview to demonstrate the DP-3T implementation. It is not a final COVID-19 tracer."</string>
+    <!-- Debug: Einstellungs-Option zum überschreiben des App-Zustands: Selbst positiv getestet -->
+    <string name="debug_state_setting_option_infected">"Reported yourself as positive"</string>
+
+    <!-- Debug: Titel für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_title">"SDK status"</string>
+
+    <!-- Debug: Erklärungstext für die Debug-Info zum Tracing-Status -->
+    <string name="debug_sdk_state_text">"Current status of DP-3T SDK"</string>
+
+    <!-- Debug: Bezeichnung für den letzen sync-Zeitpunkt -->
+    <string name="debug_sdk_state_last_synced">"Last synchronisation"</string>
+
+    <!-- Debug: Bezeichnung für den Fall, bei dem der User selber als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_self_exposed">"Reported yourself"</string>
+
+    <!-- Debug: Bezeichnung für den Fall, bei dem ein Kontakt als positiv getestet gemeldet wurde -->
+    <string name="debug_sdk_state_contact_exposed">"Contact reported"</string>
+
+    <!-- Debug: Bezeichnung für die Anzahl bluetooth-handshakes, die ausgeführt wurden -->
+    <string name="debug_sdk_state_number_handshakes">"Number of handshakes"</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'true' -->
+    <string name="debug_sdk_state_boolean_true">"Yes"</string>
+
+    <!-- Debug-Status-Bezeichnung für boleschen Wert 'false' -->
+    <string name="debug_sdk_state_boolean_false">"No"</string>
+
+    <!-- Debug: Button-Text für das Zurücksetzen des lokalen SDK Zustandes -->
+    <string name="debug_sdk_button_reset">"Reset SDK"</string>
+
+    <!-- Infotext, wenn lokal das SDK zurückgesetzt wurde -->
+    <string name="android_debug_sdk_reset_text">"The local SDK status has been reset."</string>
+
+    <!-- Tab-Titel -->
+    <string name="tab_tracing_title">"Tracing"</string>
+
+    <!-- Titel auf Homescreen bei Was tun Section -->
+    <string name="whattodo_title_positivetest">"you test positive"</string>
+
+    <!-- Subtitel auf Homescreen bei Was tun Section -->
+    <string name="whattodo_subtitle_positivetest">"What to do if …"</string>
+
+    <!-- Informieren Detail: Subtitel -->
+    <string name="inform_detail_subtitle">"What to do if …"</string>
+
+    <!-- Informieren Detail: Titel -->
+    <string name="inform_detail_title">"you test positive?"</string>
+
+    <!-- Inform Detail: Weisse Box Subtitel -->
+    <string name="inform_detail_box_subtitle">"With the Covidcode"</string>
+
+    <!-- Inform Detai Weisse Box Titel -->
+    <string name="inform_detail_box_title">"Send an anonymous report"</string>
+
+    <!-- Bluetooth Setting: Text unten -->
+    <string name="bluetooth_setting_tracking_explanation_text1">"Via BLE (Bluetooth Low Energy) the app recognizes encounters with other users. Such encounters will be registered by the app, if two users stand close to each other for a certain time period, and are deleted after 21 days."</string>
+
+    <!-- Informieren Detail Weisse Box Text -->
+    <string name="inform_detail_box_text">"Use the Covidcode sent to you to report the test anonymously in the app."</string>
+
+    <!-- Symptome Detail Subtitel -->
+    <string name="symptom_detail_subtitle">"What do I do if …"</string>
+
+    <!-- Symptom Detail Titel -->
+    <string name="symptom_detail_title">"I feel ill?"</string>
+
+    <!-- Symptom Detail Weisse Box Subtitel -->
+    <string name="symptom_detail_box_subtitle">"In the case of symptoms ..."</string>
+
+    <!-- Symptom Detail Weisse Box Titel -->
+    <string name="symptom_detail_box_title">"Contact your doctor"</string>
+
+    <!-- Symptom Detail Weisse Box Button -->
+    <string name="symptom_detail_box_button">"To the coronavirus check"</string>
+
+    <!-- Symptom Detail Weisse Box Text -->
+    <string name="symptom_detail_box_text">"If you have possible coronavirus symptoms, contact your doctor or the medical emergency service."</string>
+
+    <!-- Informieren Titel in NavigationBar/Toolbar -->
+    <string name="inform_detail_navigation_title">"Tested positive"</string>
+
+    <!-- Symptome Detail: NavigationBar/Toolbar Titel -->
+    <string name="symptom_detail_navigation_title">"Symptoms"</string>
+    <string name="tracing_turned_off_title">"Tracing deactivated"</string>
+    <string name="tracing_turned_off_text">"Activate tracing so that the app works."</string>
+    <string name="bluetooth_turned_off_title">"Bluetooth off"</string>
+    <string name="bluetooth_turned_off_text">"Switch on Bluetooth on your device so that anonymous tracing works."</string>
+    <string name="bluetooth_turn_on_button_title">"Switch on Bluetooth"</string>
+    <string name="bluetooth_permission_error_title">"Bluetooth use declined"</string>
+    <string name="bluetooth_permission_error_text">"Enable the use of Bluetooth so that anonymous tracing works."</string>
+
+    <!-- URL zum Corona Check -->
+    <string name="symptom_detail_corona_check_url">"https://check.bag-coronavirus.ch/screening"</string>
+    <string name="push_open_settings_button">"Change settings"</string>
+
+    <!-- Meldungen Detail: Subtitel wenn keine Meldungen -->
+    <string name="meldungen_no_meldungen_subtitle">"No potential infections have been reported"</string>
+
+    <!-- Keine Meldungen Weisse Box Titel -->
+    <string name="no_meldungen_box_title">"Protect yourself"</string>
+
+    <!-- Keine Meldungen Weisse Box Subtitel -->
+    <string name="no_meldungen_box_subtitle">"What should I do?"</string>
+
+    <!-- Keine Meldungen Weisse Box Text -->
+    <string name="no_meldungen_box_text">"Follow the government recommendations on hygiene and social distancing."</string>
+
+    <!-- Meldung Detail: Positiv Getestet Titel -->
+    <string name="meldung_detail_positive_tested_title">"Tested positive"</string>
+
+    <!-- Meldung Detail: Positiv Getestet Subtitel -->
+    <string name="meldung_detail_positive_tested_subtitle">"You have tested positive for the  new coronavirus."</string>
+
+    <!-- Meldung Detail Positiv Getestet Weisse Box Subtitel -->
+    <string name="meldung_detail_positive_test_box_subtitle">"What do I have to do?"</string>
+
+    <!-- Meldung Detail Positiv Getestet Weisse Box Titel -->
+    <string name="meldung_detail_positive_test_box_title">"Self-isolation"</string>
+
+    <!-- Meldung Detail Positiv Getestet Weisse Box Text -->
+    <string name="meldung_detail_positive_test_box_text">"Follow the instructions on self-isolation."</string>
+    <string name="tracing_ended_title">"Tracing ended"</string>
+    <string name="tracing_ended_text">"No further encounters registered"</string>
+    <string name="exposed_info_contact_hotline">"Contact the"</string>
+    <string name="meldung_homescreen_positive_info_line1">"Follow the"</string>
+    <string name="meldung_homescreen_positive_info_line2">"Instructions on self-isolation"</string>
+
+    <!-- Meldung Detail Exposed Neue Meldung -->
+    <string name="meldung_detail_exposed_new_meldung">"New report"</string>
+
+    <!-- Meldung Detail Exposed Titel -->
+    <string name="meldung_detail_exposed_title">"Potential infection"</string>
+    <string name="meldung_homescreen_positiv_title">"Tested positive"</string>
+
+    <!-- Meldung Detail Exposed Subtitel -->
+    <string name="meldung_detail_exposed_subtitle">"Potential infection suspected"</string>
+    <string name="meldung_homescreen_positiv_text">"You have tested positive for the  new coronavirus."</string>
+
+    <!-- Debug Screen: Onboarding Reset Button -->
+    <string name="reset_onboarding">"Reset onboarding"</string>
+
+    <!-- Heute -->
+    <string name="date_today">"Today"</string>
+
+    <!-- Meldung Detail: Vor wievielen Tagen {COUNT} wird durch Zahl ersetzt -->
+    <string name="date_days_ago">"{COUNT} days ago"</string>
+
+    <!-- Meldungen Detail: Subtitel Weisse Box -->
+    <string name="meldungen_detail_whattodo">"What should I do?"</string>
+
+    <!-- Meldungen Detail: Weisse Box Titel -->
+    <string name="meldungen_detail_call">"Call us"</string>
+
+    <!-- Meldungen Detail Text Weisse Box -->
+    <string name="meldungen_detail_call_text">"Coronavirus infoline (24hrs-a-day)"</string>
+
+    <!-- Meldungen Detail Weisse Box Button -->
+    <string name="meldungen_detail_call_button">"Call now"</string>
+
+    <!-- Meldungen Detail Weisse Box Titel der Erklärungen -->
+    <string name="meldungen_detail_explanation_title">"Be careful!"</string>
+
+    <!-- Meldungen Detail Weisse Box Erklärungstext 1 -->
+    <string name="meldungen_detail_explanation_text1">"You could be infectious without realising it."</string>
+
+    <!-- Meldungen Detail: Weisse Box Erklärtext 2 -->
+    <string name="meldungen_detail_explanation_text2">"Please protect your family, your friends and those around you. Avoid contacts for up to 10 days after a possible infection."</string>
+
+    <!-- Meldungen Detail Weisse Box Titel -->
+    <string name="meldungen_detail_guard_others">"Protect other people"</string>
+
+    <!-- Meldungen Detail: Weisse Box Text -->
+    <string name="meldungen_detail_guard_text">"If you have any questions:
+Infoline Coronavirus
+0000"</string>
+
+    <!-- Meldungen Detail Button Weisse Box -->
+    <string name="meldungen_detail_call_again_button">"Call again"</string>
+
+    <!-- Meldungen Detail: Weisse Box Anruf Zeitpunkt -->
+    <string name="meldungen_detail_call_last_call">"Last call: (DATE)"</string>
+
+    <!-- Subtitel im Onboarding erste Seite -->
+    <string name="app_subtitle">"Subtitle"</string>
+
+    <!-- Onboarding: Titel oben -->
+    <string name="onboarding_prinzip_heading">"The aim"</string>
+
+    <!-- Onboarding: Titel -->
+    <string name="onboarding_prinzip_title">"Staying one step ahead of the virus"</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text1">"By using the dp3t app, we can all help to contain the spread of the new coronavirus."</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text2">"The app provides information on suspected infections. In this way, the chain of infection can be broken."</string>
+
+    <!-- Onboarding Privacy: Titel oben -->
+    <string name="onboarding_privacy_heading">"Privacy by design"</string>
+
+    <!-- Onboarding Privacy: Titel -->
+    <string name="onboarding_privacy_title">"Protection of privacy guaranteed"</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text1">"Devices communicate anonymously."</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text2">"All data is encrypted and only saved locally on the smartphone."</string>
+
+    <!-- Onboarding Begegnungen: Titel oben -->
+    <string name="onboarding_begegnungen_heading">"What does the app do?"</string>
+
+    <!-- Onboarding Begegnungen: Titel -->
+    <string name="onboarding_begegnungen_title">"Recognising encounters using Bluetooth"</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text1">"The app automatically recognises when two users have been in close proximity for a certain time."</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text2">"It uses Bluetooth Low Energy (BLE) to do this. No GPS data are used."</string>
+
+    <!-- Onboarding Meldung: Text oben -->
+    <string name="onboarding_meldung_heading">"What does the app do?"</string>
+
+    <!-- Onboarding Meldung: Titel -->
+    <string name="onboarding_meldung_title">"Report of potential infection"</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text1">"The app notifies you if a potential infection is suspected."</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text2">"By responding appropriately, you can protect yourself and other people."</string>
+
+    <!-- Onboarding Bluetooth: Titel -->
+    <string name="onboarding_bluetooth_title">"Enable Bluetooth"</string>
+
+    <!-- Onboarding Bluetooth: Text -->
+    <string name="onboarding_bluetooth_text">"In order to use the app, you must enable Bluetooth."</string>
+
+    <!-- Onboarding Bluetooth: Button -->
+    <string name="onboarding_bluetooth_button">"Enable Bluetooth"</string>
+
+    <!-- Onboarding: Untetitel unten -->
+    <string name="onboarding_good_to_know">"Good to know"</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title1">"You remain anonymous"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text1">"No personal data is visible via Bluetooth."</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title2">"Minor increase in battery usage"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text2">"The app operates using as little energy as possible. There is only a minor increase in battery usage."</string>
+
+    <!-- Onboarding Mitteilungen: Titel -->
+    <string name="onboarding_push_title">"Allow messages"</string>
+
+    <!-- Onboarding Mitteilungen: Text -->
+    <string name="onboarding_push_text">"In order to receive notifications from the app, you must enable messages."</string>
+
+    <!-- Onboarding Mitteilungen: Button -->
+    <string name="onboarding_push_button">"Enable messages"</string>
+
+    <!-- Onboarding Mitteilungen: Titel Unten -->
+    <string name="onboarding_push_gtk_title1">"Notified immediately"</string>
+
+    <!-- Onboarding Mitteilungen: Text unten -->
+    <string name="onboarding_push_gtk_text1">"In the event of a potential infection, you will receive a message on the lock screen."</string>
+
+    <!-- Code senden: Abschluss Gute Besserung -->
+    <string name="inform_send_getwell_title">"Get well soon!"</string>
+
+    <!-- Code senden: Abschluss Gute Besserung -->
+    <string name="inform_send_getwell_text">"Get well soon! Follow the instructions on self-isolation."</string>
+
+    <!-- Titel auf dem letzen Onboarding Screen -->
+    <string name="onboarding_go_title">"The app is ready to go"</string>
+
+    <!-- Text auf dem letzten Onboarding Screen -->
+    <string name="onboarding_go_text">"Thank you for helping to protect yourself and others."</string>
+
+    <!-- Button-Label auf dem letzten Onboarding screen -->
+    <string name="onboarding_go_button">"Start"</string>
+
+    <!-- Titel auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_title">"Enable location for Bluetooth"</string>
+
+    <!-- Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_text">"For the app to work and for access to Bluetooth, you must enable the location function."</string>
+
+    <!-- Button-Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_button">"Allow"</string>
+
+    <!-- Label für Info-Section -->
+    <string name="android_onboarding_bt_permission_goodtoknow">"Good to know"</string>
+
+    <!-- Info-Titel 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_title">"Your location remains secret"</string>
+
+    <!-- Info-Text 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_text">"On Android devices, enabling Bluetooth requires you to enable the sharing of your location. This is why the location function must be enabled even if the app does not register your location at any time."</string>
+
+    <!-- Info-Titel 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_title">"You remain anonymous"</string>
+
+    <!-- Info-Text 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_text">"No personal data is visible via Bluetooth."</string>
+
+    <!-- Titel auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_title">"Ignore battery optimisation"</string>
+
+    <!-- Text auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_text">"To be able to recognise encounters at all times, the battery optimisation function for this app must be disabled."</string>
+
+    <!-- Button-Text auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_button">"Allow"</string>
+
+    <!-- Info-Titel 1 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_1_title">"Only for this app"</string>
+
+    <!-- Info-Text 1 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_1_text">"For the app to work, it must also run in the background. Battery optimisation can be disabled for individual apps, so that this is possible."</string>
+
+    <!-- Info-Titel 2 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_2_title">"Minor increase in battery usage"</string>
+
+    <!-- Info-Text 2 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_2_text">"The app operates using as little energy as possible. There is only a minor increase in battery usage."</string>
+
+    <!-- Button-Text auf Location-Permission Screen - Zugelassen -->
+    <string name="android_onboarding_bt_permission_button_allowed">"Enabled"</string>
+
+    <!-- Button-Text auf Battery-Permission Screen - Deaktiviert -->
+    <string name="android_onboarding_battery_permission_button_deactivated">"Deactivated"</string>
+
+    <!-- Homescreen: Titel bei Fehler mit Daten -->
+    <string name="homescreen_meldung_data_outdated_title">"No current data"</string>
+
+    <!-- Homescreen: Text bei Fehler mit Daten -->
+    <string name="homescreen_meldung_data_outdated_text">"It has not been possible to synchronise reports for some time. Please check that your device is connected to the internet."</string>
+
+    <!-- Homescreen: Button Titel -->
+    <string name="homescreen_meldung_data_outdated_retry_button">"Retry"</string>
+
+    <!-- Titel Fehlermeldung für ungültigen Code -->
+    <string name="inform_code_invalid_title">"Code invalid"</string>
+
+    <!-- Fehlermeldung Subtitle ungültiger Code -->
+    <string name="inform_code_invalid_subtitle">"If you have any questions: App-Hotline
+0000"</string>
+
+    <!-- Datum: Vor 1 Tag -->
+    <string name="date_one_day_ago">"1 day ago"</string>
+
+    <!-- Meldungen Detail: Titel -->
+    <string name="meldung_detail_new_contact_title">"New report"</string>
+
+    <!-- Meldungen Detail: Text -->
+    <string name="meldung_detail_new_contact_subtitle">"On this day, an infection was also possible."</string>
+
+    <!-- Fehler mit Uhrzeit Titel -->
+    <string name="time_inconsistency_title">"Time error"</string>
+
+    <!-- Fehler mit Uhrzeit Text -->
+    <string name="time_inconsistency_text">"The time must be set correctly for tracing to work."</string>
+
+    <!-- Begegnungen: Neustart Titel -->
+    <string name="begegnungen_restart_error_title">"Restart required"</string>
+
+    <!-- Begegnungen: Neustart Text -->
+    <string name="begegnungen_restart_error_text">"An unexpected error has occurred. Restart your device."</string>
+
+    <!-- Fehler Titel für Hintergrund-Fehler -->
+    <string name="meldungen_background_error_title">"Background update deactivated."</string>
+
+    <!-- Text für Hintergrund Fehler -->
+    <string name="meldungen_background_error_text">"Change the settings to receive notification outside the app as well in the event of a report."</string>
+
+    <!-- Button Titel für Hintergrundfehler beheben -->
+    <string name="meldungen_background_error_button">"Change settings"</string>
+
+    <!-- Default message for force update -->
+    <string name="force_update_text">"Install the new version of the app so that tracing works."</string>
+
+    <!-- Ignorieren Button Titel -->
+    <string name="meldung_in_app_alert_ignore_button">"Ignore"</string>
+
+    <!-- Button Titel -->
+    <string name="meldung_in_app_alert_accept_button">"To notifications"</string>
+
+    <!-- Meldungen Detail: Button Titel -->
+    <string name="meldungen_detail_call_again">"Call again"</string>
+
+    <!-- Fehlernachricht für Netzwerkfehler -->
+    <string name="network_error">"Please check your internet connection"</string>
+
+    <!-- Unerwarteter Fehler, mit Aufforderung Aktion erneut zu versuchen -->
+    <string name="unexpected_error_with_retry">"An unexpected error has occurred. Please retry."</string>
+
+    <!-- Fehlermeldung, wenn die Antwort des Authentifizierungs-Services nicht verwertbar ist -->
+    <string name="invalid_response_auth_code">"Owing to a system error, your authentification code could not be used correctly. Please call the hotline."</string>
+
+    <!-- Titel für Fehlermeldung mit Standort -->
+    <string name="error_location_permission_title">"Use of location declined"</string>
+
+    <!-- Button für Fehlermeldung mit Standort -->
+    <string name="error_location_permission_button">"Allow"</string>
+
+    <!-- VoiceOver: Datum -->
+    <string name="accessibility_date">"Date"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_1nd">"First"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_2nd">"Second"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_3nd">"Third"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_4nd">"Fourth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_5nd">"Fifth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_6nd">"Sixth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_7nd">"Seventh"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_8nd">"Eighth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_9nd">"Ninth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_10nd">"Tenth"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_11nd">"Eleventh"</string>
+
+    <!-- Voiceover Codeeingabe: Nummerierte Textfelder -->
+    <string name="accessibility_12nd">"Twelfth"</string>
+
+    <!-- Voiceover: Hilfetext bei Codeeingabe -->
+    <string name="accessibility_code_button_disabled_hint">"Please enter the code in full, then press button."</string>
+
+    <!-- Fehler Titel: Akkuverbrauch aktiviert -->
+    <string name="error_battery_optimization_title">"Optimisation of battery usage activated"</string>
+
+    <!-- Fehler: Standortinformationen / Bluetooth -->
+    <string name="foreground_service_notification_error_location_service">"Enable location information so that the app can use Bluetooth. The app does not recognise your location at any time."</string>
+
+    <!-- Location Services ausgeschaltet Titel -->
+    <string name="error_location_services_title">"Location disabled"</string>
+
+    <!-- Location Services ausgeschaltet Button -->
+    <string name="error_location_services_button">"Enable location"</string>
+
+    <!-- Information Button in the navigation bar -->
+    <string name="accessibility_info_button">"Information"</string>
+
+    <!-- Debug: Anzahl Kontakte Titel -->
+    <string name="debug_sdk_state_number_contacts">"Number of contacts"</string>
+
+    <!-- Synchronisations-Fehler Titel -->
+    <string name="sync_warning_notification_title">"An error has occurred"</string>
+
+    <!-- Synchronisations-Fehler Text -->
+    <string name="sync_warning_notification_text">"Open the app to correct the error."</string>
+
+    <!-- Meldungen Detail: Button bei Vollansicht -->
+    <string name="meldung_animation_continue_button">"Continue"</string>
+
+    <!-- Titel Impressum Menu -->
+    <string name="menu_impressum">"Imprint"</string>
+
+    <!-- Synchronisations-Fehler Titel -->
+    <string name="sync_error_title">"Unexpected error"</string>
+
+    <!-- Synchronisations-Fehler Text -->
+    <string name="sync_error_text">"A synchronisation error has occurred"</string>
+
+    <!-- Synchronisations-Fehler Button Titel -->
+    <string name="sync_error_button">"Retry"</string>
+
+    <!-- Begegnungen: FAQ Titel -->
+    <string name="begegnung_detail_faq1_title">"What is an encounter?"</string>
+
+    <!-- Begegnungen: FAQ Text -->
+    <string name="begegnung_detail_faq1_text">"If smartphones with the app are in close proximity for several minutes, this is registered on your device as an encounter."</string>
+
+    <!-- Begegnungen: FAQ Titel -->
+    <string name="begegnung_detail_faq2_title">"Are my data secure?"</string>
+
+    <!-- Begegnungen: FAQ Text -->
+    <string name="begegnung_detail_faq2_text">"In the event of an encounter, only an encrypted code is exchanged. This is saved locally on the devices and then deleted 21 days later."</string>
+
+    <!-- Begegnungen: FAQ Titel -->
+    <string name="begegnungen_detail_faq3_title">"Does Bluetooth have to be switched on all the time?"</string>
+
+    <!-- Begegnungen: FAQ Text -->
+    <string name="begegnungen_detail_faq3_text">"In order to recognise encounters, Bluetooth must be switched on at all times. This causes only a minor increase in battery usage."</string>
+
+    <!-- Meldungen Keine Meldungen FAQ Titel -->
+    <string name="meldungen_nomeldungen_faq1_title">"What are reports?"</string>
+
+    <!-- Meldungen: Keine Meldungen FAQ Text -->
+    <string name="meldungen_nomeldungen_faq1_text">"The app checks regularly to see whether any encounters it has registered have tested positive for the virus. If it is possible that you have been infected, you will receive a message on your lock screen."</string>
+
+    <!-- Meldungen: Keine Meldungen FAQ Titel -->
+    <string name="meldungen_nomeldungen_faq2_titel">"What is a potential infection?"</string>
+
+    <!-- Meldungen: Keine Meldungen FAQ Text -->
+    <string name="meldungen_nomeldungen_faq2_text">"The app not only checks whether you have had encounters with infected persons, but how long and how close these were. You will only be notified if there is sufficent suspicion that you have been infected. "</string>
+
+    <!-- Meldungen Detail Weisse Box Texte Unten -->
+    <string name="meldungen_detail_explanation_text3">"As soon as you have any symptoms, contact your doctor."</string>
+
+    <!-- Meldungen: Meldung Weisse Box Link Titel -->
+    <string name="meldungen_explanation_link_title">"Instructions on self-quarantine"</string>
+
+    <!-- Meldungen: Meldung Weisse Box Link URL -->
+    <string name="meldungen_explanation_link_url">"https://www.bag.admin.ch/bag/en/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/selbst-isolierung-und-selbst-quarantaene.html"</string>
+
+    <!-- Meldungen: Meldungen FAQ -->
+    <string name="meldungen_meldungen_faq1_title">"Do I have to call?"</string>
+
+    <!-- Meldungen: Meldungen FAQ Text -->
+    <string name="meldungen_meldungen_faq1_text">"It is important that you call every time you receive a notification. You will remain anonymous. No personal data will be recorded."</string>
+
+    <!-- Meldungen Detail: Anruf Titel -->
+    <string name="meldungen_detail_call_thankyou_title">"Thank you for your cooperation."</string>
+
+    <!-- Meldungen Detail Anruf Danke Subtitel -->
+    <string name="meldungen_detail_call_thankyou_subtitle">"You are protecting other people."</string>
+
+    <!-- Meldungen Detail Keine Meldungen Titel -->
+    <string name="meldungen_detail_no_meldungen_title">"No new notifications."</string>
+
+    <!-- Meldungen Detail Keine Meldung Subtitel -->
+    <string name="meldungen_detail_no_meldungen_subtitle">"The last potential infection took place more than 10 days ago."</string>
+
+    <!-- Meldungen Detail: Keine Meldungen Button -->
+    <string name="meldungen_detail_no_meldungen_continue">"Continue"</string>
+
+    <!-- Meldungen Detail: Keine Meldungen Hinweis -->
+    <string name="meldungen_detail_no_meldungen_hinweis">"Please note"</string>
+
+    <!-- Keine Meldungen Link in weisser Box Titel -->
+    <string name="no_meldungen_box_link">"This way, we protect ourselves"</string>
+
+    <!-- Keine Meldungen Weisse Box Link URL -->
+    <string name="no_meldungen_box_url">"https://www.bag-coronavirus.ch"</string>
+
+    <!-- Informieren Detail: FAQ Titel -->
+    <string name="inform_detail_faq1_title">"What is a Covidcode?"</string>
+
+    <!-- Inform Detail: FAQ Text -->
+    <string name="inform_detail_faq1_text">"People who have tested positive for the new coronavirus receive a Covidcode. This ensures that only confirmed cases are notified via the app. "</string>
+
+    <!-- Inform Detail: FAQ Titel -->
+    <string name="inform_detail_faq2_title">"How do I remain anonymous?"</string>
+
+    <!-- Inform Detail FAQ Text -->
+    <string name="inform_detail_faq2_text">"Only the temporary keys from your app are sent. No personal data. Other dp3t apps can then check if they have had an encounter with your app in the past few days. "</string>
+
+    <!-- Informieren: Titel Tracing beendet -->
+    <string name="inform_send_endtracing_title">"Tracing ended"</string>
+
+    <!-- Informieren: Text Tracing beendet -->
+    <string name="inform_send_endtracing_text">"Following a positive text, tracing is automatically ended."</string>
+
+    <!-- Telefonnummer der Infoline -->
+    <string name="infoline_tel_number">"0000"</string>
+
+    <!-- Informieren Flow: Titel erster Screen -->
+    <string name="inform_code_intro_title">"Important information"</string>
+
+    <!-- Informieren-Flow: Erster Screen Text -->
+    <string name="inform_code_intro_text">"Although no personal data relating to you is sent out, it may well be that someone remembers their encounter with you from the date. "</string>
+
+    <!-- Inform-Flow: Erster Screen Button -->
+    <string name="inform_code_intro_button">"ok"</string>
+
+    <!-- Symptome: FAQ Titel -->
+    <string name="symptom_faq1_title">"Unsure about symptoms?"</string>
+
+    <!-- Symptome: FAQ Text -->
+    <string name="symptom_faq1_text">"You have symptoms but are unsuare what you should do? Answer the questions in the FOPH Coronavirus Check to receive advice on what to do."</string>
+
+    <!-- Meldungen: Positiv getestet FAQ Titel -->
+    <string name="meldungen_positive_tested_faq1_title">"Why has tracing ended?"</string>
+
+    <!-- Meldungen: Positiv getestet FAQ Text -->
+    <string name="meldungen_positive_tested_faq1_text">"Following a positive text, tracing in the app is automatically ended."</string>
+
+    <!-- Sprache Abkürzung (BITTE NICHT ÄNDERN) -->
+    <string name="language_key">"de"</string>
+
+    <!-- Meldungen Homescreen: Name Hotline -->
+    <string name="exposed_info_contact_hotline_name">"Coronavirus infoline"</string>
+
+    <!-- Meldung Detail: "Noch 1 Tag" Label -->
+    <string name="date_in_one_day">"1 more day"</string>
+
+    <!-- Meldung Detail: Anzeige "Noch x Tage" {COUNT} wird durch Zahl ersetzt -->
+    <string name="date_in_days">"There are {COUNT} days left"</string>
+
+    <!-- Datum: Text vor Datum: am 26.2.2020 / {DATE} wird ersetzt durch Datum -->
+    <string name="date_text_before_date">"on {DATE}"</string>
+
+    <!-- Accessibility Talk back information for android back button in toolbar -->
+    <string name="android_accessibility_back_button">"Back"</string>
 </resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:background="@color/white"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_enormous"
+			android:src="@drawable/ill_gute_besserung" />
+
+		<TextView
+			style="@style/NextStep.Text.Title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/spacing_huge"
+			android:gravity="bottom|center_horizontal"
+			android:text="@string/inform_send_getwell_title" />
+
+		<TextView
+			style="@style/NextStep.Text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/spacing_medium_large"
+			android:gravity="center_horizontal"
+			android:paddingStart="@dimen/spacing_huge"
+			android:paddingEnd="@dimen/spacing_huge"
+			android:text="@string/inform_send_getwell_text" />
+
+		<Button
+			android:id="@+id/inform_get_well_button_continue"
+			style="@style/NextStep.Button.Purple"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/spacing_enormous"
+			android:layout_marginBottom="@dimen/spacing_huger"
+			android:text="@string/inform_fertig_button_title" />
+
+	</LinearLayout>
+</ScrollView>

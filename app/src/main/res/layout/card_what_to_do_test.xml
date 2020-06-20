@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<androidx.cardview.widget.CardView
+		style="@style/NextStep.Card"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="bottom"
+		android:layout_marginTop="@dimen/card_what_to_do_ill_margin"
+		android:elevation="@dimen/card_elevation">
+
+		<LinearLayout
+			android:id="@+id/card_what_to_do_test"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:foreground="?selectableItemBackground"
+			android:orientation="horizontal"
+			android:gravity="center_vertical"
+			android:paddingLeft="@dimen/card_ill_width"
+			android:paddingTop="@dimen/spacing_large"
+			android:paddingBottom="@dimen/spacing_large">
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/spacing_very_large"
+				android:layout_weight="1"
+				android:gravity="center_vertical"
+				android:orientation="vertical"
+				android:paddingLeft="@dimen/spacing_small">
+
+				<TextView
+					style="@style/NextStep.Text"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/whattodo_subtitle_positivetest" />
+
+				<TextView
+					style="@style/NextStep.Text.Bold"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:breakStrategy="high_quality"
+					android:hyphenationFrequency="full"
+					android:text="@string/whattodo_title_positivetest" />
+
+			</LinearLayout>
+
+			<ImageView
+				android:layout_width="@dimen/chevron_size_title"
+				android:layout_height="@dimen/chevron_size_title"
+				android:layout_marginEnd="@dimen/spacing_small"
+				android:src="@drawable/ic_chevron_right"
+				android:tint="@color/purple_main" />
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<ImageView
+		android:id="@+id/card_wtd_test_illustration"
+		android:layout_width="@dimen/card_ill_width"
+		android:layout_height="110dp"
+		android:layout_marginStart="@dimen/spacing_large"
+		android:layout_marginBottom="@dimen/spacing_medium"
+		android:elevation="@dimen/card_elevation"
+		android:src="@drawable/ill_positiv_getestet" />
+
+</FrameLayout>

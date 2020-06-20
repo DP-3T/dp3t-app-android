@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:padding="@dimen/spacing_medium_large"
+	tools:layout_height="wrap_content"
+	tools:layout_width="match_parent"
+	tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_1"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_2"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="1" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_2"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_3"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_1"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="1" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_3"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginEnd="@dimen/spacing_medium"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_4"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_2"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="1" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_4"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_5"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_3"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="2" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_5"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_6"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_4"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="2" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_6"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_5"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:selected="true"
+		tools:text="2" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_7"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_8"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/chained_edit_text_view_1"
+		tools:text="3" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_8"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_9"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_7"
+		app:layout_constraintTop_toBottomOf="@id/chained_edit_text_view_1"
+		tools:text="3" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_9"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		android:layout_marginEnd="@dimen/spacing_medium"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_10"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_8"
+		app:layout_constraintTop_toBottomOf="@id/chained_edit_text_view_1"
+		tools:text="3" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_10"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_11"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_9"
+		app:layout_constraintTop_toBottomOf="@id/chained_edit_text_view_1"
+		tools:text="4" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_11"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		android:layout_marginEnd="@dimen/padding_between_code"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/chained_edit_text_view_12"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_10"
+		app:layout_constraintTop_toBottomOf="@id/chained_edit_text_view_1"
+		tools:text="4" />
+
+	<TextView
+		android:id="@+id/chained_edit_text_view_12"
+		style="@style/NextStep.Text.Input"
+		android:layout_width="@dimen/chained_edit_text_width"
+		android:layout_height="@dimen/chained_edit_text_height"
+		android:layout_marginTop="@dimen/spacing_medium_large"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toEndOf="@+id/chained_edit_text_view_11"
+		tools:text="4" />
+
+</merge>

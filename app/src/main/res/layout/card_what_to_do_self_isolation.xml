@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<androidx.cardview.widget.CardView
+		style="@style/NextStep.Card"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/card_encounters"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/spacing_larger"
+			android:paddingRight="@dimen/spacing_larger"
+			android:paddingBottom="@dimen/spacing_medium_large">
+
+			<TextView
+				android:id="@+id/card_encounters_subtitle"
+				style="@style/NextStep.Text.SubTitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/spacing_medium_large"
+				android:text="@string/meldung_detail_positive_test_box_subtitle"
+				android:textColor="@color/purple_main"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/card_encounters_title"
+				style="@style/NextStep.Text.Title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/spacing_tiny_small"
+				android:layout_marginBottom="@dimen/spacing_tiny_small"
+				android:text="@string/meldung_detail_positive_test_box_title"
+				app:layout_constraintTop_toBottomOf="@id/card_encounters_subtitle" />
+
+			<ImageView
+				android:id="@+id/card_encounters_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ill_selbst_isolation"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/card_encounters_title" />
+
+			<Space
+				android:id="@+id/card_encounters_space1"
+				android:layout_width="@dimen/spacing_medium"
+				android:layout_height="0dp"
+				app:layout_constraintLeft_toLeftOf="@id/card_encounters_image"
+				app:layout_constraintTop_toTopOf="@id/card_encounters_image" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/spacing_medium_large"
+				android:orientation="vertical"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toLeftOf="@id/card_encounters_image"
+				app:layout_constraintTop_toTopOf="@id/card_encounters_image">
+
+				<TextView
+					android:id="@+id/card_encounters_text"
+					style="@style/NextStep.Text"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/meldung_detail_positive_test_box_text" />
+
+				<LinearLayout
+					android:id="@+id/card_encounters_link"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/spacing_large"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="@dimen/icon_size"
+						android:layout_height="@dimen/icon_size"
+						android:layout_marginRight="@dimen/spacing_small"
+						android:src="@drawable/ic_launch"
+						android:tint="@color/purple_main" />
+
+					<TextView
+						style="@style/NextStep.Text.Bold.Purple"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/meldung_homescreen_positive_info_line2" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/spacing_very_large"
+		android:paddingBottom="@dimen/spacing_medium_large">
+
+		<TextView
+			style="@style/NextStep.Text.Bold"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/spacing_small"
+			android:text="@string/meldungen_positive_tested_faq1_title" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<ImageView
+				android:layout_width="@dimen/icon_size"
+				android:layout_height="@dimen/icon_size"
+				android:layout_marginRight="@dimen/spacing_medium_large"
+				android:src="@drawable/ic_begegnungen"
+				android:tint="@color/purple_main" />
+
+			<TextView
+				style="@style/NextStep.Text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/meldungen_positive_tested_faq1_text" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
