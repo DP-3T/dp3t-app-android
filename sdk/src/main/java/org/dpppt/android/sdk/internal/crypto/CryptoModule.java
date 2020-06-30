@@ -222,7 +222,7 @@ public class CryptoModule {
 		}
 	}
 
-	public ExposeeRequest getSecretKeyForPublishing(DayDate date, ExposeeAuthMethod exposeeAuthMethod) {
+	public ExposeeRequest getSecretKeyForPublishing(DayDate date, ExposeeAuthMethod exposeeAuthMethod, ArrayList<String> countryCodeList) {
 		SKList skList = getSKList();
 		ExposeeAuthMethodJson jsonAuth =
 				exposeeAuthMethod instanceof ExposeeAuthMethodJson ? (ExposeeAuthMethodJson) exposeeAuthMethod : null;
@@ -231,14 +231,14 @@ public class CryptoModule {
 				return new ExposeeRequest(
 						toBase64(daySKPair.second),
 						daySKPair.first.getStartOfDayTimestamp(),
-						jsonAuth);
+						jsonAuth, countryCodeList);
 			}
 		}
 		if (date.isBefore(skList.get(skList.size() - 1).first)) {
 			return new ExposeeRequest(
 					toBase64(skList.get(skList.size() - 1).second),
 					skList.get(skList.size() - 1).first.getStartOfDayTimestamp(),
-					jsonAuth);
+					jsonAuth, countryCodeList);
 		}
 		return null;
 	}

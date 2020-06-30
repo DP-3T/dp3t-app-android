@@ -36,6 +36,7 @@ import org.dpppt.android.sdk.internal.util.ProcessUtil;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -158,12 +159,12 @@ public class DP3T {
 		);
 	}
 
-	public static void sendIAmInfected(Context context, Date onset, ExposeeAuthMethod exposeeAuthMethod,
+	public static void sendIAmInfected(Context context, Date onset, ExposeeAuthMethod exposeeAuthMethod, ArrayList<String> countryCodeList,
 	                                   ResponseCallback<Void> callback) {
 		checkInit();
 
 		DayDate onsetDate = new DayDate(onset.getTime());
-		ExposeeRequest exposeeRequest = CryptoModule.getInstance(context).getSecretKeyForPublishing(onsetDate, exposeeAuthMethod);
+		ExposeeRequest exposeeRequest = CryptoModule.getInstance(context).getSecretKeyForPublishing(onsetDate, exposeeAuthMethod, countryCodeList);
 
 		AppConfigManager appConfigManager = AppConfigManager.getInstance(context);
 		try {
@@ -198,7 +199,7 @@ public class DP3T {
 			jsonAuthMethod = (ExposeeAuthMethodJson) exposeeAuthMethod;
 		}
 		ExposeeRequest exposeeRequest = new ExposeeRequest(toBase64(CryptoModule.getInstance(context).getNewRandomKey()),
-				onsetDate.getStartOfDayTimestamp(), 1, jsonAuthMethod);
+				onsetDate.getStartOfDayTimestamp(), 1, jsonAuthMethod, new ArrayList<>());
 		AppConfigManager.getInstance(context).getBackendReportRepository(context)
 				.addExposeeSync(exposeeRequest, exposeeAuthMethod);
 	}

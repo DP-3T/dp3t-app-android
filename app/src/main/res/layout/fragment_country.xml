@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:padding="@dimen/spacing_medium_large">
+
+		<Button
+				android:id="@+id/cancel_button"
+				style="@style/NextStep.Button.Transparent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:text="@string/cancel"/>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="@dimen/spacing_huge"
+				android:orientation="vertical">
+
+			<TextView
+					style="@style/NextStep.Text.Title"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="bottom|center_horizontal"
+					android:text="Select Countries"/>
+
+			<LinearLayout
+					android:id="@+id/inform_invalid_code_error"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginTop="@dimen/spacing_medium_large"
+					android:layout_marginBottom="@dimen/spacing_medium"
+					android:gravity="center_horizontal"
+					android:orientation="vertical"
+					android:visibility="gone"
+					tools:visibility="visible">
+
+				<TextView
+						style="@style/NextStep.Text.Bold.Red"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Error"/>
+
+				<TextView
+						style="@style/NextStep.Text.Red"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:text="Please select at least one country"/>
+
+			</LinearLayout>
+
+			<TextView
+					android:id="@+id/inform_input_text"
+					style="@style/NextStep.Text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/spacing_medium_large"
+					android:layout_marginBottom="@dimen/spacing_medium"
+					android:gravity="center_horizontal"
+					android:paddingStart="@dimen/spacing_huge"
+					android:paddingEnd="@dimen/spacing_huge"
+					android:text="Select countries you have visited the past 14 days."/>
+
+			<com.hbb20.CountryCodePicker
+					android:id="@+id/ccp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					app:ccp_showFullName="true"
+					app:ccp_showPhoneCode="false"
+					app:ccp_showNameCode="false"
+					app:ccp_defaultNameCode="CY"/>
+
+			<ListView
+					android:id="@+id/listView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"/>
+
+			<Button
+					android:id="@+id/buttonDone"
+					style="@style/NextStep.Button.Purple"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginTop="20dp"
+					android:layout_marginBottom="@dimen/spacing_large"
+					android:text="Done"/>
+
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

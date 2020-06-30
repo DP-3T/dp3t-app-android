@@ -29,6 +29,7 @@ import org.dpppt.android.sdk.internal.backend.StatusCodeException;
 
 import java.net.ConnectException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -43,6 +44,7 @@ public class InformFragment extends Fragment {
 	private Button buttonSend;
 
 	private SecureStorage secureStorage;
+	private ArrayList<String> countryCodeList;
 
 	public static InformFragment newInstance() {
 		return new InformFragment();
@@ -55,6 +57,9 @@ public class InformFragment extends Fragment {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		Bundle bundle = getArguments();
+		countryCodeList = bundle.getStringArrayList("countryCodes");
 
 		secureStorage = SecureStorage.getInstance(getContext());
 	}
@@ -106,7 +111,7 @@ public class InformFragment extends Fragment {
 
 	private void informExposed(Date onsetDate, String authCode) {
 		DP3T.sendIAmInfected(getContext(), onsetDate,
-				new ExposeeAuthMethodJson(authCode), new ResponseCallback<Void>() {
+				new ExposeeAuthMethodJson(authCode), countryCodeList, new ResponseCallback<Void>() {
 					@Override
 					public void onSuccess(Void response) {
 						if (progressDialog != null && progressDialog.isShowing()) {
