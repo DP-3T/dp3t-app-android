@@ -36,6 +36,8 @@ android {
 		versionName "1.0"
 		resConfigs "en", "fr", "de", "it"
 
+		missingDimensionStrategy 'version', 'calibration'
+
 		buildConfigField "long", "BUILD_TIME", System.currentTimeMillis() + "L"
 	}
 
@@ -73,7 +75,7 @@ android {
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-	implementation 'org.dpppt:dp3t-sdk-android:0.2.6'
+	implementation project(':sdk')
 
 
 	implementation 'androidx.appcompat:appcompat:1.1.0'

@@ -7,6 +7,15 @@
  *
  * SPDX-License-Identifier: MPL-2.0
  */
+package org.dpppt.android.sdk.internal.crypto;
 
-rootProject.name='DP3T Demo'
-include ':app', ':sdk'
+import java.util.List;
+
+import org.dpppt.android.sdk.internal.util.DayDate;
+
+public class EphIdsForDay {
+
+	DayDate dayDate;
+	List<EphId> ephIds;
+
+}

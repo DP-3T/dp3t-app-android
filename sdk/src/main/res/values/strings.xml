@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<resources>
+
+	<string name="dp3t_sdk_service_notification_channel">DP3T SDK</string>
+	<string name="dp3t_sdk_service_notification_title">DP3T SDK</string>
+	<string name="dp3t_sdk_service_notification_text">Looking for people nearby…</string>
+	<string name="dp3t_sdk_service_notification_errors">App can\'t function properly:</string>
+	<string name="dp3t_sdk_service_notification_error_location_permission">missing location permission</string>
+	<string name="dp3t_sdk_service_notification_error_location_service">location service disabled</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">bluetooth is disabled</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">battery optimization enabled</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">bluetooth low-energy is not supported on this device</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_internal_error">bluetooth system error, please restart device</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_advertising_error">failing to broadcast with bluetooth</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_scanner_error">failing to search for nearby bluetooth devices</string>
+	<string name="dp3t_sdk_service_notification_error_sync_server">failed to load new infection data (server error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_network">failed to load new infection data (network error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_database">failed to load new infection data (database error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_timing">device time does not match server time</string>
+	<string name="dp3t_sdk_service_notification_error_sync_signature">failed to load new infection data (invalid signature)</string>
+
+</resources>

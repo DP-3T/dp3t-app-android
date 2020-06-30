@@ -8,5 +8,13 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-rootProject.name='DP3T Demo'
-include ':app', ':sdk'
+package org.dpppt.android.sdk.internal.crypto;
+
+import android.util.Pair;
+
+import java.util.ArrayList;
+
+import org.dpppt.android.sdk.internal.util.DayDate;
+
+public class SKList extends ArrayList<Pair<DayDate, byte[]>> {
+}

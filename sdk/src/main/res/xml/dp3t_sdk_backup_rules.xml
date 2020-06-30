@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<full-backup-content>
+	<exclude
+		domain="sharedpref"
+		path="dp3t_sdk_preferences.xml" />
+	<exclude
+		domain="sharedpref"
+		path="dp3t_store.xml" />
+	<exclude
+		domain="database"
+		path="dp3t_sdk.db" />
+	<exclude
+		domain="database"
+		path="dp3t_sdk_log.db" />
+</full-backup-content>

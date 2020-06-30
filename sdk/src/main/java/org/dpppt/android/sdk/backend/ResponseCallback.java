@@ -8,5 +8,11 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-rootProject.name='DP3T Demo'
-include ':app', ':sdk'
+package org.dpppt.android.sdk.backend;
+
+public interface ResponseCallback<T> {
+
+	void onSuccess(T response);
+
+	void onError(Throwable throwable);
+}

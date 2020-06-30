@@ -7,6 +7,18 @@
  *
  * SPDX-License-Identifier: MPL-2.0
  */
+package org.dpppt.android.sdk.backend.models;
 
-rootProject.name='DP3T Demo'
-include ':app', ':sdk'
+public class ExposeeAuthMethodJson implements ExposeeAuthMethod {
+
+	private String value;
+
+	public ExposeeAuthMethodJson(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+}

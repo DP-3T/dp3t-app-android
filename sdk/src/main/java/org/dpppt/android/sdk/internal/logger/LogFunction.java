@@ -7,6 +7,10 @@
  *
  * SPDX-License-Identifier: MPL-2.0
  */
+package org.dpppt.android.sdk.internal.logger;
 
-rootProject.name='DP3T Demo'
-include ':app', ':sdk'
+public interface LogFunction {
+
+	Integer log(String tag, String message);
+
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package org.dpppt.android.sdk.internal.backend.proto;
+message ProtoExposedList {
+  int64 batchReleaseTime = 1;
+  repeated ProtoExposee exposed = 2;
+}
+message ProtoExposee{
+  bytes key = 2;
+  int64 keyDate = 3;
+}
