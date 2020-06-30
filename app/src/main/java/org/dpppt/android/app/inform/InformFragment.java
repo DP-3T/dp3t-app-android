@@ -10,6 +10,7 @@
 package org.dpppt.android.app.inform;
 
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import java.net.ConnectException;
+import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -89,7 +91,8 @@ public class InformFragment extends Fragment {
 
 		buttonSend.setOnClickListener(v -> {
 			buttonSend.setEnabled(false);
-			String authCode = authCodeInput.getText();
+			String authCode = new String(Base64.encode((authCodeInput.getText()).getBytes(StandardCharsets.UTF_8), Base64.NO_WRAP),
+					StandardCharsets.UTF_8);
 
 			progressDialog = createProgressDialog();
 			Calendar calendar = Calendar.getInstance();
