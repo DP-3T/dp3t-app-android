@@ -84,8 +84,10 @@ public class DebugFragment extends Fragment {
 			boolean isTracing = (status.isAdvertising() || status.isReceiving()) && status.getErrors().size() == 0;
 			statusText.setBackgroundTintList(ColorStateList.valueOf(
 					isTracing ? getResources().getColor(R.color.status_green_bg, null)
-							  : getResources().getColor(R.color.status_purple_bg, null)));
+							: getResources().getColor(R.color.status_purple_bg, null)));
 		});
+
+		view.findViewById(R.id.debug_button_sync).setOnClickListener(v -> tracingViewModel.sync());
 
 		view.findViewById(R.id.debug_button_reset).setOnClickListener(v -> {
 			AlertDialog progressDialog = new AlertDialog.Builder(getContext())

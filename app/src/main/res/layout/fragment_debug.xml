@@ -9,157 +9,166 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="@color/grey_light"
-	android:gravity="center_horizontal"
-	android:orientation="vertical">
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/grey_light"
+			  android:gravity="center_horizontal"
+			  android:orientation="vertical">
 
 	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/contacts_toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		app:navigationContentDescription="@string/android_accessibility_back_button"
-		app:navigationIcon="@drawable/ic_arrow_back"
-		app:title="@string/debug_settings_title" />
-
-	<ScrollView
-		android:layout_width="match_parent"
-		android:layout_height="match_parent">
-
-		<LinearLayout
+			android:id="@+id/contacts_toolbar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			android:paddingBottom="@dimen/spacing_medium_large">
+			app:navigationContentDescription="@string/android_accessibility_back_button"
+			app:navigationIcon="@drawable/ic_arrow_back"
+			app:title="@string/debug_settings_title" />
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingBottom="@dimen/spacing_medium_large">
 
 			<ImageView
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/spacing_huge"
-				android:layout_marginTop="@dimen/spacing_huge"
-				android:layout_marginEnd="@dimen/spacing_huge"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:adjustViewBounds="true"
-				android:maxHeight="@dimen/illustration_height"
-				android:paddingStart="@dimen/spacing_huge"
-				android:paddingEnd="@dimen/spacing_huge"
-				android:src="@drawable/legacy_ill_privacy" />
-
-			<androidx.cardview.widget.CardView
-				style="@style/NextStep.Card"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/spacing_medium_large"
-				android:layout_marginTop="@dimen/spacing_medium_large"
-				android:layout_marginEnd="@dimen/spacing_medium_large">
-
-				<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginLeft="@dimen/spacing_large"
+					android:layout_marginStart="@dimen/spacing_huge"
+					android:layout_marginTop="@dimen/spacing_huge"
+					android:layout_marginEnd="@dimen/spacing_huge"
+					android:layout_marginBottom="@dimen/spacing_medium_large"
+					android:adjustViewBounds="true"
+					android:maxHeight="@dimen/illustration_height"
+					android:paddingStart="@dimen/spacing_huge"
+					android:paddingEnd="@dimen/spacing_huge"
+					android:src="@drawable/legacy_ill_privacy" />
+
+			<androidx.cardview.widget.CardView
+					style="@style/NextStep.Card"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/spacing_medium_large"
 					android:layout_marginTop="@dimen/spacing_medium_large"
-					android:layout_marginRight="@dimen/spacing_large"
-					android:layout_marginBottom="@dimen/spacing_large"
-					android:orientation="vertical">
+					android:layout_marginEnd="@dimen/spacing_medium_large">
 
-					<TextView
-						style="@style/NextStep.Text.Title"
+				<LinearLayout
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/debug_sdk_state_title" />
+						android:layout_marginLeft="@dimen/spacing_large"
+						android:layout_marginTop="@dimen/spacing_medium_large"
+						android:layout_marginRight="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_large"
+						android:orientation="vertical">
 
 					<TextView
-						style="@style/NextStep.Text"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:text="@string/debug_sdk_state_text" />
+							style="@style/NextStep.Text.Title"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/debug_sdk_state_title" />
 
 					<TextView
-						android:id="@+id/debug_sdk_state_text"
-						style="@style/NextStep.Text"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="@dimen/spacing_medium"
-						android:background="@drawable/bg_status_bubble"
-						android:backgroundTint="@color/status_green_bg"
-						android:gravity="center_horizontal"
-						android:padding="@dimen/spacing_small" />
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/debug_sdk_state_text" />
+
+					<TextView
+							android:id="@+id/debug_sdk_state_text"
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="@dimen/spacing_medium"
+							android:background="@drawable/bg_status_bubble"
+							android:backgroundTint="@color/status_green_bg"
+							android:gravity="center_horizontal"
+							android:padding="@dimen/spacing_small" />
 
 					<Button
-						android:id="@+id/debug_button_reset"
-						style="@style/NextStep.Button"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="@dimen/spacing_large"
-						android:backgroundTint="@color/purple_main"
-						android:text="@string/debug_sdk_button_reset" />
+							android:id="@+id/debug_button_sync"
+							style="@style/NextStep.Button"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="@dimen/spacing_large"
+							android:backgroundTint="@color/purple_main"
+							android:text="Sync Backend" />
+
+					<Button
+							android:id="@+id/debug_button_reset"
+							style="@style/NextStep.Button"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="@dimen/spacing_large"
+							android:backgroundTint="@color/purple_main"
+							android:text="@string/debug_sdk_button_reset" />
 
 				</LinearLayout>
 
 			</androidx.cardview.widget.CardView>
 
 			<androidx.cardview.widget.CardView
-				style="@style/NextStep.Card"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_margin="@dimen/spacing_medium_large">
-
-				<LinearLayout
+					style="@style/NextStep.Card"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginLeft="@dimen/spacing_large"
-					android:layout_marginTop="@dimen/spacing_medium_large"
-					android:layout_marginRight="@dimen/spacing_large"
-					android:layout_marginBottom="@dimen/spacing_medium"
-					android:orientation="vertical">
+					android:layout_margin="@dimen/spacing_medium_large">
 
-					<TextView
-						style="@style/NextStep.Text.Title"
+				<LinearLayout
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/debug_state_setting_title" />
+						android:layout_marginLeft="@dimen/spacing_large"
+						android:layout_marginTop="@dimen/spacing_medium_large"
+						android:layout_marginRight="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_medium"
+						android:orientation="vertical">
 
 					<TextView
-						style="@style/NextStep.Text"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:text="@string/debug_state_setting_text" />
+							style="@style/NextStep.Text.Title"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/debug_state_setting_title" />
+
+					<TextView
+							style="@style/NextStep.Text"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/debug_state_setting_text" />
 
 					<RadioGroup
-						android:id="@+id/debug_state_options_group"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_margin="@dimen/spacing_medium">
+							android:id="@+id/debug_state_options_group"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_margin="@dimen/spacing_medium">
 
 						<RadioButton
-							android:id="@+id/debug_state_option_none"
-							style="@style/NextStep.RadioButton"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_option_none" />
+								android:id="@+id/debug_state_option_none"
+								style="@style/NextStep.RadioButton"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/debug_state_setting_option_none" />
 
 						<RadioButton
-							android:id="@+id/debug_state_option_healthy"
-							style="@style/NextStep.RadioButton"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_option_ok" />
+								android:id="@+id/debug_state_option_healthy"
+								style="@style/NextStep.RadioButton"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/debug_state_setting_option_ok" />
 
 						<RadioButton
-							android:id="@+id/debug_state_option_exposed"
-							style="@style/NextStep.RadioButton"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_option_exposed" />
+								android:id="@+id/debug_state_option_exposed"
+								style="@style/NextStep.RadioButton"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/debug_state_setting_option_exposed" />
 
 						<RadioButton
-							android:id="@+id/debug_state_option_infected"
-							style="@style/NextStep.RadioButton"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_option_infected" />
+								android:id="@+id/debug_state_option_infected"
+								style="@style/NextStep.RadioButton"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/debug_state_setting_option_infected" />
 
 					</RadioGroup>
 
