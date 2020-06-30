@@ -88,15 +88,15 @@ public class InformFragmentCountry extends Fragment {
 		listView.setOnItemClickListener((parent, v, position, id) -> {
 			if (position != 0) {
 				Toast.makeText(v.getContext(),
-						"Long press to delete", Toast.LENGTH_SHORT).show();
+						R.string.long_press_to_delete, Toast.LENGTH_SHORT).show();
 			} else {
-				Toast.makeText(v.getContext(), "Home country cannot be deleted", Toast.LENGTH_SHORT).show();
+				Toast.makeText(v.getContext(), R.string.home_country_cannot_be_deleted, Toast.LENGTH_SHORT).show();
 			}
 		});
 
 		listView.setOnItemLongClickListener((parent, v, position, id) -> {
 			if (position == 0) {
-				Toast.makeText(v.getContext(), "Home country cannot be deleted", Toast.LENGTH_SHORT).show();
+				Toast.makeText(v.getContext(), R.string.home_country_cannot_be_deleted, Toast.LENGTH_SHORT).show();
 				return true;
 			}
 

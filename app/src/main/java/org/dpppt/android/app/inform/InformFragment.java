@@ -134,9 +134,9 @@ public class InformFragment extends Fragment {
 						if (throwable instanceof ConnectException) {
 							showErrorDialog(getString(R.string.network_error), (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
 						} else if (throwable instanceof StatusCodeException) {
-							showErrorDialog("Invalid code", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
+							showErrorDialog(getString(R.string.invalid_code), (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
 						} else {
-							showErrorDialog("Something went wrong", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
+							showErrorDialog(getString(R.string.something_went_wrong), (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
 						}
 
 						throwable.printStackTrace();

@@ -40,7 +40,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="bottom|center_horizontal"
-					android:text="Select Countries"/>
+					android:text="@string/select_countries"/>
 
 			<LinearLayout
 					android:id="@+id/inform_invalid_code_error"
@@ -58,14 +58,14 @@
 						style="@style/NextStep.Text.Bold.Red"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="Error"/>
+						android:text="@string/error"/>
 
 				<TextView
 						style="@style/NextStep.Text.Red"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:gravity="center_horizontal"
-						android:text="Please select at least one country"/>
+						android:text="@string/please_select_at_least_one_country"/>
 
 			</LinearLayout>
 
@@ -79,7 +79,7 @@
 					android:gravity="center_horizontal"
 					android:paddingStart="@dimen/spacing_huge"
 					android:paddingEnd="@dimen/spacing_huge"
-					android:text="Select countries you have visited the past 14 days."/>
+					android:text="@string/select_countries_you_have_visited_the_past_14_days"/>
 
 			<com.hbb20.CountryCodePicker
 					android:id="@+id/ccp"
@@ -104,7 +104,7 @@
 					android:layout_gravity="center_horizontal"
 					android:layout_marginTop="20dp"
 					android:layout_marginBottom="@dimen/spacing_large"
-					android:text="Done"/>
+					android:text="@string/done"/>
 
 		</LinearLayout>
 	</LinearLayout>

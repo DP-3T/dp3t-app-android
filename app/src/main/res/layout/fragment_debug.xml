@@ -94,7 +94,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="@dimen/spacing_large"
 							android:backgroundTint="@color/purple_main"
-							android:text="Sync Backend"/>
+							android:text="@string/sync_backend"/>
 
 					<Button
 							android:id="@+id/debug_button_reset"
