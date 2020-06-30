@@ -26,6 +26,7 @@ import org.dpppt.android.app.util.NotificationUtil;
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.InfectionStatus;
 import org.dpppt.android.sdk.TracingStatus;
+import org.dpppt.android.sdk.backend.models.ApplicationInfo;
 import org.dpppt.android.sdk.internal.database.models.ExposureDay;
 import org.dpppt.android.sdk.internal.util.ProcessUtil;
 import org.dpppt.android.sdk.util.SignatureUtil;
@@ -43,7 +44,7 @@ public class MainApplication extends Application {
 
 			PublicKey publicKey = SignatureUtil.getPublicKeyFromBase64OrThrow(
 					BuildConfig.BUCKET_PUBLIC_KEY);
-			DP3T.init(this, "org.dpppt.demo", true, publicKey);
+			DP3T.init(this, new ApplicationInfo("org.dpppt.demo", "http://kiossimw1.ucy.ac.cy:9003", "http://kiossimw1.ucy.ac.cy:9003"), publicKey);
 			CertificatePinner certificatePinner = new CertificatePinner.Builder()
 					.add("demo.dpppt.org", "sha256/YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=")
 					.build();
