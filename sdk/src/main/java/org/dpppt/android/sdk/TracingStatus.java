@@ -9,24 +9,24 @@
  */
 package org.dpppt.android.sdk;
 
+import org.dpppt.android.sdk.internal.database.models.ExposureDay;
+
 import java.util.Collection;
 import java.util.List;
 
-import org.dpppt.android.sdk.internal.database.models.ExposureDay;
-
 public class TracingStatus {
 
-	private int numberOfContacts;
-	private boolean advertising;
-	private boolean receiving;
-	private long lastSyncDate;
-	private InfectionStatus infectionStatus;
-	private List<ExposureDay> exposureDays;
-	private Collection<ErrorState> errors;
+	private final int numberOfContacts;
+	private final boolean advertising;
+	private final boolean receiving;
+	private final long lastSyncDate;
+	private final InfectionStatus infectionStatus;
+	private final List<ExposureDay> exposureDays;
+	private final Collection<ErrorState> errors;
 
 	public TracingStatus(int numberOfContacts, boolean advertising, boolean receiving,
-						 long lastSyncDate,
-						 InfectionStatus infectionStatus, List<ExposureDay> exposureDays, Collection<ErrorState> errors) {
+	                     long lastSyncDate,
+	                     InfectionStatus infectionStatus, List<ExposureDay> exposureDays, Collection<ErrorState> errors) {
 		this.numberOfContacts = numberOfContacts;
 		this.advertising = advertising;
 		this.receiving = receiving;
@@ -79,7 +79,7 @@ public class TracingStatus {
 		SYNC_ERROR_TIMING(R.string.dp3t_sdk_service_notification_error_sync_timing),
 		SYNC_ERROR_SIGNATURE(R.string.dp3t_sdk_service_notification_error_sync_signature);
 
-		private int errorString;
+		private final int errorString;
 
 		ErrorState(int errorString) {
 			this.errorString = errorString;

@@ -10,15 +10,14 @@
 package org.dpppt.android.sdk.internal.crypto;
 
 import android.content.Context;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import org.dpppt.android.sdk.internal.AppConfigManager;
 import org.dpppt.android.sdk.internal.backend.BackendBucketRepository;
 import org.dpppt.android.sdk.internal.database.models.Contact;
 import org.dpppt.android.sdk.internal.database.models.Handshake;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class ContactsFactory {
 

@@ -17,12 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-
-import java.net.ConnectException;
-import java.nio.charset.StandardCharsets;
-import java.util.Calendar;
-import java.util.Date;
-
 import org.dpppt.android.app.BuildConfig;
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.inform.views.ChainedEditText;
@@ -32,6 +26,11 @@ import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.backend.ResponseCallback;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodJson;
 import org.dpppt.android.sdk.internal.backend.StatusCodeException;
+
+import java.net.ConnectException;
+import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
+import java.util.Date;
 
 public class InformFragment extends Fragment {
 
@@ -128,11 +127,11 @@ public class InformFragment extends Fragment {
 						}
 
 						if (throwable instanceof ConnectException) {
-							showErrorDialog(getString(R.string.network_error), (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage(): null);
-						} else if( throwable instanceof StatusCodeException) {
-							showErrorDialog("Invalid code", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage(): null);
+							showErrorDialog(getString(R.string.network_error), (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
+						} else if (throwable instanceof StatusCodeException) {
+							showErrorDialog("Invalid code", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
 						} else {
-							showErrorDialog("Something went wrong", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage(): null);
+							showErrorDialog("Something went wrong", (BuildConfig.IS_DEV) ? throwable.getLocalizedMessage() : null);
 						}
 
 						throwable.printStackTrace();

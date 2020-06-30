@@ -9,19 +9,19 @@
   ~ SPDX-License-Identifier: MPL-2.0
   -->
 
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto">
+<font-family
+		xmlns:app="http://schemas.android.com/apk/res-auto">
 	<font
-		app:fontStyle="normal"
-		app:fontWeight="300"
-		app:font="@font/inter_light" />
+			app:fontStyle="normal"
+			app:fontWeight="300"
+			app:font="@font/inter_light"/>
 	<font
-		app:fontStyle="normal"
-		app:fontWeight="400"
-		app:font="@font/inter_regular" />
+			app:fontStyle="normal"
+			app:fontWeight="400"
+			app:font="@font/inter_regular"/>
 	<font
-		app:fontStyle="normal"
-		app:fontWeight="700"
-		app:font="@font/inter_bold" />
+			app:fontStyle="normal"
+			app:fontWeight="700"
+			app:font="@font/inter_bold"/>
 
 </font-family>

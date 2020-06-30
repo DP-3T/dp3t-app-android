@@ -15,7 +15,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.main.model.NotificationState;
 

@@ -27,15 +27,14 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-
-import java.util.Random;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.main.model.NotificationState;
 import org.dpppt.android.app.main.model.TracingState;
 import org.dpppt.android.app.main.model.TracingStatusInterface;
 import org.dpppt.android.app.util.TracingErrorStateHelper;
 import org.dpppt.android.sdk.TracingStatus;
+
+import java.util.Random;
 
 
 public class HeaderView extends ConstraintLayout {
@@ -47,7 +46,7 @@ public class HeaderView extends ConstraintLayout {
 	static final long INITIAL_DELAY = 500;
 
 	private static final int[] BACKGROUND_IMAGES =
-			new int[] { R.drawable.header_basel,
+			new int[]{R.drawable.header_basel,
 					R.drawable.header_bern,
 					R.drawable.header_chur,
 					R.drawable.header_geneva,
@@ -56,7 +55,7 @@ public class HeaderView extends ConstraintLayout {
 					R.drawable.header_lugano,
 					R.drawable.header_luzern,
 					R.drawable.header_stgallen,
-					R.drawable.header_zurich };
+					R.drawable.header_zurich};
 	private static Integer backgroundImageIndex = null;
 
 	private ImageView backgroundImage;
@@ -242,7 +241,7 @@ public class HeaderView extends ConstraintLayout {
 	}
 
 	private AnimatorSet createIconSwitchAnimation(ImageView iconView, ImageView iconBg, @DrawableRes int iconRes,
-			@DrawableRes int iconBgRes, long duration) {
+	                                              @DrawableRes int iconBgRes, long duration) {
 		long halfDur = duration / 2;
 		AnimatorSet animatorSet = new AnimatorSet();
 

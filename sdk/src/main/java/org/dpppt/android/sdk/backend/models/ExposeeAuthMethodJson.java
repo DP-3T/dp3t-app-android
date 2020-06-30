@@ -11,7 +11,7 @@ package org.dpppt.android.sdk.backend.models;
 
 public class ExposeeAuthMethodJson implements ExposeeAuthMethod {
 
-	private String value;
+	private final String value;
 
 	public ExposeeAuthMethodJson(String value) {
 		this.value = value;

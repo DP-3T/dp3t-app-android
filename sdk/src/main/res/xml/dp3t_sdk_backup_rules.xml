@@ -11,15 +11,15 @@
 
 <full-backup-content>
 	<exclude
-		domain="sharedpref"
-		path="dp3t_sdk_preferences.xml" />
+			domain="sharedpref"
+			path="dp3t_sdk_preferences.xml"/>
 	<exclude
-		domain="sharedpref"
-		path="dp3t_store.xml" />
+			domain="sharedpref"
+			path="dp3t_store.xml"/>
 	<exclude
-		domain="database"
-		path="dp3t_sdk.db" />
+			domain="database"
+			path="dp3t_sdk.db"/>
 	<exclude
-		domain="database"
-		path="dp3t_sdk_log.db" />
+			domain="database"
+			path="dp3t_sdk_log.db"/>
 </full-backup-content>

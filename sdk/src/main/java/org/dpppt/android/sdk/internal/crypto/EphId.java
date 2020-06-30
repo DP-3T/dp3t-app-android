@@ -14,7 +14,7 @@ import java.util.Arrays;
 
 public class EphId {
 
-	private byte[] data;
+	private final byte[] data;
 
 	public EphId(byte[] data) {
 		this.data = data;

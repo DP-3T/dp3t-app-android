@@ -11,7 +11,6 @@
 package org.dpppt.android.sdk.internal.backend;
 
 import org.dpppt.android.sdk.internal.backend.models.ExposeeRequest;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Header;

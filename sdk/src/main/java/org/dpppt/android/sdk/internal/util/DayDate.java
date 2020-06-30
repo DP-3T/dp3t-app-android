@@ -9,11 +9,11 @@
  */
 package org.dpppt.android.sdk.internal.util;
 
+import com.google.gson.annotations.JsonAdapter;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
-import com.google.gson.annotations.JsonAdapter;
 
 @JsonAdapter(DayDateJsonAdapter.class)
 public class DayDate {
@@ -24,7 +24,7 @@ public class DayDate {
 		dayDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 	}
 
-	private long timestampRepresentation;
+	private final long timestampRepresentation;
 
 	public DayDate() {
 		this(System.currentTimeMillis());

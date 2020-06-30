@@ -34,10 +34,14 @@ public class BleCompat {
 
 	private static String getPhyString(int phy) {
 		switch (phy) {
-			case BluetoothDevice.PHY_LE_1M: return "1M";
-			case BluetoothDevice.PHY_LE_2M: return "2M";
-			case BluetoothDevice.PHY_LE_CODED: return "coded";
-			case ScanResult.PHY_UNUSED: return "unused";
+			case BluetoothDevice.PHY_LE_1M:
+				return "1M";
+			case BluetoothDevice.PHY_LE_2M:
+				return "2M";
+			case BluetoothDevice.PHY_LE_CODED:
+				return "coded";
+			case ScanResult.PHY_UNUSED:
+				return "unused";
 		}
 		return "?";
 	}

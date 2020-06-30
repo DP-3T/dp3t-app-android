@@ -13,7 +13,6 @@ package org.dpppt.android.app.util;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-
 import org.dpppt.android.app.R;
 
 public class PhoneUtil {

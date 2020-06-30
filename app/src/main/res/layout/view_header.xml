@@ -9,51 +9,51 @@
   -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	tools:layout_height="@dimen/header_height"
-	tools:layout_width="match_parent"
-	tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:layout_height="@dimen/header_height"
+       tools:layout_width="match_parent"
+       tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
 	<ImageView
-		android:id="@+id/main_header_bg_image"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:scaleType="centerCrop" />
+			android:id="@+id/main_header_bg_image"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"/>
 
 	<ImageView
-		android:id="@+id/main_header_icon_bg"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/spacing_small"
-		android:layout_marginBottom="@dimen/spacing_larger"
-		android:scaleType="fitCenter"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		tools:src="@drawable/bg_header_icon_on" />
+			android:id="@+id/main_header_icon_bg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/spacing_small"
+			android:layout_marginBottom="@dimen/spacing_larger"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:src="@drawable/bg_header_icon_on"/>
 
 	<org.dpppt.android.app.main.views.CircleAnimationView
-		android:id="@+id/main_header_anim_view"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+			android:id="@+id/main_header_anim_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
 
 	<ImageView
-		android:id="@+id/main_header_icon"
-		android:layout_width="@dimen/header_size_icon"
-		android:layout_height="@dimen/header_size_icon"
-		android:layout_marginTop="@dimen/spacing_small"
-		android:layout_marginBottom="@dimen/spacing_larger"
-		android:scaleType="fitCenter"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		tools:src="@drawable/ic_begegnungen" />
+			android:id="@+id/main_header_icon"
+			android:layout_width="@dimen/header_size_icon"
+			android:layout_height="@dimen/header_size_icon"
+			android:layout_marginTop="@dimen/spacing_small"
+			android:layout_marginBottom="@dimen/spacing_larger"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:src="@drawable/ic_begegnungen"/>
 
 </merge>

@@ -10,7 +10,7 @@
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 	<item android:width="65dp" android:height="65dp">
-		<shape  android:shape="oval">
+		<shape android:shape="oval">
 			<stroke android:color="@color/white_20" android:width="@dimen/header_stroke_width_circle"/>
 		</shape>
 	</item>

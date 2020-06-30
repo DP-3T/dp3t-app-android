@@ -13,17 +13,17 @@ import org.dpppt.android.sdk.internal.crypto.EphId;
 
 public class Handshake {
 
-	private int id;
-	private long timestamp;
+	private final int id;
+	private final long timestamp;
 	private EphId ephId;
-	private int txPowerLevel;
-	private int rssi;
-	private String primaryPhy;
-	private String secondaryPhy;
-	private long timestampNanos;
+	private final int txPowerLevel;
+	private final int rssi;
+	private final String primaryPhy;
+	private final String secondaryPhy;
+	private final long timestampNanos;
 
 	public Handshake(int id, long timestamp, EphId ephId, int txPowerLevel, int rssi, String primaryPhy, String secondaryPhy,
-					 long timestampNanos) {
+	                 long timestampNanos) {
 		this.id = id;
 		this.timestamp = timestamp;
 		this.ephId = ephId;

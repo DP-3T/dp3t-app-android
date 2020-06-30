@@ -27,18 +27,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.debug.debug.model.DebugAppState;
 import org.dpppt.android.app.util.InfoDialog;
 import org.dpppt.android.app.viewmodel.TracingViewModel;
 import org.dpppt.android.sdk.InfectionStatus;
 import org.dpppt.android.sdk.TracingStatus;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Date;
 
 public class DebugFragment extends Fragment {
 

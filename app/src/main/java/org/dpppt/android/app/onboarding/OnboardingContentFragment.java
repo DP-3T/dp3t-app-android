@@ -20,7 +20,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
-
 import org.dpppt.android.app.R;
 
 public class OnboardingContentFragment extends Fragment {
@@ -35,8 +34,8 @@ public class OnboardingContentFragment extends Fragment {
 	private static final String ARG_STYLE_GREEN = "ARG_STYLE_GREEN";
 
 	public static OnboardingContentFragment newInstance(@StringRes int title, @StringRes int subtitle,
-			@DrawableRes int illustration, @StringRes int description1, @DrawableRes int iconDescription1,
-			@StringRes int description2, @DrawableRes int iconDescription2, boolean greenStyle) {
+	                                                    @DrawableRes int illustration, @StringRes int description1, @DrawableRes int iconDescription1,
+	                                                    @StringRes int description2, @DrawableRes int iconDescription2, boolean greenStyle) {
 		Bundle args = new Bundle();
 		args.putInt(ARG_RES_TITLE, title);
 		args.putInt(ARG_RES_SUBTITLE, subtitle);

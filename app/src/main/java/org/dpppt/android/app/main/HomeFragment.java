@@ -29,7 +29,6 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import org.dpppt.android.app.BuildConfig;
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.contacts.ContactsFragment;

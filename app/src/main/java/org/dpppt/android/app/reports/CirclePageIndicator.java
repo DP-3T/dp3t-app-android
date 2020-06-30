@@ -24,7 +24,6 @@ import android.view.ViewConfiguration;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.util.UiUtils;
 
@@ -34,7 +33,7 @@ import static android.widget.LinearLayout.VERTICAL;
 
 /**
  * IMPORTANT: based on "com.github.JakeWharton:ViewPagerIndicator:2.4.1" but custom modified/updated
- *
+ * <p>
  * Draws circles (one for each view). The current view position is filled and
  * others are only stroked.
  */
@@ -202,7 +201,7 @@ public class CirclePageIndicator extends View {
 		final float shortOffset = shortPaddingBefore + mRadius;
 		float longOffset = longPaddingBefore + mRadius;
 		if (mCentered) {
-			longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - (((count-1) * spreadDistance) / 2.0f + mRadius);
+			longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - (((count - 1) * spreadDistance) / 2.0f + mRadius);
 		}
 
 		// case: indicators need more space than available
@@ -387,8 +386,7 @@ public class CirclePageIndicator extends View {
 	/**
 	 * Determines the width of this view
 	 *
-	 * @param measureSpec
-	 *            A measureSpec packed into an int
+	 * @param measureSpec A measureSpec packed into an int
 	 * @return The width of the view, honoring constraints from measureSpec
 	 */
 	private int measureLong(int measureSpec) {
@@ -402,8 +400,8 @@ public class CirclePageIndicator extends View {
 		} else {
 			//Calculate the width according the views count
 			final int count = mViewPager.getAdapter().getItemCount();
-			result = (int)(getPaddingLeft() + getPaddingRight()
-						   + (count * 2 * mRadius) + (count - 1) * mRadius + 1);
+			result = (int) (getPaddingLeft() + getPaddingRight()
+					+ (count * 2 * mRadius) + (count - 1) * mRadius + 1);
 			//Respect AT_MOST value if that was what is called for by measureSpec
 			if (specMode == MeasureSpec.AT_MOST) {
 				result = Math.min(result, specSize);
@@ -415,8 +413,7 @@ public class CirclePageIndicator extends View {
 	/**
 	 * Determines the height of this view
 	 *
-	 * @param measureSpec
-	 *            A measureSpec packed into an int
+	 * @param measureSpec A measureSpec packed into an int
 	 * @return The height of the view, honoring constraints from measureSpec
 	 */
 	private int measureShort(int measureSpec) {
@@ -429,7 +426,7 @@ public class CirclePageIndicator extends View {
 			result = specSize;
 		} else {
 			//Measure the height
-			result = (int)(2 * mRadius + getPaddingTop() + getPaddingBottom() + 1);
+			result = (int) (2 * mRadius + getPaddingTop() + getPaddingBottom() + 1);
 			//Respect AT_MOST value if that was what is called for by measureSpec
 			if (specMode == MeasureSpec.AT_MOST) {
 				result = Math.min(result, specSize);
@@ -438,7 +435,7 @@ public class CirclePageIndicator extends View {
 		return result;
 	}
 
-	private class CirclePageChangeCallback extends ViewPager2.OnPageChangeCallback{
+	private class CirclePageChangeCallback extends ViewPager2.OnPageChangeCallback {
 
 		@Override
 		public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -465,7 +462,7 @@ public class CirclePageIndicator extends View {
 
 	@Override
 	public void onRestoreInstanceState(Parcelable state) {
-		SavedState savedState = (SavedState)state;
+		SavedState savedState = (SavedState) state;
 		super.onRestoreInstanceState(savedState.getSuperState());
 		mCurrentPage = savedState.currentPage;
 		mSnapPage = savedState.currentPage;

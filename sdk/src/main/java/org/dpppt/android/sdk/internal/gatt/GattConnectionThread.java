@@ -15,7 +15,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class GattConnectionThread extends Thread {
 
 	private boolean running = true;
-	private LinkedBlockingQueue<GattConnectionTask> bluetoothDevicesToConnect = new LinkedBlockingQueue<>();
+	private final LinkedBlockingQueue<GattConnectionTask> bluetoothDevicesToConnect = new LinkedBlockingQueue<>();
 
 	public GattConnectionThread() {
 		super("GattConnectionThread");

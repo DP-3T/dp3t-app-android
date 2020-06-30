@@ -10,6 +10,12 @@
 package org.dpppt.android.sdk.util;
 
 import android.content.Context;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import org.dpppt.android.sdk.DP3TCalibrationHelper;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,14 +23,6 @@ import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
-
-import org.dpppt.android.sdk.DP3TCalibrationHelper;
-
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
-import retrofit2.Callback;
-import retrofit2.Retrofit;
 
 public class FileUploadRepository {
 

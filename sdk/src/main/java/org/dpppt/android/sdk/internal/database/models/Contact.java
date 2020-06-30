@@ -13,11 +13,11 @@ import org.dpppt.android.sdk.internal.crypto.EphId;
 
 public class Contact {
 
-	private int id;
-	private long date;
-	private EphId ephId;
-	private int windowCount;
-	private int associatedKnownCase;
+	private final int id;
+	private final long date;
+	private final EphId ephId;
+	private final int windowCount;
+	private final int associatedKnownCase;
 
 	public Contact(int id, long date, EphId ephId, int windowCount, int associatedKnownCase) {
 		this.id = id;

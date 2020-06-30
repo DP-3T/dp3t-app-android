@@ -11,14 +11,13 @@
 package org.dpppt.android.sdk;
 
 import android.content.Context;
-
-import java.io.OutputStream;
-
 import org.dpppt.android.sdk.internal.AppConfigManager;
 import org.dpppt.android.sdk.internal.crypto.CryptoDatabaseHelper;
 import org.dpppt.android.sdk.internal.database.Database;
 import org.dpppt.android.sdk.internal.logger.LogDatabaseHelper;
 import org.dpppt.android.sdk.util.DeviceHelper;
+
+import java.io.OutputStream;
 
 public class DP3TCalibrationHelper {
 

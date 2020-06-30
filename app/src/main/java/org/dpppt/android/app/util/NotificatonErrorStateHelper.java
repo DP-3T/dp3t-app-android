@@ -13,7 +13,6 @@ import android.graphics.Paint;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.main.model.NotificationStateError;
 

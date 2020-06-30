@@ -20,9 +20,9 @@ class DatabaseThread extends HandlerThread {
 
 	private static DatabaseThread instance;
 
-	private Looper looper;
-	private Handler handler;
-	private Handler mainHandler;
+	private final Looper looper;
+	private final Handler handler;
+	private final Handler mainHandler;
 
 	static DatabaseThread getInstance(@NonNull Context context) {
 		if (instance == null) {

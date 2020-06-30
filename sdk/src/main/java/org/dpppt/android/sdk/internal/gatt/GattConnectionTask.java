@@ -13,11 +13,10 @@ import android.bluetooth.*;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.os.Build;
-
-import java.util.Arrays;
-
 import org.dpppt.android.sdk.internal.crypto.EphId;
 import org.dpppt.android.sdk.internal.logger.Logger;
+
+import java.util.Arrays;
 
 import static org.dpppt.android.sdk.internal.crypto.CryptoModule.EPHID_LENGTH;
 
@@ -27,10 +26,10 @@ public class GattConnectionTask {
 
 	private static final long GATT_READ_TIMEOUT = 10 * 1000L;
 
-	private Context context;
-	private BluetoothDevice bluetoothDevice;
-	private ScanResult scanResult;
-	private Callback callback;
+	private final Context context;
+	private final BluetoothDevice bluetoothDevice;
+	private final ScanResult scanResult;
+	private final Callback callback;
 
 	private BluetoothGatt bluetoothGatt;
 	private long startTime;

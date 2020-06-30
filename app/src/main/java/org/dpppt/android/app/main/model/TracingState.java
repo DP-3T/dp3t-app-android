@@ -12,7 +12,6 @@ package org.dpppt.android.app.main.model;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
-
 import org.dpppt.android.app.R;
 
 

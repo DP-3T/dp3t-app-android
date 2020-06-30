@@ -14,10 +14,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
+import org.dpppt.android.sdk.internal.database.DatabaseHelper;
 
 import java.util.UUID;
-
-import org.dpppt.android.sdk.internal.database.DatabaseHelper;
 
 public class DeviceHelper {
 

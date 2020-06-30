@@ -10,11 +10,11 @@
   -->
 
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-	android:color="#FFFFFF">
+        android:color="#FFFFFF">
 	<item android:id="@android:id/mask">
 		<shape android:shape="rectangle">
 			<corners android:radius="@dimen/button_corner_radius"/>
-			<solid android:color="#000000" />
+			<solid android:color="#000000"/>
 		</shape>
 	</item>
 </ripple>

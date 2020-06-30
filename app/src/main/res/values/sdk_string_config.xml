@@ -13,15 +13,26 @@
 	<string name="dp3t_sdk_service_notification_title">@string/app_name</string>
 	<string name="dp3t_sdk_service_notification_text">@string/android_foreground_service_notification_text</string>
 	<string name="dp3t_sdk_service_notification_errors">@string/android_foreground_service_notification_errors</string>
-	<string name="dp3t_sdk_service_notification_error_location_permission">@string/android_foreground_service_notification_error_location_permission</string>
-	<string name="dp3t_sdk_service_notification_error_location_service">@string/foreground_service_notification_error_location_service</string>
-	<string name="dp3t_sdk_service_notification_error_battery_optimization">@string/android_foreground_service_notification_error_battery_optimization</string>
+	<string name="dp3t_sdk_service_notification_error_location_permission">
+		@string/android_foreground_service_notification_error_location_permission
+	</string>
+	<string name="dp3t_sdk_service_notification_error_location_service">
+		@string/foreground_service_notification_error_location_service
+	</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">
+		@string/android_foreground_service_notification_error_battery_optimization
+	</string>
 
-	<string name="dp3t_sdk_service_notification_error_bluetooth_advertising_error">@string/begegnungen_restart_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_advertising_error">
+		@string/begegnungen_restart_error_text
+	</string>
 	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">@string/bluetooth_turned_off_text</string>
-	<string name="dp3t_sdk_service_notification_error_bluetooth_internal_error">@string/begegnungen_restart_error_text</string>
-	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">@string/begegnungen_restart_error_text</string>
-	<string name="dp3t_sdk_service_notification_error_bluetooth_scanner_error">@string/begegnungen_restart_error_text</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_internal_error">@string/begegnungen_restart_error_text
+	</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">@string/begegnungen_restart_error_text
+	</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_scanner_error">@string/begegnungen_restart_error_text
+	</string>
 
 	<string name="dp3t_sdk_service_notification_error_sync_database">@string/sync_error_text</string>
 	<string name="dp3t_sdk_service_notification_error_sync_network">@string/sync_error_text</string>

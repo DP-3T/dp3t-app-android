@@ -11,25 +11,22 @@ package org.dpppt.android.sdk.internal.backend;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
-
-import java.io.IOException;
-import java.security.PublicKey;
-
 import com.google.protobuf.InvalidProtocolBufferException;
-
 import org.dpppt.android.sdk.backend.SignatureException;
 import org.dpppt.android.sdk.backend.SignatureVerificationInterceptor;
 import org.dpppt.android.sdk.internal.backend.proto.Exposed;
-
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.protobuf.ProtoConverterFactory;
+
+import java.io.IOException;
+import java.security.PublicKey;
 
 public class BackendBucketRepository implements Repository {
 
 	public static long BATCH_LENGTH = 2 * 60 * 60 * 1000L;
 
-	private BucketService bucketService;
+	private final BucketService bucketService;
 
 	public BackendBucketRepository(@NonNull Context context, @NonNull String bucketBaseUrl, @NonNull PublicKey publicKey) {
 		Retrofit bucketRetrofit = new Retrofit.Builder()

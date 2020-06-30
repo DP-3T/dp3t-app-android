@@ -25,7 +25,6 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.main.model.TracingState;
 import org.dpppt.android.app.onboarding.OnboardingLocationPermissionFragment;
@@ -113,7 +112,7 @@ public class TracingBoxFragment extends Fragment {
 					if (ActivityCompat
 							.shouldShowRequestPermissionRationale(requireActivity(),
 									Manifest.permission.ACCESS_FINE_LOCATION)) {
-						String[] permissions = new String[] { Manifest.permission.ACCESS_FINE_LOCATION };
+						String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
 						requestPermissions(permissions, OnboardingLocationPermissionFragment.REQUEST_CODE_ASK_PERMISSION_FINE_LOCATION);
 					} else {
 						new AlertDialog.Builder(requireActivity())

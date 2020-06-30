@@ -13,13 +13,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteException;
 import androidx.annotation.NonNull;
 import androidx.work.*;
-
-import java.io.IOException;
-import java.security.PublicKey;
-import java.util.concurrent.TimeUnit;
-
 import com.google.protobuf.InvalidProtocolBufferException;
-
 import org.dpppt.android.sdk.TracingStatus.ErrorState;
 import org.dpppt.android.sdk.backend.SignatureException;
 import org.dpppt.android.sdk.backend.models.ApplicationInfo;
@@ -30,6 +24,10 @@ import org.dpppt.android.sdk.internal.backend.SyncErrorState;
 import org.dpppt.android.sdk.internal.backend.proto.Exposed;
 import org.dpppt.android.sdk.internal.database.Database;
 import org.dpppt.android.sdk.internal.logger.Logger;
+
+import java.io.IOException;
+import java.security.PublicKey;
+import java.util.concurrent.TimeUnit;
 
 import static org.dpppt.android.sdk.internal.backend.BackendBucketRepository.BATCH_LENGTH;
 
@@ -136,8 +134,8 @@ public class SyncWorker extends Worker {
 				new BackendBucketRepository(context, appConfig.getBucketBaseUrl(), bucketSignaturePublicKey);
 
 		for (long batchReleaseTime = nextBatchReleaseTime;
-			 batchReleaseTime < System.currentTimeMillis();
-			 batchReleaseTime += BATCH_LENGTH) {
+		     batchReleaseTime < System.currentTimeMillis();
+		     batchReleaseTime += BATCH_LENGTH) {
 
 			Exposed.ProtoExposedList result = backendBucketRepository.getExposees(batchReleaseTime);
 			long batchReleaseServerTime = result.getBatchReleaseTime();

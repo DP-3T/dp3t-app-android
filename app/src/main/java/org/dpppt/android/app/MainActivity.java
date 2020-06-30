@@ -16,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
-
 import org.dpppt.android.app.main.HomeFragment;
 import org.dpppt.android.app.onboarding.OnboardingActivity;
 import org.dpppt.android.app.reports.ReportsFragment;
@@ -110,8 +109,7 @@ public class MainActivity extends FragmentActivity {
 			tracingViewModel.setTracingEnabled(false);
 			intent.setAction(null);
 			setIntent(intent);
-		}
-		else if (ACTION_GOTO_REPORTS.equals(intentAction) && !launchedFromHistory && !consumedExposedIntent) {
+		} else if (ACTION_GOTO_REPORTS.equals(intentAction) && !launchedFromHistory && !consumedExposedIntent) {
 			consumedExposedIntent = true;
 			gotoReportsFragment();
 			intent.setAction(null);

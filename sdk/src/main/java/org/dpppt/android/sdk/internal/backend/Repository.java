@@ -14,7 +14,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import androidx.annotation.NonNull;
-
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

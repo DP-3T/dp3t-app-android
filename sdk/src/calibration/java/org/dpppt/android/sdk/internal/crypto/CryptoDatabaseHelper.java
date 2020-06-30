@@ -14,7 +14,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Pair;
-
 import org.dpppt.android.sdk.internal.database.DatabaseHelper;
 import org.dpppt.android.sdk.internal.util.DayDate;
 

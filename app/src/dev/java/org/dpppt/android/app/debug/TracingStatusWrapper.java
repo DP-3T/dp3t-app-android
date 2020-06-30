@@ -10,12 +10,6 @@
 package org.dpppt.android.app.debug;
 
 import android.content.Context;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.TimeZone;
-
 import org.dpppt.android.app.debug.debug.model.DebugAppState;
 import org.dpppt.android.app.main.model.NotificationState;
 import org.dpppt.android.app.main.model.TracingState;
@@ -27,6 +21,11 @@ import org.dpppt.android.sdk.InfectionStatus;
 import org.dpppt.android.sdk.TracingStatus;
 import org.dpppt.android.sdk.internal.database.models.ExposureDay;
 import org.dpppt.android.sdk.internal.util.DayDate;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.TimeZone;
 
 
 public class TracingStatusWrapper implements TracingStatusInterface {

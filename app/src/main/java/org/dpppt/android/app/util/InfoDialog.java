@@ -20,7 +20,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.DialogFragment;
-
 import org.dpppt.android.app.R;
 
 public class InfoDialog extends DialogFragment {
@@ -70,7 +69,7 @@ public class InfoDialog extends DialogFragment {
 	@Nullable
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-			@Nullable Bundle savedInstanceState) {
+	                         @Nullable Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.dialog_info, container, false);
 	}
 

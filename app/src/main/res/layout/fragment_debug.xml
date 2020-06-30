@@ -9,12 +9,12 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  xmlns:app="http://schemas.android.com/apk/res-auto"
-			  android:layout_width="match_parent"
-			  android:layout_height="match_parent"
-			  android:background="@color/grey_light"
-			  android:gravity="center_horizontal"
-			  android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_light"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
 
 	<androidx.appcompat.widget.Toolbar
 			android:id="@+id/contacts_toolbar"
@@ -22,7 +22,7 @@
 			android:layout_height="wrap_content"
 			app:navigationContentDescription="@string/android_accessibility_back_button"
 			app:navigationIcon="@drawable/ic_arrow_back"
-			app:title="@string/debug_settings_title" />
+			app:title="@string/debug_settings_title"/>
 
 	<ScrollView
 			android:layout_width="match_parent"
@@ -45,7 +45,7 @@
 					android:maxHeight="@dimen/illustration_height"
 					android:paddingStart="@dimen/spacing_huge"
 					android:paddingEnd="@dimen/spacing_huge"
-					android:src="@drawable/legacy_ill_privacy" />
+					android:src="@drawable/legacy_ill_privacy"/>
 
 			<androidx.cardview.widget.CardView
 					style="@style/NextStep.Card"
@@ -68,13 +68,13 @@
 							style="@style/NextStep.Text.Title"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/debug_sdk_state_title" />
+							android:text="@string/debug_sdk_state_title"/>
 
 					<TextView
 							style="@style/NextStep.Text"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/debug_sdk_state_text" />
+							android:text="@string/debug_sdk_state_text"/>
 
 					<TextView
 							android:id="@+id/debug_sdk_state_text"
@@ -85,7 +85,7 @@
 							android:background="@drawable/bg_status_bubble"
 							android:backgroundTint="@color/status_green_bg"
 							android:gravity="center_horizontal"
-							android:padding="@dimen/spacing_small" />
+							android:padding="@dimen/spacing_small"/>
 
 					<Button
 							android:id="@+id/debug_button_sync"
@@ -94,7 +94,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="@dimen/spacing_large"
 							android:backgroundTint="@color/purple_main"
-							android:text="Sync Backend" />
+							android:text="Sync Backend"/>
 
 					<Button
 							android:id="@+id/debug_button_reset"
@@ -103,7 +103,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="@dimen/spacing_large"
 							android:backgroundTint="@color/purple_main"
-							android:text="@string/debug_sdk_button_reset" />
+							android:text="@string/debug_sdk_button_reset"/>
 
 				</LinearLayout>
 
@@ -128,13 +128,13 @@
 							style="@style/NextStep.Text.Title"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_title" />
+							android:text="@string/debug_state_setting_title"/>
 
 					<TextView
 							style="@style/NextStep.Text"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/debug_state_setting_text" />
+							android:text="@string/debug_state_setting_text"/>
 
 					<RadioGroup
 							android:id="@+id/debug_state_options_group"
@@ -147,28 +147,28 @@
 								style="@style/NextStep.RadioButton"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:text="@string/debug_state_setting_option_none" />
+								android:text="@string/debug_state_setting_option_none"/>
 
 						<RadioButton
 								android:id="@+id/debug_state_option_healthy"
 								style="@style/NextStep.RadioButton"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:text="@string/debug_state_setting_option_ok" />
+								android:text="@string/debug_state_setting_option_ok"/>
 
 						<RadioButton
 								android:id="@+id/debug_state_option_exposed"
 								style="@style/NextStep.RadioButton"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:text="@string/debug_state_setting_option_exposed" />
+								android:text="@string/debug_state_setting_option_exposed"/>
 
 						<RadioButton
 								android:id="@+id/debug_state_option_infected"
 								style="@style/NextStep.RadioButton"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:text="@string/debug_state_setting_option_infected" />
+								android:text="@string/debug_state_setting_option_infected"/>
 
 					</RadioGroup>
 

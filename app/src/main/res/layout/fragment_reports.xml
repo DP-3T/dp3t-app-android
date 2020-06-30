@@ -8,96 +8,96 @@
   ~ SPDX-License-Identifier: MPL-2.0
   -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="@color/grey_light">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/grey_light">
 
 	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/reports_toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		app:layout_constraintTop_toTopOf="parent"
-		app:navigationIcon="@drawable/ic_arrow_back"
-		app:navigationContentDescription="@string/android_accessibility_back_button"
-		app:title="@string/reports_title_homescreen" />
-
-	<FrameLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		app:layout_constraintTop_toBottomOf="@id/reports_toolbar">
-
-		<androidx.viewpager2.widget.ViewPager2
-			android:id="@+id/reports_header_viewpager"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent" />
-
-		<org.dpppt.android.app.reports.CirclePageIndicator
-			android:id="@+id/reports_pageindicator"
+			android:id="@+id/reports_toolbar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_gravity="bottom"
-			android:layout_marginBottom="@dimen/spacing_larger"
-			android:visibility="gone"
-			tools:visibility="visible" />
+			app:layout_constraintTop_toTopOf="parent"
+			app:navigationIcon="@drawable/ic_arrow_back"
+			app:navigationContentDescription="@string/android_accessibility_back_button"
+			app:title="@string/reports_title_homescreen"/>
+
+	<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_constraintTop_toBottomOf="@id/reports_toolbar">
+
+		<androidx.viewpager2.widget.ViewPager2
+				android:id="@+id/reports_header_viewpager"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"/>
+
+		<org.dpppt.android.app.reports.CirclePageIndicator
+				android:id="@+id/reports_pageindicator"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_marginBottom="@dimen/spacing_larger"
+				android:visibility="gone"
+				tools:visibility="visible"/>
 
 	</FrameLayout>
 
 	<org.dpppt.android.app.reports.LockableScrollView
-		android:id="@+id/reports_scrollview"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/reports_toolbar">
+			android:id="@+id/reports_scrollview"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/reports_toolbar">
 
 		<LinearLayout
-			android:id="@+id/reports_scrollview_firstChild"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:clipChildren="false"
-			android:clipToPadding="false"
-			android:orientation="vertical"
-			android:paddingLeft="@dimen/spacing_medium_large"
-			android:paddingTop="@dimen/top_item_padding_reports"
-			android:paddingRight="@dimen/spacing_medium_large"
-			android:paddingBottom="@dimen/spacing_medium_large">
-
-			<include
-				android:id="@+id/reports_healthy"
-				layout="@layout/card_what_to_do_save_yourself"
+				android:id="@+id/reports_scrollview_firstChild"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:visibility="gone"
-				tools:visibility="visible" />
+				android:clipChildren="false"
+				android:clipToPadding="false"
+				android:orientation="vertical"
+				android:paddingLeft="@dimen/spacing_medium_large"
+				android:paddingTop="@dimen/top_item_padding_reports"
+				android:paddingRight="@dimen/spacing_medium_large"
+				android:paddingBottom="@dimen/spacing_medium_large">
 
 			<include
-				android:id="@+id/reports_hotline"
-				layout="@layout/card_what_to_do_call_us"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:visibility="gone"
-				tools:visibility="visible" />
+					android:id="@+id/reports_healthy"
+					layout="@layout/card_what_to_do_save_yourself"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/spacing_medium_large"
+					android:visibility="gone"
+					tools:visibility="visible"/>
 
 			<include
-				android:id="@+id/reports_save_others"
-				layout="@layout/card_what_to_do_save_others"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:visibility="gone"
-				tools:visibility="visible" />
+					android:id="@+id/reports_hotline"
+					layout="@layout/card_what_to_do_call_us"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/spacing_medium_large"
+					android:visibility="gone"
+					tools:visibility="visible"/>
 
 			<include
-				android:id="@+id/reports_infected"
-				layout="@layout/card_what_to_do_self_isolation"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="@dimen/spacing_medium_large"
-				android:visibility="gone"
-				tools:visibility="visible" />
+					android:id="@+id/reports_save_others"
+					layout="@layout/card_what_to_do_save_others"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/spacing_medium_large"
+					android:visibility="gone"
+					tools:visibility="visible"/>
+
+			<include
+					android:id="@+id/reports_infected"
+					layout="@layout/card_what_to_do_self_isolation"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/spacing_medium_large"
+					android:visibility="gone"
+					tools:visibility="visible"/>
 
 		</LinearLayout>
 

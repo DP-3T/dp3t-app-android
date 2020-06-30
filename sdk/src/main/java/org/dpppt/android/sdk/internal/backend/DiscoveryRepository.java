@@ -11,21 +11,19 @@ package org.dpppt.android.sdk.internal.backend;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
-
-import java.io.IOException;
-
 import org.dpppt.android.sdk.backend.ResponseCallback;
 import org.dpppt.android.sdk.internal.backend.models.ApplicationsList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.io.IOException;
+
 public class DiscoveryRepository implements Repository {
 
-	private DiscoveryService discoveryService;
+	private final DiscoveryService discoveryService;
 
 	public DiscoveryRepository(@NonNull Context context) {
 

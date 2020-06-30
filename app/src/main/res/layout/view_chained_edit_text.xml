@@ -9,12 +9,12 @@
   -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:padding="@dimen/spacing_medium_large"
-	tools:layout_height="wrap_content"
-	tools:layout_width="match_parent"
-	tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+       xmlns:tools="http://schemas.android.com/tools"
+       android:padding="@dimen/spacing_medium_large"
+       tools:layout_height="wrap_content"
+       tools:layout_width="match_parent"
+       tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-	<include layout="@layout/view_chained_edit_text_more_space" />
+	<include layout="@layout/view_chained_edit_text_more_space"/>
 
 </merge>

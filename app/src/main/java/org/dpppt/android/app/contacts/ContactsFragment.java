@@ -18,7 +18,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.main.TracingBoxFragment;
 import org.dpppt.android.app.main.views.HeaderView;
@@ -41,7 +40,9 @@ public class ContactsFragment extends Fragment {
 		return new ContactsFragment();
 	}
 
-	public ContactsFragment() { super(R.layout.fragment_contacts); }
+	public ContactsFragment() {
+		super(R.layout.fragment_contacts);
+	}
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {

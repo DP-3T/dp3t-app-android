@@ -17,7 +17,8 @@ public class SyncErrorState {
 
 	private ErrorState syncError = null;
 
-	private SyncErrorState() { }
+	private SyncErrorState() {
+	}
 
 	public static synchronized SyncErrorState getInstance() {
 		if (instance == null) {

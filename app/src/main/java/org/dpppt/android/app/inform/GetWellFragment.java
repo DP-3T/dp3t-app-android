@@ -15,7 +15,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import org.dpppt.android.app.MainActivity;
 import org.dpppt.android.app.R;
 

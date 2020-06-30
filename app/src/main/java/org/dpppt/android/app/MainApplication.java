@@ -18,9 +18,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
-
-import java.security.PublicKey;
-
+import okhttp3.CertificatePinner;
 import org.dpppt.android.app.storage.SecureStorage;
 import org.dpppt.android.app.util.NotificationUtil;
 import org.dpppt.android.sdk.DP3T;
@@ -31,7 +29,7 @@ import org.dpppt.android.sdk.internal.database.models.ExposureDay;
 import org.dpppt.android.sdk.internal.util.ProcessUtil;
 import org.dpppt.android.sdk.util.SignatureUtil;
 
-import okhttp3.CertificatePinner;
+import java.security.PublicKey;
 
 public class MainApplication extends Application {
 

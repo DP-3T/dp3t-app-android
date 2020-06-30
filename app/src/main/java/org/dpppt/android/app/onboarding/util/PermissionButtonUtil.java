@@ -15,7 +15,6 @@ import android.graphics.Color;
 import android.widget.Button;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
-
 import org.dpppt.android.app.R;
 
 

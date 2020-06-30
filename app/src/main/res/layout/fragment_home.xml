@@ -9,145 +9,145 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
 	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/home_toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
+			android:id="@+id/home_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
 
 		<TextView
-			style="@style/NextStep.Text.Bold"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center_horizontal"
-			android:text="@string/app_name" />
+				style="@style/NextStep.Text.Bold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text="@string/app_name"/>
 
 	</androidx.appcompat.widget.Toolbar>
 
 	<FrameLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/grey_light">
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/grey_light">
 
 		<org.dpppt.android.app.main.views.HeaderView
-			android:id="@+id/home_header_view"
-			android:layout_width="match_parent"
-			android:layout_height="@dimen/header_height" />
+				android:id="@+id/home_header_view"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/header_height"/>
 
 		<ScrollView
-			android:id="@+id/home_scroll_view"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+				android:id="@+id/home_scroll_view"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
 
 			<LinearLayout
-				android:id="@+id/home_main_layout"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:clipChildren="false"
-				android:clipToPadding="false"
-				android:orientation="vertical"
-				android:paddingLeft="@dimen/spacing_medium_large"
-				android:paddingTop="@dimen/top_item_padding"
-				android:paddingRight="@dimen/spacing_medium_large"
-				android:paddingBottom="@dimen/spacing_very_large">
-
-				<include
-					android:id="@+id/card_infobox"
-					layout="@layout/card_infobox"
+					android:id="@+id/home_main_layout"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_medium_large"
-					android:visibility="gone"
-					tools:visibility="visible" />
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:orientation="vertical"
+					android:paddingLeft="@dimen/spacing_medium_large"
+					android:paddingTop="@dimen/top_item_padding"
+					android:paddingRight="@dimen/spacing_medium_large"
+					android:paddingBottom="@dimen/spacing_very_large">
 
 				<include
-					layout="@layout/card_contacts"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_medium_large" />
+						android:id="@+id/card_infobox"
+						layout="@layout/card_infobox"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/spacing_medium_large"
+						android:visibility="gone"
+						tools:visibility="visible"/>
 
 				<include
-					layout="@layout/card_notifications"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_very_large" />
+						layout="@layout/card_contacts"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/spacing_medium_large"/>
 
 				<include
-					android:id="@+id/frame_card_test"
-					layout="@layout/card_what_to_do_test"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginBottom="@dimen/spacing_very_large" />
+						layout="@layout/card_notifications"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/spacing_very_large"/>
+
+				<include
+						android:id="@+id/frame_card_test"
+						layout="@layout/card_what_to_do_test"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/spacing_very_large"/>
 
 				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginTop="@dimen/spacing_larger"
-					android:layout_marginBottom="@dimen/spacing_larger"
-					android:orientation="horizontal">
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/spacing_larger"
+						android:layout_marginBottom="@dimen/spacing_larger"
+						android:orientation="horizontal">
 
 					<ImageView
-						android:id="@+id/status_icon"
-						android:layout_width="@dimen/icon_size"
-						android:layout_height="@dimen/icon_size"
-						android:src="@drawable/ic_warning_red" />
+							android:id="@+id/status_icon"
+							android:layout_width="@dimen/icon_size"
+							android:layout_height="@dimen/icon_size"
+							android:src="@drawable/ic_warning_red"/>
 
 					<LinearLayout
-						android:layout_width="0dp"
-						android:layout_height="wrap_content"
-						android:layout_marginStart="@dimen/spacing_medium"
-						android:layout_weight="1"
-						android:orientation="vertical">
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="@dimen/spacing_medium"
+							android:layout_weight="1"
+							android:orientation="vertical">
 
 						<TextView
-							android:id="@+id/status_title"
-							style="@style/NextStep.Text.Status"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_marginTop="1dp"
-							android:layout_marginBottom="2dp"
-							android:text="@string/preview_warning_title"
-							android:textColor="@color/dark_main" />
+								android:id="@+id/status_title"
+								style="@style/NextStep.Text.Status"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="1dp"
+								android:layout_marginBottom="2dp"
+								android:text="@string/preview_warning_title"
+								android:textColor="@color/dark_main"/>
 
 						<TextView
-							android:id="@+id/status_text"
-							style="@style/NextStep.Text"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:text="@string/preview_warning_text" />
+								android:id="@+id/status_text"
+								style="@style/NextStep.Text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/preview_warning_text"/>
 
 					</LinearLayout>
 
 				</LinearLayout>
 
 				<Button
-					android:id="@+id/main_button_debug"
-					style="@style/NextStep.Button.Outlined.Red"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center_horizontal"
-					android:layout_marginBottom="@dimen/spacing_larger"
-					android:text="@string/debug_settings_title" />
+						android:id="@+id/main_button_debug"
+						style="@style/NextStep.Button.Outlined.Red"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:layout_marginBottom="@dimen/spacing_larger"
+						android:text="@string/debug_settings_title"/>
 
 			</LinearLayout>
 
 		</ScrollView>
 
 		<FrameLayout
-			android:id="@+id/loading_view"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:background="@color/dark_main_transparent"
-			android:visibility="gone">
+				android:id="@+id/loading_view"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/dark_main_transparent"
+				android:visibility="gone">
 
 			<ProgressBar
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center" />
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"/>
 		</FrameLayout>
 
 	</FrameLayout>

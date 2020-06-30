@@ -11,12 +11,11 @@ package org.dpppt.android.sdk.internal.backend;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import okhttp3.Response;
 
 public class StatusCodeException extends Exception {
 
-	private Response response;
+	private final Response response;
 
 	public StatusCodeException(@NonNull Response response) {
 		this.response = response;

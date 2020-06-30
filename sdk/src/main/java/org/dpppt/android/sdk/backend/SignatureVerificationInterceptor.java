@@ -11,17 +11,15 @@
 package org.dpppt.android.sdk.backend;
 
 import androidx.annotation.NonNull;
+import okhttp3.Interceptor;
+import okhttp3.Response;
+import org.dpppt.android.sdk.util.SignatureUtil;
 
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
 import java.util.Arrays;
-
-import org.dpppt.android.sdk.util.SignatureUtil;
-
-import okhttp3.Interceptor;
-import okhttp3.Response;
 
 public class SignatureVerificationInterceptor implements Interceptor {
 

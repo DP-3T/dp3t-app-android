@@ -9,14 +9,14 @@
  */
 package org.dpppt.android.sdk.internal.backend.models;
 
+import org.dpppt.android.sdk.backend.models.ApplicationInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.dpppt.android.sdk.backend.models.ApplicationInfo;
-
 public class ApplicationsList {
 
-	private List<ApplicationInfo> applications;
+	private final List<ApplicationInfo> applications;
 
 	public ApplicationsList() {
 		applications = new ArrayList<>();

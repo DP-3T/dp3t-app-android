@@ -9,40 +9,40 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		  package="org.dpppt.android.sdk">
+          package="org.dpppt.android.sdk">
 
-	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.BLUETOOTH" />
-	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 	<uses-feature
 			android:name="android.hardware.bluetooth"
-			android:required="true" />
+			android:required="true"/>
 	<uses-feature
 			android:name="android.hardware.bluetooth_le"
-			android:required="true" />
+			android:required="true"/>
 	<uses-feature
 			android:name="android.hardware.location"
-			android:required="false" />
+			android:required="false"/>
 
 	<application android:fullBackupContent="@xml/dp3t_sdk_backup_rules">
 
 		<service
 				android:name="org.dpppt.android.sdk.internal.TracingService"
 				android:enabled="true"
-				android:foregroundServiceType="location" />
+				android:foregroundServiceType="location"/>
 
 		<receiver
 				android:name="org.dpppt.android.sdk.internal.TracingServiceBroadcastReceiver"
 				android:enabled="true">
 			<intent-filter>
-				<action android:name="android.intent.action.BOOT_COMPLETED" />
-				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
 			</intent-filter>
 		</receiver>
 

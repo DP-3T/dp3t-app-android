@@ -11,20 +11,10 @@ package org.dpppt.android.sdk.internal.gatt;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.le.BluetoothLeScanner;
-import android.bluetooth.le.ScanCallback;
-import android.bluetooth.le.ScanFilter;
-import android.bluetooth.le.ScanResult;
-import android.bluetooth.le.ScanSettings;
+import android.bluetooth.le.*;
 import android.content.Context;
 import android.os.Build;
 import android.os.ParcelUuid;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.dpppt.android.sdk.internal.AppConfigManager;
 import org.dpppt.android.sdk.internal.BroadcastHelper;
 import org.dpppt.android.sdk.internal.crypto.CryptoModule;
@@ -32,6 +22,11 @@ import org.dpppt.android.sdk.internal.crypto.EphId;
 import org.dpppt.android.sdk.internal.database.Database;
 import org.dpppt.android.sdk.internal.database.models.Handshake;
 import org.dpppt.android.sdk.internal.logger.Logger;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.dpppt.android.sdk.internal.gatt.BleServer.SERVICE_UUID;
 
@@ -42,10 +37,10 @@ public class BleClient {
 	private final Context context;
 	private BluetoothLeScanner bleScanner;
 	private ScanCallback bleScanCallback;
-	private GattConnectionThread gattConnectionThread;
+	private final GattConnectionThread gattConnectionThread;
 
-	private HashMap<String, List<Handshake>> scanResultMap = new HashMap<>();
-	private HashMap<String, EphId> connectedEphIdMap = new HashMap<>();
+	private final HashMap<String, List<Handshake>> scanResultMap = new HashMap<>();
+	private final HashMap<String, EphId> connectedEphIdMap = new HashMap<>();
 
 	public BleClient(Context context) {
 		this.context = context;

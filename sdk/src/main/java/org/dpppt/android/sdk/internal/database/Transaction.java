@@ -15,8 +15,8 @@ import androidx.annotation.NonNull;
 
 public class Transaction implements Runnable {
 
-	private SQLiteDatabase db;
-	private String[] queries;
+	private final SQLiteDatabase db;
+	private final String[] queries;
 
 	Transaction(@NonNull SQLiteDatabase db, String... queries) {
 		this.db = db;

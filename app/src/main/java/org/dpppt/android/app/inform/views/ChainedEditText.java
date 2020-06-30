@@ -24,11 +24,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import org.dpppt.android.app.R;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import org.dpppt.android.app.R;
 
 
 public class ChainedEditText extends ConstraintLayout {
@@ -79,10 +78,12 @@ public class ChainedEditText extends ConstraintLayout {
 		shadowEditText.setImeOptions(EditorInfo.IME_ACTION_SEND);
 		shadowEditText.addTextChangedListener(new TextWatcher() {
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) { }
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
 
 			@Override
 			public void afterTextChanged(Editable s) {

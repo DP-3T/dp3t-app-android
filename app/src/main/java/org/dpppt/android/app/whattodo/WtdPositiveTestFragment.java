@@ -16,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.inform.InformActivity;
 

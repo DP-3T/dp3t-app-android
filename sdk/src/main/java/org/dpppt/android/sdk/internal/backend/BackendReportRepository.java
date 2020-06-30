@@ -11,23 +11,21 @@ package org.dpppt.android.sdk.internal.backend;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
-
-import java.io.IOException;
-
 import org.dpppt.android.sdk.backend.ResponseCallback;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethod;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodAuthorization;
 import org.dpppt.android.sdk.internal.backend.models.ExposeeRequest;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.io.IOException;
+
 public class BackendReportRepository implements Repository {
 
-	private ReportService reportService;
+	private final ReportService reportService;
 
 	public BackendReportRepository(@NonNull Context context, String reportBaseUrl) {
 		Retrofit reportRetrofit = new Retrofit.Builder()
@@ -40,7 +38,7 @@ public class BackendReportRepository implements Repository {
 	}
 
 	public void addExposee(@NonNull ExposeeRequest exposeeRequest, ExposeeAuthMethod exposeeAuthMethod,
-						   @NonNull ResponseCallback<Void> responseCallback) {
+	                       @NonNull ResponseCallback<Void> responseCallback) {
 		String authorizationHeader = exposeeAuthMethod instanceof ExposeeAuthMethodAuthorization
 				? ((ExposeeAuthMethodAuthorization) exposeeAuthMethod).getAuthorization()
 				: null;

@@ -15,11 +15,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+import org.dpppt.android.sdk.BuildConfig;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.dpppt.android.sdk.BuildConfig;
 
 public class LogDatabase {
 
@@ -48,12 +47,12 @@ public class LogDatabase {
 	List<LogEntry> getLogsSince(long sinceTime) {
 		SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-		String[] cols = new String[] { LogSpec.COLUMN_NAME_TIME, LogSpec.COLUMN_NAME_LEVEL,
-				LogSpec.COLUMN_NAME_TAG, LogSpec.COLUMN_NAME_MESSAGE };
+		String[] cols = new String[]{LogSpec.COLUMN_NAME_TIME, LogSpec.COLUMN_NAME_LEVEL,
+				LogSpec.COLUMN_NAME_TAG, LogSpec.COLUMN_NAME_MESSAGE};
 		Cursor cursor = db.query(LogSpec.TABLE_NAME,
 				cols,
 				LogSpec.COLUMN_NAME_TIME + ">=?",
-				new String[] { String.valueOf(sinceTime) },
+				new String[]{String.valueOf(sinceTime)},
 				null,
 				null,
 				LogSpec.COLUMN_NAME_TIME + " ASC");
@@ -89,7 +88,7 @@ public class LogDatabase {
 
 		Cursor cursor = db.query(true,
 				LogSpec.TABLE_NAME,
-				new String[] { LogSpec.COLUMN_NAME_TAG },
+				new String[]{LogSpec.COLUMN_NAME_TAG},
 				null,
 				null,
 				null,

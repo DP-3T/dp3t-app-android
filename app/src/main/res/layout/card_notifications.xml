@@ -9,59 +9,59 @@
   -->
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	style="@style/NextStep.Card"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content">
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   style="@style/NextStep.Card"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content">
 
 	<LinearLayout
-		android:id="@+id/card_notifications"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:foreground="?selectableItemBackground"
-		android:orientation="vertical">
+			android:id="@+id/card_notifications"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:foreground="?selectableItemBackground"
+			android:orientation="vertical">
 
 		<LinearLayout
-			android:id="@+id/notifications_header"
-			android:layout_width="match_parent"
-			android:layout_marginTop="5dp"
-			android:paddingBottom="5dp"
-			android:layout_height="match_parent"
-			android:gravity="center_vertical"
-			android:orientation="horizontal">
+				android:id="@+id/notifications_header"
+				android:layout_width="match_parent"
+				android:layout_marginTop="5dp"
+				android:paddingBottom="5dp"
+				android:layout_height="match_parent"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
 
 			<TextView
-				style="@style/NextStep.Text.Title"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/spacing_medium"
-				android:layout_weight="1"
-				android:text="@string/reports_title_homescreen" />
+					style="@style/NextStep.Text.Title"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/spacing_medium"
+					android:layout_weight="1"
+					android:text="@string/reports_title_homescreen"/>
 
 			<ImageView
-				android:layout_width="@dimen/chevron_size_title"
-				android:layout_height="@dimen/chevron_size_title"
-				android:layout_marginEnd="@dimen/spacing_small"
-				android:src="@drawable/ic_chevron_right"
-				android:tint="@color/dark_main" />
+					android:layout_width="@dimen/chevron_size_title"
+					android:layout_height="@dimen/chevron_size_title"
+					android:layout_marginEnd="@dimen/spacing_small"
+					android:src="@drawable/ic_chevron_right"
+					android:tint="@color/dark_main"/>
 
 		</LinearLayout>
 
 		<LinearLayout
-			android:id="@+id/report_status_bubble"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="vertical">
+				android:id="@+id/report_status_bubble"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
 
 			<include
-				android:id="@+id/report_status"
-				layout="@layout/layout_status" />
+					android:id="@+id/report_status"
+					layout="@layout/layout_status"/>
 
 			<include
-				android:id="@+id/report_errors"
-				layout="@layout/item_error_status"
-				android:visibility="gone"
-				tools:visibility="visible"/>
+					android:id="@+id/report_errors"
+					layout="@layout/item_error_status"
+					android:visibility="gone"
+					tools:visibility="visible"/>
 
 		</LinearLayout>
 

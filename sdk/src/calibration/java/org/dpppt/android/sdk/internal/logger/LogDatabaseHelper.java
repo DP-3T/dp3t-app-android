@@ -12,7 +12,6 @@ package org.dpppt.android.sdk.internal.logger;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-
 import org.dpppt.android.sdk.internal.database.DatabaseHelper;
 
 public class LogDatabaseHelper {

@@ -17,11 +17,10 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import androidx.annotation.Nullable;
+import org.dpppt.android.app.R;
 
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
-import org.dpppt.android.app.R;
 
 public class CircleAnimationView extends View {
 
@@ -142,7 +141,9 @@ public class CircleAnimationView extends View {
 	private class CircleObject {
 		private final long birthMs;
 
-		private CircleObject(long birthMs) {this.birthMs = birthMs;}
+		private CircleObject(long birthMs) {
+			this.birthMs = birthMs;
+		}
 
 		public long getBirthMs() {
 			return birthMs;

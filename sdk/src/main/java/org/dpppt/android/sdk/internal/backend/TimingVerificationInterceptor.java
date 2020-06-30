@@ -11,12 +11,11 @@
 package org.dpppt.android.sdk.internal.backend;
 
 import androidx.annotation.NonNull;
+import okhttp3.Interceptor;
+import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.Date;
-
-import okhttp3.Interceptor;
-import okhttp3.Response;
 
 public class TimingVerificationInterceptor implements Interceptor {
 

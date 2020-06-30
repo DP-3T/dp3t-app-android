@@ -9,120 +9,120 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:layout_marginStart="@dimen/marging_status_error"
-	android:layout_marginEnd="@dimen/marging_status_error"
-	android:layout_marginBottom="@dimen/marging_status_error"
-	android:clipChildren="false"
-	android:clipToPadding="false">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:layout_marginStart="@dimen/marging_status_error"
+                                                   android:layout_marginEnd="@dimen/marging_status_error"
+                                                   android:layout_marginBottom="@dimen/marging_status_error"
+                                                   android:clipChildren="false"
+                                                   android:clipToPadding="false">
 
 	<LinearLayout
-		android:id="@+id/status_background"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:background="@drawable/bg_status_bubble"
-		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="@id/status_text"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@id/status_title" />
-
-	<ImageView
-		android:id="@+id/status_icon"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="10dp"
-		android:layout_marginTop="10dp"
-		android:paddingEnd="10dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@id/status_title"
-		tools:src="@drawable/ic_check" />
-
-	<TextView
-		android:id="@+id/status_title"
-		style="@style/NextStep.Text.Status"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginBottom="2dp"
-		android:paddingTop="10dp"
-		android:paddingEnd="15dp"
-		app:layout_constraintBottom_toTopOf="@id/status_text"
-		app:layout_constraintStart_toEndOf="@+id/status_icon"
-		tools:text="Status" />
-
-	<TextView
-		android:id="@+id/status_text"
-		style="@style/NextStep.Text"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:gravity="start"
-		android:paddingBottom="15dp"
-		app:layout_constraintBottom_toTopOf="@id/status_triangle"
-		app:layout_constraintEnd_toStartOf="@id/status_illustration"
-		app:layout_constraintStart_toEndOf="@+id/status_icon"
-		tools:text="Subtext" />
-
-	<ImageView
-		android:id="@+id/status_illustration"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="end"
-		android:src="@drawable/ill_tracking_active"
-		android:visibility="visible"
-		app:layout_constraintBottom_toBottomOf="@+id/status_background"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
-
-	<ImageView
-		android:id="@+id/status_triangle"
-		android:layout_width="11dp"
-		android:layout_height="13dp"
-		android:src="@drawable/triangle_status_exposed"
-		android:translationY="-2dp"
-		android:visibility="gone"
-		app:layout_constraintBottom_toTopOf="@id/status_additional_info"
-		app:layout_constraintEnd_toEndOf="@id/status_icon"
-		tools:visibility="visible" />
-
-	<LinearLayout
-		android:id="@+id/status_additional_info"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginBottom="10dp"
-		android:gravity="start"
-		android:orientation="vertical"
-		android:visibility="gone"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@id/status_triangle"
-		tools:visibility="visible">
-
-		<TextView
-			android:id="@+id/status_additional_info_text"
-			style="@style/NextStep.Text"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:gravity="start"
-			android:text="@string/exposed_info_contact_hotline" />
-
-		<TextView
-			android:id="@+id/status_additional_info_tel"
-			style="@style/NextStep.Text.Bold"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:gravity="start"
-			android:text="@string/exposed_info_contact_hotline_name" />
-
-		<TextView
-			android:id="@+id/status_additional_info_since"
-			style="@style/NextStep.Text.Blue"
+			android:id="@+id/status_background"
 			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:background="@drawable/bg_status_bubble"
+			android:orientation="horizontal"
+			app:layout_constraintBottom_toBottomOf="@id/status_text"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/status_title"/>
+
+	<ImageView
+			android:id="@+id/status_icon"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:gravity="end"
-			tools:text="Vor 2 Tagen" />
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="10dp"
+			android:paddingEnd="10dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/status_title"
+			tools:src="@drawable/ic_check"/>
+
+	<TextView
+			android:id="@+id/status_title"
+			style="@style/NextStep.Text.Status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="2dp"
+			android:paddingTop="10dp"
+			android:paddingEnd="15dp"
+			app:layout_constraintBottom_toTopOf="@id/status_text"
+			app:layout_constraintStart_toEndOf="@+id/status_icon"
+			tools:text="Status"/>
+
+	<TextView
+			android:id="@+id/status_text"
+			style="@style/NextStep.Text"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:gravity="start"
+			android:paddingBottom="15dp"
+			app:layout_constraintBottom_toTopOf="@id/status_triangle"
+			app:layout_constraintEnd_toStartOf="@id/status_illustration"
+			app:layout_constraintStart_toEndOf="@+id/status_icon"
+			tools:text="Subtext"/>
+
+	<ImageView
+			android:id="@+id/status_illustration"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:src="@drawable/ill_tracking_active"
+			android:visibility="visible"
+			app:layout_constraintBottom_toBottomOf="@+id/status_background"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+	<ImageView
+			android:id="@+id/status_triangle"
+			android:layout_width="11dp"
+			android:layout_height="13dp"
+			android:src="@drawable/triangle_status_exposed"
+			android:translationY="-2dp"
+			android:visibility="gone"
+			app:layout_constraintBottom_toTopOf="@id/status_additional_info"
+			app:layout_constraintEnd_toEndOf="@id/status_icon"
+			tools:visibility="visible"/>
+
+	<LinearLayout
+			android:id="@+id/status_additional_info"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10dp"
+			android:gravity="start"
+			android:orientation="vertical"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/status_triangle"
+			tools:visibility="visible">
+
+		<TextView
+				android:id="@+id/status_additional_info_text"
+				style="@style/NextStep.Text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="start"
+				android:text="@string/exposed_info_contact_hotline"/>
+
+		<TextView
+				android:id="@+id/status_additional_info_tel"
+				style="@style/NextStep.Text.Bold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="start"
+				android:text="@string/exposed_info_contact_hotline_name"/>
+
+		<TextView
+				android:id="@+id/status_additional_info_since"
+				style="@style/NextStep.Text.Blue"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				tools:text="Vor 2 Tagen"/>
 
 	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

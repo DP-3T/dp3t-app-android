@@ -9,134 +9,134 @@
  */
 
 plugins {
-    id 'com.android.library'
-    id 'maven-publish'
-    id 'com.jfrog.bintray'
-    id 'com.google.protobuf'
+	id 'com.android.library'
+	id 'maven-publish'
+	id 'com.jfrog.bintray'
+	id 'com.google.protobuf'
 }
 
 android {
-    compileSdkVersion 29
+	compileSdkVersion 29
 
-    defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 26
-        versionName "0.2.6"
-        testInstrumentationRunnerArgument 'androidx.benchmark.suppressErrors', 'EMULATOR,LOW-BATTERY,ACTIVITY-MISSING,DEBUGGABLE,UNLOCKED,UNSUSTAINED-ACTIVITY-MISSING'
-        testInstrumentationRunner "androidx.benchmark.junit4.AndroidBenchmarkRunner"
+	defaultConfig {
+		minSdkVersion 23
+		targetSdkVersion 29
+		versionCode 26
+		versionName "0.2.6"
+		testInstrumentationRunnerArgument 'androidx.benchmark.suppressErrors', 'EMULATOR,LOW-BATTERY,ACTIVITY-MISSING,DEBUGGABLE,UNLOCKED,UNSUSTAINED-ACTIVITY-MISSING'
+		testInstrumentationRunner "androidx.benchmark.junit4.AndroidBenchmarkRunner"
 
-        consumerProguardFiles 'consumer-rules.pro'
+		consumerProguardFiles 'consumer-rules.pro'
 
-        buildConfigField "long", "BUILD_TIME", System.currentTimeMillis() + "L"
-    }
+		buildConfigField "long", "BUILD_TIME", System.currentTimeMillis() + "L"
+	}
 
-    defaultPublishConfig "productionRelease"
+	defaultPublishConfig "productionRelease"
 
-    flavorDimensions "version"
+	flavorDimensions "version"
 
-    productFlavors {
-        calibration {
-        }
-        production {
-        }
-    }
+	productFlavors {
+		calibration {
+		}
+		production {
+		}
+	}
 
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
+	buildTypes {
+		release {
+			minifyEnabled false
+		}
+	}
 
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
+	compileOptions {
+		sourceCompatibility = 1.8
+		targetCompatibility = 1.8
+	}
 }
 
 protobuf {
-    protoc {
-        artifact = 'com.google.protobuf:protoc:3.11.4'
-    }
-    generateProtoTasks {
-        all().each { task ->
-            task.builtins {
-                java {
-                    option "lite"
-                }
-            }
-        }
-    }
+	protoc {
+		artifact = 'com.google.protobuf:protoc:3.11.4'
+	}
+	generateProtoTasks {
+		all().each { task ->
+			task.builtins {
+				java {
+					option "lite"
+				}
+			}
+		}
+	}
 }
 
 task androidSourcesJar(type: Jar) {
-    archiveClassifier = 'sources'
-    from android.sourceSets.main.java.srcDirs
+	archiveClassifier = 'sources'
+	from android.sourceSets.main.java.srcDirs
 }
 afterEvaluate {
-    publishing {
-        publications {
-            "sdkRelease"(MavenPublication) {
-                from components.productionRelease
-                groupId 'org.dpppt'
-                artifactId 'dp3t-sdk-android'
-                version android.defaultConfig.versionName
-                artifact androidSourcesJar
-            }
-            "sdkCalibration"(MavenPublication) {
-                from components.calibrationRelease
-                groupId 'org.dpppt'
-                artifactId 'dp3t-sdk-android'
-                version android.defaultConfig.versionName + "-calibration"
-                artifact androidSourcesJar
-            }
-        }
-    }
+	publishing {
+		publications {
+			"sdkRelease"(MavenPublication) {
+				from components.productionRelease
+				groupId 'org.dpppt'
+				artifactId 'dp3t-sdk-android'
+				version android.defaultConfig.versionName
+				artifact androidSourcesJar
+			}
+			"sdkCalibration"(MavenPublication) {
+				from components.calibrationRelease
+				groupId 'org.dpppt'
+				artifactId 'dp3t-sdk-android'
+				version android.defaultConfig.versionName + "-calibration"
+				artifact androidSourcesJar
+			}
+		}
+	}
 }
 
 ext.readProperty = { paramName ->
-    if (project.hasProperty(paramName)) {
-        return project.getProperties().get(paramName)
-    } else {
-        Properties properties = new Properties()
-        if (project.rootProject.file('local.properties').exists()) {
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        }
-        return properties.getProperty(paramName)
-    }
+	if (project.hasProperty(paramName)) {
+		return project.getProperties().get(paramName)
+	} else {
+		Properties properties = new Properties()
+		if (project.rootProject.file('local.properties').exists()) {
+			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+		}
+		return properties.getProperty(paramName)
+	}
 }
 
 bintray {
-    user = readProperty('bintrayUser')
-    key = readProperty('bintrayApikey')
-    publications = ['sdkRelease', 'sdkCalibration']
-    publish = true
-    pkg {
-        repo = 'dp3t-sdk-android'
-        name = 'dp3t-sdk-android'
-        userOrg = 'dp3t'
-        licenses = ['MPL-2.0']
-    }
+	user = readProperty('bintrayUser')
+	key = readProperty('bintrayApikey')
+	publications = ['sdkRelease', 'sdkCalibration']
+	publish = true
+	pkg {
+		repo = 'dp3t-sdk-android'
+		name = 'dp3t-sdk-android'
+		userOrg = 'dp3t'
+		licenses = ['MPL-2.0']
+	}
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.core:core:1.2.0'
-    implementation 'androidx.security:security-crypto:1.0.0-rc01'
-    implementation 'androidx.work:work-runtime:2.3.4'
+	implementation 'androidx.core:core:1.2.0'
+	implementation 'androidx.security:security-crypto:1.0.0-rc01'
+	implementation 'androidx.work:work-runtime:2.3.4'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
-    implementation('com.squareup.retrofit2:converter-protobuf:2.8.1') {
-        exclude group: 'com.google.protobuf', module: 'protobuf-java'
-    }
-    implementation 'com.google.protobuf:protobuf-javalite:3.11.4'
+	implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+	implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+	implementation('com.squareup.retrofit2:converter-protobuf:2.8.1') {
+		exclude group: 'com.google.protobuf', module: 'protobuf-java'
+	}
+	implementation 'com.google.protobuf:protobuf-javalite:3.11.4'
 
-    implementation 'io.jsonwebtoken:jjwt-api:0.11.1'
-    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.1'
-    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.1') {
-        exclude group: 'org.json', module: 'json'
-    }
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.65'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.1'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.1'
+	runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.1') {
+		exclude group: 'org.json', module: 'json'
+	}
+	implementation 'org.bouncycastle:bcprov-jdk15on:1.65'
 }

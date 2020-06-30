@@ -9,190 +9,190 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="@color/grey_light"
-	android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_light"
+              android:orientation="vertical">
 
 	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/contacts_toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		app:navigationContentDescription="@string/android_accessibility_back_button"
-		app:navigationIcon="@drawable/ic_arrow_back"
-		app:title="@string/handshakes_title_homescreen" />
+			android:id="@+id/contacts_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:navigationContentDescription="@string/android_accessibility_back_button"
+			app:navigationIcon="@drawable/ic_arrow_back"
+			app:title="@string/handshakes_title_homescreen"/>
 
 	<FrameLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/grey_light">
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/grey_light">
 
 		<org.dpppt.android.app.main.views.HeaderView
-			android:id="@+id/contacts_header_view"
-			android:layout_width="match_parent"
-			android:layout_height="@dimen/header_height" />
+				android:id="@+id/contacts_header_view"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/header_height"/>
 
 		<ScrollView
-			android:id="@+id/contacts_scroll_view"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+				android:id="@+id/contacts_scroll_view"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
 
 			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="vertical"
-				android:paddingTop="@dimen/top_item_padding">
-
-				<androidx.cardview.widget.CardView
-					style="@style/NextStep.Card"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginStart="@dimen/spacing_medium_large"
-					android:layout_marginEnd="@dimen/spacing_medium_large"
-					android:layout_marginBottom="@dimen/spacing_medium">
+					android:orientation="vertical"
+					android:paddingTop="@dimen/top_item_padding">
 
-					<LinearLayout
+				<androidx.cardview.widget.CardView
+						style="@style/NextStep.Card"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:orientation="vertical">
+						android:layout_marginStart="@dimen/spacing_medium_large"
+						android:layout_marginEnd="@dimen/spacing_medium_large"
+						android:layout_marginBottom="@dimen/spacing_medium">
 
-						<RelativeLayout
+					<LinearLayout
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_marginLeft="@dimen/spacing_large"
-							android:layout_marginTop="@dimen/spacing_medium_large"
-							android:layout_marginRight="@dimen/spacing_large"
-							android:layout_marginBottom="@dimen/spacing_medium">
+							android:orientation="vertical">
+
+						<RelativeLayout
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="@dimen/spacing_large"
+								android:layout_marginTop="@dimen/spacing_medium_large"
+								android:layout_marginRight="@dimen/spacing_large"
+								android:layout_marginBottom="@dimen/spacing_medium">
 
 							<Switch
-								android:id="@+id/contacts_tracing_switch"
-								style="@style/NextStep.Switch"
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:layout_alignParentTop="true"
-								android:layout_alignParentEnd="true"
-								android:layout_marginTop="3dp" />
+									android:id="@+id/contacts_tracing_switch"
+									style="@style/NextStep.Switch"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_alignParentTop="true"
+									android:layout_alignParentEnd="true"
+									android:layout_marginTop="3dp"/>
 
 							<TextView
-								android:id="@+id/contacts_tracing_title"
-								style="@style/NextStep.Text.Title"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentStart="true"
-								android:layout_alignParentTop="true"
-								android:layout_toStartOf="@id/contacts_tracing_switch"
-								android:text="@string/tracing_setting_title" />
+									android:id="@+id/contacts_tracing_title"
+									style="@style/NextStep.Text.Title"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_alignParentStart="true"
+									android:layout_alignParentTop="true"
+									android:layout_toStartOf="@id/contacts_tracing_switch"
+									android:text="@string/tracing_setting_title"/>
 
 							<TextView
-								style="@style/NextStep.Text"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"
-								android:layout_below="@id/contacts_tracing_title"
-								android:layout_alignParentStart="true"
-								android:text="@string/tracing_setting_text" />
+									style="@style/NextStep.Text"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_below="@id/contacts_tracing_title"
+									android:layout_alignParentStart="true"
+									android:text="@string/tracing_setting_text"/>
 
 						</RelativeLayout>
 
 						<FrameLayout
-							android:id="@+id/status_container"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content" />
+								android:id="@+id/status_container"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"/>
 
 					</LinearLayout>
 
 				</androidx.cardview.widget.CardView>
 
 				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="@dimen/spacing_large"
-					android:layout_marginTop="@dimen/spacing_huger"
-					android:layout_marginEnd="@dimen/spacing_large"
-					android:layout_marginBottom="@dimen/spacing_very_large"
-					android:orientation="vertical">
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="@dimen/spacing_large"
+						android:layout_marginTop="@dimen/spacing_huger"
+						android:layout_marginEnd="@dimen/spacing_large"
+						android:layout_marginBottom="@dimen/spacing_very_large"
+						android:orientation="vertical">
 
 					<TextView
-						style="@style/NextStep.Text.Bold"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginBottom="@dimen/spacing_small"
-						android:text="@string/begegnung_detail_faq1_title" />
-
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:orientation="horizontal">
-
-						<ImageView
-							android:layout_width="@dimen/icon_size"
-							android:layout_height="@dimen/icon_size"
-							android:layout_marginRight="@dimen/spacing_medium_large"
-							android:src="@drawable/ic_begegnungen"
-							android:tint="@color/blue_main" />
-
-						<TextView
-							style="@style/NextStep.Text"
+							style="@style/NextStep.Text.Bold"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/begegnung_detail_faq1_text" />
+							android:layout_marginBottom="@dimen/spacing_small"
+							android:text="@string/begegnung_detail_faq1_title"/>
+
+					<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal">
+
+						<ImageView
+								android:layout_width="@dimen/icon_size"
+								android:layout_height="@dimen/icon_size"
+								android:layout_marginRight="@dimen/spacing_medium_large"
+								android:src="@drawable/ic_begegnungen"
+								android:tint="@color/blue_main"/>
+
+						<TextView
+								style="@style/NextStep.Text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/begegnung_detail_faq1_text"/>
 
 					</LinearLayout>
 
 					<TextView
-						style="@style/NextStep.Text.Bold"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="@dimen/spacing_large"
-						android:layout_marginBottom="@dimen/spacing_small"
-						android:text="@string/begegnung_detail_faq2_title" />
-
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:orientation="horizontal">
-
-						<ImageView
-							android:layout_width="@dimen/icon_size"
-							android:layout_height="@dimen/icon_size"
-							android:layout_marginRight="@dimen/spacing_medium_large"
-							android:src="@drawable/ic_lock"
-							android:tint="@color/blue_main" />
-
-						<TextView
-							style="@style/NextStep.Text"
+							style="@style/NextStep.Text.Bold"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/begegnung_detail_faq2_text" />
+							android:layout_marginTop="@dimen/spacing_large"
+							android:layout_marginBottom="@dimen/spacing_small"
+							android:text="@string/begegnung_detail_faq2_title"/>
+
+					<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal">
+
+						<ImageView
+								android:layout_width="@dimen/icon_size"
+								android:layout_height="@dimen/icon_size"
+								android:layout_marginRight="@dimen/spacing_medium_large"
+								android:src="@drawable/ic_lock"
+								android:tint="@color/blue_main"/>
+
+						<TextView
+								style="@style/NextStep.Text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/begegnung_detail_faq2_text"/>
 
 					</LinearLayout>
 
 					<TextView
-						style="@style/NextStep.Text.Bold"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="@dimen/spacing_large"
-						android:layout_marginBottom="@dimen/spacing_small"
-						android:text="@string/begegnungen_detail_faq3_title" />
-
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginBottom="@dimen/spacing_medium"
-						android:orientation="horizontal">
-
-						<ImageView
-							android:layout_width="@dimen/icon_size"
-							android:layout_height="@dimen/icon_size"
-							android:layout_marginRight="@dimen/spacing_medium_large"
-							android:src="@drawable/ic_bluetooth"
-							android:tint="@color/blue_main" />
-
-						<TextView
-							style="@style/NextStep.Text"
+							style="@style/NextStep.Text.Bold"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:text="@string/begegnungen_detail_faq3_text" />
+							android:layout_marginTop="@dimen/spacing_large"
+							android:layout_marginBottom="@dimen/spacing_small"
+							android:text="@string/begegnungen_detail_faq3_title"/>
+
+					<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="@dimen/spacing_medium"
+							android:orientation="horizontal">
+
+						<ImageView
+								android:layout_width="@dimen/icon_size"
+								android:layout_height="@dimen/icon_size"
+								android:layout_marginRight="@dimen/spacing_medium_large"
+								android:src="@drawable/ic_bluetooth"
+								android:tint="@color/blue_main"/>
+
+						<TextView
+								style="@style/NextStep.Text"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/begegnungen_detail_faq3_text"/>
 
 					</LinearLayout>
 

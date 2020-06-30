@@ -19,7 +19,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.onboarding.util.PermissionButtonUtil;
 import org.dpppt.android.app.util.DeviceFeatureHelper;
@@ -43,7 +42,7 @@ public class OnboardingLocationPermissionFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		locationButton = view.findViewById(R.id.onboarding_location_permission_button);
 		locationButton.setOnClickListener(v -> {
-			String[] permissions = new String[] { Manifest.permission.ACCESS_FINE_LOCATION };
+			String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
 			requestPermissions(permissions, REQUEST_CODE_ASK_PERMISSION_FINE_LOCATION);
 		});
 		continueButton = view.findViewById(R.id.onboarding_location_permission_continue_button);

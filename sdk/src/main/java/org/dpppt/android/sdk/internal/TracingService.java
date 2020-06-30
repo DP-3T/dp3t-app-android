@@ -23,9 +23,6 @@ import android.os.PowerManager;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
-
-import java.util.Collection;
-
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.R;
 import org.dpppt.android.sdk.TracingStatus;
@@ -35,6 +32,8 @@ import org.dpppt.android.sdk.internal.gatt.BleServer;
 import org.dpppt.android.sdk.internal.gatt.BluetoothServiceStatus;
 import org.dpppt.android.sdk.internal.gatt.BluetoothState;
 import org.dpppt.android.sdk.internal.logger.Logger;
+
+import java.util.Collection;
 
 import static org.dpppt.android.sdk.internal.AppConfigManager.DEFAULT_SCAN_DURATION;
 import static org.dpppt.android.sdk.internal.AppConfigManager.DEFAULT_SCAN_INTERVAL;
@@ -102,7 +101,8 @@ public class TracingService extends Service {
 
 	private boolean isFinishing;
 
-	public TracingService() { }
+	public TracingService() {
+	}
 
 	@Override
 	public void onCreate() {

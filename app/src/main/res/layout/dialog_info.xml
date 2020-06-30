@@ -10,34 +10,34 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:gravity="center_horizontal"
-	android:orientation="vertical"
-	android:padding="@dimen/spacing_large">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:padding="@dimen/spacing_large">
 
 	<TextView
-		android:id="@+id/dialog_info_text"
-		style="@style/NextStep.Text"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		tools:text="This is an example text for information purposes on at least two lines" />
+			android:id="@+id/dialog_info_text"
+			style="@style/NextStep.Text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			tools:text="This is an example text for information purposes on at least two lines"/>
 
 	<TextView
-		android:id="@+id/dialog_info_subtext"
-		style="@style/NextStep.Text.Small"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center_horizontal"
-		tools:text="This is an example text for information purposes on at least two lines" />
+			android:id="@+id/dialog_info_subtext"
+			style="@style/NextStep.Text.Small"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			tools:text="This is an example text for information purposes on at least two lines"/>
 
 	<Button
-		android:id="@+id/dialog_info_button"
-		style="@style/NextStep.Button"
-		android:layout_marginTop="@dimen/spacing_large"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/android_button_ok" />
+			android:id="@+id/dialog_info_button"
+			style="@style/NextStep.Button"
+			android:layout_marginTop="@dimen/spacing_large"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/android_button_ok"/>
 
 </LinearLayout>

@@ -10,7 +10,6 @@
 package org.dpppt.android.sdk.internal.backend;
 
 import androidx.annotation.NonNull;
-
 import okhttp3.CertificatePinner;
 
 public class CertificatePinning {

@@ -8,114 +8,114 @@
   ~ SPDX-License-Identifier: MPL-2.0
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
 	<ScrollView
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="1">
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
 
 		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal"
-			android:orientation="vertical"
-			android:paddingStart="@dimen/spacing_large"
-			android:paddingTop="@dimen/spacing_huge"
-			android:paddingEnd="@dimen/spacing_large"
-			android:paddingBottom="@dimen/spacing_large">
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingTop="@dimen/spacing_huge"
+				android:paddingEnd="@dimen/spacing_large"
+				android:paddingBottom="@dimen/spacing_large">
 
 			<TextView
-				android:id="@+id/onboarding_subtitle"
-				style="@style/NextStep.Text.Blue"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="@dimen/spacing_very_large"
-				android:gravity="center_horizontal"
-				tools:text="Subtitle" />
-
-			<ImageView
-				android:id="@+id/onboarding_illustration"
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/illustration_height"
-				android:layout_marginBottom="@dimen/spacing_large"
-				android:scaleType="fitCenter"
-				tools:src="@drawable/ill_prinzip" />
-
-			<TextView
-				android:id="@+id/onboarding_title"
-				style="@style/NextStep.Text.Title"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="@dimen/spacing_medium"
-				android:layout_marginBottom="@dimen/spacing_large"
-				android:gravity="center_horizontal"
-				tools:text="Title" />
-
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="@dimen/spacing_huge"
-				android:orientation="horizontal">
-
-				<ImageView
-					android:id="@+id/onboarding_description_1_icon"
-					android:layout_width="@dimen/icon_size"
-					android:layout_height="@dimen/icon_size"
-					android:layout_marginRight="@dimen/spacing_medium_large"
-					android:tint="@color/blue_main"
-					tools:src="@drawable/ic_begegnungen" />
-
-				<TextView
-					android:id="@+id/onboarding_description_1"
-					style="@style/NextStep.Text"
+					android:id="@+id/onboarding_subtitle"
+					style="@style/NextStep.Text.Blue"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:breakStrategy="high_quality"
-					android:hyphenationFrequency="full"
-					tools:text="This is a description text over multiple lines to explain something" />
+					android:layout_marginBottom="@dimen/spacing_very_large"
+					android:gravity="center_horizontal"
+					tools:text="Subtitle"/>
+
+			<ImageView
+					android:id="@+id/onboarding_illustration"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/illustration_height"
+					android:layout_marginBottom="@dimen/spacing_large"
+					android:scaleType="fitCenter"
+					tools:src="@drawable/ill_prinzip"/>
+
+			<TextView
+					android:id="@+id/onboarding_title"
+					style="@style/NextStep.Text.Title"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/spacing_medium"
+					android:layout_marginBottom="@dimen/spacing_large"
+					android:gravity="center_horizontal"
+					tools:text="Title"/>
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/spacing_huge"
+					android:orientation="horizontal">
+
+				<ImageView
+						android:id="@+id/onboarding_description_1_icon"
+						android:layout_width="@dimen/icon_size"
+						android:layout_height="@dimen/icon_size"
+						android:layout_marginRight="@dimen/spacing_medium_large"
+						android:tint="@color/blue_main"
+						tools:src="@drawable/ic_begegnungen"/>
+
+				<TextView
+						android:id="@+id/onboarding_description_1"
+						style="@style/NextStep.Text"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:breakStrategy="high_quality"
+						android:hyphenationFrequency="full"
+						tools:text="This is a description text over multiple lines to explain something"/>
 
 			</LinearLayout>
 
 			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="@dimen/spacing_larger"
-				android:orientation="horizontal">
-
-				<ImageView
-					android:id="@+id/onboarding_description_2_icon"
-					android:layout_width="@dimen/icon_size"
-					android:layout_height="@dimen/icon_size"
-					android:layout_marginRight="@dimen/spacing_medium_large"
-					android:tint="@color/blue_main"
-					tools:src="@drawable/ic_message_alert" />
-
-				<TextView
-					android:id="@+id/onboarding_description_2"
-					style="@style/NextStep.Text"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:breakStrategy="high_quality"
-					android:hyphenationFrequency="full"
-					tools:text="This is a description text over multiple lines to explain something" />
+					android:layout_marginTop="@dimen/spacing_larger"
+					android:orientation="horizontal">
+
+				<ImageView
+						android:id="@+id/onboarding_description_2_icon"
+						android:layout_width="@dimen/icon_size"
+						android:layout_height="@dimen/icon_size"
+						android:layout_marginRight="@dimen/spacing_medium_large"
+						android:tint="@color/blue_main"
+						tools:src="@drawable/ic_message_alert"/>
+
+				<TextView
+						android:id="@+id/onboarding_description_2"
+						style="@style/NextStep.Text"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:breakStrategy="high_quality"
+						android:hyphenationFrequency="full"
+						tools:text="This is a description text over multiple lines to explain something"/>
 
 			</LinearLayout>
 		</LinearLayout>
 	</ScrollView>
 
 	<Button
-		android:id="@+id/onboarding_continue_button"
-		style="@style/NextStep.Button.Transparent.Blue"
-		android:layout_width="match_parent"
-		android:layout_gravity="bottom"
-		android:background="@color/white"
-		android:foreground="?android:selectableItemBackground"
-		android:layout_height="@dimen/onboarding_continue_button_height"
-		android:elevation="@dimen/card_elevation"
-		android:text="@string/onboarding_continue_button" />
+			android:id="@+id/onboarding_continue_button"
+			style="@style/NextStep.Button.Transparent.Blue"
+			android:layout_width="match_parent"
+			android:layout_gravity="bottom"
+			android:background="@color/white"
+			android:foreground="?android:selectableItemBackground"
+			android:layout_height="@dimen/onboarding_continue_button_height"
+			android:elevation="@dimen/card_elevation"
+			android:text="@string/onboarding_continue_button"/>
 
 </LinearLayout>

@@ -10,7 +10,6 @@
 package org.dpppt.android.sdk.internal.backend;
 
 import org.dpppt.android.sdk.internal.backend.proto.Exposed;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;

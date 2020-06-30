@@ -11,15 +11,14 @@ package org.dpppt.android.sdk.internal;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import java.io.IOException;
-
 import org.dpppt.android.sdk.backend.ResponseCallback;
 import org.dpppt.android.sdk.backend.models.ApplicationInfo;
 import org.dpppt.android.sdk.internal.backend.BackendReportRepository;
 import org.dpppt.android.sdk.internal.backend.DiscoveryRepository;
 import org.dpppt.android.sdk.internal.backend.models.ApplicationsList;
 import org.dpppt.android.sdk.internal.util.Json;
+
+import java.io.IOException;
 
 public class AppConfigManager {
 
@@ -65,8 +64,8 @@ public class AppConfigManager {
 	private String appId;
 	private boolean useDiscovery;
 	private boolean isDevDiscoveryMode;
-	private SharedPreferences sharedPrefs;
-	private DiscoveryRepository discoveryRepository;
+	private final SharedPreferences sharedPrefs;
+	private final DiscoveryRepository discoveryRepository;
 
 	private AppConfigManager(Context context) {
 		discoveryRepository = new DiscoveryRepository(context);

@@ -11,7 +11,6 @@
 package org.dpppt.android.sdk.internal.util;
 
 import androidx.core.util.Supplier;
-
 import com.google.gson.Gson;
 
 public final class Json {
@@ -30,6 +29,7 @@ public final class Json {
 		}
 	}
 
-	private Json() { }
+	private Json() {
+	}
 
 }

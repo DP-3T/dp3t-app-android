@@ -13,10 +13,10 @@ import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodJson;
 
 public class ExposeeRequest {
 
-	private String key;
-	private long keyDate;
-	private ExposeeAuthMethodJson authData;
-	private int fake;
+	private final String key;
+	private final long keyDate;
+	private final ExposeeAuthMethodJson authData;
+	private final int fake;
 
 	public ExposeeRequest(String key, long keyDate, ExposeeAuthMethodJson authData) {
 		this(key, keyDate, 0, authData);

@@ -15,24 +15,13 @@ import android.content.IntentFilter;
 import android.database.sqlite.SQLiteException;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
-
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-
+import okhttp3.CertificatePinner;
 import org.dpppt.android.sdk.backend.ResponseCallback;
 import org.dpppt.android.sdk.backend.SignatureException;
 import org.dpppt.android.sdk.backend.models.ApplicationInfo;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethod;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodJson;
-import org.dpppt.android.sdk.internal.AppConfigManager;
-import org.dpppt.android.sdk.internal.BroadcastHelper;
-import org.dpppt.android.sdk.internal.ErrorHelper;
-import org.dpppt.android.sdk.internal.SyncWorker;
-import org.dpppt.android.sdk.internal.TracingService;
+import org.dpppt.android.sdk.internal.*;
 import org.dpppt.android.sdk.internal.backend.CertificatePinning;
 import org.dpppt.android.sdk.internal.backend.ServerTimeOffsetException;
 import org.dpppt.android.sdk.internal.backend.StatusCodeException;
@@ -44,7 +33,12 @@ import org.dpppt.android.sdk.internal.logger.Logger;
 import org.dpppt.android.sdk.internal.util.DayDate;
 import org.dpppt.android.sdk.internal.util.ProcessUtil;
 
-import okhttp3.CertificatePinner;
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
 
 import static org.dpppt.android.sdk.internal.util.Base64Util.toBase64;
 
@@ -165,7 +159,7 @@ public class DP3T {
 	}
 
 	public static void sendIAmInfected(Context context, Date onset, ExposeeAuthMethod exposeeAuthMethod,
-									   ResponseCallback<Void> callback) {
+	                                   ResponseCallback<Void> callback) {
 		checkInit();
 
 		DayDate onsetDate = new DayDate(onset.getTime());

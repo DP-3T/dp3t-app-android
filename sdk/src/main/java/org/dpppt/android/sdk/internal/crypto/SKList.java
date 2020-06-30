@@ -11,10 +11,9 @@
 package org.dpppt.android.sdk.internal.crypto;
 
 import android.util.Pair;
+import org.dpppt.android.sdk.internal.util.DayDate;
 
 import java.util.ArrayList;
-
-import org.dpppt.android.sdk.internal.util.DayDate;
 
 public class SKList extends ArrayList<Pair<DayDate, byte[]>> {
 }

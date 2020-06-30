@@ -10,7 +10,7 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:color="@color/grey_dark_lighter" android:state_enabled="false" />
-	<item android:color="@color/blue_main" android:state_checked="true" />
-	<item android:color="@color/red_main" />
+	<item android:color="@color/grey_dark_lighter" android:state_enabled="false"/>
+	<item android:color="@color/blue_main" android:state_checked="true"/>
+	<item android:color="@color/red_main"/>
 </selector>

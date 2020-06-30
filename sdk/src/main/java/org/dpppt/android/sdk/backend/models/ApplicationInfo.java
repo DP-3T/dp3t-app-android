@@ -11,9 +11,9 @@ package org.dpppt.android.sdk.backend.models;
 
 public class ApplicationInfo {
 
-	private String appId;
-	private String reportBaseUrl;
-	private String bucketBaseUrl;
+	private final String appId;
+	private final String reportBaseUrl;
+	private final String bucketBaseUrl;
 
 	public ApplicationInfo(String appId, String reportBaseUrl, String bucketBaseUrl) {
 		this.appId = appId;

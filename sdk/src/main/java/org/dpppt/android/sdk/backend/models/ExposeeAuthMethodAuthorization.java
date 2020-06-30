@@ -11,7 +11,7 @@ package org.dpppt.android.sdk.backend.models;
 
 public class ExposeeAuthMethodAuthorization implements ExposeeAuthMethod {
 
-	private String authorization;
+	private final String authorization;
 
 	public ExposeeAuthMethodAuthorization(String authorization) {
 		this.authorization = authorization;

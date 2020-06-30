@@ -14,7 +14,6 @@ import android.annotation.SuppressLint;
 import android.bluetooth.le.AdvertiseCallback;
 import android.bluetooth.le.ScanCallback;
 import android.content.Context;
-
 import org.dpppt.android.sdk.internal.BroadcastHelper;
 
 public final class BluetoothServiceStatus {
@@ -25,7 +24,7 @@ public final class BluetoothServiceStatus {
 	@SuppressLint("StaticFieldLeak")
 	private static BluetoothServiceStatus instance;
 
-	private Context context;
+	private final Context context;
 
 	private int scanStatus = SCAN_OK;
 	private int advertiseStatus = ADVERTISE_OK;
@@ -47,7 +46,7 @@ public final class BluetoothServiceStatus {
 
 	/**
 	 * @param scanStatus {@link BluetoothServiceStatus#SCAN_OK} or error code (one of {@link ScanCallback}#SCAN_FAILED_*) for scan
-	 * failure.
+	 *                   failure.
 	 */
 	void updateScanStatus(int scanStatus) {
 		if (this.scanStatus != scanStatus) {
@@ -65,7 +64,7 @@ public final class BluetoothServiceStatus {
 
 	/**
 	 * @param advertiseStatus {@link BluetoothServiceStatus#ADVERTISE_OK} or error code
-	 * (see {@link AdvertiseCallback}#ADVERTISE_FAILED_* constants) for advertising start failures.
+	 *                        (see {@link AdvertiseCallback}#ADVERTISE_FAILED_* constants) for advertising start failures.
 	 */
 	void updateAdvertiseStatus(int advertiseStatus) {
 		if (this.advertiseStatus != advertiseStatus) {

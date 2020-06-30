@@ -16,7 +16,6 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-
 import org.dpppt.android.app.R;
 
 public class NotificationUtil {

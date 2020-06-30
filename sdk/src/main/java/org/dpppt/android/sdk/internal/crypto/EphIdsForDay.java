@@ -9,9 +9,9 @@
  */
 package org.dpppt.android.sdk.internal.crypto;
 
-import java.util.List;
-
 import org.dpppt.android.sdk.internal.util.DayDate;
+
+import java.util.List;
 
 public class EphIdsForDay {
 

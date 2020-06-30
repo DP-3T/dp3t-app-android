@@ -12,9 +12,9 @@
 <network-security-config>
 	<base-config cleartextTrafficPermitted="true">
 		<trust-anchors>
-			<certificates src="system" />
+			<certificates src="system"/>
 			<!-- Trust user added CAs while debuggable only -->
-			<certificates src="user" />
+			<certificates src="user"/>
 		</trust-anchors>
 	</base-config>
 </network-security-config>

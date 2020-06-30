@@ -16,9 +16,9 @@ import androidx.annotation.NonNull;
 
 public class InsertTransaction implements Runnable {
 
-	private SQLiteDatabase db;
-	private String tableName;
-	private ContentValues values;
+	private final SQLiteDatabase db;
+	private final String tableName;
+	private final ContentValues values;
 
 	InsertTransaction(@NonNull SQLiteDatabase db, @NonNull String tableName, @NonNull ContentValues values) {
 		this.db = db;

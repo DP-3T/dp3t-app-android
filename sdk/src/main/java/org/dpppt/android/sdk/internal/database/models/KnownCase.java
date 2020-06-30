@@ -11,9 +11,9 @@ package org.dpppt.android.sdk.internal.database.models;
 
 public class KnownCase {
 
-	private int id;
-	private String day;
-	private byte[] key;
+	private final int id;
+	private final String day;
+	private final byte[] key;
 
 	public KnownCase(int id, String day, byte[] key) {
 		this.id = id;

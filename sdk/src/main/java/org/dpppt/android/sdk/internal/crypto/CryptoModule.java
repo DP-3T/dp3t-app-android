@@ -15,27 +15,22 @@ import android.content.SharedPreferences;
 import android.util.Pair;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKeys;
-
-import java.io.IOException;
-import java.security.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.Mac;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
-
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethod;
 import org.dpppt.android.sdk.backend.models.ExposeeAuthMethodJson;
 import org.dpppt.android.sdk.internal.backend.models.ExposeeRequest;
 import org.dpppt.android.sdk.internal.database.models.Contact;
 import org.dpppt.android.sdk.internal.util.DayDate;
 import org.dpppt.android.sdk.internal.util.Json;
+
+import javax.crypto.*;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.io.IOException;
+import java.security.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 
 import static org.dpppt.android.sdk.internal.util.Base64Util.toBase64;
 
@@ -202,7 +197,7 @@ public class CryptoModule {
 	}
 
 	public void checkContacts(byte[] sk, long onsetDate, long bucketTime, GetContactsCallback contactCallback,
-							  MatchCallback matchCallback) {
+	                          MatchCallback matchCallback) {
 		DayDate dayToTest = new DayDate(onsetDate);
 		byte[] skForDay = sk;
 		while (dayToTest.isBeforeOrEquals(bucketTime)) {
@@ -260,7 +255,7 @@ public class CryptoModule {
 
 	public interface GetContactsCallback {
 		/**
-		 * @param timeFrom timestamp inclusive
+		 * @param timeFrom  timestamp inclusive
 		 * @param timeUntil timestamp exclusive
 		 */
 		List<Contact> getContacts(long timeFrom, long timeUntil);

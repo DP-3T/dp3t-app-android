@@ -11,13 +11,13 @@
 
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 	<translate
-		android:fromXDelta="40%"
-		android:toXDelta="0"
-		android:interpolator="@android:anim/decelerate_interpolator"
-		android:duration="@android:integer/config_shortAnimTime"/>
+			android:fromXDelta="40%"
+			android:toXDelta="0"
+			android:interpolator="@android:anim/decelerate_interpolator"
+			android:duration="@android:integer/config_shortAnimTime"/>
 	<alpha
-		android:fromAlpha="0"
-		android:toAlpha="1.0"
-		android:interpolator="@android:anim/decelerate_interpolator"
-		android:duration="@android:integer/config_shortAnimTime"/>
+			android:fromAlpha="0"
+			android:toAlpha="1.0"
+			android:interpolator="@android:anim/decelerate_interpolator"
+			android:duration="@android:integer/config_shortAnimTime"/>
 </set>

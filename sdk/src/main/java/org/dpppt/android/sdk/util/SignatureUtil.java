@@ -11,6 +11,11 @@
 package org.dpppt.android.sdk.util;
 
 import android.util.Base64;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
+import org.dpppt.android.sdk.backend.SignatureException;
+import org.dpppt.android.sdk.internal.util.Base64Util;
 
 import java.io.ByteArrayInputStream;
 import java.security.KeyFactory;
@@ -21,13 +26,6 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
-
-import org.dpppt.android.sdk.backend.SignatureException;
-import org.dpppt.android.sdk.internal.util.Base64Util;
-
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.Jwts;
 
 public class SignatureUtil {
 

@@ -17,16 +17,15 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.PowerManager;
 import androidx.core.content.ContextCompat;
-
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.dpppt.android.sdk.TracingStatus.ErrorState;
 import org.dpppt.android.sdk.internal.backend.SyncErrorState;
 import org.dpppt.android.sdk.internal.gatt.BluetoothServiceStatus;
 import org.dpppt.android.sdk.internal.logger.Logger;
 import org.dpppt.android.sdk.internal.util.LocationServiceUtil;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ErrorHelper {
 

@@ -17,14 +17,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
+import org.dpppt.android.app.R;
+import org.dpppt.android.sdk.TracingStatus;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
-import org.dpppt.android.sdk.TracingStatus;
-
-import org.dpppt.android.app.R;
 
 public class TracingErrorStateHelper {
 

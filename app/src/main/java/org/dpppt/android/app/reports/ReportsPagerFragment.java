@@ -19,7 +19,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.util.DateUtils;
 
@@ -62,7 +61,7 @@ public class ReportsPagerFragment extends Fragment {
 	@Nullable
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-			@Nullable Bundle savedInstanceState) {
+	                         @Nullable Bundle savedInstanceState) {
 
 		View view = null;
 

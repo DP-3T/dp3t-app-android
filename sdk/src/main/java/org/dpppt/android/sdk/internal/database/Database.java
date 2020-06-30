@@ -14,14 +14,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.NonNull;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.dpppt.android.sdk.BuildConfig;
 import org.dpppt.android.sdk.internal.AppConfigManager;
 import org.dpppt.android.sdk.internal.BroadcastHelper;
@@ -33,12 +25,19 @@ import org.dpppt.android.sdk.internal.database.models.ExposureDay;
 import org.dpppt.android.sdk.internal.database.models.Handshake;
 import org.dpppt.android.sdk.internal.util.DayDate;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import static android.database.sqlite.SQLiteDatabase.CONFLICT_IGNORE;
 
 public class Database {
 
-	private DatabaseOpenHelper databaseOpenHelper;
-	private DatabaseThread databaseThread;
+	private final DatabaseOpenHelper databaseOpenHelper;
+	private final DatabaseThread databaseThread;
 
 	public Database(@NonNull Context context) {
 		databaseOpenHelper = DatabaseOpenHelper.getInstance(context);
@@ -110,13 +109,13 @@ public class Database {
 			SQLiteDatabase db = databaseOpenHelper.getWritableDatabase();
 			DayDate lastDayToKeep = new DayDate().subtractDays(CryptoModule.NUMBER_OF_DAYS_TO_KEEP_DATA);
 			db.delete(KnownCases.TABLE_NAME, KnownCases.BUCKET_TIME + " < ?",
-					new String[] { Long.toString(lastDayToKeep.getStartOfDayTimestamp()) });
+					new String[]{Long.toString(lastDayToKeep.getStartOfDayTimestamp())});
 			db.delete(Contacts.TABLE_NAME, Contacts.DATE + " < ?",
-					new String[] { Long.toString(lastDayToKeep.getStartOfDayTimestamp()) });
+					new String[]{Long.toString(lastDayToKeep.getStartOfDayTimestamp())});
 			DayDate lastDayToKeepMatchedContacts =
 					new DayDate().subtractDays(CryptoModule.NUMBER_OF_DAYS_TO_KEEP_EXPOSED_DAYS);
 			db.delete(ExposureDays.TABLE_NAME, ExposureDays.REPORT_DATE + " < ?",
-					new String[] { Long.toString(lastDayToKeepMatchedContacts.getStartOfDayTimestamp()) });
+					new String[]{Long.toString(lastDayToKeepMatchedContacts.getStartOfDayTimestamp())});
 		});
 	}
 
@@ -147,7 +146,7 @@ public class Database {
 	public List<Handshake> getHandshakes(long maxTime) {
 		SQLiteDatabase db = databaseOpenHelper.getReadableDatabase();
 		Cursor cursor = db.query(Handshakes.TABLE_NAME, Handshakes.PROJECTION, Handshakes.TIMESTAMP + " < ?",
-				new String[] { "" + maxTime }, null, null, Handshakes.ID);
+				new String[]{"" + maxTime}, null, null, Handshakes.ID);
 		return getHandshakesFromCursor(cursor);
 	}
 
@@ -197,7 +196,7 @@ public class Database {
 			if (!BuildConfig.FLAVOR.equals("calibration")) {
 				//unless in calibration mode, delete handshakes after converting them to contacts
 				db.delete(Handshakes.TABLE_NAME, Handshakes.TIMESTAMP + " < ?",
-						new String[] { "" + currentEpochStart });
+						new String[]{"" + currentEpochStart});
 			}
 			removeOldData();
 		});
@@ -222,7 +221,7 @@ public class Database {
 	public List<Contact> getContacts(long timeFrom, long timeUntil) {
 		SQLiteDatabase db = databaseOpenHelper.getReadableDatabase();
 		Cursor cursor = db.query(Contacts.TABLE_NAME, Contacts.PROJECTION, Contacts.DATE + ">=? AND " + Contacts.DATE + "<?",
-				new String[] { Long.toString(timeFrom), Long.toString(timeUntil) }, null, null, Contacts.ID);
+				new String[]{Long.toString(timeFrom), Long.toString(timeUntil)}, null, null, Contacts.ID);
 		return getContactsFromCursor(cursor);
 	}
 

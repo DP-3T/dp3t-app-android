@@ -12,7 +12,6 @@ package org.dpppt.android.sdk.internal;
 
 import android.content.Context;
 import android.content.Intent;
-
 import org.dpppt.android.sdk.DP3T;
 
 public class BroadcastHelper {

@@ -9,10 +9,10 @@
  */
 package org.dpppt.android.app.main.model;
 
-import java.util.List;
-
 import org.dpppt.android.sdk.TracingStatus;
 import org.dpppt.android.sdk.internal.database.models.ExposureDay;
+
+import java.util.List;
 
 public interface TracingStatusInterface {
 

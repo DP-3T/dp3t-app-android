@@ -9,7 +9,7 @@
   -->
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-	android:shape="rectangle">
-	<solid android:color="@color/purple_main" />
-	<corners android:radius="@dimen/message_bubble_corner_radius" />
+       android:shape="rectangle">
+	<solid android:color="@color/purple_main"/>
+	<corners android:radius="@dimen/message_bubble_corner_radius"/>
 </shape>

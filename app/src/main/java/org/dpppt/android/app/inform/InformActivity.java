@@ -12,7 +12,6 @@ package org.dpppt.android.app.inform;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
-
 import org.dpppt.android.app.R;
 
 

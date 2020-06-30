@@ -10,12 +10,12 @@
 
 package org.dpppt.android.sdk.internal.util;
 
-import java.io.IOException;
-import java.text.ParseException;
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+
+import java.io.IOException;
+import java.text.ParseException;
 
 class DayDateJsonAdapter extends TypeAdapter<DayDate> {
 

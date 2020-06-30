@@ -32,11 +32,6 @@ import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TimeZone;
-
 import org.dpppt.android.app.R;
 import org.dpppt.android.app.storage.SecureStorage;
 import org.dpppt.android.app.util.DateUtils;
@@ -44,6 +39,10 @@ import org.dpppt.android.app.util.NotificationUtil;
 import org.dpppt.android.app.util.PhoneUtil;
 import org.dpppt.android.app.viewmodel.TracingViewModel;
 import org.dpppt.android.sdk.internal.database.models.ExposureDay;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TimeZone;
 
 public class ReportsFragment extends Fragment {
 
@@ -75,7 +74,9 @@ public class ReportsFragment extends Fragment {
 
 	private int originalFirstChildPadding = 0;
 
-	public ReportsFragment() { super(R.layout.fragment_reports); }
+	public ReportsFragment() {
+		super(R.layout.fragment_reports);
+	}
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -363,7 +364,7 @@ public class ReportsFragment extends Fragment {
 			}
 
 			updateHeaderSize(isReportsHeaderAnimationPending);
-			
+
 			if (isReportsHeaderAnimationPending) {
 				headerViewPager.setUserInputEnabled(false);
 
